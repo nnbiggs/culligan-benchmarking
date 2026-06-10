@@ -235,7 +235,7 @@ export const keyFindings = {
     title: "Hypothesis Legend — What Each Area Means",
     intro:
       "The benchmarking is structured around six hypotheses — specific questions about where Culligan's IT spending might be above or below comparable companies.",
-    columns: ["Code", "Hypothesis Name", "Plain-Language Definition", "What Was Measured"],
+    columns: ["Code", "Hypothesis Name", "High Level Description", "What Was Measured"],
     rows: [
       { code: "H1", name: "AI & Automation", definition: "How effectively is Culligan using AI and automation to handle IT work?", measured: "Service desk automation, developer productivity tools, AIOps, and ticket deflection rates." },
       { code: "H2", name: "Spans & Layers", definition: "Is the IT organisation structured efficiently, or are there too many management layers?", measured: "Management ratio, span of control, FTE headcount per $1B revenue vs. peers." },
