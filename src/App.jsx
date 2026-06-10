@@ -1,4 +1,5 @@
 import Nav from "./components/Nav";
+import DraftBanner from "./components/DraftBanner";
 import Hero from "./components/Hero";
 import CioPriority from "./components/CioPriority";
 import ExecutiveSummary from "./components/ExecutiveSummary";
@@ -18,7 +19,8 @@ export default function App() {
   return (
     <div className="min-h-screen">
       <Nav />
-      <main>
+      <DraftBanner />
+      <main className="pt-9 sm:pt-10">
         <Hero />
         <ExecutiveSummary />
         <CioPriority />

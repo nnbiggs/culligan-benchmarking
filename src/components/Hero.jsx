@@ -1,5 +1,5 @@
 import { useCountUp } from "../hooks/useAnimations";
-import { brand, kpis } from "../data/benchmarkData";
+import { brand, draft, kpis } from "../data/benchmarkData";
 import Logo from "./Logo";
 
 function KpiCard({ kpi }) {
@@ -24,16 +24,21 @@ function KpiCard({ kpi }) {
 
 export default function Hero() {
   return (
-    <header id="overview" className="bg-culligan-deep pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20">
+    <header id="overview" className="bg-culligan-deep pt-28 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 sm:mb-12 lg:hidden">
           <Logo />
         </div>
 
         <div className="text-center max-w-4xl mx-auto">
-          <p className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] sm:tracking-[0.25em] text-culligan-accent uppercase mb-3 sm:mb-4">
-            {brand.reportLabel}
-          </p>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+            <p className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] sm:tracking-[0.25em] text-culligan-accent uppercase">
+              {brand.reportLabel}
+            </p>
+            <span className="inline-flex items-center rounded-full border border-culligan-amber/60 bg-culligan-amber/20 px-3 py-1 text-[10px] sm:text-xs font-extrabold tracking-widest text-culligan-amber uppercase">
+              {draft.label}
+            </span>
+          </div>
           <h1 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-extrabold text-white tracking-tight leading-tight">
             {brand.heroTitle}
           </h1>

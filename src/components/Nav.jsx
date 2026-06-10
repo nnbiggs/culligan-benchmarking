@@ -26,7 +26,7 @@ export default function Nav() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-culligan-deep transition-shadow duration-300 ${
+      className={`fixed top-9 left-0 right-0 z-50 bg-culligan-deep transition-shadow duration-300 ${
         scrolled ? "shadow-lg" : ""
       }`}
     >

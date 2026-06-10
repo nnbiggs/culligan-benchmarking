@@ -3,9 +3,17 @@ export const brand = {
   reportLabel: "IT BENCHMARKING ANALYSIS",
   heroTitle: "Transforming IT for Growth",
   heroSubtitle:
-    "Strategic Roadmap, EBITDA Impact & CIO Action Plan · June 2026 · Final Edition · Confidential",
+    "Strategic Roadmap, EBITDA Impact & CIO Action Plan · June 2026 · Draft · Confidential",
   heroAttribution:
     "PwC IT Benchmarking · Gartner · Zylo 2026 SaaS Index · Forrester TEI · HDI/MetricNet · Independent 2026 Industry Data",
+};
+
+export const draft = {
+  label: "DRAFT",
+  banner:
+    "Draft — For internal review only. All figures are directional and unvalidated.",
+  footnote:
+    "Data footnote: All metrics, savings ranges, and enterprise value estimates on this site are directional and unvalidated. Analysis reflects 20 of 40 in-scope business units; TBM tower mapping, cybersecurity spend, IT labor survey results, and remaining BU coverage are pending confirmation. Do not use for board reporting, external distribution, or investment decisions without CIO validation and sign-off.",
 };
 
 export const kpis = [
@@ -646,5 +654,5 @@ export const footer = {
     "Based on PwC IT Benchmarking Analysis (June 2026) enhanced with Gartner, Zylo, Forrester, HDI/MetricNet, and independent 2026 industry research",
   copyright: "© 2026 Culligan International Co. All rights reserved.",
   disclaimer:
-    "All findings are directional; 20 of 40 in-scope BUs reflected. Not for external distribution.",
+    "Not for external distribution.",
 };
