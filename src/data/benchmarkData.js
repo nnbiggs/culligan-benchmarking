@@ -70,45 +70,90 @@ export const cioPriority = {
       step: "01",
       title: "Launch the SAM Program",
       description:
-        "Highest confidence, fastest payback, no structural change required. Audit all 44+ contracts, eliminate ghost users, consolidate overlapping tools, renegotiate top-10 EAs. This funds everything else and is the test of whether Culligan can enforce global standards.",
+        "Software Asset Management (SAM) is the discipline of knowing exactly what software licences Culligan owns, who is using them, and whether the company is getting value for money. In plain terms: right now nobody centrally knows what software is installed across 40+ acquired companies, how many seats are paid for versus actually used, or whether the same tool has been bought ten times under different contracts. A SAM program fixes this by creating a single inventory of all software contracts, identifying unused licences (industry average: 51% go unused), consolidating duplicate tools, and renegotiating vendor agreements using Culligan's full scale as leverage — instead of negotiating as 40 separate companies. This is not an IT project. It is a procurement and governance exercise that pays back faster than almost any other IT initiative available.",
       horizon: "Start this week",
       savings: "$4.2–10.4M yr-1",
       owner: "CIO + CPO (Procurement)",
       milestones: [
-        { period: "30 DAYS", text: "Appoint SAM program lead. Pull full vendor contract list from all 20 covered BUs." },
-        { period: "60 DAYS", text: "Complete license audit. Identify top 5 consolidation targets. Present EA renegotiation list to CFO." },
-        { period: "90 DAYS", text: "Launch renegotiations. Establish vendor governance council with CIO as chair." },
+        { period: "30 DAYS", text: "Appoint SAM program lead. Pull complete vendor and licence list from all covered BUs. Identify top 10 contracts by spend." },
+        { period: "60 DAYS", text: "Complete licence utilisation audit. Flag unused seats, duplicate tools, and contracts up for renewal in the next 12 months." },
+        { period: "90 DAYS", text: "Present consolidated vendor list and renegotiation targets to CFO. Launch first round of EA renegotiations with top 5 vendors." },
       ],
     },
     {
       step: "02",
-      title: "Commission IT Labor Survey",
-      description:
-        "The org structure is the root cause of every other problem in this analysis. Without knowing the span-of-control data and compensation by management layer, the delayering business case cannot be built. This 60-day survey unlocks the single largest structural lever.",
-      horizon: "Start within 30 days",
-      savings: "Survey-led (H2)",
-      owner: "CIO + CHRO",
+      title: "Scale the AI Service Desk — 40,000 Tickets Off the Queue, Starting Now",
+      whyItMatters:
+        "Culligan already paid for the answer to this problem. Moveworks — an AI tool that automatically resolves routine IT support requests without a human — is deployed but operating at near-zero effectiveness. The company handles ~126,000 IT support tickets per year manually, at an industry median cost of $22 per ticket. That is $2.8M in annual support-handling cost that is almost entirely addressable. Scaling Moveworks to 30–45% ticket containment (a conservative target — mature deployments achieve 45–65%) eliminates the need for a human to handle 38,000–57,000 routine requests per year. This does not require buying new technology, hiring new staff, or any structural change. It requires switching on, configuring, and training a tool that is already in the building. At 50 acquisitions per year, the ticket volume only grows — acting now locks in the efficiency before the problem compounds.",
+      note:
+        "Moveworks was acquired by ServiceNow in December 2025. If Culligan runs ServiceNow as its ITSM platform, this is a native capability. If not, evaluate whether to continue with Moveworks standalone or migrate to ServiceNow Now Assist as part of the broader ITSM consolidation.",
+      horizon: "0–6 Months",
+      savings: "$1.1–1.3M year-one · $4.7–7.9M fully scaled",
+      owner: "CIO + IT Operations Lead",
       milestones: [
-        { period: "30 DAYS", text: "Select survey vendor. Define scope — all 281 IT FTEs across 4 regions." },
-        { period: "60 DAYS", text: "Complete survey. Analyze management ratios by region and function." },
-        { period: "90 DAYS", text: "Present delayering proposal with dollar impact to CEO/CFO. Design target org model." },
+        { period: "30 DAYS", text: "Audit current Moveworks deployment — what is configured, what ticket categories are in scope, and what the current deflection rate is. Identify the top 10 ticket types by volume." },
+        { period: "60 DAYS", text: "Expand Moveworks coverage to the top 10 ticket categories. Set deflection rate target of 30% by day 90. Brief IT support team leads on the change." },
+        { period: "90 DAYS", text: "Hit 30% deflection target. Measure cost per ticket before and after. Present ROI to CIO. Set 45% target for month 6." },
       ],
     },
     {
       step: "03",
-      title: "Quantify Cybersecurity Posture",
-      description:
-        "No security spend data exists in the benchmarking. Across 100+ countries with OT/ICS assets, this is a board-level risk exposure. The security audit must complete before the trusted baseline is finalized — remediation costs are orders of magnitude higher than prevention.",
-      horizon: "Start within 30 days",
-      savings: "Risk Mitigation",
-      owner: "CIO + CISO",
+      title: "Standardise Developer Tools — $1–2M in Productivity Sitting Unused Across the Engineering Team",
+      whyItMatters:
+        "Culligan's software engineers and developers are working without AI-assisted coding tools — despite these tools being widely available, inexpensive, and proven to increase developer output by 20–35% (GitHub Copilot internal studies; Cursor usage data). Every developer working without a copilot is writing boilerplate code, looking up syntax, and manually searching documentation that an AI tool resolves in seconds. At Culligan's scale, standardising GitHub Copilot or Cursor across the developer population costs approximately $200–400 per developer per year and returns that investment within the first month of use. This is one of the highest ROI, lowest risk, fastest-to-implement IT investments available — requiring no infrastructure change, no procurement approval beyond a standard software licence, and no change management beyond a brief onboarding session. It also sets the cultural foundation for broader AI adoption across the organisation.",
+      horizon: "0–3 Months",
+      savings: "$1.0–2.0M annually",
+      owner: "CIO + Engineering Leads",
       milestones: [
-        { period: "30 DAYS", text: "Map all security spend within $69.2M base. Identify what is and is not included." },
-        { period: "60 DAYS", text: "Benchmark vs. 8–12% of IT budget norm and 15–20% manufacturing norm." },
-        { period: "90 DAYS", text: "Present security investment gap analysis to board. Initiate gap remediation plan." },
+        { period: "30 DAYS", text: "Count the current developer and engineering population across all covered BUs. Survey current tool usage — is anyone already using copilots individually? Select the standard tool (GitHub Copilot or Cursor) based on existing GitHub/IDE infrastructure." },
+        { period: "60 DAYS", text: "Purchase licences for 100% of the developer population. Run a mandatory 2-hour onboarding session per team. Set a 30-day usage target." },
+        { period: "90 DAYS", text: "Measure adoption rate and developer output metrics (PRs merged, time to close tickets, code review cycle time). Calculate ROI. Expand mandate to all engineering-adjacent roles (data analysts, QA, DevOps)." },
       ],
     },
   ],
+  businessResults: {
+    title: "Business Results",
+    subtitle:
+      "If all three actions are executed in the next 90 days, what does success look like — in numbers?",
+    columns: ["Action", "Investment Required", "Year-1 Return", "3-Year Return", "Payback Period", "Confidence Level"],
+    rows: [
+      {
+        action: "Action 1 — SAM Program",
+        investment: "$150–300K (SAM tooling + program lead)",
+        year1: "$4.2–10.4M",
+        year3: "$12–31M",
+        payback: "2–4 weeks",
+        confidence: "HIGH — based on 44+ confirmed contracts, industry-average 51% licence waste rate",
+      },
+      {
+        action: "Action 2 — AI Service Desk",
+        investment: "$0 additional (Moveworks already deployed)",
+        year1: "$1.1–1.3M (30–45% deflection × $22/ticket × 126K tickets)",
+        year3: "$3.3–4.9M (growing with ticket volume from M&A)",
+        payback: "Immediate — no new spend required",
+        confidence: "HIGH — tool is deployed, benchmarks are published, target deflection rate is conservative",
+      },
+      {
+        action: "Action 3 — Developer Copilots",
+        investment: "$200–400/developer/year (licence cost only)",
+        year1: "$1.0–2.0M (20–35% productivity uplift on developer labour)",
+        year3: "$3.0–6.0M",
+        payback: "3–4 weeks",
+        confidence: "MEDIUM-HIGH — GitHub Copilot and Cursor have published productivity benchmarks; actual return depends on developer population size",
+      },
+      {
+        action: "COMBINED TOTAL",
+        investment: "~$500K–750K total",
+        year1: "$6.3–13.7M",
+        year3: "$18.3–41.9M",
+        payback: "Under 30 days on the combined portfolio",
+        confidence: "HIGH",
+        isTotal: true,
+      },
+    ],
+    closing:
+      "These three actions share a critical characteristic: none of them require structural reorganisation, ERP migration, or long procurement cycles. They are executable within the current IT organisation as it exists today — fragmented, acquisition-heavy, and under-governed. That is precisely why they come first. They generate the credibility, the cash, and the organisational proof-of-concept that makes every subsequent transformation initiative easier to fund and faster to execute.",
+  },
 };
 
 export const executiveSummary = {
