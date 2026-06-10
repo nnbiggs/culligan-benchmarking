@@ -28,7 +28,7 @@ function PriorityCard({ priority, index, inView }) {
             <p className="text-sm text-culligan-muted leading-relaxed">{priority.whyItMatters}</p>
           </div>
         ) : (
-          <p className="text-sm text-culligan-muted leading-relaxed">{priority.description}</p>
+          <p className="text-sm text-culligan-muted leading-relaxed whitespace-pre-line">{priority.description}</p>
         )}
 
         {priority.note && (

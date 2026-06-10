@@ -13,7 +13,7 @@ export const draft = {
   banner:
     "Draft — For internal review only. All figures are directional and unvalidated.",
   footnote:
-    "Data footnote: All metrics, savings ranges, and enterprise value estimates on this site are directional and unvalidated. Analysis reflects 20 of 40 in-scope business units; TBM tower mapping, cybersecurity spend, IT labor survey results, and remaining BU coverage are pending confirmation. Do not use for board reporting, external distribution, or investment decisions without CIO validation and sign-off.",
+    "Data footnote: All metrics, savings ranges, and enterprise value estimates on this site are directional and unvalidated. Analysis reflects 20 of 40 in-scope business units; TBM tower mapping, IT labor survey results, and remaining BU coverage are pending confirmation. Do not use for board reporting, external distribution, or investment decisions without CIO validation and sign-off.",
 };
 
 export const kpis = [
@@ -70,7 +70,7 @@ export const cioPriority = {
       step: "01",
       title: "Launch the SAM Program",
       description:
-        "Software Asset Management (SAM) is the discipline of knowing exactly what software licences Culligan owns, who is using them, and whether the company is getting value for money. In plain terms: right now nobody centrally knows what software is installed across 40+ acquired companies, how many seats are paid for versus actually used, or whether the same tool has been bought ten times under different contracts. A SAM program fixes this by creating a single inventory of all software contracts, identifying unused licences (industry average: 51% go unused), consolidating duplicate tools, and renegotiating vendor agreements using Culligan's full scale as leverage — instead of negotiating as 40 separate companies. This is not an IT project. It is a procurement and governance exercise that pays back faster than almost any other IT initiative available.",
+        "A Software Asset Management (SAM) program is the discipline of knowing exactly what software Culligan owns, who is using it, and whether the company is getting value for money across every contract.\n\nRight now, no single team knows what software is installed across 40+ acquired companies, how many seats are paid for versus actually used, or whether the same tool has been bought ten times under different contracts. A SAM program fixes this by creating a single inventory of all software contracts, identifying unused licences (industry average: 51% go unused), consolidating duplicate tools, and renegotiating vendor agreements using Culligan's full scale as leverage — instead of negotiating as 40 separate companies. This is not an IT project. It is a procurement and governance exercise that pays back faster than almost any other IT initiative available.",
       horizon: "Start this week",
       savings: "$4.2–10.4M yr-1",
       owner: "CIO + CPO (Procurement)",
@@ -176,10 +176,11 @@ export const executiveSummary = {
       },
       {
         id: "S2",
-        title: "Headline IT Spend — Below Median Means Room to Invest Smartly",
+        title: "Headline IT Spend — Within Benchmark Range",
+        tone: "neutral",
         description:
-          "At 2.10% of revenue, Culligan spends less on IT overall than its peers — creating headroom to redirect savings toward structural investments. The peer median is 2.44%. Culligan is not being starved of IT investment — it is allocating it poorly within a lean total. The savings programme does not require cutting the IT budget further; it requires moving money from ungoverned software and excess management layers into consolidation, governance, and automation.",
-        highlight: "2.10% of revenue vs. 2.44% peer median · $69.2M total · Covers 20 of 40 BUs (floor, not ceiling)",
+          "At 2.10% of revenue, Culligan's overall IT spend sits within the acceptable benchmark range — neither a red flag nor a competitive advantage. The headline is not the problem; where the money goes is. The $69.2M total is within range of the 2.44% peer median — not low enough to signal under-investment, and not high enough to be a concern. Total IT spend is appropriate; the issue is allocation — heavily concentrated in ungoverned software contracts rather than structural platforms, governance, and consolidation.",
+        highlight: "2.10% of revenue · Peer median: 2.44% · Within benchmark range",
       },
       {
         id: "S3",
@@ -200,8 +201,6 @@ export const executiveSummary = {
         description:
           "Software costs $34.8M — 1.05% of revenue versus a peer median of 0.36%. That is 3× the benchmark and 50% of the entire IT budget, sitting in 44+ vendor contracts that no central team owns. Industry data shows 51% of enterprise SaaS licences go unused. Applied to Culligan's base, $8–18M may be directly recoverable through a SAM programme before any renegotiation begins.",
         metrics: "$4.2–10.4M confirmed · Up to $18M additional (SaaS waste) · 0–12 months",
-        priority: "PRIORITY 1 — START THIS WEEK",
-        priorityType: "red",
       },
       {
         id: "O2",
@@ -209,17 +208,6 @@ export const executiveSummary = {
         description:
           "19.9% of IT staff are managers — 81% above the lean industry norm of ~11%. Each manager has the authority to select tools, sign contracts, and retain their own ERP system. Delayering and implementing a global IT operating model with centralised architecture governance is the single change that makes every other saving permanent.",
         metrics: "Survey-led (IT labour survey required) · Est. $3–8M annually · 6–18 months",
-        priority: "PRIORITY 2 — COMMISSION SURVEY IN 30 DAYS",
-        priorityType: "red",
-      },
-      {
-        id: "O3",
-        title: "The Cybersecurity Gap — An Unquantified Risk Across 100+ Countries",
-        description:
-          "There is no cybersecurity spend data in the current benchmarking. Expected range is $5.5–8.3M (8–12% of IT budget), rising to $10–14M using the manufacturing norm. Culligan operates water treatment infrastructure across 100+ countries including OT/ICS systems. The cost of a breach ($4.88M average) far exceeds the cost of a 30-day audit.",
-        metrics: "Investment requirement — not a savings lever · 30-day assessment · Board-level risk",
-        priority: "PRIORITY 3 — ASSESS WITHIN 30 DAYS",
-        priorityType: "red",
       },
       {
         id: "O4",
@@ -227,8 +215,6 @@ export const executiveSummary = {
         description:
           "25+ ERP systems across 40 business units means every consolidated report requires manual reconciliation from 25 different sources. At 50 acquisitions per year with no ERP governance, the estate grows by 5–10 new systems annually. Forrester TEI shows ERP consolidation delivers 106% ROI over three years with 17-month payback.",
         metrics: "$3.8–7.5M annually · 12–36 months · Payback within 17 months (Forrester)",
-        priority: "PRIORITY 4 — BEGIN BUSINESS CASE NOW",
-        priorityType: "amber",
       },
       {
         id: "O5",
@@ -236,8 +222,6 @@ export const executiveSummary = {
         description:
           "$13.0M is spent across four independent regional IT support teams. Every new acquisition adds support headcount in proportion to users. ~126,000 annual tickets are handled largely manually despite Moveworks (now ServiceNow) already being deployed. Scaling AI deflection to 30–45% would eliminate 38,000–57,000 manual tickets per year.",
         metrics: "$2.0–3.9M annually · 12–24 months · AI deflection quick win in 6 months",
-        priority: "PRIORITY 5 — DESIGN MODEL IN PHASE 2",
-        priorityType: "amber",
       },
       {
         id: "O6",
@@ -245,8 +229,6 @@ export const executiveSummary = {
         description:
           "Culligan is not under-investing in AI — it is under-deploying it. Moveworks operates at near-zero deflection against a mature benchmark of 45–65%. Developer copilots are not standardised despite a $1.0–2.0M productivity opportunity. The AI opportunity is $5.7–10.9M across four levers — mostly deployment, not procurement.",
         metrics: "$5.7–10.9M across four AI levers · 0–18 months · Largely deployment, not procurement",
-        priority: "PRIORITY 6 — SCALE IN PHASES 1 & 2",
-        priorityType: "green",
       },
     ],
   },
@@ -355,14 +337,6 @@ export const keyFindings = {
           "Culligan already has Moveworks (now ServiceNow) to handle routine IT requests — but it has barely been switched on. At 126,000 tickets and $22 per ticket, deploying AI properly could automatically handle 40–50% of requests, saving $1–1.5M annually without buying new technology.",
       },
       {
-        area: "Cybersecurity",
-        status: "UNASSESSED",
-        statusType: "red",
-        numbers: "Security spend in benchmarking: $0 captured\nExpected range: 8–12% of IT budget\nExpected spend: $5.5–8.3M\nManufacturing norm: 15–20% of IT budget\nCulligan countries of operation: 100+",
-        meaning:
-          "Nobody knows how much Culligan spends on security or whether it is enough. For a company operating water treatment infrastructure across 100+ countries, this is a board-level concern. OT/ICS systems require dedicated protection. The absence of data must be addressed immediately.",
-      },
-      {
         area: "Overall IT Spend",
         status: "BELOW MEDIAN",
         statusType: "green",
@@ -424,7 +398,6 @@ export const costOfInaction = {
     { item: "IT org at 19.9% management (vs. 12%)", annual: "~$3–6M", threeYear: "~$9–18M", basis: "Excess management layers produce software 3× median and app sprawl; 15–20 excess FTEs" },
     { item: "Software at 3× median — each additional year", annual: "~$15–20M", threeYear: "~$45–60M", basis: "Paying $34.8M vs. ~$12M peer-equivalent; new BUs add contracts with no governance" },
     { item: "No shared-services IT support model", annual: "~$1–2M", threeYear: "~$3–6M", basis: "Each acquired BU adds proportional support FTEs; linear vs. sub-linear scaling" },
-    { item: "Cybersecurity gap unquantified", annual: "Exposure", threeYear: "Board Risk", basis: "OT/ICS across 100+ countries; average enterprise breach cost $4.88M (IBM 2024)" },
     { item: "TOTAL ANNUAL COST OF INACTION", annual: "~$22–35M/yr", threeYear: "~$66–105M", basis: "Conservative floor — excludes M&A deal value erosion and regulatory exposure", isTotal: true },
   ],
   note: "Annual cost estimates are directional and based on industry benchmarks applied to Culligan's specific profile.",
@@ -436,7 +409,7 @@ export const costOfInaction = {
 
 export const strategicInsights = {
   title: "Strategic Insights & Required Actions",
-  subtitle: "Seven insights — each with observation, business implication, and mandatory action",
+  subtitle: "Six insights — each with observation, business implication, and mandatory action",
   items: [
     {
       id: 1,
@@ -490,16 +463,6 @@ export const strategicInsights = {
     },
     {
       id: 6,
-      title: "Cybersecurity: A Board-Level Blind Spot",
-      borderColor: "#C0392B",
-      sections: {
-        observation: "No cybersecurity spend data in benchmarking. Enterprise norm: 8–12% of IT budget; manufacturing/OT: 15–20%. Applied to $69.2M base: expected spend is $5.5–13.8M. Gartner projects $240B global security spend in 2026. AI-enabled attacks increased 72% in 2025.",
-        businessImplication: "Culligan operates across 100+ countries with water treatment manufacturing assets including OT/ICS infrastructure — a specific and growing attack vector. An unquantified cybersecurity posture is an unmanaged board-level risk.",
-        requiredAction: "Immediately commission cybersecurity spend audit. Map all security spend within $69.2M baseline. Benchmark vs. norms. Identify OT/ICS gaps. Present findings to the board before trusted baseline is finalized.",
-      },
-    },
-    {
-      id: 7,
       title: "Infrastructure Is a Discipline to Export, Not an Area to Fix",
       borderColor: "#1E7A46",
       sections: {
@@ -546,7 +509,7 @@ export const maturityModel = {
   title: "IT Maturity Model",
   subtitle: "Where Culligan sits today — and where it needs to be",
   intro:
-    "Culligan's current state across eight domains on a 1–5 scale (1 = Reactive, 5 = Optimized). Target reflects the state needed to support M&A strategy without compounding cost.",
+    "Culligan's current state across seven domains on a 1–5 scale (1 = Reactive, 5 = Optimized). Target reflects the state needed to support M&A strategy without compounding cost.",
   columns: ["Domain", "Score", "Level", "Current State", "Target State", "Gap"],
   rows: [
     { domain: "Vendor & License Governance", score: "1 / 5", level: "Reactive", current: "44+ contracts, no central governance, 3× peer median", target: "4 — Proactive: Group-wide SAM, vendor council, EA governance", gap: "3 levels" },
@@ -555,12 +518,11 @@ export const maturityModel = {
     { domain: "IT Support & Operating Model", score: "2 / 5", level: "Developing", current: "4 regional models, no shared services, manual tickets", target: "4 — Proactive: Unified ITSM, shared services, AI deflection", gap: "2 levels" },
     { domain: "Infrastructure & Cloud", score: "3 / 5", level: "Defined", current: "Lean, at/below benchmark, FinOps absent", target: "4 — Proactive: FinOps, cloud governance, resilience", gap: "1 level" },
     { domain: "AI & Automation", score: "2 / 5", level: "Developing", current: "Moveworks early-stage, copilots not standardized", target: "4 — Proactive: AI deflection 40%+, copilots standardized", gap: "2 levels" },
-    { domain: "Cybersecurity Posture", score: "? / 5", level: "UNASSESSED", current: "No spend data — posture unknown", target: "3 — Defined: Spend quantified, gap to 8–12% norm closed", gap: "Unknown" },
     { domain: "M&A IT Integration Capability", score: "2 / 5", level: "Developing", current: "No standardized playbook; BU-by-BU approach", target: "4 — Proactive: Repeatable playbook, <90-day Day-1 readiness", gap: "2 levels" },
   ],
   callout: {
     label: "MATURITY READING",
-    text: "Culligan scores 1–2 across five of eight domains — including the two most critical (Vendor Governance and M&A IT Integration). No domain scores above 3. The target is reaching 3–4 across the board — the threshold at which IT stops being a growth constraint and starts being a growth enabler.",
+    text: "Culligan scores 1–2 across six of seven domains — including the two most critical (Vendor Governance and M&A IT Integration). No domain scores above 3. The target is reaching 3–4 across the board — the threshold at which IT stops being a growth constraint and starts being a growth enabler.",
   },
 };
 
@@ -577,7 +539,6 @@ export const priorityMatrix = {
       items: [
         "H6 — SAM + Vendor Rationalization ($4.2–10.4M, 0–12 mo)",
         "IT Labor Survey — commissions in 30 days, sizes H2",
-        "Cybersecurity spend audit (30-day assessment)",
         "Close BU data gaps — Italy first (30–60 days)",
         "AI-driven SAM tooling — accelerates H6 savings",
       ],
@@ -611,7 +572,7 @@ export const priorityMatrix = {
       color: "#5A6A7E",
       items: [
         "Deep infrastructure re-architecture (already lean)",
-        "Full OT/ICS tech refresh (unless security audit mandates)",
+        "Full OT/ICS tech refresh",
         "Legacy data center exits (sequence after ERP decisions)",
       ],
     },
@@ -632,7 +593,6 @@ export const roadmap = {
         "Launch SAM + vendor rationalization program across all 44+ contracts",
         "Appoint SAM program lead; establish vendor governance council",
         "Commission IT labor survey (60 days) to size H2 delayering",
-        "Cybersecurity spend audit — map posture vs. 8–12% IT budget norm",
         "Close BU coverage gap: Italy (9 entities), Canada, CWC, China, EMEA OEM",
         "Validate TBM tower mapping in CIO office workshops",
         "Deploy AI-driven SAM tooling to accelerate license waste recovery",
@@ -668,7 +628,7 @@ export const roadmap = {
       ],
     },
   ],
-  note: "Phase 1 and Phase 2 can run concurrently where independent. Phase 3 ERP work must not begin until Phase 2 org governance and Architecture Council are operational. Cybersecurity assessment runs in parallel with all phases.",
+  note: "Phase 1 and Phase 2 can run concurrently where independent. Phase 3 ERP work must not begin until Phase 2 org governance and Architecture Council are operational.",
 };
 
 export const benchmarkTable = {
@@ -685,7 +645,6 @@ export const benchmarkTable = {
     { metric: "IT FTEs per $1B Revenue", culligan: "85", peer: "70.5", comparison: "🟡 +21%" },
     { metric: "AI Ticket Deflection", culligan: "~0%", peer: "45–65% (mature)", comparison: "🔴 Far Below" },
     { metric: "SaaS License Utilization", culligan: "Unknown", peer: "54% avg", comparison: "🟡 Unassessed" },
-    { metric: "Cybersecurity % IT Budget", culligan: "Unknown", peer: "8–12%", comparison: "🔴 Unquantified" },
     { metric: "Offshore Delivery Mix", culligan: "Below norm", peer: "25–35%", comparison: "🟡 Gap Exists" },
     { metric: "M&A IT Integration Playbook", culligan: "None", peer: "Standardized", comparison: "🔴 Missing" },
   ],

@@ -1,12 +1,23 @@
 import { executiveSummary } from "../data/benchmarkData";
 import SectionWrapper from "./SectionWrapper";
-import StatusBadge from "./StatusBadge";
 
 function StrengthCard({ item }) {
+  const isNeutral = item.tone === "neutral";
+
   return (
-    <div className="rounded-xl bg-white shadow-md p-5 sm:p-6 border-t-4 border-t-culligan-green h-full">
+    <div
+      className={`rounded-xl bg-white shadow-md p-5 sm:p-6 border-t-4 h-full ${
+        isNeutral ? "border-t-culligan-accent" : "border-t-culligan-green"
+      }`}
+    >
       <div className="flex items-start gap-3 mb-3">
-        <span className="font-headline text-lg font-extrabold text-culligan-green shrink-0">{item.id}</span>
+        <span
+          className={`font-headline text-lg font-extrabold shrink-0 ${
+            isNeutral ? "text-culligan-accent" : "text-culligan-green"
+          }`}
+        >
+          {item.id}
+        </span>
         <h3 className="font-headline text-base sm:text-lg font-bold text-culligan-deep leading-snug">{item.title}</h3>
       </div>
       <p className="text-sm text-culligan-muted leading-relaxed mb-4">{item.description}</p>
@@ -18,15 +29,9 @@ function StrengthCard({ item }) {
 function OpportunityCard({ item }) {
   return (
     <div className="rounded-xl bg-white shadow-md p-5 sm:p-6 border-l-4 border-l-culligan-accent h-full flex flex-col">
-      <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
-        <div className="flex items-start gap-3">
-          <span className="font-headline text-lg font-extrabold text-culligan-accent shrink-0">{item.id}</span>
-          <h3 className="font-headline text-base sm:text-lg font-bold text-culligan-deep leading-snug">{item.title}</h3>
-        </div>
-      </div>
+      <h3 className="font-headline text-base sm:text-lg font-bold text-culligan-deep leading-snug mb-3">{item.title}</h3>
       <p className="text-sm text-culligan-muted leading-relaxed flex-1">{item.description}</p>
-      <p className="text-xs text-culligan-body font-medium mt-4 mb-3">{item.metrics}</p>
-      <StatusBadge label={item.priority} type={item.priorityType} />
+      <p className="text-xs text-culligan-body font-medium mt-4">{item.metrics}</p>
     </div>
   );
 }
