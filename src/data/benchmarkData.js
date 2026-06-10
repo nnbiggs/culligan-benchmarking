@@ -3,9 +3,9 @@ export const brand = {
   reportLabel: "IT BENCHMARKING ANALYSIS",
   heroTitle: "Transforming IT for Growth",
   heroSubtitle:
-    "Executive Insights, Gap Analysis & Strategic Roadmap · June 2026 · Enhanced Edition · Confidential",
+    "Strategic Roadmap, EBITDA Impact & CIO Action Plan · June 2026 · Final Edition · Confidential",
   heroAttribution:
-    "Based on PwC IT Benchmarking Analysis · Enhanced with Gartner, Zylo, Forrester, HDI/MetricNet 2026 Industry Data",
+    "PwC IT Benchmarking · Gartner · Zylo 2026 SaaS Index · Forrester TEI · HDI/MetricNet · Independent 2026 Industry Data",
 };
 
 export const kpis = [
@@ -23,173 +23,304 @@ export const kpis = [
     id: "software",
     display: "~3×",
     label: "Software vs. Peer Median",
-    sublabel: "$34.8M = 50% of IT budget",
+    sublabel: "$34.8M — 50% of all IT spend",
     animate: false,
   },
   {
     id: "savings",
     display: "$16–31M",
-    label: "Annual Savings Potential",
-    sublabel: "22–45% reduction to benchmark",
+    label: "Savings Potential",
+    sublabel: "Confirmed floor — scales with BUs",
     animate: false,
   },
   {
-    id: "management",
-    value: 19.9,
-    prefix: "",
-    suffix: "%",
-    decimals: 1,
-    label: "Management Ratio",
-    sublabel: "+81% above lean ~11% norm",
-    animate: true,
+    id: "ev",
+    display: "$160–310M",
+    label: "EBITDA / EV Impact",
+    sublabel: "At 10–12× PE exit multiple",
+    animate: false,
   },
 ];
 
 export const navLinks = [
   { id: "overview", label: "Overview" },
-  { id: "baseline", label: "Baseline" },
+  { id: "priority", label: "Priority" },
   { id: "findings", label: "Findings" },
-  { id: "savings", label: "Savings" },
+  { id: "value", label: "EV Impact" },
   { id: "insights", label: "Insights" },
   { id: "roadmap", label: "Roadmap" },
   { id: "reference", label: "Reference" },
 ];
 
+export const cioPriority = {
+  title: "If You Do Nothing Else, Do These Three Things",
+  eyebrow: "CIO PRIORITY PAGE",
+  intro:
+    "This analysis covers 12 sections and 21 roadmap actions. The page below is the forced-rank filter: the three actions that unlock the most value, have the fewest dependencies, and must start before anything else. Everything else in this report is context and sequencing for these three moves.",
+  priorities: [
+    {
+      step: "01",
+      title: "Launch the SAM Program",
+      description:
+        "Highest confidence, fastest payback, no structural change required. Audit all 44+ contracts, eliminate ghost users, consolidate overlapping tools, renegotiate top-10 EAs. This funds everything else and is the test of whether Culligan can enforce global standards.",
+      horizon: "Start this week",
+      savings: "$4.2–10.4M yr-1",
+      owner: "CIO + CPO (Procurement)",
+      milestones: [
+        { period: "30 DAYS", text: "Appoint SAM program lead. Pull full vendor contract list from all 20 covered BUs." },
+        { period: "60 DAYS", text: "Complete license audit. Identify top 5 consolidation targets. Present EA renegotiation list to CFO." },
+        { period: "90 DAYS", text: "Launch renegotiations. Establish vendor governance council with CIO as chair." },
+      ],
+    },
+    {
+      step: "02",
+      title: "Commission IT Labor Survey",
+      description:
+        "The org structure is the root cause of every other problem in this analysis. Without knowing the span-of-control data and compensation by management layer, the delayering business case cannot be built. This 60-day survey unlocks the single largest structural lever.",
+      horizon: "Start within 30 days",
+      savings: "Survey-led (H2)",
+      owner: "CIO + CHRO",
+      milestones: [
+        { period: "30 DAYS", text: "Select survey vendor. Define scope — all 281 IT FTEs across 4 regions." },
+        { period: "60 DAYS", text: "Complete survey. Analyze management ratios by region and function." },
+        { period: "90 DAYS", text: "Present delayering proposal with dollar impact to CEO/CFO. Design target org model." },
+      ],
+    },
+    {
+      step: "03",
+      title: "Quantify Cybersecurity Posture",
+      description:
+        "No security spend data exists in the benchmarking. Across 100+ countries with OT/ICS assets, this is a board-level risk exposure. The security audit must complete before the trusted baseline is finalized — remediation costs are orders of magnitude higher than prevention.",
+      horizon: "Start within 30 days",
+      savings: "Risk Mitigation",
+      owner: "CIO + CISO",
+      milestones: [
+        { period: "30 DAYS", text: "Map all security spend within $69.2M base. Identify what is and is not included." },
+        { period: "60 DAYS", text: "Benchmark vs. 8–12% of IT budget norm and 15–20% manufacturing norm." },
+        { period: "90 DAYS", text: "Present security investment gap analysis to board. Initiate gap remediation plan." },
+      ],
+    },
+  ],
+};
+
 export const executiveSummary = {
   eyebrow: "EXECUTIVE SUMMARY",
-  headline: "The strategic picture — what it means and what Culligan must do",
-  paragraphs: [
-    "Culligan International's IT & Digital spend of $69.2M (2.10% of revenue) is lean relative to its water-sector peers — a finding that is simultaneously reassuring and misleading. The headline efficiency masks two confirmed structural problems and at least three significant analytical blind spots that, together, make the current $16–31M savings estimate a conservative floor.",
-    "The two confirmed problems are software and licensing running at nearly 3× the peer median, and an IT organization so top-heavy that it systematically generates the fragmentation it cannot govern away. These are not independent issues — the org structure is the root cause of the software sprawl, and fixing the software without fixing the org will not produce durable savings. The three blind spots — cybersecurity posture, Run/Grow/Transform investment mix, and offshore delivery opportunity — each represent material financial exposure or untapped savings that this report now surfaces.",
-    "The strategic imperative is sequencing. The vendor rationalization program is the year-one quick win that funds the transformation and tests Culligan's ability to enforce global standards. Organizational delayering removes the structural cause of fragmentation and makes all other savings permanent. ERP consolidation is the multi-year anchor that determines whether Culligan can operate and report as one company. A newly identified fourth priority — quantifying and right-sizing the cybersecurity investment — must be initiated in parallel, as it is both a risk exposure and a potential spending gap.",
-  ],
-  callout: {
-    label: "BOTTOM LINE FOR LEADERSHIP",
-    text: "Culligan is not a broad IT overspender — but it is structurally mis-spending. The $16–31M savings opportunity is a confirmed floor, not a ceiling. Enhanced 2026 industry data suggests SaaS waste alone could add $8–18M to the recoverable pool, and AI automation economics have strengthened materially since the original analysis. Fix the vendors. Flatten the org. Consolidate the ERPs. Quantify the security exposure. Done in sequence, these four moves transform IT from a cost that scales with complexity into a platform for Culligan's next stage of growth.",
+  headline: "For the Board, CEO, CFO & CIO — strengths to protect, opportunities to capture",
+  situation: {
+    label: "THE SITUATION",
+    text: "Culligan International is a $3.4B PE-backed water services platform that has executed 300+ acquisitions since 2016, running roughly 50 bolt-on deals per year. That growth engine has delivered exceptional revenue scale — but it has also created a predictable IT problem: spend concentrated in ungoverned software contracts, 25+ fragmented ERP systems, and an organisational structure that gives every regional manager the authority to buy their own tools. Culligan is not an IT overspender. It is an IT mis-spender. The $16–31M savings opportunity does not require cutting investment — it requires redirecting it toward governance, structure, and consolidation.",
+  },
+  strengths: {
+    label: "STRENGTHS",
+    sublabel: "What Culligan Is Already Doing Well",
+    items: [
+      {
+        id: "S1",
+        title: "Infrastructure Efficiency — The Benchmark Others Aspire To",
+        description:
+          "Culligan runs its core technology infrastructure leaner than any company in its peer group — and this discipline is proof that governance, when applied, works. Network and compute spend sits at 0.12% of revenue against a peer median of 0.17%. Total infrastructure costs $5.6M — below benchmark across every metric. The same rigour that keeps infrastructure lean needs to be applied to software, applications, and vendor management.",
+        highlight: "0.12% of revenue vs. 0.17% median · $5.6M total · Below benchmark on all infrastructure metrics",
+      },
+      {
+        id: "S2",
+        title: "Headline IT Spend — Below Median Means Room to Invest Smartly",
+        description:
+          "At 2.10% of revenue, Culligan spends less on IT overall than its peers — creating headroom to redirect savings toward structural investments. The peer median is 2.44%. Culligan is not being starved of IT investment — it is allocating it poorly within a lean total. The savings programme does not require cutting the IT budget further; it requires moving money from ungoverned software and excess management layers into consolidation, governance, and automation.",
+        highlight: "2.10% of revenue vs. 2.44% peer median · $69.2M total · Covers 20 of 40 BUs (floor, not ceiling)",
+      },
+      {
+        id: "S3",
+        title: "M&A Execution Capability — The Engine That Makes IT Reform Urgent and Valuable",
+        description:
+          "Culligan's ability to execute 50 acquisitions per year is a genuine competitive advantage — and it is precisely this capability that makes IT transformation a strategic priority. The M&A machine has grown Culligan from $400M to $3.4B in under a decade. A standardised integration playbook and consolidated ERP platform transform the M&A machine from a fragmentation engine into a genuine value-creation flywheel.",
+        highlight: "300+ acquisitions since 2016 · ~50 bolt-on deals/year · $400M to $3.4B revenue growth",
+      },
+    ],
+  },
+  opportunities: {
+    label: "OPPORTUNITIES",
+    sublabel: "Where Culligan Must Act, In Priority Order",
+    items: [
+      {
+        id: "O1",
+        title: "The Software Sprawl — Half the IT Budget Is Unmanaged",
+        description:
+          "Software costs $34.8M — 1.05% of revenue versus a peer median of 0.36%. That is 3× the benchmark and 50% of the entire IT budget, sitting in 44+ vendor contracts that no central team owns. Industry data shows 51% of enterprise SaaS licences go unused. Applied to Culligan's base, $8–18M may be directly recoverable through a SAM programme before any renegotiation begins.",
+        metrics: "$4.2–10.4M confirmed · Up to $18M additional (SaaS waste) · 0–12 months",
+        priority: "PRIORITY 1 — START THIS WEEK",
+        priorityType: "red",
+      },
+      {
+        id: "O2",
+        title: "The Management Structure — The Root Cause Behind Every Other Problem",
+        description:
+          "19.9% of IT staff are managers — 81% above the lean industry norm of ~11%. Each manager has the authority to select tools, sign contracts, and retain their own ERP system. Delayering and implementing a global IT operating model with centralised architecture governance is the single change that makes every other saving permanent.",
+        metrics: "Survey-led (IT labour survey required) · Est. $3–8M annually · 6–18 months",
+        priority: "PRIORITY 2 — COMMISSION SURVEY IN 30 DAYS",
+        priorityType: "red",
+      },
+      {
+        id: "O3",
+        title: "The Cybersecurity Gap — An Unquantified Risk Across 100+ Countries",
+        description:
+          "There is no cybersecurity spend data in the current benchmarking. Expected range is $5.5–8.3M (8–12% of IT budget), rising to $10–14M using the manufacturing norm. Culligan operates water treatment infrastructure across 100+ countries including OT/ICS systems. The cost of a breach ($4.88M average) far exceeds the cost of a 30-day audit.",
+        metrics: "Investment requirement — not a savings lever · 30-day assessment · Board-level risk",
+        priority: "PRIORITY 3 — ASSESS WITHIN 30 DAYS",
+        priorityType: "red",
+      },
+      {
+        id: "O4",
+        title: "The ERP Estate — 25 Systems That Make One Company Impossible to Run",
+        description:
+          "25+ ERP systems across 40 business units means every consolidated report requires manual reconciliation from 25 different sources. At 50 acquisitions per year with no ERP governance, the estate grows by 5–10 new systems annually. Forrester TEI shows ERP consolidation delivers 106% ROI over three years with 17-month payback.",
+        metrics: "$3.8–7.5M annually · 12–36 months · Payback within 17 months (Forrester)",
+        priority: "PRIORITY 4 — BEGIN BUSINESS CASE NOW",
+        priorityType: "amber",
+      },
+      {
+        id: "O5",
+        title: "The Support Model — A Growth Tax That Compounds With Every Deal",
+        description:
+          "$13.0M is spent across four independent regional IT support teams. Every new acquisition adds support headcount in proportion to users. ~126,000 annual tickets are handled largely manually despite Moveworks (now ServiceNow) already being deployed. Scaling AI deflection to 30–45% would eliminate 38,000–57,000 manual tickets per year.",
+        metrics: "$2.0–3.9M annually · 12–24 months · AI deflection quick win in 6 months",
+        priority: "PRIORITY 5 — DESIGN MODEL IN PHASE 2",
+        priorityType: "amber",
+      },
+      {
+        id: "O6",
+        title: "The AI & Automation Upside — Tools Already Paid For, Barely Switched On",
+        description:
+          "Culligan is not under-investing in AI — it is under-deploying it. Moveworks operates at near-zero deflection against a mature benchmark of 45–65%. Developer copilots are not standardised despite a $1.0–2.0M productivity opportunity. The AI opportunity is $5.7–10.9M across four levers — mostly deployment, not procurement.",
+        metrics: "$5.7–10.9M across four AI levers · 0–18 months · Largely deployment, not procurement",
+        priority: "PRIORITY 6 — SCALE IN PHASES 1 & 2",
+        priorityType: "green",
+      },
+    ],
+  },
+  conclusion: {
+    label: "EXECUTIVE CONCLUSION",
+    title: "Culligan is not an IT overspender — it is an IT mis-spender.",
+    text: "Three strengths confirm Culligan can run IT lean and scale fast when governance is applied. Six prioritised opportunities show exactly where to redirect investment. The $16–31M confirmed savings — worth $160–370M in enterprise value at current PE exit multiples — is not a cost reduction exercise. It is the structural reform that transforms IT from a fragmentation engine into the platform that powers Culligan's next 300 acquisitions.",
   },
 };
 
-export const spendBaseline = {
-  title: "IT Spend Baseline & Tower Analysis",
-  subtitle: "Where the $69.2M sits — preliminary TBM allocation across 20 of 40 in-scope BUs",
-  intro:
-    "Two structural facts dominate the picture: software is the single largest cost category at $34.8M (50% of total), and spend is highly concentrated — Corporate alone accounts for $21M and the top five BUs represent ~$46.5M (67% of the base).",
-  columns: ["TBM Tower", "Spend ($M)", "% of IT", "vs. Peer Benchmark", "Status"],
-  rows: [
-    { tower: "Application / Platform", spend: "$25.1M", pct: "36%", benchmark: "0.76% vs 0.65% median", status: "ABOVE MEDIAN", statusType: "amber" },
-    { tower: "Software (within towers)", spend: "$34.8M", pct: "50%", benchmark: "1.05% vs 0.36% median", status: "3× MEDIAN", statusType: "red" },
-    { tower: "IT Services / Delivery", spend: "$15.7M", pct: "23%", benchmark: "0.48% vs 0.56% median", status: "IN RANGE", statusType: "green" },
-    { tower: "End User Support", spend: "$13.0M", pct: "19%", benchmark: "Not directly benchmarked", status: "FRAGMENTED", statusType: "amber" },
-    { tower: "Cloud & Infrastructure", spend: "$7.0M", pct: "10%", benchmark: "Below peer median", status: "AT/BELOW", statusType: "green" },
-    { tower: "Network", spend: "$4.0M", pct: "6%", benchmark: "0.12% vs 0.17% median", status: "BELOW", statusType: "green" },
-    { tower: "Compute", spend: "$1.6M", pct: "2%", benchmark: "Below peer median", status: "LEAN", statusType: "green" },
+export const businessContext = {
+  title: "Culligan Business Context",
+  subtitle: "Why IT matters more here than at most companies — the M&A machine that makes IT transformation a strategic imperative",
+  sections: [
+    {
+      label: "THE M&A MACHINE",
+      paragraphs: [
+        "Culligan has executed over 300 acquisitions since 2016 — growing from a $400M business to a $3.4B global platform. The strategy is explicit: programmatic M&A at roughly 50 bolt-on deals per year, targeting small companies ($2–4M revenue) primarily in water treatment across Europe, Asia, and the Americas. CEO Scott Clawson has described this as Culligan's 'M&A machine — nailed.'",
+        "The IT implication is severe. Every acquisition without a standardized IT integration playbook adds another ERP variant, another software contract, and another regional support FTE to an already fragmented base. The current 25+ ERP estate is not a historical artifact — it is the direct, predictable output of 300 acquisitions with no IT governance enforcement. At 50 deals per year, the estate grows by 5–10 new systems annually without intervention.",
+      ],
+    },
+    {
+      label: "PE OWNERSHIP CONTEXT",
+      paragraphs: [
+        "Culligan is majority-owned by BDT & MSD Partners (since 2021), with Advent International holding a minority stake. The PE ownership structure creates a specific lens through which IT investment decisions should be evaluated: every dollar of EBITDA improvement is worth 10–12× in enterprise value at exit. A $31M IT savings program is a $310–370M EV event. The IT transformation is not a cost center project — it is one of the most capital-efficient value creation levers available to the ownership group.",
+      ],
+    },
   ],
-  note: "Software ($34.8M) is a cross-cutting category spanning multiple TBM towers. Tower mapping is preliminary pending validation workshops. Source: PwC Hypothesis Tracker, Categorized Spend Breakdown pt2.",
   callout: {
-    label: "BU COVERAGE & SPEND CONCENTRATION",
-    text: "The top-5 BU concentration (67% of spend) has an important governance implication: a limited number of targeted levers can reach most of the cost base. Corporate ($21M alone) represents a natural starting point for vendor rationalization. Italy (9 entities including Blupura, Gasmarine, Steiel, Think Water) remains the most material gap. Proportional extrapolation suggests a fully-covered IT spend of approximately $110–130M across 40 BUs.",
+    label: "THE COMPOUNDING PROBLEM",
+    text: "At 50 acquisitions per year, each adding ~1 ERP and ~3–5 ungoverned software contracts, Culligan's IT fragmentation is not a static problem to be solved — it is an accelerating one. The cost of the current ERP estate ($25.1M, 25+ systems) will roughly double within 5 years if no playbook is implemented. The $16–31M savings opportunity is not just a recovery — it is also the prevention of $20–40M in future unnecessary cost.",
   },
 };
 
 export const keyFindings = {
   title: "Key Findings vs. Peer Benchmark",
-  subtitle:
-    "Six hypothesis areas — results, root causes, and implications across 20 business units",
-  columns: ["Hypothesis Area", "Key Finding", "vs. Benchmark"],
-  rows: [
-    {
-      area: "Vendor & Licensing (H6)",
-      finding:
-        "Software $34.8M = 1.05% rev vs. 0.36% peer median (~3×). 50% of all IT spend in 44+ ungoverned contracts. Ghost users and over-tiering likely material.",
-      status: "RED FLAG",
-      statusType: "red",
-    },
-    {
-      area: "Spans & Layers (H2)",
-      finding:
-        "19.9% of 281 IT FTEs are managers — 81% above lean ~11% norm. 85 FTEs/$1B vs. 70.5 median (+21%). M&A added regional leadership layers never consolidated.",
-      status: "RED FLAG",
-      statusType: "red",
-    },
-    {
-      area: "Application / Platform (H4)",
-      finding:
-        "25+ ERPs across 40 BUs. $25.1M = 0.76% rev vs. 0.65% median. Largest TBM tower at 36% of IT. No common platform template.",
-      status: "ABOVE MEDIAN",
-      statusType: "amber",
-    },
-    {
-      area: "IT Support & Op Model (H5)",
-      finding:
-        "$13.0M across 4 independent regional models (EMEA 144 / NA 86 / LATAM 39 / APAC 12 FTEs). No shared-services layer. Cost scales linearly with acquisitions.",
-      status: "ABOVE MEDIAN / FRAGMENTED",
-      statusType: "amber",
-    },
-    {
-      area: "Infrastructure & Cloud (H3)",
-      finding:
-        "Network 0.12% rev vs. 0.17% peer median. Total infra $5.6M — lean and efficient. Absence of FinOps means some cloud waste likely.",
-      status: "AT/BELOW MEDIAN",
-      statusType: "green",
-    },
-    {
-      area: "AI & Automation (H1)",
-      finding:
-        "~126K tickets/year handled largely manually. Moveworks deployed but early-stage (now ServiceNow). Spend in range — capacity constraint, not overspend.",
-      status: "IN RANGE / UNDER-DEPLOYED",
-      statusType: "green",
-    },
-    {
-      area: "Overall IT Spend",
-      finding:
-        "$69.2M = 2.10% rev vs. 2.44% peer median. Not a broad overspender — savings are surgical and concentrated.",
-      status: "BELOW MEDIAN",
-      statusType: "green",
-    },
-  ],
+  subtitle: "What each hypothesis area measured, what the numbers show, and what it means for Culligan",
+  hypothesisLegend: {
+    title: "Hypothesis Legend — What Each Area Means",
+    intro:
+      "The benchmarking is structured around six hypotheses — specific questions about where Culligan's IT spending might be above or below comparable companies.",
+    columns: ["Code", "Hypothesis Name", "Plain-Language Definition", "What Was Measured"],
+    rows: [
+      { code: "H1", name: "AI & Automation", definition: "How effectively is Culligan using AI and automation to handle IT work?", measured: "Service desk automation, developer productivity tools, AIOps, and ticket deflection rates." },
+      { code: "H2", name: "Spans & Layers", definition: "Is the IT organisation structured efficiently, or are there too many management layers?", measured: "Management ratio, span of control, FTE headcount per $1B revenue vs. peers." },
+      { code: "H3", name: "Infrastructure & Cloud", definition: "Is Culligan spending the right amount on core technology infrastructure?", measured: "Network, compute, data centre, and cloud costs as % of revenue vs. peers." },
+      { code: "H4", name: "Application & Platform", definition: "Is Culligan spending too much maintaining too many applications and ERP systems?", measured: "Number of ERP/CRM systems, application spend as % of revenue, rationalisation opportunity." },
+      { code: "H5", name: "IT Support & Operating Model", definition: "Is IT delivered efficiently across regions, or are there redundant teams?", measured: "End-user support cost, regional operating model, shared services maturity, offshore mix." },
+      { code: "H6", name: "Vendor & Licensing", definition: "Is Culligan getting value from software contracts, or paying for unused licences?", measured: "Software spend as % of revenue, contract governance, licence utilisation, vendor consolidation." },
+    ],
+    footnote:
+      "H1–H6 are the six structured analysis areas from the PwC IT Benchmarking framework. Peer group: Pentair, A. O. Smith, Veralto, Zurn Elkay, and Primo Brands.",
+  },
+  findingsTable: {
+    title: "Key Findings — Quantitative Results & Business Meaning",
+    intro:
+      "Each hypothesis area with specific numbers from the benchmarking data and a plain-language explanation of what those numbers mean for Culligan's business.",
+    columns: ["Hypothesis Area", "The Numbers", "What This Means for Culligan — In Plain Terms"],
+    rows: [
+      {
+        area: "H6 — Vendor & Licensing",
+        status: "RED FLAG",
+        statusType: "red",
+        numbers: "$34.8M software spend = 1.05% of revenue\nPeer median: 0.36% of revenue\nCulligan is 3× above benchmark\n44+ vendor contracts identified\nSoftware = 50% of total IT budget",
+        meaning:
+          "Culligan is spending nearly three times what comparable companies spend on software. Half the entire IT budget goes to vendor contracts that nobody centrally manages. The company is almost certainly paying for licences nobody uses, multiple tools that do the same job in different regions, and prices that could be dramatically lower if negotiated as one company.",
+      },
+      {
+        area: "H2 — Spans & Layers",
+        status: "RED FLAG",
+        statusType: "red",
+        numbers: "56 of 281 IT staff are managers = 19.9%\nIndustry lean norm: ~11%\nCulligan is 81% above norm\n85 IT staff per $1B revenue\nPeer median: 70.5 per $1B (+21%)",
+        meaning:
+          "Nearly 1 in 5 IT employees is a manager — almost double the industry norm. Each manager has the authority to buy their own software tools and keep their own ERP system. The management structure is the direct cause of the software and ERP fragmentation visible in every other finding.",
+      },
+      {
+        area: "H4 — Application & Platform",
+        status: "ABOVE MEDIAN",
+        statusType: "amber",
+        numbers: "$25.1M application spend = 0.76% of revenue\nPeer median: 0.65% of revenue\n25+ ERP systems across 40 business units\nSAP, IFS, Sage, NetSuite, D365, TOTVS — all active\nLargest single cost tower: 36% of IT spend",
+        meaning:
+          "Culligan has 25+ different financial systems, each acquired through M&A and never consolidated. Every company-wide P&L requires manual gathering from 25 different systems. Leadership cannot get a reliable, real-time view of the business. Every new acquisition makes this worse.",
+      },
+      {
+        area: "H5 — IT Support & Op Model",
+        status: "ABOVE MEDIAN",
+        statusType: "amber",
+        numbers: "$13.0M end-user support = 19% of IT\nEMEA: 144 support staff · NA: 86 · LATAM: 39 · APAC: 12\n~126,000 IT support tickets per year",
+        meaning:
+          "IT support is delivered by four completely separate regional teams. When Culligan acquires a new company, it adds IT support staff in proportion to users rather than absorbing them into an existing pool. Support costs grow at the same rate as acquisitions — roughly 50 new companies a year.",
+      },
+      {
+        area: "H3 — Infrastructure & Cloud",
+        status: "STRENGTH",
+        statusType: "green",
+        numbers: "Network spend: 0.12% of revenue\nPeer median: 0.17% of revenue\nTotal infrastructure: $5.6M\nBelow benchmark across all metrics\nFinOps programme: not yet implemented",
+        meaning:
+          "Infrastructure is the one area where Culligan is genuinely doing better than peers — spending less and running lean. This should be protected. The only gap is cloud spending is not actively optimised (FinOps), which typically recovers 28–35% of cloud costs in year one.",
+      },
+      {
+        area: "H1 — AI & Automation",
+        status: "UNDER-DEPLOYED",
+        statusType: "green",
+        numbers: "~126,000 IT support tickets per year\nEstimated cost per ticket: ~$22\nAI deflection rate today: ~0%\nMature deployments achieve: 45–65%\nMoveworks deployed — early stage only",
+        meaning:
+          "Culligan already has Moveworks (now ServiceNow) to handle routine IT requests — but it has barely been switched on. At 126,000 tickets and $22 per ticket, deploying AI properly could automatically handle 40–50% of requests, saving $1–1.5M annually without buying new technology.",
+      },
+      {
+        area: "Cybersecurity",
+        status: "UNASSESSED",
+        statusType: "red",
+        numbers: "Security spend in benchmarking: $0 captured\nExpected range: 8–12% of IT budget\nExpected spend: $5.5–8.3M\nManufacturing norm: 15–20% of IT budget\nCulligan countries of operation: 100+",
+        meaning:
+          "Nobody knows how much Culligan spends on security or whether it is enough. For a company operating water treatment infrastructure across 100+ countries, this is a board-level concern. OT/ICS systems require dedicated protection. The absence of data must be addressed immediately.",
+      },
+      {
+        area: "Overall IT Spend",
+        status: "BELOW MEDIAN",
+        statusType: "green",
+        numbers: "Total IT & Digital spend: $69.2M\nCulligan as % of revenue: 2.10%\nPeer median: 2.44% of revenue\nCovers 20 of 40 business units\nEstimated full baseline: $110–130M",
+        meaning:
+          "At a headline level, Culligan spends less on IT than comparable companies. However this headline is misleading: the opportunity exists because Culligan mis-spends within that total. Too much goes to ungoverned software and too little to structural investments that would make the whole estate more efficient.",
+      },
+    ],
+  },
   source:
-    "Source: PwC IT Cost Benchmarking Analysis. Peer set: Pentair, A. O. Smith, Veralto, Zurn Elkay, Primo Brands.",
-};
-
-export const industryContext = {
-  title: "Industry Context & External Benchmarks",
-  subtitle:
-    "2026 market data from Gartner, Zylo, Forrester, HDI/MetricNet enriching the PwC analysis",
-  columns: ["Metric", "Industry Benchmark", "Culligan Implication", "Source"],
-  rows: [
-    { metric: "Global IT spend growth (2026)", benchmark: "13.5% YoY — $6.31T total", implication: "Below-average growth profile; prioritize reallocation over growth", source: "Gartner, April 2026" },
-    { metric: "SaaS license waste rate", benchmark: "51% of licenses unused; 25–30% underutilized", implication: "$34.8M software base implies $8–18M recoverable waste at industry average", source: "Zylo 2026 SaaS Index" },
-    { metric: "AI ticket deflection (mature)", benchmark: "45–65% containment at 12-month maturity", implication: "Culligan at near 0% with 126K tickets — 30–45% target is conservative", source: "servicedeskagents.com, April 2026" },
-    { metric: "ERP consolidation ROI", benchmark: "Average 52% ROI; 106% over 3 years (manufacturing)", implication: "25+ ERP estate makes Culligan a strong consolidation candidate", source: "ERP Research 2026; Forrester TEI" },
-    { metric: "ERP consolidation savings", benchmark: "15–30% process efficiency; up to 20% org rationalization", implication: "On $25.1M application tower, 15–20% = $3.8–5.0M steady-state", source: "Liberty Advisor Group 2025" },
-    { metric: "Cybersecurity % of IT budget", benchmark: "8–12% enterprise norm; 15–20% manufacturing", implication: "Culligan's cybersecurity investment is unquantified — critical gap", source: "Gartner/Elisity 2026" },
-    { metric: "Cost per IT support ticket", benchmark: "HDI/MetricNet: $6–$40+; NA median ~$22", implication: "126K tickets × $22 = $2.8M addressable; 40% deflection recovers ~$1.1M", source: "HDI/MetricNet 2026" },
-    { metric: "Offshore delivery mix (peers)", benchmark: "25–35% offshore mix for $3–5B revenue companies", implication: "Culligan's offshore mix below peer norm — $1–3M arbitrage unquantified", source: "Industry norm / PwC" },
-  ],
-  callout: {
-    label: "KEY IMPLICATION FROM INDUSTRY CONTEXT",
-    text: "The industry data materially strengthens two savings hypotheses. On software: with 51% of enterprise SaaS licenses unused industry-wide and Culligan's $34.8M base entirely ungoverned, the recoverable pool may be $8–18M higher than the PwC H6 range alone. On AI: mature Moveworks deployments achieve 45–65% ticket containment — Culligan's 30–45% target is conservative, not aggressive.",
-  },
-};
-
-export const gapAnalysis = {
-  title: "Gap Analysis",
-  subtitle: "What is absent or partially covered in the current benchmarking data",
-  columns: ["Gap Area", "Status", "Detail & Why It Matters", "Priority"],
-  rows: [
-    { area: "Cybersecurity Posture", status: "ABSENT", detail: "No cybersecurity spend breakdown. With Gartner projecting $240B global security spend in 2026 and manufacturing seeing highest budget growth (90–95% increasing), Culligan's security investment vs. 8–12% IT norm is unknown.", priority: "HIGH", priorityType: "red" },
-    { area: "FinOps / Cloud Governance", status: "PARTIAL", detail: "Infrastructure is lean but FinOps maturity unassessed. Industry benchmark: 28–35% of cloud spend recoverable through FinOps in year one.", priority: "MEDIUM", priorityType: "amber" },
-    { area: "IT Run vs. Grow vs. Transform", status: "ABSENT", detail: "$69.2M baseline does not segment Run/Grow/Transform. Industry norm: 65% Run / 20% Grow / 15% Transform. Culligan likely skewed heavily to Run given ERP fragmentation.", priority: "HIGH", priorityType: "red" },
-    { area: "Offshore / Nearshore Delivery Mix", status: "PARTIAL", detail: "Limited offshore mix noted but no percentage or cost-per-FTE comparison. Peers achieve 25–35% offshore mix — $1–3M labor arbitrage unquantified.", priority: "MEDIUM", priorityType: "amber" },
-    { area: "IT Vendor Concentration Risk", status: "ABSENT", detail: "44 contracts identified but no top-10 vendor concentration analysis, dependency risk, or renewal calendar.", priority: "MEDIUM", priorityType: "amber" },
-    { area: "Digital / Innovation Investment", status: "ABSENT", detail: "No data on IT spend allocated to digital transformation or innovation. Peers invest 15–25% of IT budgets in growth/transform initiatives.", priority: "MEDIUM", priorityType: "amber" },
-    { area: "IT Service Catalog Maturity", status: "ABSENT", detail: "No ITSM process maturity or service catalog assessment. Regional fragmentation makes standardization a prerequisite for shared-services.", priority: "LOW", priorityType: "green" },
-    { area: "Peer Revenue Growth Correlation", status: "ABSENT", detail: "Benchmarking compares spend levels but not investment trajectory. Context for Culligan's M&A-driven growth strategy.", priority: "LOW", priorityType: "green" },
-  ],
-  callout: {
-    label: "MOST CRITICAL GAP — CYBERSECURITY",
-    text: "The complete absence of cybersecurity spend data is the single most important gap to close. With Gartner projecting $240B in global security spending in 2026 (up 12.5%) and manufacturing companies seeing the highest budget growth of any sector, Culligan's security investment could be either a hidden exposure or a significant undisclosed spend pocket — either scenario has material implications for the $69.2M baseline and risk posture across 100+ countries.",
-  },
+    "Source: PwC IT Cost Benchmarking Analysis — Hypothesis Tracker, Benchmarks Working Set, IT Headcount data. Peer set: Pentair ($4.1B), A.O. Smith ($3.8B), Veralto ($5.2B), Zurn Elkay ($1.6B), Primo Brands ($6.5B).",
 };
 
 export const statusBadgeStyles = {
@@ -198,10 +329,27 @@ export const statusBadgeStyles = {
   green: "bg-emerald-100 text-culligan-green",
 };
 
-export const savingsOpportunity = {
-  title: "Savings Opportunity — Enhanced View",
-  subtitle:
-    "Revised ranges incorporating 2026 industry data and newly identified gaps. Figures represent a floor.",
+export const ebitdaImpact = {
+  title: "EBITDA & Enterprise Value Impact",
+  subtitle: "Translating IT savings into the language of PE ownership",
+  intro:
+    "The benchmarking analysis identifies $16–31M in annual savings. This section translates those savings into EBITDA improvement and enterprise value impact — the metrics that matter to Culligan's ownership and any future transaction process. PE exit multiples for water services and industrial services companies are currently 10–12× EBITDA.",
+  columns: ["Savings Lever", "Annual Saving", "EBITDA Lift", "EV @ 10×", "EV @ 12×", "Confidence"],
+  rows: [
+    { lever: "H6 — Vendor & Licensing", annual: "$4.2–10.4M", ebitda: "$4.2–10.4M", ev10: "$42–104M", ev12: "$50–125M", confidence: "HIGH", confidenceType: "green" },
+    { lever: "H1 — AI & Automation", annual: "$4.7–7.9M", ebitda: "$4.7–7.9M", ev10: "$47–79M", ev12: "$56–95M", confidence: "HIGH", confidenceType: "green" },
+    { lever: "H4 — Application / ERP", annual: "$3.8–7.5M", ebitda: "$3.8–7.5M", ev10: "$38–75M", ev12: "$46–90M", confidence: "MEDIUM", confidenceType: "amber" },
+    { lever: "H5 — IT Support", annual: "$2.0–3.9M", ebitda: "$2.0–3.9M", ev10: "$20–39M", ev12: "$24–47M", confidence: "MEDIUM", confidenceType: "amber" },
+    { lever: "H3 — Infrastructure", annual: "$0.8–1.7M", ebitda: "$0.8–1.7M", ev10: "$8–17M", ev12: "$10–20M", confidence: "MEDIUM", confidenceType: "amber" },
+    { lever: "H2 — Spans & Layers", annual: "Survey-led", ebitda: "$3–8M (est.)", ev10: "$30–80M", ev12: "$36–96M", confidence: "SURVEY", confidenceType: "amber" },
+    { lever: "SaaS Waste (additional)", annual: "$8–18M", ebitda: "$8–18M", ev10: "$80–180M", ev12: "$96–216M", confidence: "TO VALIDATE", confidenceType: "red" },
+    { lever: "TOTAL CONFIRMED + UPSIDE", annual: "$24–49M/yr", ebitda: "$24–49M", ev10: "$240–490M", ev12: "$288–588M", confidence: "—", confidenceType: "green", isTotal: true },
+  ],
+  note: "EBITDA impact assumes full dollar-for-dollar flow-through of IT savings (no incremental investment required beyond implementation costs). EV impact calculated at 10× and 12× EBITDA multiples. PE exit multiples sourced from Capstone Partners M&A Valuations Index 2025 (average 9.8× in 2025; PE-led deals averaging 12.8× median per CLFI analysis). SaaS waste recovery requires formal SAM assessment to confirm.",
+  callout: {
+    label: "THE EV FRAMING FOR OWNERSHIP",
+    text: "The $16–31M confirmed savings range represents $160–370M in enterprise value at current multiples — before the SaaS waste upside is validated. Put differently: the IT transformation program, if executed successfully, is worth more to Culligan's equity value than the average acquisition in the current bolt-on pipeline. This is the single most important reframe for any board or ownership conversation about IT investment.",
+  },
   chartData: [
     { name: "H6 · Vendor & Licensing", low: 4.2, high: 10.4 },
     { name: "H1 · AI & Automation", low: 4.7, high: 7.9 },
@@ -209,120 +357,102 @@ export const savingsOpportunity = {
     { name: "H5 · IT Support", low: 2.0, high: 3.9 },
     { name: "H3 · Infrastructure", low: 0.8, high: 1.7 },
   ],
-  totalCallout: {
-    amount: "$16–31M / year",
-    subtext: "Confirmed floor from six PwC hypothesis areas",
-  },
-  enhancedCallout: {
-    label: "REVISED BOTTOM-LINE SAVINGS RANGE",
-    text: "Confirmed savings from the six PwC hypothesis areas: $16–31M/year. Additional identified opportunity from SaaS waste recovery: $8–18M (to validate). Combined potential: $24–49M in annual savings — equal to 35–71% of the current IT cost base. When the remaining 20 BUs are included, the proportional savings scale accordingly.",
-  },
-  tableColumns: ["Area", "Savings Range", "Time Horizon", "Priority"],
-  tableRows: [
-    { area: "H6 · Vendor & Licensing", range: "$4.2M – $10.4M (+ ~$8–18M SaaS waste to validate)", horizon: "0–12 months", priority: "1 — IMMEDIATE", priorityType: "red" },
-    { area: "H1 · AI & Automation", range: "$4.7M – $7.9M", horizon: "6–18 months", priority: "2 — NEAR-TERM", priorityType: "amber" },
-    { area: "H4 · Application / ERP", range: "$3.8M – $7.5M", horizon: "12–36 months", priority: "3 — MEDIUM-TERM", priorityType: "amber" },
-    { area: "H5 · IT Support & Op Model", range: "$2.0M – $3.9M", horizon: "12–24 months", priority: "4 — MEDIUM-TERM", priorityType: "amber" },
-    { area: "H3 · Infrastructure & Cloud", range: "$0.8M – $1.7M", horizon: "12–24 months", priority: "5 — OPPORTUNISTIC", priorityType: "green" },
-    { area: "H2 · Spans & Layers", range: "Survey-led (TBD)", horizon: "6–18 months", priority: "2 — NEAR-TERM", priorityType: "red" },
-    { area: "NEW · Cybersecurity Gap", range: "Investment Required", horizon: "Immediate", priority: "CRITICAL — ASSESS", priorityType: "red" },
+};
+
+export const costOfInaction = {
+  title: "Cost of Inaction",
+  subtitle: "What it costs Culligan every year to not act on these recommendations",
+  intro:
+    "Most IT analyses present the upside of action. This section presents the cost of inaction — what Culligan pays every year the current state persists. These are quantifiable costs embedded in the current operating model that compound with every passing quarter and every new acquisition.",
+  columns: ["Inaction Item", "Annual Cost", "3-Year Cost", "Basis"],
+  rows: [
+    { item: "Each new acquisition without IT playbook", annual: "~$1.2–3.5M", threeYear: "~$3.6–10.5M", basis: "EY: IT integration = 5–15% of deal value; ~$100–600K per deal at 10–50 deals/yr" },
+    { item: "Every year of 25+ ERP fragmentation", annual: "~$2–4M", threeYear: "~$6–12M", basis: "Manual reconciliation labor; unified ERP reduces finance close costs 20–30%" },
+    { item: "IT org at 19.9% management (vs. 12%)", annual: "~$3–6M", threeYear: "~$9–18M", basis: "Excess management layers produce software 3× median and app sprawl; 15–20 excess FTEs" },
+    { item: "Software at 3× median — each additional year", annual: "~$15–20M", threeYear: "~$45–60M", basis: "Paying $34.8M vs. ~$12M peer-equivalent; new BUs add contracts with no governance" },
+    { item: "No shared-services IT support model", annual: "~$1–2M", threeYear: "~$3–6M", basis: "Each acquired BU adds proportional support FTEs; linear vs. sub-linear scaling" },
+    { item: "Cybersecurity gap unquantified", annual: "Exposure", threeYear: "Board Risk", basis: "OT/ICS across 100+ countries; average enterprise breach cost $4.88M (IBM 2024)" },
+    { item: "TOTAL ANNUAL COST OF INACTION", annual: "~$22–35M/yr", threeYear: "~$66–105M", basis: "Conservative floor — excludes M&A deal value erosion and regulatory exposure", isTotal: true },
   ],
-  note: "H6 additional row reflects potential SaaS waste recovery (51% unused licenses applied to $34.8M base) — requires formal SAM assessment. Cybersecurity flagged as 'Investment Required' because current spend level is unknown.",
+  note: "Annual cost estimates are directional and based on industry benchmarks applied to Culligan's specific profile.",
+  callout: {
+    label: "THE INACTION MATH",
+    text: "The conservative annual cost of inaction — $22–35M/year — is larger than the confirmed annual savings opportunity of $16–31M. Every year of delay costs more than the transformation saves in year one. The question is not whether Culligan can afford to invest in IT transformation. It is whether it can afford not to.",
+  },
 };
 
 export const strategicInsights = {
   title: "Strategic Insights & Required Actions",
-  subtitle: "Seven insights — each with observation, implication, and mandatory action",
+  subtitle: "Seven insights — each with observation, business implication, and mandatory action",
   items: [
     {
       id: 1,
-      title: "Software & Licensing: The Quick Win That Funds and Proves the Transformation",
+      title: "Software & Licensing: 3× Median Is a Governance Failure, Not a Spending Problem",
       borderColor: "#C0392B",
       sections: {
-        observation:
-          "Software spend is $34.8M — 1.05% of revenue vs. 0.36% peer median (~3×), representing 50% of all IT spend. 44 vendor contracts identified; none centrally governed. 2026 industry data: 51% of enterprise SaaS licenses are unused industry-wide. Applied to Culligan's base, this implies $8–18M may be directly recoverable through governance alone — on top of the H6 savings range.",
-        businessImplication:
-          "Half of Culligan's IT cost base sits in contracts no single team owns globally. The absence of vendor governance is not a procurement failure — it is a governance failure that compounds with every acquisition. Each new BU adds contracts. The 3× median is the mathematical outcome of that organizational design.",
-        requiredAction:
-          "Launch a SAM + vendor rationalization program immediately. Step 1: full license audit across 44+ contracts — ghost users, over-tiered licenses, duplicate tools. Step 2: consolidate overlapping applications. Step 3: renegotiate top-10 vendor EAs using group-wide volume leverage. Target: $4.2M–$10.4M in 12 months. Upside from SaaS waste recovery (up to $18M additional) makes this the highest-ROI action in the portfolio.",
+        observation: "Software spend is $34.8M — 1.05% of revenue vs. 0.36% peer median (~3×), representing 50% of all IT spend. 44 vendor contracts identified so far, none centrally governed. Industry data (Zylo 2026): 51% of enterprise SaaS licenses go unused. Applied to Culligan's $34.8M base, $8–18M may be directly recoverable through governance alone.",
+        businessImplication: "The 3× median is the mathematical output of 300 acquisitions with no vendor governance. Every new acquisition adds contracts. Half of Culligan's IT budget is funding vendor margin on software nobody centrally manages. At 50 acquisitions per year, this gets worse every quarter without intervention.",
+        requiredAction: "Launch a SAM + vendor rationalization program immediately. Step 1: full license audit across all 44+ contracts. Step 2: consolidate overlapping tools. Step 3: renegotiate top-10 vendor EAs using group-wide volume leverage. Target $4.2–10.4M year-one savings. Establish a Vendor Governance Council chaired by the CIO.",
       },
     },
     {
       id: 2,
-      title: "Organizational Structure: The Root Cause That Unlocks All Other Savings",
+      title: "Org Structure: The Root Cause That Makes Every Other Problem Unfixable",
       borderColor: "#C0392B",
       sections: {
-        observation:
-          "56 of 281 IT FTEs (19.9%) hold management roles — 81% above the lean ~11% industry norm. Headcount at 85 FTEs/$1B vs. 70.5 median. Regional M&A added leadership layers in EMEA, NA, LATAM, and APAC that were never consolidated. The H2 dollar value is unquantified pending the IT labor survey.",
-        businessImplication:
-          "Too many managers — each empowered to make local tool, vendor, and ERP choices — is the structural cause of software fragmentation (H6), application sprawl (H4), and support model duplication (H5). The org is not a symptom; it is the disease. Every savings program that does not address org structure risks recreating fragmentation within 3–5 years after M&A resumes.",
-        requiredAction:
-          "Commission the IT labor survey within 60 days to quantify delayering with compensation data. In parallel: design a global IT operating model with unified architecture governance reporting to the CIO. Target management ratio of 12–13% (from 19.9%). Implement global vendor and technology approval gates. This is the precondition for all other savings becoming permanent.",
+        observation: "56 of 281 IT FTEs (19.9%) hold management roles — 81% above the lean ~11% norm. 85 FTEs/$1B vs. 70.5 median. Each regional M&A wave added leadership layers never consolidated. The H2 dollar value is unquantified pending the IT labor survey.",
+        businessImplication: "Too many managers — each empowered to make local tool, vendor, and ERP choices — is the structural cause of the 3× software median, the 25+ ERP estate, and the four duplicated support models. Fix the vendors without fixing the org and the same incentives recreate the fragmentation within 3–5 years.",
+        requiredAction: "Commission the IT labor survey within 30 days. Design a global IT operating model with unified Architecture Governance reporting to the CIO. Target management ratio of 12–13%. Implement global vendor and technology approval gates.",
       },
     },
     {
       id: 3,
-      title: "ERP Fragmentation: 25 Versions of the Truth That Make One Company Impossible",
+      title: "ERP Fragmentation: 25 Systems Is an M&A Integration Tax on Every Future Deal",
       borderColor: "#E67E22",
       sections: {
-        observation:
-          "Application tower is $25.1M — 36% of IT, 0.76% revenue vs. 0.65% median. 25+ ERPs across 40 BUs: SAP, IFS, Sage, NetSuite, D365, TOTVS. 2026 industry data: ERP consolidation delivers 52% ROI, 15–30% process efficiency gains, and up to 20% org rationalization savings. Forrester TEI found $5.8M in legacy system elimination with 17-month payback.",
-        businessImplication:
-          "25+ ERPs means 25 sets of financial data requiring manual reconciliation. Consolidated P&L, supply chain optimization, and customer reporting are structurally impossible. Every future acquisition inherits this complexity — making Culligan's growth-by-acquisition model increasingly expensive. Leadership cannot run the company as one entity.",
-        requiredAction:
-          "Begin ERP consolidation business case immediately. 90-day actions: (1) formal application portfolio inventory, (2) evaluate platform options (consolidation vs. federated data model), (3) define first-migration BU cluster (North America recommended). Year-one goal is architectural commitment and governance enforcement to stop the estate from growing.",
+        observation: "Application tower is $25.1M — 36% of IT, 0.76% revenue vs. 0.65% median. 25+ ERPs across 40 BUs (SAP, IFS, Sage, NetSuite, D365, TOTVS). Forrester TEI: ERP consolidation delivers 106% ROI over 3 years for manufacturing, with 17-month payback.",
+        businessImplication: "25+ ERPs means consolidated P&L, supply chain optimization, and customer reporting are structurally impossible. Each new acquisition adds another system. Culligan's ownership cannot get a clean view of the business — the opposite of a scalable M&A machine.",
+        requiredAction: "Begin ERP consolidation business case immediately. 90-day actions: application portfolio inventory, evaluate platform options, define first-migration BU cluster (North America recommended). Set architectural freeze: no new ERP variants without Architecture Council exception.",
       },
     },
     {
       id: 4,
-      title: "IT Support Operating Model: A Growth Tax That Compounds with Every Acquisition",
+      title: "M&A IT Integration: No Playbook at 50 Deals/Year Is a Material Value Leak",
       borderColor: "#E67E22",
       sections: {
-        observation:
-          "End-user support is $13.0M — second-largest tower at 19% of IT. Four independent regional orgs: EMEA (144 FTEs), NA (86), LATAM (39), APAC (12). ~126K annual tickets handled largely manually. HDI/MetricNet 2026: North American enterprise median cost per ticket is $22.",
-        businessImplication:
-          "At $22 × 126K tickets = ~$2.8M addressable support cost annually — all at risk of growing linearly as Culligan acquires. Without shared-services, every acquisition adds FTEs in proportion to users. Four regional models represent IT's version of the ERP problem: local replication instead of global leverage.",
-        requiredAction:
-          "Design global shared-services operating model for end-user support as part of H2 work. Scale Moveworks (now within ServiceNow) to target 30–45% L1 deflection — $1.1M–$1.3M recoverable at $22/ticket. Evaluate offshore delivery mix. Unify ITSM toolchain. Target: $2.0M–$3.9M recurring savings plus elimination of linear scaling.",
+        observation: "Culligan executes ~50 bolt-on acquisitions per year with no standardized IT integration playbook. Industry research consistently shows IT integration costs run 5–15% of deal value; up to 60% of M&A synergy initiatives are IT-related but delayed by fragmentation; 70–75% of M&A deals underperform, with IT complexity a leading cause.",
+        businessImplication: "At $2–4M revenue per acquisition, IT integration costs of 5–15% imply $100–600K per deal — at 50 deals/year, $5–30M in annual integration overhead producing the ERP variants and software contracts that cost $34.8M to maintain. Every acquisition without standards is a future cost that must eventually be rationalized.",
+        requiredAction: "Build a standardized 5-phase M&A IT integration playbook within 90 days. Apply to all future acquisitions immediately. Include: IT due diligence checklist, Day-1 readiness, 90-day integration tasks, ERP classification framework, and vendor contract absorption process.",
       },
     },
     {
       id: 5,
-      title: "Cybersecurity: A Material Blind Spot in the Current Analysis",
-      borderColor: "#C0392B",
+      title: "IT Support Operating Model: Linear Scaling Is a Growth Tax",
+      borderColor: "#E67E22",
       sections: {
-        observation:
-          "No cybersecurity spend data in the benchmarking. Gartner projects $240B global security spending in 2026 (up 12.5%). Enterprise norm is 8–12% of IT budget, rising to 15–20% for manufacturing (OT/ICS exposure). Applied to $69.2M base: expected range is $5.5M–$13.8M. On fully-covered ~$120M base: $9.6M–$24M.",
-        businessImplication:
-          "Culligan operates in 100+ countries with OT/ICS security requirements across water treatment infrastructure. Either security spend is buried in other categories (making the baseline incomplete) or Culligan is materially under-invested at a time when AI-enabled attacks increased 72% in 2025.",
-        requiredAction:
-          "Immediately commission a cybersecurity spend audit to (1) locate all security-related spend within the $69.2M baseline, (2) benchmark against 8–12% IT norm and 15–20% manufacturing norm, and (3) identify OT/ICS coverage gaps. Complete before the trusted baseline is finalized. Do not approve the IT investment roadmap without understanding security posture.",
+        observation: "End-user support is $13.0M — 19% of IT — through four independent regional organizations (EMEA 144 / NA 86 / LATAM 39 / APAC 12 FTEs). ~126K annual tickets handled largely manually. HDI/MetricNet 2026: median cost per ticket is $22.",
+        businessImplication: "Every acquisition adds support FTEs in proportion to users. At 50 acquisitions per year, support cost compounds continuously. At $22/ticket × 126K tickets = $2.8M addressable annual support cost on the current base alone.",
+        requiredAction: "Design global shared-services operating model as part of Phase 2 org reform. Scale Moveworks/ServiceNow Now Assist to 30–45% L1 deflection — ~$1.1–1.3M recoverable. Unify ITSM on single platform. Target: $2.0–3.9M savings.",
       },
     },
     {
       id: 6,
-      title: "Infrastructure & AI: A Proven Discipline That Can Be Exported to the Rest of IT",
-      borderColor: "#1E7A46",
+      title: "Cybersecurity: A Board-Level Blind Spot",
+      borderColor: "#C0392B",
       sections: {
-        observation:
-          "Network at 0.12% of revenue is below 0.17% peer median. Total infrastructure is $5.6M — lean and efficient. Moveworks deployed but early-stage, now acquired by ServiceNow (December 2025). AI deflection benchmarks show 45–65% containment in mature deployments — Culligan's 30–45% year-one target is achievable and conservative.",
-        businessImplication:
-          "Infrastructure discipline proves the organization can run lean when governance is applied. The AI automation opportunity is material — 126K tickets at $22/ticket implies $2.8M addressable cost. Moveworks' integration into ServiceNow creates a path to broader workflow automation beyond the service desk.",
-        requiredAction:
-          "Protect infrastructure investment discipline — do not re-open this cost base. Scale Moveworks/ServiceNow Now Assist to 30–45% L1 containment. Standardize developer copilots (GitHub Copilot or Cursor) for $1.0–$2.0M productivity savings. Pilot AIOps. Use AI governance as a template for vendor and application management rigor.",
+        observation: "No cybersecurity spend data in benchmarking. Enterprise norm: 8–12% of IT budget; manufacturing/OT: 15–20%. Applied to $69.2M base: expected spend is $5.5–13.8M. Gartner projects $240B global security spend in 2026. AI-enabled attacks increased 72% in 2025.",
+        businessImplication: "Culligan operates across 100+ countries with water treatment manufacturing assets including OT/ICS infrastructure — a specific and growing attack vector. An unquantified cybersecurity posture is an unmanaged board-level risk.",
+        requiredAction: "Immediately commission cybersecurity spend audit. Map all security spend within $69.2M baseline. Benchmark vs. norms. Identify OT/ICS gaps. Present findings to the board before trusted baseline is finalized.",
       },
     },
     {
       id: 7,
-      title: "IT Investment Mix: Over-Indexed to Run, Under-Indexed to Transform",
+      title: "Infrastructure Is a Discipline to Export, Not an Area to Fix",
       borderColor: "#1E7A46",
       sections: {
-        observation:
-          "The benchmarking does not segment IT spend into Run/Grow/Transform. Based on org profile, ERP fragmentation, and four independent support models, Culligan's estimated Run spend is 75–80% — significantly above the 60–65% peer norm for companies of this scale.",
-        businessImplication:
-          "When 75–80% of IT budget sustains fragmented legacy systems, only 20–25% is available for growth and transformation investments enabling M&A strategy and digital customer experience. The ERP estate, manual support, and ungoverned software are all 'Run tax' — consuming capacity that should build Culligan's next competitive capability.",
-        requiredAction:
-          "As part of the trusted baseline exercise, categorize $69.2M into Run/Grow/Transform. Set target mix: 65% Run / 20% Grow / 15% Transform. Require every IT investment decision to improve the mix. Use H6 savings to fund the shift — dollars freed from ungoverned software should be re-invested in transformation capability, not returned to overhead.",
+        observation: "Network at 0.12% of revenue — below 0.17% peer median. Total infrastructure $5.6M — lean and efficient. Mature Moveworks/ServiceNow deployments achieve 45–65% containment — Culligan's 30–45% year-one target is conservative.",
+        businessImplication: "Infrastructure discipline proves the organization can run lean when governance is applied. The same rigor needs to be applied to software and application management. The $4.7–7.9M H1 range may have further upside at mature containment rates.",
+        requiredAction: "Protect infrastructure investment discipline — do not reopen this cost base. Scale Moveworks/ServiceNow Now Assist to production. Standardize developer copilots. Pilot AIOps. Use infrastructure governance as the template for vendor and application estates.",
       },
     },
   ],
@@ -333,59 +463,126 @@ export const strategicInsights = {
   },
 };
 
-export const aiDeepDive = {
-  title: "AI & Automation Opportunity — Deep Dive",
-  subtitle: "Expanded savings sizing using 2026 industry benchmarks",
+export const maPlaybook = {
+  title: "M&A IT Integration Playbook",
+  subtitle: "The missing capability that breaks the compounding fragmentation cycle",
   intro:
-    "The original H1 analysis sized AI savings at $4.7M–$7.9M. This section re-examines that range using 2026 data on AI service desk performance, developer productivity, and AIOps — and identifies a fourth lever (AI-driven license management) not in the original analysis.",
-  columns: ["AI Lever", "Derivation Basis", "Low", "High", "Horizon", "Readiness"],
-  rows: [
-    { lever: "AI Service Desk (Moveworks scale-up)", basis: "30–45% × L1 support; 126K tickets × $22/ticket", low: "$2.4M", high: "$4.0M", horizon: "6–12 months", readiness: "Moveworks deployed — scale now" },
-    { lever: "Developer Copilots (GitHub / Cursor)", basis: "10–35% × developer labor ($9.7M delivery tower)", low: "$1.0M", high: "$2.0M", horizon: "3–6 months", readiness: "Quick to deploy — high confidence" },
-    { lever: "AIOps + Intelligent Doc Processing", basis: "Operations & back-office labor automation", low: "$1.3M", high: "$1.9M", horizon: "12–18 months", readiness: "Requires process standardization" },
-    { lever: "AI-Driven License Management", basis: "51% SaaS unused; AI SAM recovers 15–25% faster", low: "$1.0M", high: "$3.0M", horizon: "0–6 months", readiness: "High confidence — direct to savings" },
-    { lever: "TOTAL AI Opportunity", basis: "Across all four levers (additive)", low: "$5.7M", high: "$10.9M", horizon: "0–18 months", readiness: "Staged deployment", isTotal: true },
+    "Culligan's M&A machine executes ~50 acquisitions per year. Each acquisition without a standardized IT integration approach adds ERP variants, software contracts, and support FTEs to an already fragmented base.",
+  phases: [
+    { phase: "Pre-Close (–90 to 0 days)", owner: "CIO + M&A Team", actions: "IT due diligence checklist. Identify ERP type, software contracts, headcount, security posture. Classify: integrate (<20% rev), federate (>30% rev), or stand-alone." },
+    { phase: "Day 1 Readiness (0–30 days)", owner: "Regional CTO", actions: "Ensure email, VPN, network connectivity. Onboard to Culligan SSO. Deploy standard security tooling. Capture full vendor contract list from target." },
+    { phase: "90-Day Integration (30–90 days)", owner: "CIO + Regional CTO", actions: "Add target to Culligan SAM program. Map target software to standard stack — identify duplicates. Complete IT headcount census. Assign to regional support model." },
+    { phase: "Full Integration (90–365 days)", owner: "CIO", actions: "Migrate target to Culligan ITSM (ServiceNow). Consolidate or retire target ERP per platform decision. Onboard to Culligan vendor EA agreements." },
+    { phase: "Governance (Ongoing)", owner: "Architecture Council", actions: "No new ERP or enterprise software without Council sign-off. All vendor contracts through group procurement. Annual license audit includes acquired entities." },
   ],
-  callout: {
-    label: "SERVICENOW ACQUISITION OF MOVEWORKS",
-    text: "ServiceNow acquired Moveworks in December 2025 for $2.85 billion. If Culligan runs ServiceNow as its primary ITSM platform, Moveworks' agentic capabilities integrate into Now Assist — a clear path to scaled deployment. The 126K annual ticket volume at $22 median cost-per-ticket is the opportunity. A 40% deflection rate by month 12 recovers approximately $1.1M annually — before ticket volume growth from the 20 outstanding BUs.",
+  note: "Playbook framework based on industry best practice for PE-backed portfolio companies with high-frequency M&A activity. Classification logic reflects standard post-acquisition ERP decision frameworks used across comparable roll-up platforms.",
+  erpFramework: {
+    title: "ERP Classification Decision Framework",
+    subtitle: "Not every acquisition requires full ERP integration",
+    columns: ["Scenario", "Decision", "Rationale"],
+    rows: [
+      { scenario: "Small bolt-on (<20% of BU revenue), identical model", decision: "Integrate to Culligan standard ERP", rationale: "Immature processes; adopting Culligan SOPs is part of the value add. Rip and replace is fastest path." },
+      { scenario: "Mid-size deal (20–30% of BU revenue), similar model", decision: "Phased integration (18–24 months)", rationale: "Retain target ERP during transition; migrate to Culligan template with dedicated integration resources." },
+      { scenario: "Significant deal (>30% of BU revenue) or different model", decision: "Federate with iPaaS data layer", rationale: "Keep target ERP; use MuleSoft/Boomi to federate financial reporting without process disruption." },
+      { scenario: "Specialty technology or unique 'secret sauce'", decision: "Stand-alone indefinitely", rationale: "Standardization would destroy acquired value. Protect operational independence; connect reporting only." },
+    ],
   },
 };
 
-export const investmentMix = {
-  title: "IT Investment Mix: Run / Grow / Transform",
-  subtitle: "Structural diagnosis of how Culligan allocates IT spend",
+export const maturityModel = {
+  title: "IT Maturity Model",
+  subtitle: "Where Culligan sits today — and where it needs to be",
   intro:
-    "Run covers keeping systems operational; Grow covers new business capabilities; Transform covers structural change. Benchmarking this split reveals whether IT is sustainably investing in the future or trapped sustaining the past.",
-  columns: ["Category", "Culligan (Est.)", "Peer Norm", "Gap", "Implication"],
+    "Culligan's current state across eight domains on a 1–5 scale (1 = Reactive, 5 = Optimized). Target reflects the state needed to support M&A strategy without compounding cost.",
+  columns: ["Domain", "Score", "Level", "Current State", "Target State", "Gap"],
   rows: [
-    { category: "Run (Keep lights on)", culligan: "Est. ~75–80%", peer: "~60–65%", gap: "10–15pp above norm", implication: "IT is primarily sustaining fragmented legacy — not enabling growth" },
-    { category: "Grow (Enable business growth)", culligan: "Est. ~15–18%", peer: "~20–25%", gap: "Below norm", implication: "Underfunding growth capabilities; acquisition integration competes with BAU" },
-    { category: "Transform (Drive change)", culligan: "Est. ~5–7%", peer: "~12–15%", gap: "Significantly below", implication: "Transformation investment insufficient to close ERP and org gaps" },
+    { domain: "Vendor & License Governance", score: "1 / 5", level: "Reactive", current: "44+ contracts, no central governance, 3× peer median", target: "4 — Proactive: Group-wide SAM, vendor council, EA governance", gap: "3 levels" },
+    { domain: "Organizational Structure", score: "2 / 5", level: "Developing", current: "19.9% mgmt ratio, 4 regional silos, no global operating model", target: "4 — Proactive: 12–13% mgmt, global shared services", gap: "2 levels" },
+    { domain: "Application / ERP Rationalization", score: "1 / 5", level: "Reactive", current: "25+ ERPs, no consolidation plan, no platform template", target: "3 — Defined: Roadmap committed, Year-1 migrations begun", gap: "2 levels" },
+    { domain: "IT Support & Operating Model", score: "2 / 5", level: "Developing", current: "4 regional models, no shared services, manual tickets", target: "4 — Proactive: Unified ITSM, shared services, AI deflection", gap: "2 levels" },
+    { domain: "Infrastructure & Cloud", score: "3 / 5", level: "Defined", current: "Lean, at/below benchmark, FinOps absent", target: "4 — Proactive: FinOps, cloud governance, resilience", gap: "1 level" },
+    { domain: "AI & Automation", score: "2 / 5", level: "Developing", current: "Moveworks early-stage, copilots not standardized", target: "4 — Proactive: AI deflection 40%+, copilots standardized", gap: "2 levels" },
+    { domain: "Cybersecurity Posture", score: "? / 5", level: "UNASSESSED", current: "No spend data — posture unknown", target: "3 — Defined: Spend quantified, gap to 8–12% norm closed", gap: "Unknown" },
+    { domain: "M&A IT Integration Capability", score: "2 / 5", level: "Developing", current: "No standardized playbook; BU-by-BU approach", target: "4 — Proactive: Repeatable playbook, <90-day Day-1 readiness", gap: "2 levels" },
   ],
-  note: "Culligan estimates are directional, derived from benchmarking profile. Formal Run/Grow/Transform categorization should be conducted as part of trusted baseline work.",
   callout: {
-    label: "STRATEGIC IMPLICATION",
-    text: "An IT organization spending 75–80% on Run is structurally incapable of transformation. Every dollar consumed by 25+ ERPs, four regional service desks, and ungoverned software is a dollar not available for digital capability or M&A integration. The $16–31M savings program is the mechanism to shift from a Run-heavy portfolio to one that funds its strategic agenda. Target by Year 3: 65% Run / 20% Grow / 15% Transform.",
+    label: "MATURITY READING",
+    text: "Culligan scores 1–2 across five of eight domains — including the two most critical (Vendor Governance and M&A IT Integration). No domain scores above 3. The target is reaching 3–4 across the board — the threshold at which IT stops being a growth constraint and starts being a growth enabler.",
   },
+};
+
+export const priorityMatrix = {
+  title: "Initiative Priority Matrix",
+  subtitle: "Speed-to-value vs. effort — where to focus first",
+  intro:
+    "The top-left quadrant — high value, low effort — is the mandatory starting point. The top-right contains structural transformation work sequenced after quick wins establish credibility and governance.",
+  quadrants: [
+    {
+      label: "DO NOW",
+      sublabel: "High Value, Low Effort",
+      color: "#1E7A46",
+      items: [
+        "H6 — SAM + Vendor Rationalization ($4.2–10.4M, 0–12 mo)",
+        "IT Labor Survey — commissions in 30 days, sizes H2",
+        "Cybersecurity spend audit (30-day assessment)",
+        "Close BU data gaps — Italy first (30–60 days)",
+        "AI-driven SAM tooling — accelerates H6 savings",
+      ],
+    },
+    {
+      label: "PLAN & SEQUENCE",
+      sublabel: "High Value, High Effort",
+      color: "#022656",
+      items: [
+        "H2 — Org delayering + global operating model (6–18 mo)",
+        "H4 — ERP consolidation business case + Year-1 migration",
+        "H5 — Global shared-services model for IT support",
+        "M&A IT integration playbook build (3–6 mo)",
+        "Architecture Governance Council (post-delayering)",
+      ],
+    },
+    {
+      label: "QUICK WINS",
+      sublabel: "Moderate Value, Low Effort",
+      color: "#1B7F9E",
+      items: [
+        "H3 — FinOps program (cloud waste recovery)",
+        "Developer copilots (GitHub/Cursor) — 3–6 mo",
+        "Moveworks/ServiceNow Now Assist scale-up",
+        "ITSM toolchain unification across regions",
+      ],
+    },
+    {
+      label: "DEPRIORITIZE",
+      sublabel: "Lower Value, High Effort",
+      color: "#5A6A7E",
+      items: [
+        "Deep infrastructure re-architecture (already lean)",
+        "Full OT/ICS tech refresh (unless security audit mandates)",
+        "Legacy data center exits (sequence after ERP decisions)",
+      ],
+    },
+  ],
 };
 
 export const roadmap = {
   title: "3-Phase Transformation Roadmap",
-  subtitle: "Prioritized actions across 0–36 months — sequenced by dependency and speed-to-value",
+  subtitle: "Prioritized 0–36 month action plan — sequenced by dependency, not arbitrary timing",
+  intro:
+    "Phase 1 generates quick wins that fund Phase 2. Phase 2 removes structural obstacles that make Phase 3 achievable. The M&A IT playbook must be built in Phase 2 and applied from Phase 1 onward to all new acquisitions.",
   phases: [
     {
       phase: "PHASE 1: Quick Wins",
       horizon: "0–12 Months",
       savings: "$4.2–10.4M/yr",
       actions: [
-        "Launch SAM program — audit all 44+ software contracts, eliminate ghost users",
-        "Right-tier licenses; consolidate overlapping tools across BUs",
-        "Renegotiate top-10 vendor EAs using consolidated volume leverage",
-        "Close BU data gap — land Italy (9 entities), Canada, CWC, China, EMEA OEM",
-        "Commission IT labor survey to size H2 (Spans & Layers) opportunity",
+        "Launch SAM + vendor rationalization program across all 44+ contracts",
+        "Appoint SAM program lead; establish vendor governance council",
+        "Commission IT labor survey (60 days) to size H2 delayering",
+        "Cybersecurity spend audit — map posture vs. 8–12% IT budget norm",
+        "Close BU coverage gap: Italy (9 entities), Canada, CWC, China, EMEA OEM",
         "Validate TBM tower mapping in CIO office workshops",
-        "Quantify cybersecurity spend vs. 8–12% IT budget norm",
+        "Deploy AI-driven SAM tooling to accelerate license waste recovery",
       ],
     },
     {
@@ -393,13 +590,14 @@ export const roadmap = {
       horizon: "6–24 Months",
       savings: "$6.7–11.8M/yr",
       actions: [
-        "Execute org delayering — reduce management ratio from 19.9% toward 12–13%",
-        "Design and stand up global IT shared-services model for end-user support",
-        "Scale Moveworks to full production; target 30–45% L1 ticket deflection",
-        "Standardize developer copilots (GitHub Copilot / Cursor) across dev population",
+        "Execute org delayering — reduce management ratio from 19.9% to ~12–13%",
+        "Build and launch global IT shared-services model for end-user support",
+        "Scale Moveworks/ServiceNow Now Assist to 30–45% L1 ticket deflection",
+        "Standardize developer copilots (GitHub Copilot/Cursor) across dev population",
         "Implement FinOps program to recover 28–35% cloud waste",
-        "Rationalize end-user support to a single unified ITSM toolchain",
-        "Define offshore delivery strategy; increase mix toward 25–35% peer norm",
+        "Build and deploy M&A IT integration playbook (5-phase)",
+        "Unify ITSM toolchain across all 4 regions onto single platform",
+        "Define and enforce offshore delivery strategy — target 25–35% mix",
       ],
     },
     {
@@ -410,67 +608,36 @@ export const roadmap = {
         "Complete application portfolio inventory and ERP consolidation business case",
         "Select common ERP platform; define phased migration by BU cluster",
         "Begin Year-1 ERP migrations (North America recommended as first cluster)",
-        "Retire duplicate and low-value applications; target 20–30% app rationalization",
-        "Implement architecture governance function to enforce global standards post-delayering",
-        "Deploy AIOps to reduce infrastructure incidents and back-office labor costs",
-        "Establish IT investment split target: 60% Run / 25% Grow / 15% Transform",
+        "Retire duplicate and low-value applications — target 20–30% app rationalization",
+        "Implement Architecture Governance Council — enforce global standards post-delayering",
+        "Deploy AIOps for incident reduction and back-office automation",
+        "Set and govern IT investment mix target: 65% Run / 20% Grow / 15% Transform",
       ],
     },
   ],
-  note: "Phase 1 and Phase 2 can run concurrently for independent workstreams. Phase 3 ERP work must not begin until Phase 2 org governance is in place. Cybersecurity assessment runs in parallel with all phases.",
-};
-
-export const assumptions = {
-  title: "Key Assumptions",
-  subtitle: "Underpinning assumptions for all findings and savings estimates",
-  rows: [
-    { category: "Peer Group", detail: "Pentair ($4.1B), A. O. Smith ($3.8B), Veralto ($5.2B), Zurn Elkay ($1.6B), Primo Brands ($6.5B) — water technology companies within 0.5–2× Culligan's revenue." },
-    { category: "Data Currency", detail: "Benchmarking data reflects FY2025/2026. Industry context from Zylo 2026 SaaS Index, Gartner, Forrester TEI, servicedeskagents.com (verified April–June 2026)." },
-    { category: "Spend Coverage", detail: "20 of 40 in-scope BUs, $69.2M IT & Digital spend. Five clusters outstanding: Italy (9 entities), Canada, CWC, China, EMEA OEM. Full baseline may be $110–130M." },
-    { category: "Revenue Denominator", detail: "~$3.3–$3.4B revenue estimate requiring confirmation. A $200M swing moves spend ratios by ~6 basis points." },
-    { category: "TBM Tower Mapping", detail: "Tower allocations preliminary pending validation. Software ($34.8M) is a cross-cutting overlay, not a separate tower." },
-    { category: "Run/Grow/Transform", detail: "Split for Culligan is estimated based on org profile and M&A history — directional, not measured. Formal categorization recommended." },
-    { category: "AI Deflection", detail: "Uses 'full AI resolution' definition (72-hour no-human-escalation). 126K tickets × $22 × 30–45% deflection rate. Source: HDI/MetricNet 2026." },
-  ],
-};
-
-export const limitations = {
-  title: "Dependencies & Limitations",
-  subtitle: "Factors affecting validity, completeness, or applicability of findings",
-  columns: ["Dependency / Limitation", "Impact", "Detail & Mitigation"],
-  rows: [
-    { item: "Incomplete BU Coverage", impact: "HIGH", detail: "Italy (9 entities) is most material gap. Baseline may be understated 40–80%. All savings ranges are floors.", impactType: "red" },
-    { item: "Cybersecurity Data Absent", impact: "HIGH", detail: "No security spend data available. Culligan's security posture unknown — potential investment gap or hidden spend not captured in $69.2M.", impactType: "red" },
-    { item: "TBM Mapping Unvalidated", impact: "MEDIUM", detail: "Tower-level allocations preliminary. Cross-tower comparisons may shift after CIO validation workshops.", impactType: "amber" },
-    { item: "ERP Count Estimated", impact: "MEDIUM", detail: "'25+ ERP' based on SME input, not formal inventory. Actual count and consolidation savings may vary.", impactType: "amber" },
-    { item: "M&A Pipeline", impact: "MEDIUM", detail: "Snapshot does not reflect potential acquisitions. Each new acquisition adds complexity — reinforcing urgency of structural reform.", impactType: "amber" },
-    { item: "Moveworks Acquisition Impact", impact: "MEDIUM", detail: "ServiceNow acquired Moveworks December 2025. Long-term AI service desk strategy may need re-evaluation if ITSM is not ServiceNow.", impactType: "amber" },
-    { item: "IT Labor Survey Pending", impact: "MEDIUM", detail: "H2 savings unquantified pending labor survey. 19.9% management rate confirmed; dollar value requires compensation data.", impactType: "amber" },
-    { item: "Offshore Mix Unquantified", impact: "MEDIUM", detail: "Potential $1–3M labor arbitrage is directional based on peer norms, not Culligan-specific analysis.", impactType: "amber" },
-    { item: "SaaS Waste Estimate", impact: "LOW-MEDIUM", detail: "$8–18M estimate applies industry averages to $34.8M base. Actual waste requires formal SAM assessment.", impactType: "green" },
-  ],
+  note: "Phase 1 and Phase 2 can run concurrently where independent. Phase 3 ERP work must not begin until Phase 2 org governance and Architecture Council are operational. Cybersecurity assessment runs in parallel with all phases.",
 };
 
 export const benchmarkTable = {
   title: "Benchmark Reference Summary",
-  subtitle: "Full metrics table — Culligan vs. peer quartiles and 2026 industry norms",
-  columns: ["Metric", "Culligan", "Peer Median", "Top Quartile", "vs. Benchmark"],
+  subtitle: "Full metrics — Culligan vs. peer medians and 2026 industry norms",
+  columns: ["Metric", "Culligan", "Peer Median / Norm", "vs. Benchmark"],
   rows: [
-    { metric: "IT & Digital Spend % Revenue", culligan: "2.10%", peer: "2.44%", top: "—", comparison: "✅ Below" },
-    { metric: "Software % Revenue", culligan: "1.05%", peer: "0.36%", top: "—", comparison: "🔴 ~3×" },
-    { metric: "Application Tower % Revenue", culligan: "0.76%", peer: "0.65%", top: "—", comparison: "🟡 Above" },
-    { metric: "Network % Revenue", culligan: "0.12%", peer: "0.17%", top: "—", comparison: "✅ Below" },
-    { metric: "IT Services % Revenue", culligan: "0.48%", peer: "0.56%", top: "0.86%", comparison: "✅ In Range" },
-    { metric: "Management % of IT Org", culligan: "19.9%", peer: "~11%", top: "—", comparison: "🔴 +81%" },
-    { metric: "IT FTEs per $1B Revenue", culligan: "85", peer: "70.5", top: "—", comparison: "🟡 +21%" },
-    { metric: "Annual IT Support Tickets", culligan: "~126K", peer: "—", top: "—", comparison: "🟡 Capacity Risk" },
-    { metric: "AI Ticket Deflection Rate", culligan: "~0% (early stage)", peer: "45–65% (mature)", top: "—", comparison: "🔴 Far Below" },
-    { metric: "SaaS License Utilization", culligan: "Unknown", peer: "~54% avg", top: "90%+ (best)", comparison: "🟡 Unassessed" },
-    { metric: "Cybersecurity % of IT Budget", culligan: "Unknown", peer: "10–12%", top: "15–20% (mfg)", comparison: "🔴 Unquantified" },
-    { metric: "Offshore Delivery Mix", culligan: "Below norm", peer: "25–35%", top: "—", comparison: "🟡 Gap Exists" },
+    { metric: "IT & Digital Spend % Revenue", culligan: "2.10%", peer: "2.44%", comparison: "✅ Below" },
+    { metric: "Software % Revenue", culligan: "1.05%", peer: "0.36%", comparison: "🔴 ~3× RED FLAG" },
+    { metric: "Application Tower % Revenue", culligan: "0.76%", peer: "0.65%", comparison: "🟡 Above" },
+    { metric: "Network % Revenue", culligan: "0.12%", peer: "0.17%", comparison: "✅ Below" },
+    { metric: "IT Services % Revenue", culligan: "0.48%", peer: "0.56%", comparison: "✅ In Range" },
+    { metric: "Management % of IT Org", culligan: "19.9%", peer: "~11%", comparison: "🔴 +81% RED FLAG" },
+    { metric: "IT FTEs per $1B Revenue", culligan: "85", peer: "70.5", comparison: "🟡 +21%" },
+    { metric: "AI Ticket Deflection", culligan: "~0%", peer: "45–65% (mature)", comparison: "🔴 Far Below" },
+    { metric: "SaaS License Utilization", culligan: "Unknown", peer: "54% avg", comparison: "🟡 Unassessed" },
+    { metric: "Cybersecurity % IT Budget", culligan: "Unknown", peer: "8–12%", comparison: "🔴 Unquantified" },
+    { metric: "Offshore Delivery Mix", culligan: "Below norm", peer: "25–35%", comparison: "🟡 Gap Exists" },
+    { metric: "M&A IT Integration Playbook", culligan: "None", peer: "Standardized", comparison: "🔴 Missing" },
   ],
   caption:
-    "Sources: PwC IT Cost Benchmarking Analysis; Gartner IT Spending 2026; Zylo 2026 SaaS Index; HDI/MetricNet 2026. Directional; 20 of 40 BUs covered.",
+    "Sources: PwC IT Cost Benchmarking Analysis; Gartner IT Spending 2026; Zylo 2026 SaaS Index; Capstone Partners M&A Valuations Index 2025. Directional; 20 of 40 BUs covered.",
 };
 
 export const footer = {

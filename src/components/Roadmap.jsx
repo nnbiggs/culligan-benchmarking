@@ -29,17 +29,16 @@ function PhaseCard({ phase, index, inView }) {
 }
 
 export default function Roadmap() {
-  const { title, subtitle, phases, note } = roadmap;
+  const { title, subtitle, intro, phases, note } = roadmap;
   const [ref, inView] = useInView({ threshold: 0.1 });
 
   return (
     <SectionWrapper id="roadmap" className="bg-culligan-deep py-16 sm:py-20">
       <div ref={ref} className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            {title}
-          </h2>
+          <h2 className="font-headline text-3xl sm:text-4xl font-extrabold text-white tracking-tight">{title}</h2>
           <p className="mt-3 text-culligan-light max-w-3xl mx-auto">{subtitle}</p>
+          <p className="mt-4 text-sm text-culligan-light/80 max-w-4xl mx-auto">{intro}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

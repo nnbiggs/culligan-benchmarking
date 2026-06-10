@@ -14,6 +14,11 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
+
   const handleNavClick = (id) => {
     setMenuOpen(false);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -25,21 +30,17 @@ export default function Nav() {
         scrolled ? "shadow-lg" : ""
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <button
-          onClick={() => handleNavClick("overview")}
-          className="cursor-pointer"
-          aria-label="Scroll to top"
-        >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:py-4 sm:px-6 lg:px-8">
+        <button onClick={() => handleNavClick("overview")} className="cursor-pointer shrink-0" aria-label="Scroll to top">
           <Logo />
         </button>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-6">
           {navLinks.map((link) => (
             <button
               key={link.id}
               onClick={() => handleNavClick(link.id)}
-              className={`text-sm font-medium transition-colors cursor-pointer ${
+              className={`text-xs xl:text-sm font-medium transition-colors cursor-pointer whitespace-nowrap ${
                 activeId === link.id
                   ? "text-culligan-accent underline underline-offset-4"
                   : "text-white/70 hover:text-white"
@@ -51,7 +52,7 @@ export default function Nav() {
         </div>
 
         <button
-          className="md:hidden text-white p-2"
+          className="lg:hidden text-white p-2 -mr-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
@@ -67,16 +68,16 @@ export default function Nav() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden border-t border-white/20 bg-culligan-deep">
-          <div className="flex flex-col px-4 py-4 gap-1">
+        <div className="lg:hidden fixed inset-x-0 top-[60px] bottom-0 bg-culligan-deep border-t border-white/20 overflow-y-auto">
+          <div className="flex flex-col px-4 py-2">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => handleNavClick(link.id)}
-                className={`text-left py-3 px-2 text-sm font-medium transition-colors cursor-pointer ${
+                className={`text-left py-4 px-2 text-base font-medium transition-colors cursor-pointer min-h-[48px] border-b border-white/10 last:border-0 ${
                   activeId === link.id
-                    ? "text-culligan-accent underline underline-offset-4"
-                    : "text-white/70 hover:text-white"
+                    ? "text-culligan-accent"
+                    : "text-white/80 hover:text-white"
                 }`}
               >
                 {link.label}

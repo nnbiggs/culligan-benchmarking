@@ -1,17 +1,17 @@
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
+import CioPriority from "./components/CioPriority";
 import ExecutiveSummary from "./components/ExecutiveSummary";
-import SpendBaseline from "./components/SpendBaseline";
+import BusinessContext from "./components/BusinessContext";
 import KeyFindings from "./components/KeyFindings";
-import IndustryContext from "./components/IndustryContext";
-import GapAnalysis from "./components/GapAnalysis";
-import SavingsOpportunity from "./components/SavingsOpportunity";
+import EbitdaImpact from "./components/EbitdaImpact";
+import CostOfInaction from "./components/CostOfInaction";
 import StrategicInsights from "./components/StrategicInsights";
-import AiDeepDive from "./components/AiDeepDive";
-import InvestmentMix from "./components/InvestmentMix";
+import MaPlaybook from "./components/MaPlaybook";
+import MaturityModel from "./components/MaturityModel";
+import PriorityMatrix from "./components/PriorityMatrix";
 import Roadmap from "./components/Roadmap";
 import BenchmarkTable from "./components/BenchmarkTable";
-import ReferenceSection from "./components/ReferenceSection";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -21,17 +21,17 @@ export default function App() {
       <main>
         <Hero />
         <ExecutiveSummary />
-        <SpendBaseline />
+        <CioPriority />
+        <BusinessContext />
         <KeyFindings />
-        <IndustryContext />
-        <GapAnalysis />
-        <SavingsOpportunity />
+        <EbitdaImpact />
+        <CostOfInaction />
         <StrategicInsights />
-        <AiDeepDive />
-        <InvestmentMix />
+        <MaPlaybook />
+        <MaturityModel />
+        <PriorityMatrix />
         <Roadmap />
         <BenchmarkTable />
-        <ReferenceSection />
       </main>
       <Footer />
     </div>

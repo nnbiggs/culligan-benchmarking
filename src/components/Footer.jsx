@@ -7,12 +7,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <hr className="border-white/20 mb-8" />
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6 mb-8 text-center lg:text-left">
           <Logo />
-          <p className="text-xs tracking-[0.15em] text-white/60 uppercase text-center">
+          <p className="text-[10px] sm:text-xs tracking-[0.12em] sm:tracking-[0.15em] text-white/60 uppercase max-w-xs lg:max-w-none">
             {footer.confidentiality}
           </p>
-          <p className="text-xs text-white/60 text-center md:text-right">
+          <p className="text-[10px] sm:text-xs text-white/60 max-w-sm lg:max-w-xs lg:text-right leading-relaxed">
             {footer.attribution}
           </p>
         </div>
