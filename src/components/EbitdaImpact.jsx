@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend,
 } from "recharts";
@@ -9,14 +10,38 @@ import { TableScroll, MobileCards } from "./ResponsiveTable";
 function SavingsChart() {
   const [ref, inView] = useInView({ threshold: 0.2 });
   const { chartData } = ebitdaImpact;
+  const [chartLayout, setChartLayout] = useState({ yAxisWidth: 120, height: 320 });
+
+  useEffect(() => {
+    const update = () => {
+      const width = window.innerWidth;
+      if (width < 400) {
+        setChartLayout({ yAxisWidth: 68, height: 300 });
+      } else if (width < 640) {
+        setChartLayout({ yAxisWidth: 88, height: 300 });
+      } else {
+        setChartLayout({ yAxisWidth: 120, height: 320 });
+      }
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   return (
-    <div ref={ref} className="w-full h-[280px] sm:h-[320px] mt-8 sm:mt-10 -mx-2 sm:mx-0">
+    <div ref={ref} className="w-full mt-8 sm:mt-10" style={{ height: chartLayout.height }}>
       <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={chartData} layout="vertical" margin={{ top: 8, right: 12, left: 0, bottom: 8 }}>
+        <BarChart data={chartData} layout="vertical" margin={{ top: 8, right: 8, left: 4, bottom: 8 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#D6E8F5" horizontal={false} />
-          <XAxis type="number" domain={[0, 12]} tickFormatter={(v) => `$${v}M`} tick={{ fill: "#5A6A7E", fontSize: 11 }} />
-          <YAxis type="category" dataKey="name" width={120} tick={{ fill: "#1A1A2E", fontSize: 10 }} axisLine={false} tickLine={false} />
+          <XAxis type="number" domain={[0, 12]} tickFormatter={(v) => `$${v}M`} tick={{ fill: "#5A6A7E", fontSize: 10 }} />
+          <YAxis
+            type="category"
+            dataKey="name"
+            width={chartLayout.yAxisWidth}
+            tick={{ fill: "#1A1A2E", fontSize: 10 }}
+            axisLine={false}
+            tickLine={false}
+          />
           <Tooltip formatter={(value) => [`$${value}M`, ""]} contentStyle={{ borderRadius: "12px", border: "none", boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }} />
           <Legend wrapperStyle={{ paddingTop: 12, fontSize: 12 }} formatter={(v) => (v === "low" ? "Low" : "High")} />
           <Bar dataKey="low" fill="#022656" radius={[0, 4, 4, 0]} barSize={12} isAnimationActive={inView} animationDuration={1200} />

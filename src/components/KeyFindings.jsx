@@ -99,7 +99,7 @@ export default function KeyFindings() {
                   <tr
                     key={row.area}
                     id={row.sectionId}
-                    className={`${i % 2 === 0 ? "bg-white" : "bg-culligan-off-white"}${row.sectionId ? " scroll-mt-28 sm:scroll-mt-32" : ""}`}
+                    className={`${i % 2 === 0 ? "bg-white" : "bg-culligan-off-white"}${row.sectionId ? " scroll-anchor" : ""}`}
                   >
                     <td className="px-4 py-4 align-top">
                       {row.code && (

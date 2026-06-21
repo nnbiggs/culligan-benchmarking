@@ -21,10 +21,10 @@ export const taxonomyNavLinks = [
   { id: "taxonomy-current-state", label: "Current state" },
   { id: "taxonomy-future-state", label: "Future state" },
   { id: "taxonomy-leadership", label: "IT leadership" },
-  { id: "taxonomy-benchmark", label: "Benchmark" },
+  { id: "taxonomy-benchmark", label: "Benchmarks" },
   { id: "taxonomy-savings", label: "Savings case" },
   { id: "taxonomy-roadmap", label: "Roadmap" },
-  { id: "taxonomy-regions", label: "BU spend detail" },
+  { id: "taxonomy-regions", label: "Regional spend" },
 ];
 
 export const hypothesisTags = {

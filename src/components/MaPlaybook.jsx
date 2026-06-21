@@ -1,5 +1,6 @@
 import { maPlaybook } from "../data/benchmarkData";
 import SectionWrapper from "./SectionWrapper";
+import { TableScroll, MobileCards } from "./ResponsiveTable";
 
 export default function MaPlaybook() {
   const { title, subtitle, intro, phases, note, erpFramework } = maPlaybook;
@@ -30,7 +31,20 @@ export default function MaPlaybook() {
         <div className="mt-12">
           <h3 className="font-headline text-xl font-bold text-culligan-deep mb-2">{erpFramework.title}</h3>
           <p className="text-sm text-culligan-muted mb-6">{erpFramework.subtitle}</p>
-          <div className="overflow-x-auto rounded-xl shadow-md">
+          <MobileCards
+            rows={erpFramework.rows}
+            renderCard={(row) => (
+              <>
+                <p className="font-headline font-bold text-culligan-deep text-sm mb-3">{row.scenario}</p>
+                <p className="text-xs font-semibold text-culligan-accent uppercase tracking-wide mb-1">Decision</p>
+                <p className="text-sm font-semibold text-culligan-accent mb-3">{row.decision}</p>
+                <p className="text-xs font-semibold text-culligan-deep uppercase tracking-wide mb-1">Rationale</p>
+                <p className="text-sm text-culligan-muted leading-relaxed">{row.rationale}</p>
+              </>
+            )}
+          />
+
+          <TableScroll className="hidden md:block rounded-xl shadow-md">
             <table className="w-full min-w-[720px] text-sm">
               <thead>
                 <tr className="bg-culligan-light">
@@ -49,7 +63,7 @@ export default function MaPlaybook() {
                 ))}
               </tbody>
             </table>
-          </div>
+          </TableScroll>
         </div>
       </div>
     </SectionWrapper>

@@ -70,7 +70,7 @@ export default function AgentAssistant() {
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="fixed bottom-5 left-4 sm:left-6 z-50 flex items-center gap-2 rounded-2xl bg-culligan-deep px-4 py-3 text-white shadow-2xl ring-1 ring-white/10 hover:bg-[#033875] transition-colors"
+        className="fixed bottom-5 left-4 sm:left-6 z-50 safe-bottom flex items-center gap-2 rounded-2xl bg-culligan-deep px-4 py-3 text-white shadow-2xl ring-1 ring-white/10 hover:bg-[#033875] transition-colors"
         aria-label={open ? "Close AI agent" : "Open AI agent"}
         aria-expanded={open}
       >
@@ -89,7 +89,7 @@ export default function AgentAssistant() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.98 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-20 left-4 right-4 sm:left-6 sm:right-auto z-50 flex w-auto sm:w-[min(420px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-black/10"
+            className="fixed bottom-20 left-4 right-4 sm:left-6 sm:right-auto z-50 safe-bottom flex w-auto sm:w-[min(420px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-black/10"
             style={{ maxHeight: "min(70vh, 640px)" }}
             role="dialog"
             aria-label="IT Benchmarking AI agent"

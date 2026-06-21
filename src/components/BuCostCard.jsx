@@ -293,7 +293,7 @@ export default function BuCostCard({ taxonomyName }) {
           )}
         </div>
 
-        <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
+        <div className="mt-4 grid grid-cols-1 min-[380px]:grid-cols-3 gap-2 sm:gap-3">
           <MetricBadge label="Vendor spend" value={cost.totalSpend} />
           <MetricBadge label="IT spend" value={cost.itSpend} accent />
           <MetricBadge label="IT share" value={cost.itPercent} sub="of vendor spend" />

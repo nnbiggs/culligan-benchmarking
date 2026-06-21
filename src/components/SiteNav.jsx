@@ -2,31 +2,34 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useActiveSection } from "../hooks/useAnimations";
 import Logo from "./Logo";
+import SiteTitleBar from "./SiteTitleBar";
 import {
   executiveSummaryLinks,
-  hypothesisLinks,
   operatingModelLink,
   taxonomyNavLinks,
 } from "../data/siteNav";
 
 function scrollToSection(id) {
   const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: "smooth" });
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
+
+const pageLinks = [
+  { path: "/", label: "Executive Summary" },
+  { path: operatingModelLink.path, label: "Operating model" },
+];
 
 export default function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeMenu, setActiveMenu] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
   const navRef = useRef(null);
 
   const isHome = location.pathname === "/";
   const isOperatingModel = location.pathname === operatingModelLink.path;
-  const activeSection = useActiveSection(
-    isHome ? executiveSummaryLinks.map((l) => l.id) : isOperatingModel ? taxonomyNavLinks.map((l) => l.id) : []
-  );
+  const sectionLinks = isHome ? executiveSummaryLinks : isOperatingModel ? taxonomyNavLinks : [];
+  const activeSection = useActiveSection(sectionLinks.map((l) => l.id));
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -36,48 +39,22 @@ export default function SiteNav() {
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
-
-  useEffect(() => {
-    if (isHome) {
-      setActiveMenu("executive");
-    } else if (isOperatingModel) {
-      setActiveMenu("hypothesis");
-    }
-  }, [isHome, isOperatingModel]);
 
   useEffect(() => {
     const hash = location.hash.replace("#", "");
     if (!hash) return;
-
-    if (isHome && hash.startsWith("hypothesis-")) {
-      setActiveMenu("hypothesis");
-      requestAnimationFrame(() => scrollToSection(hash));
-    } else if (isHome) {
-      setActiveMenu("executive");
-      requestAnimationFrame(() => scrollToSection(hash));
-    } else if (isOperatingModel) {
-      requestAnimationFrame(() => scrollToSection(hash));
-    }
-  }, [location.hash, isHome, isOperatingModel]);
+    requestAnimationFrame(() => scrollToSection(hash));
+  }, [location.hash, location.pathname]);
 
   useEffect(() => {
-    const onPointerDown = (e) => {
-      if (navRef.current && !navRef.current.contains(e.target)) {
-        setActiveMenu(null);
-      }
-    };
-    document.addEventListener("pointerdown", onPointerDown);
-    return () => document.removeEventListener("pointerdown", onPointerDown);
-  }, []);
+    setMenuOpen(false);
+  }, [location.pathname]);
 
-  const toggleMenu = (key) => {
-    setActiveMenu((prev) => (prev === key ? null : key));
-  };
-
-  const handleExecutiveSummaryClick = () => {
-    setActiveMenu("executive");
+  const handleLogoClick = () => {
     setMenuOpen(false);
     if (isHome) {
       scrollToSection("overview");
@@ -86,95 +63,49 @@ export default function SiteNav() {
     }
   };
 
-  const handleExecClick = (id) => {
+  const handleSectionClick = (id) => {
     setMenuOpen(false);
-    setActiveMenu("executive");
-    if (isHome) {
+    if (isHome || isOperatingModel) {
       scrollToSection(id);
     }
   };
 
-  const handleTaxonomySectionClick = (id) => {
-    setMenuOpen(false);
-    setActiveMenu("hypothesis");
-    if (isOperatingModel) {
-      scrollToSection(id);
-    } else {
-      navigate({ pathname: operatingModelLink.path, hash: id });
-    }
-  };
-
-  const handleHypothesisClick = () => {
-    setMenuOpen(false);
-    setActiveMenu("hypothesis");
-  };
-
-  const execParentActive =
-    isHome && (activeMenu === "executive" || activeSection === "overview");
-  const hypothesisParentActive = activeMenu === "hypothesis";
-
-  const hypothesisLinkClass = (link, active) =>
-    `text-xs font-medium py-1.5 px-2 whitespace-nowrap rounded transition-colors ${
-      active
-        ? "text-culligan-accent underline underline-offset-4"
-        : "text-white/70 hover:text-white"
+  const pageLinkClass = (path) => {
+    const active = location.pathname === path;
+    return `rounded-lg px-3 py-2 text-xs xl:text-sm font-semibold transition-colors whitespace-nowrap ${
+      active ? "bg-white/10 text-white" : "text-white/70 hover:text-white hover:bg-white/5"
     }`;
+  };
 
-  const HypothesisNavItem = ({ link, className, onNavigate }) => {
-    if (link.to) {
-      return (
-        <Link to={link.to} onClick={onNavigate} className={className}>
-          {link.label}
-        </Link>
-      );
-    }
-    return (
-      <a href={`/#${link.hash ?? link.id}`} onClick={onNavigate} className={className}>
-        {link.label}
-      </a>
-    );
+  const sectionLinkClass = (id) => {
+    const active = activeSection === id;
+    return `text-xs font-medium py-1.5 px-2.5 whitespace-nowrap rounded-full transition-colors ${
+      active
+        ? "bg-white/15 text-culligan-accent underline underline-offset-4"
+        : "text-white/70 hover:text-white hover:bg-white/10"
+    }`;
   };
 
   return (
-    <header ref={navRef} className="fixed top-9 left-0 right-0 z-50">
-      <nav
-        className={`bg-culligan-deep transition-shadow duration-300 ${
-          scrolled ? "shadow-lg" : ""
-        }`}
-      >
+    <header ref={navRef} className="fixed top-0 left-0 right-0 z-50">
+      <SiteTitleBar />
+      <nav className={`bg-culligan-deep transition-shadow duration-300 ${scrolled ? "shadow-lg" : ""}`}>
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:py-4 sm:px-6 lg:px-8">
           <button
             type="button"
-            onClick={handleExecutiveSummaryClick}
+            onClick={handleLogoClick}
             className="shrink-0 cursor-pointer"
-            aria-label="Go to Executive Summary"
+            aria-label="Go to report overview"
           >
             <Logo />
           </button>
 
           <div className="hidden lg:flex items-center gap-1 xl:gap-2">
-            <button
-              type="button"
-              onClick={handleExecutiveSummaryClick}
-              className={`rounded-lg px-3 py-2 text-xs xl:text-sm font-semibold transition-colors cursor-pointer whitespace-nowrap ${
-                execParentActive
-                  ? "bg-white/10 text-white"
-                  : "text-white/70 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              Executive Summary
-            </button>
-            <button
-              type="button"
-              onClick={() => toggleMenu("hypothesis")}
-              className={`rounded-lg px-3 py-2 text-xs xl:text-sm font-semibold transition-colors cursor-pointer whitespace-nowrap ${
-                hypothesisParentActive
-                  ? "bg-white/10 text-white"
-                  : "text-white/70 hover:text-white hover:bg-white/5"
-              }`}
-            >
-              Detailed Findings
-            </button>
+            {pageLinks.map((link) => (
+              <Link key={link.path} to={link.path} className={pageLinkClass(link.path)}>
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           <button
@@ -193,148 +124,60 @@ export default function SiteNav() {
           </button>
         </div>
 
-        {activeMenu === "executive" && (
+        {sectionLinks.length > 0 && (
           <div className="hidden lg:block border-t border-white/10 bg-culligan-deep/95 px-4 py-2 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-7xl flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
-              {executiveSummaryLinks.map((link) =>
-                isHome ? (
+            <div className="mx-auto max-w-7xl flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+              {sectionLinks.map((link) => (
                   <button
                     key={link.id}
                     type="button"
-                    onClick={() => handleExecClick(link.id)}
-                    className={`text-xs font-medium py-1.5 px-2 rounded transition-colors cursor-pointer whitespace-nowrap ${
-                      activeSection === link.id
-                        ? "text-culligan-accent underline underline-offset-4"
-                        : "text-white/70 hover:text-white"
-                    }`}
+                    onClick={() => handleSectionClick(link.id)}
+                    className={sectionLinkClass(link.id)}
                   >
                     {link.label}
                   </button>
-                ) : (
-                  <a
-                    key={link.id}
-                    href={`/#${link.id}`}
-                    className="text-xs font-medium py-1.5 px-2 text-white/70 hover:text-white whitespace-nowrap"
-                  >
-                    {link.label}
-                  </a>
-                )
-              )}
+                ))}
             </div>
-          </div>
-        )}
-
-        {activeMenu === "hypothesis" && (
-          <div className="hidden lg:block border-t border-white/10 bg-culligan-deep/95 px-4 py-2 sm:px-6 lg:px-8">
-            {isOperatingModel ? (
-              <div className="mx-auto max-w-7xl flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
-                {taxonomyNavLinks.map((link) => (
-                  <button
-                    key={link.id}
-                    type="button"
-                    onClick={() => handleTaxonomySectionClick(link.id)}
-                    className={`text-xs font-medium py-1.5 px-2.5 whitespace-nowrap rounded-full transition-colors ${
-                      activeSection === link.id
-                        ? "bg-white/15 text-culligan-accent underline underline-offset-4"
-                        : "text-white/70 hover:text-white hover:bg-white/10"
-                    }`}
-                  >
-                    {link.label}
-                  </button>
-                ))}
-              </div>
-            ) : (
-              <div className="mx-auto max-w-7xl flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
-                {hypothesisLinks.map((link) => (
-                  <HypothesisNavItem
-                    key={link.id}
-                    link={link}
-                    onNavigate={handleHypothesisClick}
-                    className={hypothesisLinkClass(link, false)}
-                  />
-                ))}
-              </div>
-            )}
           </div>
         )}
       </nav>
 
       {menuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[calc(2.25rem+60px)] bottom-0 bg-culligan-deep border-t border-white/20 overflow-y-auto">
+        <div className="lg:hidden fixed inset-x-0 bottom-0 top-[var(--fixed-header)] bg-culligan-deep border-t border-white/20 overflow-y-auto">
           <div className="flex flex-col px-4 py-2">
-            <button
-              type="button"
-              onClick={handleExecutiveSummaryClick}
-              className="text-left py-3 px-2 text-base font-semibold text-white border-b border-white/10 w-full"
-            >
-              Executive Summary
-            </button>
-            {activeMenu === "executive" && (
-              <div className="pb-2 border-b border-white/10">
-                {executiveSummaryLinks.map((link) =>
-                  isHome ? (
-                    <button
-                      key={link.id}
-                      type="button"
-                      onClick={() => handleExecClick(link.id)}
-                      className={`text-left w-full py-3 px-4 text-sm font-medium min-h-[44px] ${
-                        activeSection === link.id ? "text-culligan-accent" : "text-white/80"
-                      }`}
-                    >
-                      {link.label}
-                    </button>
-                  ) : (
-                    <a
-                      key={link.id}
-                      href={`/#${link.id}`}
-                      onClick={() => setMenuOpen(false)}
-                      className="block py-3 px-4 text-sm font-medium text-white/80 min-h-[44px]"
-                    >
-                      {link.label}
-                    </a>
-                  )
-                )}
-              </div>
-            )}
+            <p className="px-2 py-2 text-[10px] font-bold uppercase tracking-widest text-white/50">Reports</p>
+            {pageLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={() => setMenuOpen(false)}
+                className={`py-3 px-4 text-base font-semibold min-h-[44px] border-b border-white/10 ${
+                  location.pathname === link.path ? "text-culligan-accent" : "text-white"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
 
-            <button
-              type="button"
-              onClick={() => setActiveMenu(activeMenu === "hypothesis" ? null : "hypothesis")}
-              className="text-left py-3 px-2 text-base font-semibold text-white border-b border-white/10"
-            >
-              Detailed Findings
-            </button>
-            {activeMenu === "hypothesis" && (
-              <div className="pb-2 border-b border-white/10">
-                {isOperatingModel ? (
-                  taxonomyNavLinks.map((link) => (
-                    <button
-                      key={link.id}
-                      type="button"
-                      onClick={() => handleTaxonomySectionClick(link.id)}
-                      className={`block w-full text-left py-3 px-4 text-sm font-medium min-h-[44px] ${
-                        activeSection === link.id ? "text-culligan-accent" : "text-white/80"
-                      }`}
-                    >
-                      {link.label}
-                    </button>
-                  ))
-                ) : (
-                  hypothesisLinks.map((link) => (
-                    <HypothesisNavItem
-                      key={link.id}
-                      link={link}
-                      onNavigate={() => {
-                        setMenuOpen(false);
-                        handleHypothesisClick();
-                      }}
-                      className={`block py-3 px-4 text-sm font-medium min-h-[44px] text-white/80`}
-                    />
-                  ))
-                )}
-              </div>
+            {sectionLinks.length > 0 && (
+              <>
+                <p className="px-2 py-3 text-[10px] font-bold uppercase tracking-widest text-white/50">
+                  {isHome ? "On this page" : "Sections"}
+                </p>
+                {sectionLinks.map((link) => (
+                  <button
+                    key={link.id}
+                    type="button"
+                    onClick={() => handleSectionClick(link.id)}
+                    className={`text-left w-full py-3 px-4 text-sm font-medium min-h-[44px] border-b border-white/10 ${
+                      activeSection === link.id ? "text-culligan-accent" : "text-white/80"
+                    }`}
+                  >
+                    {link.label}
+                  </button>
+                ))}
+              </>
             )}
-
           </div>
         </div>
       )}

@@ -9,6 +9,7 @@ import {
 } from "../../data/opModelData";
 import HypothesisTag from "../HypothesisTag";
 import SectionWrapper from "../SectionWrapper";
+import { TableScroll, MobileCards } from "../ResponsiveTable";
 import {
   PartLabel,
   SectionTitle,
@@ -36,7 +37,21 @@ function KeyObservationsTable({ title, rows, variant }) {
       <div className={`${headerBg} px-4 py-3 sm:px-5`}>
         <p className="font-headline text-sm sm:text-base font-bold text-white">{title}</p>
       </div>
-      <div className="overflow-x-auto">
+
+      <MobileCards
+        rows={rows}
+        renderCard={(row) => (
+          <>
+            <p className="font-semibold text-culligan-deep text-sm mb-3">{row.area}</p>
+            <p className="text-xs font-semibold text-culligan-accent uppercase tracking-wide mb-1">Observation</p>
+            <p className="text-sm text-culligan-body leading-relaxed mb-3">{row.observation}</p>
+            <p className="text-xs font-semibold text-culligan-deep uppercase tracking-wide mb-1">Impact on Culligan IT costs</p>
+            <p className="text-sm text-culligan-body leading-relaxed">{row.impact}</p>
+          </>
+        )}
+      />
+
+      <TableScroll className="hidden md:block">
         <table className="w-full text-left text-sm">
           <thead>
             <tr className="bg-culligan-deep text-white">
@@ -63,7 +78,7 @@ function KeyObservationsTable({ title, rows, variant }) {
             ))}
           </tbody>
         </table>
-      </div>
+      </TableScroll>
     </div>
   );
 }
@@ -72,7 +87,7 @@ export function ExecutiveSummarySection() {
   const { title, sectionTitle, rows } = opModelExecutiveSummary;
 
   return (
-    <SectionWrapper id="taxonomy-executive" className="bg-white py-12 sm:py-16 scroll-mt-28">
+    <SectionWrapper id="taxonomy-executive" className="bg-white py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionTitle>{title}</SectionTitle>
         <SubTitle className="mt-6">{sectionTitle}</SubTitle>
@@ -93,7 +108,7 @@ export function CurrentStateSection() {
   const d = opModelCurrentState;
 
   return (
-    <SectionWrapper id="taxonomy-current-state" className="bg-culligan-off-white py-12 sm:py-16 scroll-mt-28">
+    <SectionWrapper id="taxonomy-current-state" className="bg-culligan-off-white py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <PartLabel>{d.partLabel}</PartLabel>
         <SectionTitle>{d.title}</SectionTitle>
@@ -144,7 +159,7 @@ export function OperatingModelSection() {
 
   return (
     <>
-      <SectionWrapper id="taxonomy-future-state" className="bg-white py-12 sm:py-16 scroll-mt-28">
+      <SectionWrapper id="taxonomy-future-state" className="bg-white py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <PartLabel>{d.partLabel}</PartLabel>
           <SectionTitle className="mb-8">Current vs future state</SectionTitle>
@@ -154,7 +169,7 @@ export function OperatingModelSection() {
 
       <SectionWrapper
         id="taxonomy-leadership"
-        className="bg-white py-12 sm:py-16 scroll-mt-28 border-t border-culligan-off-white"
+        className="bg-white py-12 sm:py-16 border-t border-culligan-off-white"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold tracking-[0.2em] text-culligan-accent uppercase mb-3">
@@ -175,7 +190,7 @@ export function BenchmarkSection() {
   const d = opModelBenchmark;
 
   return (
-    <SectionWrapper id="taxonomy-benchmark" className="bg-culligan-off-white py-12 sm:py-16 scroll-mt-28">
+    <SectionWrapper id="taxonomy-benchmark" className="bg-culligan-off-white py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <PartLabel>{d.partLabel}</PartLabel>
         <SectionTitle>{d.title}</SectionTitle>
@@ -231,7 +246,7 @@ export function SavingsSection() {
   const d = opModelSavings;
 
   return (
-    <SectionWrapper id="taxonomy-savings" className="bg-white py-12 sm:py-16 scroll-mt-28">
+    <SectionWrapper id="taxonomy-savings" className="bg-white py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <PartLabel>{d.partLabel}</PartLabel>
 
@@ -254,8 +269,27 @@ export function SavingsSection() {
         </Panel>
 
         <SubTitle>{d.leversTitle}</SubTitle>
-        <div className="mt-4 overflow-x-auto rounded-xl ring-1 ring-culligan-off-white">
-          <table className="w-full text-left text-sm">
+
+        <MobileCards
+          rows={d.levers}
+          renderCard={(row) => (
+            <>
+              <div className="flex flex-wrap items-center gap-2 mb-3">
+                <HypothesisTag code={row.hyp} />
+                <span className="font-medium text-culligan-deep text-sm">{row.lever}</span>
+              </div>
+              <p className="text-xs font-semibold text-culligan-accent uppercase tracking-wide mb-1">Capability</p>
+              <p className="text-sm text-culligan-body mb-3">{row.capability}</p>
+              <p className="text-xs font-semibold text-culligan-deep uppercase tracking-wide mb-1">Current state</p>
+              <p className="text-sm text-culligan-body mb-3">{row.current}</p>
+              <p className="text-xs font-semibold text-culligan-accent uppercase tracking-wide mb-1">Saving</p>
+              <p className="text-sm font-semibold text-culligan-accent">{row.saving}</p>
+            </>
+          )}
+        />
+
+        <TableScroll className="hidden md:block mt-4 rounded-xl ring-1 ring-culligan-off-white">
+          <table className="w-full text-left text-sm min-w-[720px]">
             <thead>
               <tr className="bg-culligan-deep text-white">
                 <th className="px-3 py-3">Hyp.</th>
@@ -277,7 +311,7 @@ export function SavingsSection() {
               ))}
             </tbody>
           </table>
-        </div>
+        </TableScroll>
 
         <div className="mt-8 rounded-2xl bg-culligan-deep px-6 py-6 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-culligan-accent mb-2">Year 3 run rate</p>
@@ -292,7 +326,7 @@ export function RoadmapSection() {
   const d = opModelRoadmap;
 
   return (
-    <SectionWrapper id="taxonomy-roadmap" className="bg-culligan-deep py-12 sm:py-16 scroll-mt-28">
+    <SectionWrapper id="taxonomy-roadmap" className="bg-culligan-deep py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <PartLabel>{d.partLabel}</PartLabel>
         <h2 className="font-headline text-2xl sm:text-3xl font-extrabold text-white tracking-tight">{d.title}</h2>

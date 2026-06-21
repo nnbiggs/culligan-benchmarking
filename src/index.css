@@ -16,9 +16,24 @@
   --font-body: "Inter", sans-serif;
 }
 
+:root {
+  --site-title-h: 3.25rem;
+  --nav-bar-h: 3.75rem;
+  --subnav-h: 2.25rem;
+  --fixed-header: calc(var(--site-title-h) + var(--nav-bar-h) + var(--subnav-h));
+  --anchor-offset: var(--fixed-header);
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --site-title-h: 3rem;
+    --subnav-h: 0px;
+    --fixed-header: calc(var(--site-title-h) + var(--nav-bar-h));
+  }
+}
+
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -26,7 +41,17 @@ body {
   color: var(--color-culligan-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+.scroll-anchor {
+  scroll-margin-top: var(--anchor-offset);
+}
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
 
 img,

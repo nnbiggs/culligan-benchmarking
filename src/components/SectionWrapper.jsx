@@ -11,7 +11,7 @@ export default function SectionWrapper({ children, className = "", id }) {
       initial={{ opacity: 1, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 1, y: 24 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className={className}
+      className={`${id ? "scroll-anchor" : ""} ${className}`.trim()}
     >
       {children}
     </motion.section>

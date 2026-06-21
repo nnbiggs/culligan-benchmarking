@@ -36,7 +36,7 @@ export default function CapabilityScopeDiagram() {
   return (
     <section className="rounded-2xl overflow-hidden shadow-xl ring-1 ring-culligan-deep/10">
       <div className="bg-culligan-deep px-5 py-6 sm:px-8 sm:py-8">
-        <div className="grid gap-6 lg:grid-cols-[1fr_200px] lg:gap-10 items-start">
+        <div className="grid gap-6 lg:grid-cols-[1fr_minmax(0,12rem)] lg:gap-10 items-start">
           <div className="space-y-4">
             <p className="text-base sm:text-lg font-semibold text-white leading-relaxed">{intro.lead}</p>
             <p className="text-sm sm:text-base text-culligan-light/90 leading-relaxed">{intro.scope}</p>
@@ -44,7 +44,7 @@ export default function CapabilityScopeDiagram() {
               {intro.framework}
             </p>
           </div>
-          <div className="grid grid-cols-3 lg:grid-cols-1 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-2">
             {[
               { value: "59", label: "Legal entities" },
               { value: "24", label: "Business units" },

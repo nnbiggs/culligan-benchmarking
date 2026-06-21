@@ -34,30 +34,45 @@ export function Panel({ children, className = "" }) {
 
 export function DataTable({ columns, rows, compact = false }) {
   return (
-    <div className="overflow-x-auto rounded-xl ring-1 ring-culligan-off-white">
-      <table className="w-full text-left text-sm">
-        <thead>
-          <tr className="bg-culligan-deep text-white">
-            {columns.map((col) => (
-              <th key={col.key} className={`px-4 py-3 font-semibold ${compact ? "text-xs" : ""}`}>
-                {col.label}
-              </th>
+    <>
+      <div className="space-y-3 md:hidden">
+        {rows.map((row, i) => (
+          <div key={i} className="rounded-xl bg-white p-4 ring-1 ring-culligan-off-white shadow-sm">
+            {columns.map((col, colIndex) => (
+              <div key={col.key} className={colIndex > 0 ? "mt-3 pt-3 border-t border-culligan-off-white" : ""}>
+                <p className="text-[10px] font-bold uppercase tracking-wide text-culligan-accent mb-1">{col.label}</p>
+                <p className={`text-culligan-body leading-relaxed ${compact ? "text-xs" : "text-sm"}`}>{row[col.key]}</p>
+              </div>
             ))}
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row, i) => (
-            <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-culligan-off-white/50"}>
+          </div>
+        ))}
+      </div>
+
+      <div className="hidden md:block overflow-x-auto rounded-xl ring-1 ring-culligan-off-white">
+        <table className="w-full text-left text-sm">
+          <thead>
+            <tr className="bg-culligan-deep text-white">
               {columns.map((col) => (
-                <td key={col.key} className={`px-4 py-3 text-culligan-body align-top ${compact ? "text-xs" : ""}`}>
-                  {row[col.key]}
-                </td>
+                <th key={col.key} className={`px-4 py-3 font-semibold ${compact ? "text-xs" : ""}`}>
+                  {col.label}
+                </th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody>
+            {rows.map((row, i) => (
+              <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-culligan-off-white/50"}>
+                {columns.map((col) => (
+                  <td key={col.key} className={`px-4 py-3 text-culligan-body align-top ${compact ? "text-xs" : ""}`}>
+                    {row[col.key]}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }
 

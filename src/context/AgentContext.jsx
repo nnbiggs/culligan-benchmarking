@@ -14,7 +14,7 @@ export function AgentProvider({ children }) {
       id: "welcome",
       role: "assistant",
       content:
-        "I'm your **Culligan IT Benchmarking agent**. I can answer questions about hypotheses, savings, BU spend, and the operating model — and navigate you to the right section.\n\nTry a suggested prompt below, or ask anything about the report.",
+        "I'm your **Culligan IT Cost Savings agent**. I can answer your questions and navigate you to the right section.\n\nTry a suggested prompt below, or ask anything about the report.",
       mode: "system",
     },
   ]);

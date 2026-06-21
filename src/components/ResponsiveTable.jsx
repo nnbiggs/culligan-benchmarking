@@ -18,7 +18,7 @@ export function MobileCards({ rows, renderCard, getSectionId }) {
           <div
             key={sectionId ?? row.id ?? i}
             id={sectionId}
-            className={`rounded-xl bg-white shadow-md p-5 border border-culligan-off-white${sectionId ? " scroll-mt-28 sm:scroll-mt-32" : ""}`}
+            className={`rounded-xl bg-white shadow-md p-5 border border-culligan-off-white${sectionId ? " scroll-anchor" : ""}`}
           >
             {renderCard(row, i)}
           </div>

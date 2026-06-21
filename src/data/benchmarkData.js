@@ -1,11 +1,20 @@
 export const brand = {
   companyName: "Culligan",
-  reportLabel: "IT COST SAVINGS OPPORUNITIES",
   heroTitle: "Transforming IT for Growth",
-  heroSubtitle:
-    "Strategic Roadmap, EBITDA Impact & CIO Action Plan · June 2026 · Draft · Confidential",
+  heroSubtitle: "Strategic Roadmap, EBITDA Impact & CIO Action Plan",
+  heroMeta: "June 2026 · Draft · Confidential",
   heroAttribution:
     "PwC IT Benchmarking · Gartner · Zylo 2026 SaaS Index · Forrester TEI · HDI/MetricNet · Independent 2026 Industry Data",
+};
+
+export const executiveSummaryCover = {
+  eyebrow: "Culligan International · Confidential · PwC Engagement",
+  title: "IT Cost Savings Benchmark",
+  subtitle: "Hypothesis Analysis, Savings Quantification, EBITDA Impact & CIO Action Plan",
+  meta: "Hypotheses H1–H6 · June 2026 · PwC Confidential",
+  hook:
+    "Culligan is not an IT overspender — it is an IT mis-spender. Vendor spend sits within benchmark, but ~3× peer software costs, 25+ fragmented ERP systems, and ungoverned BU purchasing leave $16–31M in confirmed annual savings on the table. This report quantifies the opportunity and sequences the CIO actions to capture it.",
+  source: "Source: Culligan Spend Cube June 2026 · March 2026 P&L · 20 of 40 BUs in scope",
 };
 
 export const draft = {
@@ -52,12 +61,12 @@ export const kpis = [
 
 export const navLinks = [
   { id: "overview", label: "Overview" },
-  { id: "priority", label: "Priority" },
-  { id: "findings", label: "Findings" },
-  { id: "value", label: "EV Impact" },
-  { id: "insights", label: "Insights" },
+  { id: "priority", label: "CIO priorities" },
+  { id: "findings", label: "Key findings" },
+  { id: "value", label: "Savings & EBITDA" },
+  { id: "insights", label: "Strategic insights" },
   { id: "roadmap", label: "Roadmap" },
-  { id: "reference", label: "Reference" },
+  { id: "reference", label: "Benchmark data" },
 ];
 
 export const cioPriority = {

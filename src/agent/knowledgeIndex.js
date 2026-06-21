@@ -26,7 +26,7 @@ export const knowledgeChunks = [
   chunk({
     id: "brand-overview",
     title: "Report overview",
-    content: `${brand.heroTitle}. ${brand.heroSubtitle}. KPIs: ${kpis.map((k) => `${k.label}: ${k.display ?? `${k.prefix ?? ""}${k.value}${k.suffix ?? ""}`}`).join("; ")}`,
+    content: `${brand.heroTitle}. ${brand.heroSubtitle}. ${brand.heroMeta}. KPIs: ${kpis.map((k) => `${k.label}: ${k.display ?? `${k.prefix ?? ""}${k.value}${k.suffix ?? ""}`}`).join("; ")}`,
     tags: ["overview", "kpi"],
     source: "benchmarkData",
   }),

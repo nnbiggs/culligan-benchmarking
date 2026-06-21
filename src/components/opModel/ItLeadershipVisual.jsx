@@ -14,7 +14,7 @@ function OrgNode({ label, sublabel, variant = "group", className = "" }) {
     <div
       className={`flex flex-col items-center justify-center rounded-lg px-2 py-2 text-center ring-1 shadow-sm w-full min-h-[52px] ${NODE_VARIANTS[variant]} ${className}`}
     >
-      <p className="text-[11px] font-bold leading-tight">{label}</p>
+      <p className="text-[10px] sm:text-[11px] font-bold leading-tight">{label}</p>
       {sublabel && <p className="text-[9px] font-medium opacity-90 mt-0.5 leading-tight">{sublabel}</p>}
     </div>
   );
@@ -35,7 +35,7 @@ function RegionalColumn({ nodes }) {
 
 function SymmetricOrgDiagram({ groupSublabel, columns, caption, captionClass = "text-culligan-muted" }) {
   return (
-    <div className="flex flex-col h-[248px]">
+    <div className="flex flex-col min-h-[200px] sm:h-[248px]">
       <div className="flex-1 flex flex-col items-center justify-center w-full max-w-[320px] mx-auto">
         <OrgNode label="Group CIO" sublabel={groupSublabel} variant="group" className="max-w-[200px]" />
         <div className="w-0.5 h-3 bg-slate-300 shrink-0" aria-hidden="true" />

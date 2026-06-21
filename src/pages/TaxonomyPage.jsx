@@ -1,12 +1,9 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import SiteNav from "../components/SiteNav";
-import DraftBanner from "../components/DraftBanner";
 import Footer from "../components/Footer";
 import CapabilityModelVisual from "../components/CapabilityModelVisual";
 import CapabilityModelIntro from "../components/CapabilityModelIntro";
 import SectionWrapper from "../components/SectionWrapper";
-import Logo from "../components/Logo";
 import BuCostCard from "../components/BuCostCard";
 import RegionalInsightsPanel from "../components/RegionalInsightsPanel";
 import {
@@ -21,22 +18,19 @@ import { operatingRegions } from "../data/taxonomyData";
 import { taxonomyNavLinks } from "../data/siteNav";
 import { opModelCover, opModelCapability } from "../data/opModelData";
 import { buCostSource, buCostFootnote } from "../data/buCostData";
-import { StickySectionNav, PageScrollAssist } from "../components/PageNavigation";
+import { PageScrollAssist } from "../components/PageNavigation";
 
 function TaxonomyHero() {
   return (
-    <header id="taxonomy-overview" className="bg-culligan-deep pt-28 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20 scroll-mt-28">
+    <header id="taxonomy-overview" className="scroll-anchor bg-culligan-deep pb-12 sm:pb-16 lg:pb-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-8 lg:hidden">
-          <Logo />
-        </div>
         <div className="text-center max-w-4xl mx-auto">
           <p className="text-[10px] sm:text-xs font-semibold tracking-[0.2em] text-culligan-accent uppercase mb-3">
             {opModelCover.eyebrow}
           </p>
-          <h1 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
             {opModelCover.title}
-          </h1>
+          </h2>
           <p className="mt-3 text-sm sm:text-base text-culligan-light">{opModelCover.subtitle}</p>
           <p className="mt-2 text-xs text-culligan-light/70">{opModelCover.meta}</p>
         </div>
@@ -67,7 +61,7 @@ function RegionsSection() {
   const activeRegion = operatingRegions.find((r) => r.id === activeRegionId) ?? operatingRegions[0];
 
   return (
-    <SectionWrapper id="taxonomy-regions" className="bg-culligan-off-white py-12 sm:py-16 scroll-mt-28">
+    <SectionWrapper id="taxonomy-regions" className="bg-culligan-off-white py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="font-headline text-2xl sm:text-3xl font-extrabold text-culligan-deep tracking-tight">
           Operating regions · vendor spend detail
@@ -120,7 +114,7 @@ function RegionsSection() {
 
 function CapabilitiesSection() {
   return (
-    <SectionWrapper id="taxonomy-capabilities" className="bg-gradient-to-b from-culligan-off-white to-white py-12 sm:py-16 lg:py-20 scroll-mt-28">
+    <SectionWrapper id="taxonomy-capabilities" className="bg-gradient-to-b from-culligan-off-white to-white py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 sm:mb-12">
           <p className="text-xs font-semibold tracking-[0.2em] text-culligan-accent uppercase mb-4">
@@ -148,9 +142,7 @@ export default function TaxonomyPage() {
   return (
     <div className="min-h-screen">
       <SiteNav />
-      <DraftBanner />
-      <main className="pt-9 sm:pt-10">
-        <StickySectionNav links={taxonomyNavLinks} ariaLabel="Operating model sections" />
+      <main className="pt-[var(--fixed-header)]">
         <TaxonomyHero />
         <ExecutiveSummarySection />
         <CapabilitiesSection />

@@ -147,7 +147,7 @@ function GovernanceLayer() {
         <p className="text-center text-[10px] font-bold uppercase tracking-widest text-culligan-muted mb-4">
           Capabilities by domain
         </p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-2 sm:gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
           {domains.map((domain) => (
             <div
               key={domain.name}

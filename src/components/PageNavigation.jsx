@@ -20,7 +20,7 @@ export function StickySectionNav({ links, ariaLabel = "Page sections" }) {
   return (
     <nav
       aria-label={ariaLabel}
-      className="sticky top-[calc(2.25rem+3.5rem)] sm:top-[calc(2.25rem+4rem)] z-40 border-b border-slate-200 bg-white/95 backdrop-blur-md shadow-sm"
+      className="sticky top-[var(--fixed-header)] z-40 mt-[var(--fixed-header)] border-b border-slate-200 bg-white/95 backdrop-blur-md shadow-sm"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-2 py-2.5 overflow-x-auto scrollbar-thin [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -77,7 +77,7 @@ export function PageScrollAssist({ links, ariaLabel = "Page navigation" }) {
   };
 
   return (
-    <div className="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-2" aria-label={ariaLabel}>
+    <div className="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-40 safe-bottom flex flex-col items-end gap-2" aria-label={ariaLabel}>
       {menuOpen && (
         <div className="w-[min(18rem,calc(100vw-2rem))] rounded-2xl bg-white shadow-2xl ring-1 ring-black/10 overflow-hidden mb-1">
           <div className="px-4 py-3 bg-culligan-deep">
