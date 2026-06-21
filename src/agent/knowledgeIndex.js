@@ -50,10 +50,16 @@ export const knowledgeChunks = [
   ),
   ...keyFindings.findingsTable.rows.map((row) =>
     chunk({
-      id: `hypothesis-${row.code.toLowerCase()}-finding`,
-      title: `${row.area} — ${row.status}`,
+      id: row.code ? `hypothesis-${row.code.toLowerCase()}-finding` : `finding-${row.area.replace(/\s+/g, "-").toLowerCase()}`,
+      title: `${row.area}${row.status ? ` — ${row.status}` : ""}`,
       content: `Numbers:\n${row.numbers}\n\nMeaning:\n${row.meaning}`,
-      tags: ["hypothesis", row.code.toLowerCase(), row.status.toLowerCase(), row.name.toLowerCase()],
+      tags: [
+        "hypothesis",
+        row.code?.toLowerCase(),
+        row.status?.toLowerCase(),
+        row.name?.toLowerCase(),
+        row.area?.toLowerCase(),
+      ].filter(Boolean),
       source: "benchmarkData",
     })
   ),

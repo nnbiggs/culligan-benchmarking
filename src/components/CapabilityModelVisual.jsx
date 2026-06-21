@@ -153,13 +153,13 @@ function GovernanceLayer() {
               key={domain.name}
               className="rounded-lg bg-white px-2 py-3 ring-1 ring-black/5 shadow-sm"
             >
-              <p className="font-headline text-[10px] sm:text-[11px] font-bold text-culligan-deep text-center leading-tight mb-2 min-h-[2.5rem] flex items-center justify-center">
+              <div className="font-headline text-[10px] sm:text-[11px] font-bold text-culligan-deep text-center leading-tight mb-2 min-h-[2.5rem] flex items-center justify-center">
                 <DomainLabel
                   name={domain.name}
                   meta={domainMeta[domain.name]}
                   className="text-culligan-deep text-[10px] sm:text-[11px] [&_button]:text-culligan-deep [&_button]:decoration-culligan-accent/50"
                 />
-              </p>
+              </div>
               <div className="space-y-1">
                 {domain.capabilities.map((cap) => (
                   <CapabilityItem
