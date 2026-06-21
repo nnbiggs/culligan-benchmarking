@@ -8,14 +8,22 @@ export function TableScroll({ children, className = "" }) {
   );
 }
 
-export function MobileCards({ rows, renderCard }) {
+export function MobileCards({ rows, renderCard, getSectionId }) {
   return (
     <div className="space-y-4 md:hidden">
-      {rows.map((row, i) => (
-        <div key={row.id ?? i} className="rounded-xl bg-white shadow-md p-5 border border-culligan-off-white">
-          {renderCard(row, i)}
-        </div>
-      ))}
+      {rows.map((row, i) => {
+        const sectionId = getSectionId?.(row) ?? row.sectionId;
+
+        return (
+          <div
+            key={sectionId ?? row.id ?? i}
+            id={sectionId}
+            className={`rounded-xl bg-white shadow-md p-5 border border-culligan-off-white${sectionId ? " scroll-mt-28 sm:scroll-mt-32" : ""}`}
+          >
+            {renderCard(row, i)}
+          </div>
+        );
+      })}
     </div>
   );
 }

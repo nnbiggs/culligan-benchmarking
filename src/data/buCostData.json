@@ -1,0 +1,1127 @@
+{
+  "source": "Spend Cube (June 2026) \u00b7 Vendor invoice spend only",
+  "footnote": "Financial & Corporate Charges are intercompany allocations \u2014 interpret as financial flows, not operational cost drivers. People costs (salaries, benefits) are not included.",
+  "regionCosts": {
+    "Americas": {
+      "vendorSpend": "$774.8M",
+      "itSpend": "$14.98M",
+      "itPercent": "1.9%",
+      "buCount": 5,
+      "explanation": "Americas IT totals $15.0M across 5 BUs in the spend cube (1\u20133% of vendor spend). Quench and Flagship drive IT spend; ZeroWater, Paragon, and Brazil are under-invested in operational IT."
+    },
+    "EMEA": {
+      "vendorSpend": "$476.0M",
+      "itSpend": "$22.21M",
+      "itPercent": "4.7%",
+      "buCount": 6,
+      "explanation": "EMEA IT totals $22.2M across 6 BUs. Iberia, Germany, Nordics, and UK CDW at 6% reflect fragmented MSP and local service desk models. Poland at 1% is the highest H4 standardisation opportunity."
+    },
+    "APAC": {
+      "vendorSpend": "$234.7M",
+      "itSpend": "$8.11M",
+      "itPercent": "3.5%",
+      "buCount": 3,
+      "explanation": "APAC IT totals $8.1M across 3 BUs in the spend cube. ZIP ANZ carries group ERP migration cost; Harvey and ZIP UK rely on lean local IT stacks."
+    }
+  },
+  "taxonomyBuMap": {
+    "Culligan Quench": "Culligan Quench",
+    "Flagship": "Flagship",
+    "Franchise & dealers": null,
+    "OEM channel": "Paragon",
+    "NA Consumer Products": "ZeroWater",
+    "Latin America": "Brazil (IBBL)",
+    "France & Switzerland": "France & Switzerland",
+    "Iberia": "Iberia",
+    "Germany": "Germany",
+    "Poland & Baltics": "Poland & Baltics",
+    "Nordics": "Nordics",
+    "UK CDW": "UK CDW",
+    "ZIP Water ANZ": "ZIP ANZ",
+    "ZIP UK": "ZIP UK",
+    "Harvey": "Harvey",
+    "Culligan AUS": null,
+    "Complete Home Filtration": null
+  },
+  "corporate": {
+    "name": "Corporate",
+    "region": "Corporate",
+    "totalSpend": "$80.8M",
+    "itSpend": "$21M",
+    "itPercent": "26%",
+    "itDominant": "software ($12",
+    "overview": "Corporate is the IT owner for the group. IT at 26% of Corporate spend ($21M) \u2014 the highest of any BU. The Salesforce enterprise CRM contract ($7.2M) is the largest single IT spend item in the group.",
+    "costBreakdown": [
+      {
+        "category": "IT & Digital",
+        "amount": "$21.0M",
+        "percent": "26%"
+      },
+      {
+        "category": "Financial & corporate charges (interco)",
+        "amount": "$17.9M",
+        "percent": "22%"
+      },
+      {
+        "category": "Sales & marketing (global brand agencies)",
+        "amount": "$13.9M",
+        "percent": "17%"
+      },
+      {
+        "category": "Professional services (audit, consulting, legal)",
+        "amount": "$11.3M",
+        "percent": "14%"
+      },
+      {
+        "category": "Group insurance (general liability)",
+        "amount": "$9.1M",
+        "percent": "11%"
+      },
+      {
+        "category": "HR & corporate services",
+        "amount": "$1.9M",
+        "percent": "2%"
+      },
+      {
+        "category": "Facilities & utilities",
+        "amount": "$0.9M",
+        "percent": "1%"
+      },
+      {
+        "category": "Unclassified",
+        "amount": "$4.7M",
+        "percent": "6%"
+      },
+      {
+        "category": "TOTAL",
+        "amount": "$80.8M",
+        "percent": "100%"
+      }
+    ],
+    "itLine": "$21M  \u00b7  26% of total spend  \u00b7  IT Spend only",
+    "itExplanation": "IT of $21.0M: software ($12.2M) including Salesforce CRM ($7.2M), HRIS/Workday ($2.1M), ERP ($1.1M), BI ($0.78M); IT services ($5.1M) including group helpdesk and managed services; cloud & infrastructure ($2.9M) including cybersecurity SOC ($1.7M), integration platform ($0.7M), cloud hosting ($0.46M). Corporate holds the group's best-negotiated IT contracts \u2014 the gap between Corporate's Salesforce rate and what BUs pay independently is the H5 savings pool.",
+    "operationalNarrative": "Corporate's cost structure is fundamentally different from any operating BU. IT at $21M (26%) confirms Corporate's role as the group's technology owner \u2014 it holds the group enterprise agreements that BUs benefit from or should benefit from once consolidated. The $13.9M in sales & marketing is primarily global brand management agency fees ($10.2M) \u2014 the cost of maintaining Culligan International's global brand identity. Professional services at $11.3M covers group audit ($3.9M), management consulting ($5.3M, likely including PwC's current engagement), and legal ($2.2M). Insurance at $9.1M is the group-level general liability policy that covers the entire portfolio. The $17.9M intercompany charge represents Corporate's recovery of shared service costs from operating BUs."
+  },
+  "businessUnits": [
+    {
+      "name": "Culligan Quench",
+      "region": "Americas",
+      "totalSpend": "$347.9M",
+      "itSpend": "$6.65M",
+      "itPercent": "2%",
+      "itDominant": "\u2014",
+      "overview": "Largest BU by spend. Cost structure dominated by equipment procurement (35%) and intercompany charges (20%) \u2014 reflecting the capital-intensive PPE-on-premises rental model and significant intra-group billing.",
+      "costBreakdown": [
+        {
+          "category": "Finished goods (equipment & consumables)",
+          "amount": "$121.2M",
+          "percent": "35%"
+        },
+        {
+          "category": "Financial & corporate charges (interco)",
+          "amount": "$71.3M",
+          "percent": "20%"
+        },
+        {
+          "category": "Mechanical components",
+          "amount": "$31.5M",
+          "percent": "9%"
+        },
+        {
+          "category": "Taxes & regulatory",
+          "amount": "$30.1M",
+          "percent": "9%"
+        },
+        {
+          "category": "Transportation & logistics",
+          "amount": "$17.7M",
+          "percent": "5%"
+        },
+        {
+          "category": "Fleet management",
+          "amount": "$14.2M",
+          "percent": "4%"
+        },
+        {
+          "category": "Professional services",
+          "amount": "$11.6M",
+          "percent": "3%"
+        },
+        {
+          "category": "Facilities & utilities",
+          "amount": "$9.4M",
+          "percent": "3%"
+        },
+        {
+          "category": "IT & Digital",
+          "amount": "$6.6M",
+          "percent": "2%"
+        },
+        {
+          "category": "HR & corporate services",
+          "amount": "$6.6M",
+          "percent": "2%"
+        },
+        {
+          "category": "Other",
+          "amount": "$8.7M",
+          "percent": "2%"
+        },
+        {
+          "category": "TOTAL",
+          "amount": "$347.9M",
+          "percent": "100%"
+        }
+      ],
+      "itLine": "$6.65M  \u00b7  2% of total spend  \u00b7  IT Spend only",
+      "itExplanation": "IT spend of $6.65M covers ERP ($2.3M), BI/analytics ($1.5M), AI/automation tools ($0.7M), telecom ($1.0M), and IT services ($0.6M). No FSM tool spend visible \u2014 field service scheduling likely managed through legacy ERP modules.",
+      "operationalNarrative": "The $121M in finished goods spend (water dispensers, coolers, RO units) is the cost of growing the subscriber base \u2014 each new customer requires equipment placement. The $71M intercompany charge is primarily cost reallocation from Corporate for shared services, not operational spend. Stripping both out gives an operational cost base of ~$156M against $457M annualised revenue (34% cost ratio). IT at $6.65M (2%) is low relative to the operational complexity \u2014 14 route BUs worth of service scheduling, fleet, and CRM running on fragmented tools."
+    },
+    {
+      "name": "Flagship",
+      "region": "Americas",
+      "totalSpend": "$213.9M",
+      "itSpend": "$6.7M",
+      "itPercent": "3%",
+      "itDominant": "\u2014",
+      "overview": "Second-largest Americas BU. Unlike Quench (POU dispensers), Flagship is a residential and commercial water treatment business with a manufacturing/fabrication cost profile \u2014 mechanical components (15%) and electrical systems (9%) reflect in-house assembly.",
+      "costBreakdown": [
+        {
+          "category": "Mechanical components",
+          "amount": "$32.0M",
+          "percent": "15%"
+        },
+        {
+          "category": "Transportation & logistics",
+          "amount": "$30.4M",
+          "percent": "14%"
+        },
+        {
+          "category": "Sales & marketing",
+          "amount": "$28.4M",
+          "percent": "13%"
+        },
+        {
+          "category": "Finished goods",
+          "amount": "$28.3M",
+          "percent": "13%"
+        },
+        {
+          "category": "Electrical & control systems",
+          "amount": "$18.3M",
+          "percent": "9%"
+        },
+        {
+          "category": "Financial & corporate charges",
+          "amount": "$17.1M",
+          "percent": "8%"
+        },
+        {
+          "category": "Raw materials (filtration media)",
+          "amount": "$10.2M",
+          "percent": "5%"
+        },
+        {
+          "category": "Insurance",
+          "amount": "$9.7M",
+          "percent": "5%"
+        },
+        {
+          "category": "IT & Digital",
+          "amount": "$6.7M",
+          "percent": "3%"
+        },
+        {
+          "category": "Professional services",
+          "amount": "$5.1M",
+          "percent": "2%"
+        },
+        {
+          "category": "HR & corporate services",
+          "amount": "$4.7M",
+          "percent": "2%"
+        },
+        {
+          "category": "Other",
+          "amount": "$23.1M",
+          "percent": "11%"
+        },
+        {
+          "category": "TOTAL",
+          "amount": "$213.9M",
+          "percent": "100%"
+        }
+      ],
+      "itLine": "$6.7M  \u00b7  3% of total spend  \u00b7  IT Spend only",
+      "itExplanation": "IT at $6.70M (3%) includes cloud & infrastructure ($1.6M) \u2014 the highest cloud spend of any Americas BU \u2014 plus software licences ($3.2M) and IT services ($1.2M). The cloud investment likely relates to Flagship's e-commerce and digital customer acquisition infrastructure.",
+      "operationalNarrative": "The $28M sales & marketing spend (13%) is unusually high for a route service business \u2014 it reflects Flagship's investment in national B2B account development and local market advertising across its multi-market footprint. The $3.5M National Account Services charge confirms significant B2B channel activity. Insurance at $9.7M (5%) is disproportionately high \u2014 likely reflects the liability exposure of deploying treatment systems in residential premises. The relatively low intercompany charge vs Quench ($17M vs $71M) suggests Flagship has more operational autonomy."
+    },
+    {
+      "name": "ZeroWater",
+      "region": "Americas",
+      "totalSpend": "$79.3M",
+      "itSpend": "$0.54M",
+      "itPercent": "1%",
+      "itDominant": "\u2014",
+      "overview": "Consumer filtration brand (pitchers, dispensers, replacement filters). Cost structure is product-company: intercompany (23%), mechanical components (19%), filtration media (13%), packaging (10%), and marketing (9%).",
+      "costBreakdown": [
+        {
+          "category": "Financial & corporate charges",
+          "amount": "$18.4M",
+          "percent": "23%"
+        },
+        {
+          "category": "Mechanical components (contract mfg)",
+          "amount": "$15.2M",
+          "percent": "19%"
+        },
+        {
+          "category": "Filtration & treatment media",
+          "amount": "$10.2M",
+          "percent": "13%"
+        },
+        {
+          "category": "Packaging",
+          "amount": "$7.9M",
+          "percent": "10%"
+        },
+        {
+          "category": "Transportation & freight",
+          "amount": "$7.5M",
+          "percent": "9%"
+        },
+        {
+          "category": "Sales & marketing",
+          "amount": "$6.9M",
+          "percent": "9%"
+        },
+        {
+          "category": "Professional services (legal & IP)",
+          "amount": "$5.1M",
+          "percent": "6%"
+        },
+        {
+          "category": "Finished goods",
+          "amount": "$4.2M",
+          "percent": "5%"
+        },
+        {
+          "category": "IT & Digital",
+          "amount": "$0.5M",
+          "percent": "1%"
+        },
+        {
+          "category": "Other",
+          "amount": "$3.4M",
+          "percent": "4%"
+        },
+        {
+          "category": "TOTAL",
+          "amount": "$79.3M",
+          "percent": "100%"
+        }
+      ],
+      "itLine": "$0.54M  \u00b7  1% of total spend  \u00b7  IT Spend only",
+      "itExplanation": "IT spend of $0.54M is entirely software licences \u2014 likely Microsoft 365 and a basic ERP/accounting system. No CRM, FSM, or analytics tools visible in the spend cube. Digital commerce (Amazon, DTC website) likely managed through Corporate's shared platforms.",
+      "operationalNarrative": "ZeroWater's cost profile is that of a branded consumer goods manufacturer selling through retail channels. The $15M in mechanical components (contract manufacturing of filter housings and pitchers in Asia) and $10M in filtration media (the TDS-removing ion-exchange resin) are the core product costs. Packaging at $7.9M (10%) reflects the retail shelf-ready packaging required for Walmart, Target, and Costco. The $7M in advertising/agency spend supports the brand's performance in a competitive retail environment. IT at $0.54M (1%) is minimal \u2014 consistent with a business that relies on the retailer's supply chain systems and Amazon Vendor Central rather than its own operational IT."
+    },
+    {
+      "name": "Paragon",
+      "region": "Americas",
+      "totalSpend": "$79.4M",
+      "itSpend": "$0.29M",
+      "itPercent": "<1%",
+      "itDominant": "\u2014",
+      "overview": "OEM filter manufacturer. Cost structure is manufacturing-heavy: intercompany (40%), raw materials (20%), and mechanical components (19%). IT spend negligible at $0.29M.",
+      "costBreakdown": [
+        {
+          "category": "Financial & corporate charges (interco)",
+          "amount": "$32.0M",
+          "percent": "40%"
+        },
+        {
+          "category": "Raw materials (media & plastics)",
+          "amount": "$16.3M",
+          "percent": "20%"
+        },
+        {
+          "category": "Mechanical components",
+          "amount": "$14.9M",
+          "percent": "19%"
+        },
+        {
+          "category": "Packaging",
+          "amount": "$3.5M",
+          "percent": "4%"
+        },
+        {
+          "category": "Facilities & utilities",
+          "amount": "$2.0M",
+          "percent": "3%"
+        },
+        {
+          "category": "NSF certification services",
+          "amount": "$1.8M",
+          "percent": "2%"
+        },
+        {
+          "category": "Transportation",
+          "amount": "$2.3M",
+          "percent": "3%"
+        },
+        {
+          "category": "IT & Digital",
+          "amount": "$0.3M",
+          "percent": "0%"
+        },
+        {
+          "category": "Other",
+          "amount": "$6.3M",
+          "percent": "8%"
+        },
+        {
+          "category": "TOTAL",
+          "amount": "$79.4M",
+          "percent": "100%"
+        }
+      ],
+      "itLine": "$0.29M  \u00b7  <1% of total spend  \u00b7  IT Spend only",
+      "operationalNarrative": "Paragon is primarily a B2B manufacturer \u2014 it makes filter components and assemblies that other Culligan BUs and external OEM customers incorporate into their products. The 40% intercompany charge reflects transfer pricing of manufactured goods to Culligan entities. Raw materials (filtration media $10.9M, plastics $5.3M) and mechanical components ($14.9M) together account for 39% of spend \u2014 the core cost of manufacturing. NSF certification costs ($1.4M) reflect the regulatory overhead of making water treatment components for the US market. IT at $0.29M is the lowest of any Americas BU \u2014 consistent with a manufacturing business that operates largely on paper-based or basic ERP processes."
+    },
+    {
+      "name": "Brazil (IBBL)",
+      "region": "Americas",
+      "totalSpend": "$54.3M",
+      "itSpend": "$0.8M",
+      "itPercent": "1%",
+      "itDominant": "\u2014",
+      "overview": "Brazilian route service and manufacturing business. Unique cost profile: mechanical components (42%) and finished goods (21%) reflect manufacturing activity; minimal IT spend ($0.8M) relative to operational complexity.",
+      "costBreakdown": [
+        {
+          "category": "Mechanical components (contract mfg)",
+          "amount": "$22.6M",
+          "percent": "42%"
+        },
+        {
+          "category": "Finished goods",
+          "amount": "$11.5M",
+          "percent": "21%"
+        },
+        {
+          "category": "Transportation & brokerage",
+          "amount": "$3.2M",
+          "percent": "6%"
+        },
+        {
+          "category": "Raw materials",
+          "amount": "$2.4M",
+          "percent": "4%"
+        },
+        {
+          "category": "Taxes (ICMS, federal)",
+          "amount": "$1.5M",
+          "percent": "3%"
+        },
+        {
+          "category": "Sales & marketing",
+          "amount": "$1.8M",
+          "percent": "3%"
+        },
+        {
+          "category": "MRO supplies & services",
+          "amount": "$1.4M",
+          "percent": "3%"
+        },
+        {
+          "category": "HR & corporate services",
+          "amount": "$1.6M",
+          "percent": "3%"
+        },
+        {
+          "category": "IT & Digital",
+          "amount": "$0.8M",
+          "percent": "1%"
+        },
+        {
+          "category": "Other",
+          "amount": "$7.5M",
+          "percent": "14%"
+        },
+        {
+          "category": "TOTAL",
+          "amount": "$54.3M",
+          "percent": "100%"
+        }
+      ],
+      "itLine": "$0.8M  \u00b7  1% of total spend  \u00b7  IT Spend only",
+      "itExplanation": "IT spend of $0.80M covers software ($0.51M), IT services ($0.22M), telecom ($0.07M). No ERP, CRM, or analytics visible. Route scheduling likely managed manually or through imported processes from group IT.",
+      "operationalNarrative": "Brazil's cost structure is unusual within the Americas region \u2014 42% of spend is mechanical components (contract manufacturing), which is far higher than other route service BUs. This reflects IBBL's manufacturing activity: producing water coolers and treatment systems locally rather than importing finished goods. The $2.5M brokerage charge in logistics reflects Brazilian import duties and customs brokerage \u2014 a structural tax cost of doing business in Brazil. The $1.5M in taxes is likely ICMS (Brazilian state VAT). IT at $0.8M (1%) is very low \u2014 field service operations likely run on manual or spreadsheet-based scheduling."
+    },
+    {
+      "name": "France & Switzerland",
+      "region": "EMEA",
+      "totalSpend": "$122.6M",
+      "itSpend": "$5.04M",
+      "itPercent": "4%",
+      "itDominant": "software ($3",
+      "overview": "Largest EMEA BU by spend. Significantly distorted by a $72.7M intercompany charge (59% of spend) \u2014 once stripped, the operational cost base is ~$50M, dominated by fleet operations (25%) and consumables.",
+      "costBreakdown": [
+        {
+          "category": "Financial & corporate charges (interco)",
+          "amount": "$72.7M",
+          "percent": "59%"
+        },
+        {
+          "category": "Fleet management",
+          "amount": "$12.2M",
+          "percent": "10%"
+        },
+        {
+          "category": "Finished goods & consumables",
+          "amount": "$9.1M",
+          "percent": "7%"
+        },
+        {
+          "category": "Facilities & utilities",
+          "amount": "$5.5M",
+          "percent": "4%"
+        },
+        {
+          "category": "IT & Digital",
+          "amount": "$5.0M",
+          "percent": "4%"
+        },
+        {
+          "category": "HR & corporate services",
+          "amount": "$4.1M",
+          "percent": "3%"
+        },
+        {
+          "category": "Professional services",
+          "amount": "$3.7M",
+          "percent": "3%"
+        },
+        {
+          "category": "MRO supplies & services",
+          "amount": "$2.7M",
+          "percent": "2%"
+        },
+        {
+          "category": "Transportation",
+          "amount": "$1.8M",
+          "percent": "1%"
+        },
+        {
+          "category": "Fleet insurance",
+          "amount": "$1.6M",
+          "percent": "1%"
+        },
+        {
+          "category": "Other",
+          "amount": "$4.2M",
+          "percent": "3%"
+        },
+        {
+          "category": "TOTAL",
+          "amount": "$122.6M",
+          "percent": "100%"
+        }
+      ],
+      "itLine": "$5.04M  \u00b7  4% of total spend  \u00b7  IT Spend only",
+      "itExplanation": "IT of $5.04M: software ($3.4M) includes ERP and the ATS IoT dispenser management platform, hardware ($0.89M) \u2014 notably high for EMEA \u2014 and cloud infrastructure ($0.60M). ATS France is the most IoT-invested EMEA BU.",
+      "operationalNarrative": "The $72.7M intercompany charge is the defining feature of France & Switzerland's cost profile. This represents transfer pricing for water treatment equipment, filter media, and shared services allocated from group entities \u2014 a common structure in French subsidiaries with complex intra-group supply chains. Stripping it out, the actual operational cost base is approximately $50M: fleet ($12M, 24%), consumables ($6.8M, 14%), facilities ($5.5M, 11%), IT ($5M, 10%). Fleet at 24% of operational cost is the highest fleet ratio in EMEA \u2014 reflecting the density of the French route service network. IT at $5M includes significant software investment ($3.4M) relative to its operational scale, likely the ATS connected dispenser platform."
+    },
+    {
+      "name": "Iberia",
+      "region": "EMEA",
+      "totalSpend": "$106.3M",
+      "itSpend": "$6.12M",
+      "itPercent": "6%",
+      "itDominant": "software ($3",
+      "overview": "The most IT-intensive EMEA BU at 6% of spend. Highest IT absolute spend in EMEA ($6.1M). Broad-based cost profile: finished goods (27%), intercompany (13%), logistics (9%), and fleet (7%).",
+      "costBreakdown": [
+        {
+          "category": "Finished goods (equipment & bottled water)",
+          "amount": "$28.8M",
+          "percent": "27%"
+        },
+        {
+          "category": "Financial & corporate charges",
+          "amount": "$13.4M",
+          "percent": "13%"
+        },
+        {
+          "category": "Transportation & logistics",
+          "amount": "$9.1M",
+          "percent": "9%"
+        },
+        {
+          "category": "Fleet management",
+          "amount": "$7.5M",
+          "percent": "7%"
+        },
+        {
+          "category": "IT & Digital",
+          "amount": "$6.1M",
+          "percent": "6%"
+        },
+        {
+          "category": "Mechanical components",
+          "amount": "$6.4M",
+          "percent": "6%"
+        },
+        {
+          "category": "Bottled water packaging",
+          "amount": "$5.4M",
+          "percent": "5%"
+        },
+        {
+          "category": "Facilities & utilities",
+          "amount": "$4.7M",
+          "percent": "4%"
+        },
+        {
+          "category": "Account services (national accounts)",
+          "amount": "$3.9M",
+          "percent": "4%"
+        },
+        {
+          "category": "Sales & marketing",
+          "amount": "$3.2M",
+          "percent": "3%"
+        },
+        {
+          "category": "Other",
+          "amount": "$17.8M",
+          "percent": "17%"
+        },
+        {
+          "category": "TOTAL",
+          "amount": "$106.3M",
+          "percent": "100%"
+        }
+      ],
+      "itLine": "$6.12M  \u00b7  6% of total spend  \u00b7  IT Spend only",
+      "itExplanation": "IT of $6.12M: software ($3.96M) the highest in EMEA, IT services ($1.08M), telecom ($0.61M), cloud ($0.32M), hardware ($0.12M). Suggests Iberia may have a more developed ERP and CRM stack than other EMEA BUs.",
+      "operationalNarrative": "Iberia's cost structure reflects a diversified water business \u2014 both route service (fleet, MRO, installation materials) and product distribution (finished goods $28.8M, packaging $5.4M for bottled water). The $4.8M in bottled water products and $3.6M in bottled water packaging confirms a water bottling/delivery segment not present in other EMEA BUs. Account Services at $3.9M signals a significant national account / B2B sales channel. IT at $6.1M (6%) is the highest IT ratio in EMEA \u2014 software dominates ($4M including ERP and CRM), with meaningful IT services spend ($1.1M). Iberia appears to be the most digitally invested EMEA operating BU."
+    },
+    {
+      "name": "Germany",
+      "region": "EMEA",
+      "totalSpend": "$70.2M",
+      "itSpend": "$4.04M",
+      "itPercent": "6%",
+      "itDominant": "IT Services dominate at $2",
+      "overview": "IT-intensive EMEA BU at 6% of spend. Distinctive cost profile: legal costs ($7.1M, 10% of total) are unusually high, reflecting German regulatory and employment law complexity. Fleet and logistics reflect route service density.",
+      "costBreakdown": [
+        {
+          "category": "Finished goods (equipment)",
+          "amount": "$19.2M",
+          "percent": "27%"
+        },
+        {
+          "category": "Transportation & logistics",
+          "amount": "$8.6M",
+          "percent": "12%"
+        },
+        {
+          "category": "Professional services (incl. $7.1M legal)",
+          "amount": "$8.1M",
+          "percent": "12%"
+        },
+        {
+          "category": "Financial & corporate charges",
+          "amount": "$6.6M",
+          "percent": "9%"
+        },
+        {
+          "category": "Fleet management",
+          "amount": "$5.3M",
+          "percent": "8%"
+        },
+        {
+          "category": "Facilities & utilities",
+          "amount": "$4.7M",
+          "percent": "7%"
+        },
+        {
+          "category": "HR & corporate services",
+          "amount": "$4.2M",
+          "percent": "6%"
+        },
+        {
+          "category": "IT & Digital",
+          "amount": "$4.0M",
+          "percent": "6%"
+        },
+        {
+          "category": "Sales & marketing",
+          "amount": "$2.6M",
+          "percent": "4%"
+        },
+        {
+          "category": "Raw materials (gas)",
+          "amount": "$2.8M",
+          "percent": "4%"
+        },
+        {
+          "category": "Other",
+          "amount": "$4.1M",
+          "percent": "6%"
+        },
+        {
+          "category": "TOTAL",
+          "amount": "$70.2M",
+          "percent": "100%"
+        }
+      ],
+      "itLine": "$4.04M  \u00b7  6% of total spend  \u00b7  IT Spend only",
+      "itExplanation": "IT of $4.04M: IT Services dominate at $2.9M (72% of Germany's IT spend) \u2014 the highest managed service ratio in EMEA. This is the clearest fragmentation signal: one BU paying a local German MSP for services that a group shared service desk would cover. Software only $0.58M \u2014 suggests Germany is behind the group on ERP/CRM.",
+      "operationalNarrative": "Germany's $7.1M legal cost (within Professional Services $8.1M) is the standout feature \u2014 10% of total spend on legal fees is exceptional even within EMEA. This reflects the complexity of German employment law (works council obligations, individual termination procedures), regulatory requirements, and potentially ongoing litigation or acquisition integration activity. The $19.2M in finished goods is almost entirely water treatment equipment ($19.2M of $19.2M) \u2014 suggesting Germany predominantly installs rather than manufactures, sourcing equipment from group entities. IT at $4M is 6% of spend \u2014 the IT Services line ($2.9M) is the highest IT services cost of any EMEA BU relative to its size, suggesting significant managed service provider dependency."
+    },
+    {
+      "name": "Poland & Baltics",
+      "region": "EMEA",
+      "totalSpend": "$71.3M",
+      "itSpend": "$0.95M",
+      "itPercent": "1%",
+      "itDominant": "software ($0",
+      "overview": "Labour-intensive EMEA BU: HR & corporate services at 27% of spend \u2014 the highest people-cost intensity of any BU in the group. IT spend minimal at $0.95M (1%).",
+      "costBreakdown": [
+        {
+          "category": "HR & corporate services (payroll-adjacent)",
+          "amount": "$19.3M",
+          "percent": "27%"
+        },
+        {
+          "category": "Financial & corporate charges",
+          "amount": "$12.8M",
+          "percent": "18%"
+        },
+        {
+          "category": "Professional services (incl. legal)",
+          "amount": "$7.8M",
+          "percent": "11%"
+        },
+        {
+          "category": "Fleet management",
+          "amount": "$6.3M",
+          "percent": "9%"
+        },
+        {
+          "category": "Facilities & utilities",
+          "amount": "$5.0M",
+          "percent": "7%"
+        },
+        {
+          "category": "Finished goods",
+          "amount": "$4.9M",
+          "percent": "7%"
+        },
+        {
+          "category": "Transportation & logistics",
+          "amount": "$4.4M",
+          "percent": "6%"
+        },
+        {
+          "category": "Mechanical components",
+          "amount": "$2.4M",
+          "percent": "3%"
+        },
+        {
+          "category": "Packaging (bottled water)",
+          "amount": "$2.4M",
+          "percent": "3%"
+        },
+        {
+          "category": "IT & Digital",
+          "amount": "$1.0M",
+          "percent": "1%"
+        },
+        {
+          "category": "Other",
+          "amount": "$5.0M",
+          "percent": "7%"
+        },
+        {
+          "category": "TOTAL",
+          "amount": "$71.3M",
+          "percent": "100%"
+        }
+      ],
+      "itLine": "$0.95M  \u00b7  1% of total spend  \u00b7  IT Spend only",
+      "itExplanation": "IT of $0.95M: software ($0.30M), IT services ($0.25M), hardware ($0.21M), telecom ($0.16M). No ERP, CRM, or analytics. Poland & Baltics is the most technology-underpenetrated EMEA BU \u2014 highest H4 operating model opportunity.",
+      "operationalNarrative": "Poland & Baltics stands out for its HR & corporate services spend at $19.3M (27%) \u2014 almost entirely employee expenses ($19.6M, note: slightly exceeds category total due to rounding). This is not unusual for Poland, where payroll-adjacent costs (ZUS social contributions, PPK pension contributions, statutory benefits) flow through accounts payable as employer obligations rather than through a pure payroll system. Legal fees ($3.85M within Professional Services $7.76M) reflect Polish employment law complexity. Fleet at $6.3M (9%) confirms active route service operations. IT at $0.95M (1%) is the lowest of the EMEA route service BUs \u2014 indicating minimal digital infrastructure investment. Scheduling and route management are almost certainly manual or spreadsheet-based."
+    },
+    {
+      "name": "Nordics",
+      "region": "EMEA",
+      "totalSpend": "$47.6M",
+      "itSpend": "$2.64M",
+      "itPercent": "6%",
+      "itDominant": "IT services ($1",
+      "overview": "IT at 6% of spend ($2.64M) despite being mid-sized. Large unclassified category ($8.3M, 17%) reduces analytical confidence. Taxes at $5.5M (12%) reflect Scandinavian corporate tax rates.",
+      "costBreakdown": [
+        {
+          "category": "Financial & corporate charges",
+          "amount": "$10.5M",
+          "percent": "22%"
+        },
+        {
+          "category": "Unclassified",
+          "amount": "$8.3M",
+          "percent": "17%"
+        },
+        {
+          "category": "Taxes & regulatory",
+          "amount": "$5.5M",
+          "percent": "12%"
+        },
+        {
+          "category": "Finished goods",
+          "amount": "$3.9M",
+          "percent": "8%"
+        },
+        {
+          "category": "Transportation & logistics",
+          "amount": "$3.4M",
+          "percent": "7%"
+        },
+        {
+          "category": "Fleet management",
+          "amount": "$3.2M",
+          "percent": "7%"
+        },
+        {
+          "category": "IT & Digital",
+          "amount": "$2.6M",
+          "percent": "6%"
+        },
+        {
+          "category": "Facilities & utilities",
+          "amount": "$2.3M",
+          "percent": "5%"
+        },
+        {
+          "category": "HR & corporate services",
+          "amount": "$1.8M",
+          "percent": "4%"
+        },
+        {
+          "category": "Professional services",
+          "amount": "$1.6M",
+          "percent": "3%"
+        },
+        {
+          "category": "Other",
+          "amount": "$4.5M",
+          "percent": "9%"
+        },
+        {
+          "category": "TOTAL",
+          "amount": "$47.6M",
+          "percent": "100%"
+        }
+      ],
+      "itLine": "$2.64M  \u00b7  6% of total spend  \u00b7  IT Spend only",
+      "itExplanation": "IT of $2.64M: IT services ($1.42M), software ($0.61M), telecom ($0.24M), cloud ($0.20M), hardware ($0.14M). The IT services proportion (54% of Nordics IT spend) mirrors Germany \u2014 both likely have separate Nordic/DACH MSP contracts that a group shared service model would replace.",
+      "operationalNarrative": "The Nordics BU (covering Sweden, Norway, Denmark, Finland) shows a typical Scandinavian cost structure: high taxes ($5.5M, 12%), significant intercompany charges ($10.5M, 22%), and meaningful HR costs ($1.75M, 4% \u2014 all employee expenses rather than recruitment, suggesting a stable workforce). The $8.3M unclassified category (17% of total) is the highest unclassified proportion in EMEA \u2014 this limits cost analysis confidence and likely includes a mix of local procurement that wasn't fully categorised in the spend cube exercise. IT at $2.64M (6%) is above the EMEA average \u2014 IT services ($1.42M) dominate, suggesting a managed service provider relationship similar to Germany."
+    },
+    {
+      "name": "UK CDW",
+      "region": "EMEA",
+      "totalSpend": "$58M",
+      "itSpend": "$3.42M",
+      "itPercent": "6%",
+      "itDominant": "hardware ($1",
+      "overview": "Fleet-intensive UK route service business. IT at 6% ($3.42M). Notable: hardware ($1.26M) is the largest single IT line \u2014 unusually high, suggesting a recent device refresh cycle.",
+      "costBreakdown": [
+        {
+          "category": "Financial & corporate charges",
+          "amount": "$17.5M",
+          "percent": "30%"
+        },
+        {
+          "category": "Fleet management",
+          "amount": "$8.4M",
+          "percent": "15%"
+        },
+        {
+          "category": "Facilities & utilities",
+          "amount": "$4.9M",
+          "percent": "8%"
+        },
+        {
+          "category": "Transportation & logistics",
+          "amount": "$3.8M",
+          "percent": "7%"
+        },
+        {
+          "category": "Professional services",
+          "amount": "$3.7M",
+          "percent": "6%"
+        },
+        {
+          "category": "IT & Digital",
+          "amount": "$3.4M",
+          "percent": "6%"
+        },
+        {
+          "category": "HR & corporate services",
+          "amount": "$2.6M",
+          "percent": "4%"
+        },
+        {
+          "category": "Finished goods",
+          "amount": "$2.4M",
+          "percent": "4%"
+        },
+        {
+          "category": "Sales & marketing",
+          "amount": "$2.3M",
+          "percent": "4%"
+        },
+        {
+          "category": "Packaging (bottled water)",
+          "amount": "$1.9M",
+          "percent": "3%"
+        },
+        {
+          "category": "Other",
+          "amount": "$7.0M",
+          "percent": "12%"
+        },
+        {
+          "category": "TOTAL",
+          "amount": "$58M",
+          "percent": "100%"
+        }
+      ],
+      "itLine": "$3.42M  \u00b7  6% of total spend  \u00b7  IT Spend only",
+      "itExplanation": "IT of $3.42M: hardware ($1.26M \u2014 highest in EMEA as a proportion), software ($1.22M), cloud ($0.58M), telecom ($0.35M), IT services ($0.21M). The hardware dominance and cloud presence ($0.58M) suggests UK CDW may be ahead of other EMEA BUs on field digitisation.",
+      "operationalNarrative": "UK CDW (Culligan Water Direct) is the UK's domestic route service operation \u2014 distinct from Harvey which is the ZIP/premium product business. Fleet at $8.4M (15%) confirms active delivery and service operations across the UK. The $17.5M intercompany charge (30%) is typical of a UK subsidiary receiving shared services from group. Facilities at $4.9M (8%) reflects UK commercial property costs. IT at $3.42M (6%): the hardware line ($1.26M, 37% of UK CDW's IT spend) suggests a device refresh or new equipment deployment in the period \u2014 possibly handheld devices for field technicians. This is the highest hardware proportion in EMEA."
+    },
+    {
+      "name": "ZIP ANZ",
+      "region": "APAC",
+      "totalSpend": "$127.9M",
+      "itSpend": "$6M",
+      "itPercent": "5%",
+      "itDominant": "software ($2",
+      "overview": "APAC's largest BU \u2014 a premium product manufacturer. Cost structure reflects Sydney manufacturing operations: mechanical components (24%), taxes (16%), intercompany (14%), electrical systems (12%). IT at 5% ($6M).",
+      "costBreakdown": [
+        {
+          "category": "Mechanical components",
+          "amount": "$31.1M",
+          "percent": "24%"
+        },
+        {
+          "category": "Taxes & regulatory (GST, corporate)",
+          "amount": "$20.2M",
+          "percent": "16%"
+        },
+        {
+          "category": "Financial & corporate charges",
+          "amount": "$17.4M",
+          "percent": "14%"
+        },
+        {
+          "category": "Electrical & control systems",
+          "amount": "$15.0M",
+          "percent": "12%"
+        },
+        {
+          "category": "IT & Digital",
+          "amount": "$6.0M",
+          "percent": "5%"
+        },
+        {
+          "category": "Transportation & logistics",
+          "amount": "$5.8M",
+          "percent": "5%"
+        },
+        {
+          "category": "Sales & marketing",
+          "amount": "$5.6M",
+          "percent": "4%"
+        },
+        {
+          "category": "HR & corporate services (recruitment-led)",
+          "amount": "$4.7M",
+          "percent": "4%"
+        },
+        {
+          "category": "Finished goods",
+          "amount": "$5.4M",
+          "percent": "4%"
+        },
+        {
+          "category": "Fleet management",
+          "amount": "$2.9M",
+          "percent": "2%"
+        },
+        {
+          "category": "Other",
+          "amount": "$13.8M",
+          "percent": "11%"
+        },
+        {
+          "category": "TOTAL",
+          "amount": "$127.9M",
+          "percent": "100%"
+        }
+      ],
+      "itLine": "$6M  \u00b7  5% of total spend  \u00b7  IT Spend only",
+      "itExplanation": "IT of $6.00M: software ($2.78M) including SAP ERP migrating to IFS, IT services ($1.77M) likely managed services for Sydney manufacturing IT, telecom ($0.70M), hardware ($0.36M), cloud ($0.32M). SAP licence is ZIP's largest single IT cost.",
+      "operationalNarrative": "ZIP ANZ is fundamentally a manufacturer and consumer brand \u2014 not a route service business. The cost structure reflects this: mechanical components ($31M, 24%) and electrical systems ($15M, 12%) are the core inputs for HydroTap assembly in Sydney. The 16% tax burden ($20.2M) reflects Australian GST and corporate tax obligations \u2014 the highest tax share of any Culligan BU. The $17.4M intercompany charge relates to intra-group transfer pricing with ZIP UK and other ZIP entities. HR at $4.7M (4%) includes significant talent acquisition spend ($3M) \u2014 consistent with ZIP's ongoing engineering hiring for product development. IT at $6M (5%) is well-invested relative to its size: software ($2.8M) includes ERP (SAP), analytics, and likely the HydroTap connected product platform."
+    },
+    {
+      "name": "ZIP UK",
+      "region": "APAC",
+      "totalSpend": "$62.2M",
+      "itSpend": "$1.1M",
+      "itPercent": "2%",
+      "itDominant": "cloud & infrastructure ($0",
+      "overview": "Heavily distorted by intercompany charges (51% of total spend). Operationally a distribution and field service business \u2014 once the $32M interco is stripped, the real cost base is ~$30M.",
+      "costBreakdown": [
+        {
+          "category": "Financial & corporate charges (interco transfer pricing)",
+          "amount": "$32.0M",
+          "percent": "51%"
+        },
+        {
+          "category": "Finished goods (HydroTap from Sydney)",
+          "amount": "$6.8M",
+          "percent": "11%"
+        },
+        {
+          "category": "Fleet management",
+          "amount": "$3.6M",
+          "percent": "6%"
+        },
+        {
+          "category": "Mechanical components",
+          "amount": "$2.9M",
+          "percent": "5%"
+        },
+        {
+          "category": "Electrical & control systems",
+          "amount": "$2.7M",
+          "percent": "4%"
+        },
+        {
+          "category": "Professional services (audit-heavy)",
+          "amount": "$2.2M",
+          "percent": "4%"
+        },
+        {
+          "category": "Transportation & logistics",
+          "amount": "$1.9M",
+          "percent": "3%"
+        },
+        {
+          "category": "Facilities & utilities",
+          "amount": "$1.4M",
+          "percent": "2%"
+        },
+        {
+          "category": "IT & Digital",
+          "amount": "$1.1M",
+          "percent": "2%"
+        },
+        {
+          "category": "HR & corporate services",
+          "amount": "$1.2M",
+          "percent": "2%"
+        },
+        {
+          "category": "Other",
+          "amount": "$6.4M",
+          "percent": "10%"
+        },
+        {
+          "category": "TOTAL",
+          "amount": "$62.2M",
+          "percent": "100%"
+        }
+      ],
+      "itLine": "$1.1M  \u00b7  2% of total spend  \u00b7  IT Spend only",
+      "itExplanation": "IT of $1.10M: cloud & infrastructure ($0.39M \u2014 highest cloud proportion in APAC), software ($0.26M), IT services ($0.21M), hardware ($0.10M), telecom ($0.08M). Very low absolute IT spend for a $62M business \u2014 likely dependent on ZIP ANZ's Sydney IT systems.",
+      "operationalNarrative": "ZIP UK's $32M intercompany charge (51% of total) is the largest interco proportion of any BU in the group. This reflects transfer pricing for ZIP HydroTap units manufactured in Sydney and transferred to ZIP UK for sale in the British market \u2014 each unit sold carries a transfer price that appears as cost in ZIP UK's P&L. Stripping this out, ZIP UK's operational cost base is approximately $30M: finished goods distribution ($6.8M, converted from AUD), fleet ($3.6M), mechanical components ($3M), logistics ($1.9M). IT at $1.1M (2%) is surprisingly low for a business of this scale \u2014 the cloud infrastructure ($0.39M) is the highest cloud proportion of any APAC BU, suggesting ZIP UK may be ahead on cloud adoption."
+    },
+    {
+      "name": "Harvey",
+      "region": "APAC",
+      "totalSpend": "$44.6M",
+      "itSpend": "$1.01M",
+      "itPercent": "2%",
+      "itDominant": "software ($0",
+      "overview": "UK softener manufacturer and consumer brand. Sales & marketing at 12% ($5.2M) reflects premium consumer brand investment. IT at 2% ($1M) \u2014 lean for a manufacturing business.",
+      "costBreakdown": [
+        {
+          "category": "Mechanical components (softener assembly)",
+          "amount": "$8.4M",
+          "percent": "19%"
+        },
+        {
+          "category": "Finished goods (salt blocks & consumables)",
+          "amount": "$6.9M",
+          "percent": "16%"
+        },
+        {
+          "category": "Financial & corporate charges",
+          "amount": "$5.8M",
+          "percent": "13%"
+        },
+        {
+          "category": "Sales & marketing (brand advertising)",
+          "amount": "$5.2M",
+          "percent": "12%"
+        },
+        {
+          "category": "Transportation (3PL salt delivery)",
+          "amount": "$4.0M",
+          "percent": "9%"
+        },
+        {
+          "category": "HR & corporate services",
+          "amount": "$2.4M",
+          "percent": "5%"
+        },
+        {
+          "category": "Facilities & utilities",
+          "amount": "$1.8M",
+          "percent": "4%"
+        },
+        {
+          "category": "Professional services",
+          "amount": "$1.7M",
+          "percent": "4%"
+        },
+        {
+          "category": "Fleet management",
+          "amount": "$1.7M",
+          "percent": "4%"
+        },
+        {
+          "category": "IT & Digital",
+          "amount": "$1.0M",
+          "percent": "2%"
+        },
+        {
+          "category": "Other",
+          "amount": "$5.7M",
+          "percent": "13%"
+        },
+        {
+          "category": "TOTAL",
+          "amount": "$44.6M",
+          "percent": "100%"
+        }
+      ],
+      "itLine": "$1.01M  \u00b7  2% of total spend  \u00b7  IT Spend only",
+      "itExplanation": "IT of $1.01M: software ($0.39M), telecom ($0.26M), hardware ($0.26M), IT services ($0.10M). Harvey is the least digitally invested APAC BU \u2014 no ERP licence visible, no cloud spend. Likely dependent on manual processes or basic accounting software. Saltwatch IoT may be managed through ZIP ANZ's platform.",
+      "operationalNarrative": "Harvey Water Softeners is a premium consumer brand with manufacturing operations in Woking, Surrey. The cost profile reflects this: mechanical components ($8.4M, 19%) for softener assembly, salt block consumables ($6.4M within finished goods) for subscription deliveries, and sales & marketing ($5.2M, 12%) for brand advertising including Harvey Norman and digital channels. The $4M in 3PL logistics reflects national distribution of heavy salt block subscriptions \u2014 a recurring logistics cost unique to the Harvey model. HR at $2.4M (5%) with $1.85M in talent acquisition suggests Harvey is actively growing its workforce. IT at $1.01M (2%) is minimal \u2014 the telecom spend ($0.26M) and hardware ($0.26M) suggest basic field engineer device provisioning rather than any managed IT infrastructure."
+    }
+  ]
+}

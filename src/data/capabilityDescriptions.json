@@ -1,0 +1,271 @@
+{
+  "byDomainRegion": {
+    "Customer & market": {
+      "Americas": {
+        "Brand management": "Build and protect consumer brand equity for ZeroWater, PurePlay, and Hydroviv across retail shelf, Amazon marketplace, and owned digital channels; manage packaging and NSF claims communication.",
+        "Customer acquisition": "Generate new subscriber leads through direct sales teams, inbound digital channels, and local marketing; convert prospects to rental and service contracts with average deal tenure of 3\u20135 years.",
+        "Account management": "Manage the ongoing relationship with contracted B2B and residential accounts; conduct annual reviews, upsell higher-spec equipment, and resolve service escalations before churn.",
+        "Contract & pricing management": "Design, administer, and renew rental, service, and supply contracts; manage rate cards, volume discounts, and CPI-linked annual uplifts across the subscriber base.",
+        "Customer retention": "Monitor churn signals across the contract book; deploy targeted win-back programs, proactive outreach at renewal windows, and loyalty incentives to protect recurring revenue.",
+        "Retail channel management": "Manage retailer relationships, promotional calendars, and ranging decisions with Walmart, Target, Costco, and Amazon 1P/3P; execute joint business plans and negotiate promotional investment.",
+        "Direct-to-consumer sales": "Acquire customers directly through brand e-commerce sites, Amazon Stores, and social commerce; optimize conversion funnels, bundle offers, and first-order incentives.",
+        "Subscription management": "Manage filter replacement subscription programs; automate replenishment dispatch, minimize skip and cancel rates, and optimize subscriber lifetime value through add-on recommendations.",
+        "Customer loyalty & retention": "Engage existing customers through email, loyalty points, and product review programs; use TDS meter data and usage signals to prompt timely filter replacement and brand advocacy."
+      },
+      "APAC": {
+        "Brand management": "Sustain the premium positioning of ZIP and Harvey as design-led water brands; manage partnerships with retail premium channels (Harvey Norman, John Lewis) and trade specifiers.",
+        "Retail channel management": "Develop and execute retail ranging, planograms, and promotional programs across national electrical and kitchen retail chains; manage sell-through, margin, and returns.",
+        "Direct-to-consumer sales": "Drive online unit sales and filter subscriptions through brand websites and digital marketing; manage post-sale onboarding, warranty registration, and the digital customer lifecycle.",
+        "Subscription management": "Operate the ongoing filter replacement subscription model; manage automatic dispatch schedules, subscriber communications, pause and cancel flows, and consumable replenishment pricing.",
+        "Customer loyalty & retention": "Drive repeat purchase and accessory attachment through loyalty programs, owner communities, and proactive outreach at filter subscription renewal; measure NPS and act on detractor feedback."
+      },
+      "corporate": {
+        "Market intelligence": "Aggregate competitive landscape data, consumer trend research, and peer benchmarks (Pentair, Veralto, A.O. Smith, Zurn Elkay, Primo Brands) to inform group strategy; commission primary research on water quality awareness.",
+        "Brand governance": "Define and steward the global Culligan brand architecture; manage trademark portfolio, licensing agreements with ~180 franchise dealers, and brand standards across 59 legal entities.",
+        "Pricing strategy": "Set group pricing philosophy and guardrails for rental rates, subscription pricing, and OEM supply; provide analytical frameworks for price-to-value positioning in each market segment."
+      }
+    },
+    "Product & service": {
+      "Americas": {
+        "Water treatment innovation": "Develop and certify new softener, filtration, and RO system configurations for residential and commercial applications; manage NSF/WQA certifications and EU Water Framework Directive compliance across product ranges.",
+        "Product portfolio management": "Define the active product range \u2014 softeners, dispensers, RO units, salt-free conditioners \u2014 including equipment grading, retirement decisions, and new model introductions across each market.",
+        "Installation & commissioning": "Survey, design, and install water treatment systems at residential and commercial premises; certify installation quality to NSF, WRAS, DWI, and ACS plumbing and water-quality standards.",
+        "Planned maintenance": "Execute scheduled service visits for salt replenishment, filter cartridge replacement, resin regeneration, and system health checks; optimize visit frequency to minimize cost per service event.",
+        "Break-fix & repair": "Diagnose and resolve unplanned equipment failures at customer premises; manage spare parts availability, first-time fix rates, and SLA compliance for residential and commercial customers."
+      },
+      "EMEA": {
+        "Connected device management": "Remotely monitor and manage the installed estate of IoT-connected dispensers; use telemetry data on filter saturation, water temperature, and fault codes to trigger predictive maintenance and reduce unnecessary truck rolls."
+      },
+      "APAC": {
+        "Product research & development": "Conduct consumer research, engineering design, and prototype testing for next-generation HydroTap and Harvey softener products; manage IP pipeline and WELS, WRAS, and AS/NZS certification programs.",
+        "Product portfolio management": "Manage the active range of HydroTap models (G5 residential, commercial, ZipChief) and Harvey softener variants (Minimax, HarveyArc) including pricing tiers, accessories, and end-of-life decisions.",
+        "Manufacturing": "Operate ZIP's Sydney assembly facility and Harvey's Woking softener and block-salt manufacturing plant; manage production scheduling, component sourcing, assembly quality control, and CAPEX planning.",
+        "Installation & commissioning": "Coordinate plumber and trade-channel installation of HydroTap and Harvey units; provide technical training to the approved installer network and manage warranty registration at point of installation.",
+        "Subscription fulfilment": "Pick, pack, and dispatch filter cartridge and salt block subscription orders to consumer homes on schedule; manage shipment tracking, non-delivery resolution, and returns handling for recurring subscribers."
+      },
+      "corporate": {
+        "R&D governance": "Coordinate intellectual property strategy across ZIP, Harvey, Paragon, and Culligan's filter innovation programs; manage cross-BU technology sharing agreements and group R&D investment prioritization.",
+        "Product standards & compliance": "Maintain the group register of regulatory certifications (NSF, WQA, WELS, WRAS, ACS, INMETRO, CE marking); govern compliance obligations and coordinate multi-market product registration across 59 entities."
+      }
+    },
+    "Operations & supply chain": {
+      "Americas": {
+        "Route planning & optimization": "Design and continuously optimize service route sequences to maximize daily service calls per technician; use geographic density modelling to reduce drive time and fuel cost across the fleet.",
+        "Fleet operations": "Manage the service and delivery vehicle fleet including acquisition, maintenance, fuel management, telematics, driver compliance (license, hours), and end-of-life disposal across regional depots.",
+        "Supplier management": "Source and manage the supply of salt, resin, filter media, spare parts, and equipment from regional and global suppliers; qualify new vendors and manage contract terms and performance.",
+        "Inventory management": "Maintain optimal stock levels of consumables (salt, filter cartridges, resin) and spare parts across regional depots; minimize write-off from obsolescence while preventing route-service stockouts.",
+        "Quality assurance": "Conduct water quality testing, installation audits, and equipment performance checks to maintain NSF, WQA, EU WFD, and local regulatory standards across the installed customer base.",
+        "Regulatory compliance": "Ensure ongoing compliance with local water quality regulations, health and safety legislation, fleet transport laws, and environmental standards across European and Latin American operating markets."
+      },
+      "APAC": {
+        "Manufacturing operations": "Operate ZIP's Sydney assembly facility and Harvey's Woking manufacturing plant; manage production runs, quality control, yield optimization, supplier-delivered components, and safety compliance.",
+        "Supplier management": "Source electronic, mechanical, and filter media components from Asian and European suppliers; manage vendor qualification, dual-sourcing strategies, and supply continuity for manufacturing operations.",
+        "Inventory management": "Manage raw material, work-in-progress, and finished goods inventory across manufacturing facilities; balance production scheduling against demand forecasts and retail replenishment requirements.",
+        "Outbound logistics": "Coordinate national distribution of finished HydroTap and Harvey units to retail, trade, and consumer customers via 3PL partners; manage carrier performance, delivery SLAs, and returns processing.",
+        "Quality assurance": "Implement and maintain ISO 9001, WELS, WRAS, KIWA, and AS/NZS standards across manufacturing operations; manage production QC, product testing protocols, and certification renewals."
+      },
+      "corporate": {
+        "Strategic sourcing": "Lead group-level sourcing strategy across the $1.87B addressable spend base; develop category strategies for high-value spend towers including IT, fleet, filter components, packaging, and professional services.",
+        "Category management": "Manage group spend categories end-to-end including market intelligence, supplier selection, contract negotiation, and savings delivery; IT and fleet are the highest-priority categories given duplication across 24 BUs.",
+        "Supplier relationship management": "Govern strategic supplier relationships with performance reviews, risk assessments, and innovation partnering; manage escalation paths for supply disruption across all 59 legal entities and 100+ countries.",
+        "Quality standards governance": "Define and maintain the group quality management framework; coordinate NSF, WQA, ISO 9001, and local regulatory certification programs across all manufacturing and service BUs."
+      }
+    },
+    "Technology & innovation": {
+      "Americas": {
+        "Financial management & reporting": "Operate the financial management platform (IFS ERP deployed across key Americas BUs) for transaction processing, general ledger, accounts payable/receivable, asset management, and management reporting.",
+        "Customer relationship management": "Manage the CRM platform (Salesforce) for prospect pipeline, customer contract records, service history, and NPS tracking; 18 BUs across the group still operating local CRM tools pending group consolidation.",
+        "Work order & scheduling management": "Operate the field service management platform for technician dispatch, work order creation, route scheduling, and job completion capture; currently fragmented across 14 separate FSM tools in the Americas.",
+        "Remote asset monitoring": "Monitor the Quench connected dispenser estate remotely via IoT telemetry; detect filter saturation, equipment faults, and usage anomalies to trigger predictive maintenance and reduce avoidable truck rolls.",
+        "Business intelligence & reporting": "Deliver management reporting, route performance dashboards, and customer analytics to BU leadership; consolidate data from ERP, FSM, and CRM into operational BI tools (Power BI / Tableau)."
+      },
+      "EMEA": {
+        "Financial management & reporting": "Operate financial management platforms across EMEA \u2014 a mix of local ERPs (SAP, Navision, bespoke) with IFS as the group migration target; manage multi-currency reporting in EUR, GBP, PLN, NOK, and SEK.",
+        "Customer relationship management": "Manage customer data, contract records, and service history across EMEA CRM instances; fragmented landscape with each BU on local tools pending Salesforce group rollout.",
+        "Work order & scheduling management": "Operate scheduling and dispatch platforms for field technicians across France, Iberia, Germany, Poland, Nordics, and UK CDW; currently 7+ separate FSM tools across EMEA with no group standard.",
+        "Connected dispenser management": "Manage the ATS France IoT-connected dispenser platform; remotely monitor filter status, usage data, and fault codes across the commercial installed base to drive predictive service and reduce callouts.",
+        "Business intelligence & reporting": "Deliver regional operational reporting across EMEA; consolidate data from fragmented local ERP and CRM systems into management dashboards for revenue, service SLA, and fleet performance."
+      },
+      "APAC": {
+        "Financial management & reporting": "Operate financial management systems across APAC \u2014 ZIP ANZ on SAP with IFS migration underway, ZIP UK and Harvey on local systems; manage AUD, NZD, and GBP multi-currency reporting and intercompany transactions.",
+        "Customer relationship management": "Manage customer records, subscription status, warranty registration, and service history across ZIP and Harvey CRM platforms; Salesforce is the group standard target for consolidation.",
+        "Connected product management": "Manage the ZIP HydroTap smart platform and Harvey Saltwatch connected softener; collect usage telemetry, push firmware updates, deliver consumer app features, and use data to drive subscription retention.",
+        "Digital commerce management": "Operate ZIP and Harvey direct-to-consumer e-commerce platforms; manage product catalogue, checkout, subscription management, and post-purchase digital experience for residential customers in ANZ and UK.",
+        "Business intelligence & reporting": "Deliver operational reporting for ZIP and Harvey covering subscription metrics, NPS, manufacturing yield, and retail sell-through; consolidate data across SAP, Salesforce, and IoT platforms."
+      },
+      "corporate": {
+        "Enterprise application governance": "Define and enforce group application architecture standards; govern the IFS global ERP template rollout across 20+ BUs, the Salesforce enterprise CRM agreement, and the FSM platform consolidation program.",
+        "Group platform management": "Own and operate the group-level shared platforms \u2014 integration layer (iPaaS), identity management, M365/O365 tenancy, and group data lake \u2014 that underpin all BU applications across 59 entities.",
+        "IoT & connected asset management": "Define the group IoT architecture and data standards; govern the consolidation of 4 separate IoT stacks (Quench, ZIP, Harvey, ATS France) onto a single connected asset platform.",
+        "Infrastructure & cloud management": "Manage group cloud tenancies (AWS, Azure), data center footprint, and network infrastructure across 100+ countries; operate FinOps capability to optimize $30M+ annual cloud spend across 22 BUs.",
+        "Information security management": "Operate the group Security Operations Centre (SOC); manage cyber threat monitoring, incident response, vulnerability management, and compliance with ISO 27001, GDPR, and NIST frameworks.",
+        "Data & analytics governance": "Define data standards, master data management, and the group analytics platform (Snowflake / Power BI); enable consistent reporting across all 24 BUs from a single source of truth."
+      }
+    },
+    "Finance & risk": {
+      "Americas": {
+        "Financial planning & analysis": "Produce annual budgets, quarterly reforecasts, and monthly management accounts; analyze variances against plan and provide financial insight to BU leadership for operational decision-making.",
+        "Revenue management": "Manage the recurring revenue base \u2014 track subscriber counts, average revenue per unit, churn rates, and price realization; model the impact of rate changes across the Americas contract book.",
+        "Accounts payable & receivable": "Process supplier invoices, manage payment runs, and collect customer receivables; maintain working capital discipline and minimize days sales outstanding across the BU customer base.",
+        "Asset management": "Track and depreciate the installed equipment estate \u2014 water softeners, dispensers, and filtration units deployed on customer premises; manage capital refresh cycle and impairment assessments."
+      },
+      "EMEA": {
+        "Financial planning & analysis": "Produce annual budgets and monthly management accounts for EMEA BUs; analyze performance against plan across a multi-currency environment and provide variance commentary to regional leadership.",
+        "Multi-currency management": "Manage financial reporting and transactional foreign exchange exposure across EUR, GBP, PLN, NOK, SEK, DKK, and other EMEA currencies; coordinate with Corporate Treasury on hedging policy.",
+        "Accounts payable & receivable": "Process supplier invoices and collect customer receivables across EMEA entities; manage local payment terms, SEPA/BACS payment runs, and credit risk exposure by BU.",
+        "Regulatory & tax compliance": "Prepare and file statutory accounts, VAT returns, and corporate tax submissions in each EMEA jurisdiction; manage transfer pricing compliance and relationships with local tax authorities."
+      },
+      "APAC": {
+        "Financial planning & analysis": "Produce budgets and rolling forecasts for APAC BUs; analyze subscription economics, manufacturing cost variances, and retail margin performance against plan.",
+        "Treasury management": "Manage AUD and GBP cash positions, intercompany loans, and FX exposure for ZIP ANZ, ZIP UK, and Harvey; coordinate repatriation of operating cash flows to group treasury in accordance with hedging policy.",
+        "Accounts payable & receivable": "Process supplier invoices and collect retail and consumer receivables in AUD, NZD, and GBP; manage credit terms with retailers and 3PL providers.",
+        "Regulatory & tax compliance": "Prepare and file statutory accounts and GST/VAT returns in Australia, New Zealand, and the UK; manage corporate tax obligations and ensure compliance with local financial reporting standards."
+      },
+      "corporate": {
+        "Group financial consolidation": "Consolidate monthly, quarterly, and annual financial results across all 59 legal entities into group IFRS accounts; manage intercompany eliminations, FX translation, and audit committee deliverables.",
+        "Treasury & cash management": "Manage group cash pooling, short-term liquidity, debt facilities, and FX hedging programs; optimize the cost of capital and cash repatriation from 24 BUs across 100+ countries.",
+        "Risk management": "Identify, assess, and mitigate enterprise risks across operational, financial, regulatory, and cyber domains; maintain the group risk register and report to the board risk committee quarterly.",
+        "Internal audit & control": "Execute the annual internal audit plan across BUs; test key financial controls, assess SOX compliance, and provide assurance to the audit committee on the integrity of group financial reporting.",
+        "Tax management": "Define and manage the group tax strategy; oversee transfer pricing, thin capitalization, and BEPS compliance across all jurisdictions; manage relationships with local tax authorities and advisors."
+      }
+    },
+    "People & org": {
+      "Americas": {
+        "Workforce planning": "Plan technician and driver headcount requirements based on route density, service volume forecasts, and attrition rates; ensure the field workforce can meet scheduled service demand and seasonal peaks.",
+        "Talent acquisition": "Recruit qualified field technicians, drivers, and branch managers at volume; manage high-volume hiring pipelines given technician attrition rates typical of route service businesses across multiple markets.",
+        "Technician training & certification": "Deliver and track mandatory water quality, plumbing, health and safety, and product training; maintain certification records for NSF, WRAS, DWI, ACS, and local regulatory standards across the field workforce.",
+        "Performance management": "Set, track, and review field team KPIs (service calls per day, first-time fix rate, salt delivery accuracy, NPS scores); link performance to variable pay and career progression frameworks."
+      },
+      "EMEA": {
+        "Employee relations & compliance": "Manage local employment law compliance, works council relationships, and collective bargaining arrangements across EMEA jurisdictions; navigate bilingual and multilingual workforce requirements in France, Spain, Poland, Germany, and the Nordics."
+      },
+      "APAC": {
+        "Engineering talent management": "Attract, develop, and retain product and manufacturing engineers for ZIP ANZ's Sydney R&D and manufacturing operations; manage technical career paths and succession for key engineering roles.",
+        "Learning & development": "Deliver technical upskilling, safety training, and leadership development programs for ZIP and Harvey employees; manage apprenticeship and trade training partnerships in ANZ and UK.",
+        "Safety management": "Implement and audit workplace health and safety standards across manufacturing operations (Sydney and Woking); manage zero-incident culture, accident investigation, and regulatory reporting to WorkSafe and HSE."
+      },
+      "corporate": {
+        "Total rewards management": "Design and administer the group compensation philosophy, base pay bands, short-term incentive plans, and long-term equity awards; benchmark against peer water technology and industrial services companies.",
+        "HR information management": "Operate the group HRIS (Workday target) for employee records, payroll integration, absence management, and people analytics across all 24 BUs and 59 legal entities in 100+ countries.",
+        "Leadership development": "Design and deliver executive and senior management development programs; manage succession planning for group leadership roles and the BU General Manager population globally.",
+        "Diversity, equity & inclusion": "Drive group DEI strategy including hiring diversity targets, pay equity audits, inclusive culture initiatives, and employee resource group programs across the global workforce.",
+        "Organizational design": "Lead organizational structure design for BU restructuring, post-acquisition integration, and group operating model changes; provide job evaluation and grading frameworks to maintain internal equity."
+      }
+    },
+    "Corporate affairs": {
+      "Americas": {
+        "Dealer network management": "Manage relationships with the ~180 independent Culligan franchise dealers in North America and EMEA; enforce brand standards, provide operational and marketing support, and grow the active dealer base.",
+        "Regulatory compliance management": "Monitor and respond to evolving water quality regulations, health and safety legislation, and environmental standards in each BU's operating jurisdiction; manage regulatory filings and government relationships.",
+        "Brand licensing management": "Administer Culligan brand license agreements with franchise dealers; manage royalty collection, periodic brand usage audits, and termination proceedings for non-compliant licensees.",
+        "Legal & contract management": "Draft, review, and enforce customer contracts, supplier agreements, and property leases; manage litigation, employment disputes, and regulatory investigations at the BU level."
+      },
+      "EMEA": {
+        "Sustainability reporting": "Prepare sustainability disclosures for EMEA entities subject to CSRD and TCFD reporting requirements; collect Scope 1, 2, and 3 emissions data, water stewardship metrics, and social KPIs across EMEA operations.",
+        "Dealer network management": "Manage relationships with the ~180 independent Culligan franchise dealers in North America and EMEA; enforce brand standards, provide operational and marketing support, and grow the active dealer base.",
+        "Regulatory compliance management": "Monitor and respond to evolving water quality regulations, health and safety legislation, and environmental standards in each BU's operating jurisdiction; manage regulatory filings and government relationships.",
+        "Brand licensing management": "Administer Culligan brand license agreements with franchise dealers; manage royalty collection, periodic brand usage audits, and termination proceedings for non-compliant licensees.",
+        "Legal & contract management": "Draft, review, and enforce customer contracts, supplier agreements, and property leases; manage litigation, employment disputes, and regulatory investigations at the BU level."
+      },
+      "APAC": {
+        "Sustainability & ESG management": "Manage ZIP and Harvey's environmental commitments including WELS water efficiency ratings, packaging sustainability programs, carbon footprint measurement, and responsible sourcing standards for manufacturing.",
+        "Intellectual property management": "Protect ZIP HydroTap and Harvey design and utility patents in Australia, the UK, and key export markets; manage trade secrets around manufacturing processes and proprietary filter formulations."
+      },
+      "corporate": {
+        "Corporate strategy management": "Define and execute the Culligan group long-range plan; evaluate strategic options including organic growth, geographic expansion, portfolio rationalization, and operating model transformation.",
+        "Mergers & acquisitions": "Source, evaluate, and execute acquisition targets in the water treatment and services sector; manage the full M&A lifecycle from origination through due diligence, negotiation, closing, and post-acquisition integration.",
+        "Franchise network governance": "Set and enforce standards across the global franchise and dealer network; manage franchise agreement design, territory allocation, dealer performance management, and network development strategy.",
+        "Intellectual property management": "Maintain the group patent portfolio (200+ patents across Paragon, ZIP, Harvey, and Culligan filter IP); manage trademark registrations across 100+ countries and enforce IP rights against infringement.",
+        "Sustainability & ESG management": "Lead the group ESG strategy including water stewardship commitments, Scope 1/2/3 carbon reduction targets, CSRD regulatory reporting, and stakeholder disclosure for institutional investors and regulators."
+      }
+    }
+  },
+  "default": {
+    "Brand management": "Manage the Culligan master brand identity across residential and commercial channels; maintain national brand standards and local co-brand guidelines for owned dealer territories.",
+    "Customer acquisition": "Generate new subscriber leads through direct sales teams, inbound digital channels, and local marketing; convert prospects to rental and service contracts with average deal tenure of 3\u20135 years.",
+    "Account management": "Manage the ongoing relationship with contracted B2B and residential accounts; conduct annual reviews, upsell higher-spec equipment, and resolve service escalations before churn.",
+    "Contract & pricing management": "Design, administer, and renew rental, service, and supply contracts; manage rate cards, volume discounts, and CPI-linked annual uplifts across the subscriber base.",
+    "Customer retention": "Monitor churn signals across the contract book; deploy targeted win-back programs, proactive outreach at renewal windows, and loyalty incentives to protect recurring revenue.",
+    "Retail channel management": "Develop and execute retail ranging, planograms, and promotional programs across national electrical and kitchen retail chains; manage sell-through, margin, and returns.",
+    "Direct-to-consumer sales": "Drive online unit sales and filter subscriptions through brand websites and digital marketing; manage post-sale onboarding, warranty registration, and the digital customer lifecycle.",
+    "Subscription management": "Operate the ongoing filter replacement subscription model; manage automatic dispatch schedules, subscriber communications, pause and cancel flows, and consumable replenishment pricing.",
+    "Customer loyalty & retention": "Drive repeat purchase and accessory attachment through loyalty programs, owner communities, and proactive outreach at filter subscription renewal; measure NPS and act on detractor feedback.",
+    "Market intelligence": "Aggregate competitive landscape data, consumer trend research, and peer benchmarks (Pentair, Veralto, A.O. Smith, Zurn Elkay, Primo Brands) to inform group strategy; commission primary research on water quality awareness.",
+    "Brand governance": "Define and steward the global Culligan brand architecture; manage trademark portfolio, licensing agreements with ~180 franchise dealers, and brand standards across 59 legal entities.",
+    "Pricing strategy": "Set group pricing philosophy and guardrails for rental rates, subscription pricing, and OEM supply; provide analytical frameworks for price-to-value positioning in each market segment.",
+    "Water treatment innovation": "Develop and certify new softener, filtration, and RO system configurations for residential and commercial applications; manage NSF/WQA certifications and EU Water Framework Directive compliance across product ranges.",
+    "Product portfolio management": "Define the active product range \u2014 softeners, dispensers, RO units, salt-free conditioners \u2014 including equipment grading, retirement decisions, and new model introductions across each market.",
+    "Installation & commissioning": "Survey, design, and install water treatment systems at residential and commercial premises; certify installation quality to NSF, WRAS, DWI, and ACS plumbing and water-quality standards.",
+    "Planned maintenance": "Execute scheduled service visits for salt replenishment, filter cartridge replacement, resin regeneration, and system health checks; optimize visit frequency to minimize cost per service event.",
+    "Break-fix & repair": "Diagnose and resolve unplanned equipment failures at customer premises; manage spare parts availability, first-time fix rates, and SLA compliance for residential and commercial customers.",
+    "Connected device management": "Remotely monitor and manage the installed estate of IoT-connected dispensers; use telemetry data on filter saturation, water temperature, and fault codes to trigger predictive maintenance and reduce unnecessary truck rolls.",
+    "Product research & development": "Conduct consumer research, engineering design, and prototype testing for next-generation HydroTap and Harvey softener products; manage IP pipeline and WELS, WRAS, and AS/NZS certification programs.",
+    "Manufacturing": "Operate ZIP's Sydney assembly facility and Harvey's Woking softener and block-salt manufacturing plant; manage production scheduling, component sourcing, assembly quality control, and CAPEX planning.",
+    "Subscription fulfilment": "Pick, pack, and dispatch filter cartridge and salt block subscription orders to consumer homes on schedule; manage shipment tracking, non-delivery resolution, and returns handling for recurring subscribers.",
+    "R&D governance": "Coordinate intellectual property strategy across ZIP, Harvey, Paragon, and Culligan's filter innovation programs; manage cross-BU technology sharing agreements and group R&D investment prioritization.",
+    "Product standards & compliance": "Maintain the group register of regulatory certifications (NSF, WQA, WELS, WRAS, ACS, INMETRO, CE marking); govern compliance obligations and coordinate multi-market product registration across 59 entities.",
+    "Route planning & optimization": "Design and continuously optimize service route sequences to maximize daily service calls per technician; use geographic density modelling to reduce drive time and fuel cost across the fleet.",
+    "Fleet operations": "Manage the service and delivery vehicle fleet including acquisition, maintenance, fuel management, telematics, driver compliance (license, hours), and end-of-life disposal across regional depots.",
+    "Supplier management": "Source and manage the supply of salt, resin, filter media, spare parts, and equipment from regional and global suppliers; qualify new vendors and manage contract terms and performance.",
+    "Inventory management": "Maintain optimal stock levels of consumables (salt, filter cartridges, resin) and spare parts across regional depots; minimize write-off from obsolescence while preventing route-service stockouts.",
+    "Quality assurance": "Conduct water quality testing, installation audits, and equipment performance checks to maintain NSF, WQA, EU WFD, and local regulatory standards across the installed customer base.",
+    "Regulatory compliance": "Ensure ongoing compliance with local water quality regulations, health and safety legislation, fleet transport laws, and environmental standards across European and Latin American operating markets.",
+    "Manufacturing operations": "Operate ZIP's Sydney assembly facility and Harvey's Woking manufacturing plant; manage production runs, quality control, yield optimization, supplier-delivered components, and safety compliance.",
+    "Outbound logistics": "Coordinate national distribution of finished HydroTap and Harvey units to retail, trade, and consumer customers via 3PL partners; manage carrier performance, delivery SLAs, and returns processing.",
+    "Strategic sourcing": "Lead group-level sourcing strategy across the $1.87B addressable spend base; develop category strategies for high-value spend towers including IT, fleet, filter components, packaging, and professional services.",
+    "Category management": "Manage group spend categories end-to-end including market intelligence, supplier selection, contract negotiation, and savings delivery; IT and fleet are the highest-priority categories given duplication across 24 BUs.",
+    "Supplier relationship management": "Govern strategic supplier relationships with performance reviews, risk assessments, and innovation partnering; manage escalation paths for supply disruption across all 59 legal entities and 100+ countries.",
+    "Quality standards governance": "Define and maintain the group quality management framework; coordinate NSF, WQA, ISO 9001, and local regulatory certification programs across all manufacturing and service BUs.",
+    "Financial management & reporting": "Operate the financial management platform (IFS ERP deployed across key Americas BUs) for transaction processing, general ledger, accounts payable/receivable, asset management, and management reporting.",
+    "Customer relationship management": "Manage the CRM platform (Salesforce) for prospect pipeline, customer contract records, service history, and NPS tracking; 18 BUs across the group still operating local CRM tools pending group consolidation.",
+    "Work order & scheduling management": "Operate the field service management platform for technician dispatch, work order creation, route scheduling, and job completion capture; currently fragmented across 14 separate FSM tools in the Americas.",
+    "Remote asset monitoring": "Monitor the Quench connected dispenser estate remotely via IoT telemetry; detect filter saturation, equipment faults, and usage anomalies to trigger predictive maintenance and reduce avoidable truck rolls.",
+    "Business intelligence & reporting": "Deliver management reporting, route performance dashboards, and customer analytics to BU leadership; consolidate data from ERP, FSM, and CRM into operational BI tools (Power BI / Tableau).",
+    "Connected dispenser management": "Manage the ATS France IoT-connected dispenser platform; remotely monitor filter status, usage data, and fault codes across the commercial installed base to drive predictive service and reduce callouts.",
+    "Connected product management": "Manage the ZIP HydroTap smart platform and Harvey Saltwatch connected softener; collect usage telemetry, push firmware updates, deliver consumer app features, and use data to drive subscription retention.",
+    "Digital commerce management": "Operate ZIP and Harvey direct-to-consumer e-commerce platforms; manage product catalogue, checkout, subscription management, and post-purchase digital experience for residential customers in ANZ and UK.",
+    "Enterprise application governance": "Define and enforce group application architecture standards; govern the IFS global ERP template rollout across 20+ BUs, the Salesforce enterprise CRM agreement, and the FSM platform consolidation program.",
+    "Group platform management": "Own and operate the group-level shared platforms \u2014 integration layer (iPaaS), identity management, M365/O365 tenancy, and group data lake \u2014 that underpin all BU applications across 59 entities.",
+    "IoT & connected asset management": "Define the group IoT architecture and data standards; govern the consolidation of 4 separate IoT stacks (Quench, ZIP, Harvey, ATS France) onto a single connected asset platform.",
+    "Infrastructure & cloud management": "Manage group cloud tenancies (AWS, Azure), data center footprint, and network infrastructure across 100+ countries; operate FinOps capability to optimize $30M+ annual cloud spend across 22 BUs.",
+    "Information security management": "Operate the group Security Operations Centre (SOC); manage cyber threat monitoring, incident response, vulnerability management, and compliance with ISO 27001, GDPR, and NIST frameworks.",
+    "Data & analytics governance": "Define data standards, master data management, and the group analytics platform (Snowflake / Power BI); enable consistent reporting across all 24 BUs from a single source of truth.",
+    "Financial planning & analysis": "Produce annual budgets, quarterly reforecasts, and monthly management accounts; analyze variances against plan and provide financial insight to BU leadership for operational decision-making.",
+    "Revenue management": "Manage the recurring revenue base \u2014 track subscriber counts, average revenue per unit, churn rates, and price realization; model the impact of rate changes across the Americas contract book.",
+    "Accounts payable & receivable": "Process supplier invoices, manage payment runs, and collect customer receivables; maintain working capital discipline and minimize days sales outstanding across the BU customer base.",
+    "Asset management": "Track and depreciate the installed equipment estate \u2014 water softeners, dispensers, and filtration units deployed on customer premises; manage capital refresh cycle and impairment assessments.",
+    "Multi-currency management": "Manage financial reporting and transactional foreign exchange exposure across EUR, GBP, PLN, NOK, SEK, DKK, and other EMEA currencies; coordinate with Corporate Treasury on hedging policy.",
+    "Regulatory & tax compliance": "Prepare and file statutory accounts, VAT returns, and corporate tax submissions in each EMEA jurisdiction; manage transfer pricing compliance and relationships with local tax authorities.",
+    "Treasury management": "Manage AUD and GBP cash positions, intercompany loans, and FX exposure for ZIP ANZ, ZIP UK, and Harvey; coordinate repatriation of operating cash flows to group treasury in accordance with hedging policy.",
+    "Group financial consolidation": "Consolidate monthly, quarterly, and annual financial results across all 59 legal entities into group IFRS accounts; manage intercompany eliminations, FX translation, and audit committee deliverables.",
+    "Treasury & cash management": "Manage group cash pooling, short-term liquidity, debt facilities, and FX hedging programs; optimize the cost of capital and cash repatriation from 24 BUs across 100+ countries.",
+    "Risk management": "Identify, assess, and mitigate enterprise risks across operational, financial, regulatory, and cyber domains; maintain the group risk register and report to the board risk committee quarterly.",
+    "Internal audit & control": "Execute the annual internal audit plan across BUs; test key financial controls, assess SOX compliance, and provide assurance to the audit committee on the integrity of group financial reporting.",
+    "Tax management": "Define and manage the group tax strategy; oversee transfer pricing, thin capitalization, and BEPS compliance across all jurisdictions; manage relationships with local tax authorities and advisors.",
+    "Workforce planning": "Plan technician and driver headcount requirements based on route density, service volume forecasts, and attrition rates; ensure the field workforce can meet scheduled service demand and seasonal peaks.",
+    "Talent acquisition": "Recruit qualified field technicians, drivers, and branch managers at volume; manage high-volume hiring pipelines given technician attrition rates typical of route service businesses across multiple markets.",
+    "Technician training & certification": "Deliver and track mandatory water quality, plumbing, health and safety, and product training; maintain certification records for NSF, WRAS, DWI, ACS, and local regulatory standards across the field workforce.",
+    "Performance management": "Set, track, and review field team KPIs (service calls per day, first-time fix rate, salt delivery accuracy, NPS scores); link performance to variable pay and career progression frameworks.",
+    "Employee relations & compliance": "Manage local employment law compliance, works council relationships, and collective bargaining arrangements across EMEA jurisdictions; navigate bilingual and multilingual workforce requirements in France, Spain, Poland, Germany, and the Nordics.",
+    "Engineering talent management": "Attract, develop, and retain product and manufacturing engineers for ZIP ANZ's Sydney R&D and manufacturing operations; manage technical career paths and succession for key engineering roles.",
+    "Learning & development": "Deliver technical upskilling, safety training, and leadership development programs for ZIP and Harvey employees; manage apprenticeship and trade training partnerships in ANZ and UK.",
+    "Safety management": "Implement and audit workplace health and safety standards across manufacturing operations (Sydney and Woking); manage zero-incident culture, accident investigation, and regulatory reporting to WorkSafe and HSE.",
+    "Total rewards management": "Design and administer the group compensation philosophy, base pay bands, short-term incentive plans, and long-term equity awards; benchmark against peer water technology and industrial services companies.",
+    "HR information management": "Operate the group HRIS (Workday target) for employee records, payroll integration, absence management, and people analytics across all 24 BUs and 59 legal entities in 100+ countries.",
+    "Leadership development": "Design and deliver executive and senior management development programs; manage succession planning for group leadership roles and the BU General Manager population globally.",
+    "Diversity, equity & inclusion": "Drive group DEI strategy including hiring diversity targets, pay equity audits, inclusive culture initiatives, and employee resource group programs across the global workforce.",
+    "Organizational design": "Lead organizational structure design for BU restructuring, post-acquisition integration, and group operating model changes; provide job evaluation and grading frameworks to maintain internal equity.",
+    "Dealer network management": "Manage relationships with the ~180 independent Culligan franchise dealers in North America and EMEA; enforce brand standards, provide operational and marketing support, and grow the active dealer base.",
+    "Regulatory compliance management": "Monitor and respond to evolving water quality regulations, health and safety legislation, and environmental standards in each BU's operating jurisdiction; manage regulatory filings and government relationships.",
+    "Brand licensing management": "Administer Culligan brand license agreements with franchise dealers; manage royalty collection, periodic brand usage audits, and termination proceedings for non-compliant licensees.",
+    "Legal & contract management": "Draft, review, and enforce customer contracts, supplier agreements, and property leases; manage litigation, employment disputes, and regulatory investigations at the BU level.",
+    "Sustainability reporting": "Prepare sustainability disclosures for EMEA entities subject to CSRD and TCFD reporting requirements; collect Scope 1, 2, and 3 emissions data, water stewardship metrics, and social KPIs across EMEA operations.",
+    "Sustainability & ESG management": "Manage ZIP and Harvey's environmental commitments including WELS water efficiency ratings, packaging sustainability programs, carbon footprint measurement, and responsible sourcing standards for manufacturing.",
+    "Intellectual property management": "Protect ZIP HydroTap and Harvey design and utility patents in Australia, the UK, and key export markets; manage trade secrets around manufacturing processes and proprietary filter formulations.",
+    "Corporate strategy management": "Define and execute the Culligan group long-range plan; evaluate strategic options including organic growth, geographic expansion, portfolio rationalization, and operating model transformation.",
+    "Mergers & acquisitions": "Source, evaluate, and execute acquisition targets in the water treatment and services sector; manage the full M&A lifecycle from origination through due diligence, negotiation, closing, and post-acquisition integration.",
+    "Franchise network governance": "Set and enforce standards across the global franchise and dealer network; manage franchise agreement design, territory allocation, dealer performance management, and network development strategy."
+  },
+  "aliases": {
+    "Route planning & optimisation": "Route planning & optimization"
+  }
+}

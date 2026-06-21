@@ -1,6 +1,6 @@
 export const brand = {
   companyName: "Culligan",
-  reportLabel: "IT BENCHMARKING ANALYSIS",
+  reportLabel: "IT COST SAVINGS OPPORUNITIES",
   heroTitle: "Transforming IT for Growth",
   heroSubtitle:
     "Strategic Roadmap, EBITDA Impact & CIO Action Plan · June 2026 · Draft · Confidential",
@@ -289,6 +289,9 @@ export const keyFindings = {
     columns: ["Hypothesis Area", "The Numbers", "What This Means for Culligan — In Plain Terms"],
     rows: [
       {
+        code: "H6",
+        name: "Vendor & Licensing",
+        sectionId: "hypothesis-h6",
         area: "H6 — Vendor & Licensing",
         status: "RED FLAG",
         statusType: "red",
@@ -297,6 +300,9 @@ export const keyFindings = {
           "Culligan is spending nearly three times what comparable companies spend on software. Half the entire IT budget goes to vendor contracts that nobody centrally manages. The company is almost certainly paying for licences nobody uses, multiple tools that do the same job in different regions, and prices that could be dramatically lower if negotiated as one company.",
       },
       {
+        code: "H2",
+        name: "Spans & Layers",
+        sectionId: "hypothesis-h2",
         area: "H2 — Spans & Layers",
         status: "RED FLAG",
         statusType: "red",
@@ -305,6 +311,9 @@ export const keyFindings = {
           "Nearly 1 in 5 IT employees is a manager — almost double the industry norm. Each manager has the authority to buy their own software tools and keep their own ERP system. The management structure is the direct cause of the software and ERP fragmentation visible in every other finding.",
       },
       {
+        code: "H4",
+        name: "Application & Platform",
+        sectionId: "hypothesis-h4",
         area: "H4 — Application & Platform",
         status: "ABOVE MEDIAN",
         statusType: "amber",
@@ -313,6 +322,9 @@ export const keyFindings = {
           "Culligan has 25+ different financial systems, each acquired through M&A and never consolidated. Every company-wide P&L requires manual gathering from 25 different systems. Leadership cannot get a reliable, real-time view of the business. Every new acquisition makes this worse.",
       },
       {
+        code: "H5",
+        name: "IT Support & Op Model",
+        sectionId: "hypothesis-h5",
         area: "H5 — IT Support & Op Model",
         status: "ABOVE MEDIAN",
         statusType: "amber",
@@ -321,6 +333,9 @@ export const keyFindings = {
           "IT support is delivered by four completely separate regional teams. When Culligan acquires a new company, it adds IT support staff in proportion to users rather than absorbing them into an existing pool. Support costs grow at the same rate as acquisitions — roughly 50 new companies a year.",
       },
       {
+        code: "H3",
+        name: "Infrastructure & Cloud",
+        sectionId: "hypothesis-h3",
         area: "H3 — Infrastructure & Cloud",
         status: "STRENGTH",
         statusType: "green",
@@ -329,6 +344,9 @@ export const keyFindings = {
           "Infrastructure is the one area where Culligan is genuinely doing better than peers — spending less and running lean. This should be protected. The only gap is cloud spending is not actively optimised (FinOps), which typically recovers 28–35% of cloud costs in year one.",
       },
       {
+        code: "H1",
+        name: "AI & Automation",
+        sectionId: "hypothesis-h1",
         area: "H1 — AI & Automation",
         status: "UNDER-DEPLOYED",
         statusType: "green",

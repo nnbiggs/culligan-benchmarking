@@ -1,6 +1,7 @@
 import { keyFindings } from "../data/benchmarkData";
 import SectionWrapper from "./SectionWrapper";
 import StatusBadge from "./StatusBadge";
+import Breadcrumb, { hypothesisBreadcrumb } from "./Breadcrumb";
 import { TableScroll, MobileCards } from "./ResponsiveTable";
 
 export default function KeyFindings() {
@@ -22,6 +23,7 @@ export default function KeyFindings() {
             rows={hypothesisLegend.rows}
             renderCard={(row) => (
               <>
+                <Breadcrumb items={hypothesisBreadcrumb(row.code, row.name)} className="mb-3" />
                 <div className="flex items-center gap-2 mb-3">
                   <span className="font-headline font-extrabold text-culligan-accent">{row.code}</span>
                   <span className="font-semibold text-culligan-deep">{row.name}</span>
@@ -44,10 +46,13 @@ export default function KeyFindings() {
               <tbody>
                 {hypothesisLegend.rows.map((row, i) => (
                   <tr key={row.code} className={i % 2 === 0 ? "bg-white" : "bg-culligan-off-white"}>
-                    <td className="px-4 py-3 font-extrabold text-culligan-accent whitespace-nowrap">{row.code}</td>
-                    <td className="px-4 py-3 font-semibold text-culligan-deep whitespace-nowrap">{row.name}</td>
-                    <td className="px-4 py-3 text-culligan-body">{row.definition}</td>
-                    <td className="px-4 py-3 text-culligan-muted">{row.measured}</td>
+                    <td className="px-4 py-3 align-top">
+                      <Breadcrumb items={hypothesisBreadcrumb(row.code, row.name)} className="mb-2" />
+                      <span className="font-extrabold text-culligan-accent whitespace-nowrap">{row.code}</span>
+                    </td>
+                    <td className="px-4 py-3 font-semibold text-culligan-deep whitespace-nowrap align-top">{row.name}</td>
+                    <td className="px-4 py-3 text-culligan-body align-top">{row.definition}</td>
+                    <td className="px-4 py-3 text-culligan-muted align-top">{row.measured}</td>
                   </tr>
                 ))}
               </tbody>
@@ -62,8 +67,12 @@ export default function KeyFindings() {
 
           <MobileCards
             rows={findingsTable.rows}
+            getSectionId={(row) => row.sectionId}
             renderCard={(row) => (
               <>
+                {row.code && (
+                  <Breadcrumb items={hypothesisBreadcrumb(row.code, row.name)} className="mb-3" />
+                )}
                 <div className="flex flex-wrap items-center gap-2 mb-3">
                   <span className="font-headline font-bold text-culligan-deep text-sm">{row.area}</span>
                   <StatusBadge label={row.status} type={row.statusType} />
@@ -87,8 +96,18 @@ export default function KeyFindings() {
               </thead>
               <tbody>
                 {findingsTable.rows.map((row, i) => (
-                  <tr key={row.area} className={i % 2 === 0 ? "bg-white" : "bg-culligan-off-white"}>
+                  <tr
+                    key={row.area}
+                    id={row.sectionId}
+                    className={`${i % 2 === 0 ? "bg-white" : "bg-culligan-off-white"}${row.sectionId ? " scroll-mt-28 sm:scroll-mt-32" : ""}`}
+                  >
                     <td className="px-4 py-4 align-top">
+                      {row.code && (
+                        <Breadcrumb
+                          items={hypothesisBreadcrumb(row.code, row.name)}
+                          className="mb-2"
+                        />
+                      )}
                       <p className="font-semibold text-culligan-deep">{row.area}</p>
                       <div className="mt-2">
                         <StatusBadge label={row.status} type={row.statusType} />

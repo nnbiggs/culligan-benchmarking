@@ -1,0 +1,631 @@
+{
+  "sourceDocument": "Culligan_IT_OpModel_Combined (1).docx \u00b7 June 2026",
+  "cover": {
+    "eyebrow": "Culligan International \u00b7 Confidential \u00b7 PwC Engagement",
+    "title": "IT Operating Model",
+    "subtitle": "Capability Model, Current State Analysis & IT Cost Savings Case",
+    "meta": "Hypotheses H1\u2013H5 \u00b7 June 2026 \u00b7 PwC Confidential",
+    "hook": "Culligan's IT operating model is not a model. It is 24 separate IT operations running in parallel, each replicating the same capabilities independently. The cost of that duplication is measurable. The path to reducing it is clear.",
+    "kpis": [
+      {
+        "value": "$69M",
+        "label": "IT & Digital Spend"
+      },
+      {
+        "value": "~$170M",
+        "label": "Est. total IT cost incl. people"
+      },
+      {
+        "value": "19 / 19",
+        "label": "BUs buying IT independently"
+      },
+      {
+        "value": "$20\u201344M",
+        "label": "Annual savings opportunity"
+      }
+    ],
+    "source": "Source: Culligan Spend Cube June 2026 \u00b7 March 2026 P&L. People costs excluded from spend cube."
+  },
+  "executiveSummary": {
+    "title": "Executive Summary",
+    "sectionTitle": "The situation at a glance",
+    "rows": [
+      {
+        "dimension": "What the problem is",
+        "finding": "Culligan's IT estate is the unmanaged residue of 20+ acquisitions. Every business unit runs its own IT operation independently — its own ERP, CRM, service desk, managed service contracts, and IT staff — with no group mandate to standardise, consolidate, or govern. Culligan operates one business model across three regions, but runs its IT 24 separate ways."
+      },
+      {
+        "dimension": "Why it is a problem",
+        "finding": "19 of 19 operating BUs buy software independently ($34.8M) · 19 separate MSP/IT service contracts ($15.7M) · 10 different ERP instances across the group · 19 separate CRM instances, despite a $7.2M group Salesforce EA sitting unused · 15 separate cloud tenancies with no group FinOps · 15+ separate service desks costing an estimated $45–80 per ticket vs. $12–20 at best-in-class · Group CIO in place but mandate limited to Corporate enterprise agreements — no authority over BU technology decisions · Estimated $80–130M in IT headcount cost entirely invisible in the spend cube · EMEA pays $5M more in IT Spend than Americas at equivalent revenue scale, directly attributable to running six national IT operations independently."
+      },
+      {
+        "dimension": "Impact on the Culligan operating model",
+        "finding": "IT fragmentation directly undermines the Culligan operating model in four ways: (1) Scale benefits are destroyed — a $3.8B enterprise negotiates 19 separate software contracts instead of one, paying small-company rates across every BU. (2) Operational visibility is broken — no group IT performance data, no consolidated SLA reporting, no single view of the technology estate. (3) Integration is structurally blocked — 10 ERP instances and 19 CRM instances make group-level data consolidation, cross-BU reporting, and post-acquisition integration progressively harder and more expensive. (4) Risk compounds silently — security patching, access management, and change control are managed independently per BU with no group oversight, creating a patchwork risk posture that no single person can see."
+      },
+      {
+        "dimension": "The opportunity",
+        "finding": "$22–44M in annual run-rate savings at Year 3, comprising $12–22M from H4 IT operating model changes (service delivery consolidation, headcount rationalisation, MSP renegotiation, demand governance) and $12–23M from H2 Infrastructure, H3 application rationalisation, and H5 vendor agreements — all of which are unlocked by H4 governance. Conservative estimates using lower-bound Gartner, Forrester, IDC, and Info-Tech benchmarks."
+      },
+      {
+        "dimension": "Recommendations",
+        "finding": "Extend Group CIO mandate to cover all BU-level IT decisions. Establish an IT architecture board with cross-BU authority. Introduce an IT chargeback model to create a financial incentive for BU compliance. Commission the PwC TBM baseline to make the $80–130M headcount cost visible. Without these steps, no consolidation programme — application, infrastructure, or vendor — can be executed at group level."
+      },
+      {
+        "dimension": "Roadmap",
+        "finding": "Wave 1 (0–6 months): Extend Group CIO mandate, establish IT architecture board, complete SaaS and telecom vendor audit — $4–10M quick wins. Wave 2 (6–18 months): Deploy group ITSM (ServiceNow), migrate first BU service desks, launch Salesforce consolidation — $6–14M. Wave 3 (18–36 months): Full service desk consolidation, IFS ERP roll-out, cloud FinOps, IT chargeback — $12–20M additional."
+      }
+    ]
+  },
+  "capabilityModel": {
+    "partLabel": "Culligan's Capability Model Overview",
+    "hero": "Culligan operates one business model across three regions \u2014 but runs it 24 different ways. And IT is paying for every duplicate.",
+    "section1": "Culligan operates across 59 legal entities, 24 business units, and three regions \u2014 delivering water softening, filtration, dispensing, and purification to residential, commercial, and industrial customers across more than 100 countries. The business capability model maps what Culligan needs to be able to do \u2014 independent of how it does it, who does it, or which systems it uses \u2014 across all 24 BUs simultaneously. It is the analytical foundation for the PwC IT operating model hypothesis.",
+    "intro": {
+      "lead": "Culligan operates across 59 legal entities, 24 business units, and three regions \u2014 delivering water softening, filtration, dispensing, and purification to residential, commercial, and industrial customers across more than 100 countries.",
+      "scope": "The business capability model maps what Culligan needs to be able to do \u2014 independent of how it does it, who does it, or which systems it uses \u2014 across all 24 BUs simultaneously.",
+      "framework": "It is the analytical foundation for the PwC IT operating model hypothesis."
+    },
+    "section1a": "Culligan's portfolio was assembled through more than 20 acquisitions over the past decade. Quench, ZIP Water, Harvey Water Softeners, ZeroWater, and Paragon Water Systems were all built independently before becoming Culligan entities. The result is three structurally distinct operating archetypes:",
+    "archetypes": [
+      {
+        "name": "Route service",
+        "bus": "Quench, Flagship, France, Iberia, Germany, Poland, Nordics, UK CDW",
+        "model": "Recurring technician visits. Recurring revenue from salt, filters, service. IT focus: FSM, CRM, routing."
+      },
+      {
+        "name": "Premium product",
+        "bus": "ZIP ANZ, ZIP UK, Harvey, Culligan AUS",
+        "model": "Manufacture and sell high-value water appliances. Subscription revenue. IT focus: ERP, e-commerce, connected product."
+      },
+      {
+        "name": "Consumer & OEM",
+        "bus": "ZeroWater, Paragon, Pureplay",
+        "model": "Retail filtration products via online and industrial channels. IT focus: demand planning, EDI, retail analytics."
+      }
+    ],
+    "calloutTitle": "What this means for Culligan",
+    "callout": "No two BUs were designed to operate together. The technology fragmentation visible in the capability map \u2014 10 separate ERPs, 19 CRM instances, 14 FSM tools \u2014 is not an architectural choice. It is the unmanaged residue of 20+ acquisitions where integration was never prioritised. The capability model provides the first common framework across all 24 BUs that makes the total cost of that fragmentation visible.",
+    "calloutStats": [
+      {
+        "value": "10",
+        "label": "Separate ERPs"
+      },
+      {
+        "value": "19",
+        "label": "CRM instances"
+      },
+      {
+        "value": "14",
+        "label": "FSM tools"
+      },
+      {
+        "value": "20+",
+        "label": "Acquisitions"
+      }
+    ],
+    "domains": [
+      {
+        "domain": "Customer & market",
+        "covers": "Brand management, customer acquisition, account management, contract & pricing, customer retention.",
+        "itEnabler": "19 separate CRM instances \u2192 group Salesforce EA ($7.2M)."
+      },
+      {
+        "domain": "Product & service",
+        "covers": "Installation, planned maintenance, break-fix repair (route), manufacturing & R&D (premium).",
+        "itEnabler": "14 FSM tools \u2192 group FSM platform."
+      },
+      {
+        "domain": "Operations & supply chain",
+        "covers": "Route planning & optimisation, fleet, supplier management, inventory, QA.",
+        "itEnabler": "No BU uses AI-driven route optimisation today. H1 opportunity."
+      },
+      {
+        "domain": "Technology & innovation",
+        "covers": "ERP, CRM, FSM, remote monitoring, BI, IT service & support management.",
+        "itEnabler": "$62M IT Spend (30\u201340% of true IT cost). Core H3/H4 domain."
+      },
+      {
+        "domain": "Finance & risk",
+        "covers": "Financial planning, revenue management, AP/AR, asset management, tax compliance.",
+        "itEnabler": "10 separate ERP instances \u2192 IFS group template."
+      },
+      {
+        "domain": "People & org",
+        "covers": "Workforce planning, talent acquisition, technician training, performance management.",
+        "itEnabler": "Workday HRIS (group target, partially deployed)."
+      },
+      {
+        "domain": "Corporate affairs",
+        "covers": "Dealer network, regulatory compliance, brand licensing, M&A, IP management.",
+        "itEnabler": "Light IT spend \u2014 primarily professional services."
+      }
+    ],
+    "scopeRegions": [
+      {
+        "name": "Americas",
+        "profile": "$149M/mo \u00b7 28% margin",
+        "headerLine": "Americas  $149M/mo \u00b7 28% margin",
+        "businessUnits": [
+          {
+            "name": "Quench",
+            "spend": "$348M"
+          },
+          {
+            "name": "Flagship",
+            "spend": "$214M"
+          },
+          {
+            "name": "Paragon",
+            "spend": "$79M"
+          },
+          {
+            "name": "ZeroWater",
+            "spend": "$79M"
+          },
+          {
+            "name": "Pureplay",
+            "spend": "$56M"
+          },
+          {
+            "name": "WaterCo",
+            "spend": "$55M"
+          },
+          {
+            "name": "Brazil",
+            "spend": "$54M"
+          },
+          {
+            "name": "Ultrapure",
+            "spend": "$40M"
+          },
+          {
+            "name": "Mexico",
+            "spend": "$38M"
+          },
+          {
+            "name": "CWG",
+            "spend": "$21M"
+          }
+        ],
+        "footer": "26 legal entities  \u00b7  $14M IT Spend"
+      },
+      {
+        "name": "EMEA",
+        "profile": "$141M/mo \u00b7 30% margin",
+        "headerLine": "EMEA  $141M/mo \u00b7 30% margin",
+        "businessUnits": [
+          {
+            "name": "France",
+            "spend": "$123M"
+          },
+          {
+            "name": "Iberia",
+            "spend": "$107M"
+          },
+          {
+            "name": "Poland",
+            "spend": "$79M"
+          },
+          {
+            "name": "Germany",
+            "spend": "$74M"
+          },
+          {
+            "name": "UK CDW",
+            "spend": "$59M"
+          },
+          {
+            "name": "Nordics",
+            "spend": "$48M"
+          }
+        ],
+        "footer": "24 legal entities  \u00b7  $19M IT Spend"
+      },
+      {
+        "name": "APAC",
+        "profile": "$29M/mo \u00b7 28% margin",
+        "headerLine": "APAC  $29M/mo \u00b7 28% margin",
+        "businessUnits": [
+          {
+            "name": "ZIP ANZ",
+            "spend": "$128M"
+          },
+          {
+            "name": "ZIP UK",
+            "spend": "$62M"
+          },
+          {
+            "name": "Harvey",
+            "spend": "$45M"
+          }
+        ],
+        "footer": "9 legal entities  \u00b7  $8M IT Spend"
+      }
+    ],
+    "corporateBand": "CORPORATE & SHARED SERVICES  (cross-cutting band, dashed border)  \u00b7  IT & Technology  \u00b7  Finance & Risk  \u00b7  Strategy & M&A  \u00b7  Legal & IP  \u00b7  People & Org  \u00b7  Procurement CoE",
+    "coreInsightTitle": "The core insight",
+    "coreInsight": "Every domain row shows the same capability names across all three region columns. \"Route planning and optimisation\" appears in Americas, EMEA, and APAC. \"Financial management and reporting\" appears in all three. The capabilities are identical across a $1.87B, 24-BU, 100-country enterprise. What differs is the technology estate that supports them \u2014 and that is where the savings are."
+  },
+  "currentState": {
+    "partLabel": "Part II  \u2014  Current State Analysis",
+    "title": "IT operating model \u2014 current state",
+    "lead": "Culligan's IT operating model was never designed. It is the residue of 20+ acquisitions, each of which left behind its own IT organisation, its own vendor contracts, its own service desk, and its own governance structures. Every BU manages IT independently \u2014 from provisioning laptops to managing ERP licences to running a helpdesk.",
+    "keyObservationsTitle": "Current state key observations",
+    "doingWellTitle": "What Culligan is already doing well",
+    "mustActTitle": "Where Culligan must act",
+    "doingWell": [
+      {
+        "area": "Group Salesforce enterprise agreement",
+        "observation": "Corporate has negotiated a $7.2M Salesforce enterprise agreement \u2014 the largest single IT spend item in the group. The commercial leverage is already secured.",
+        "impact": "The EA unit economics make BU migration financially attractive. Migrating BUs eliminate their standalone CRM contracts while paying into an EA already funded at group level. Net cost impact is neutral-to-positive from the first BU consolidated."
+      },
+      {
+        "area": "Group cybersecurity SOC",
+        "observation": "Corporate funds a $1.7M group security operations centre (Crowdstrike or equivalent), providing centralised threat monitoring across the estate.",
+        "impact": "Avoids 24 BUs independently procuring endpoint security. Equivalent per-BU coverage purchased independently would cost an estimated $3\u20134M group-wide \u2014 a $1.3\u20132.3M annual saving already being realised."
+      },
+      {
+        "area": "IFS ERP group template",
+        "observation": "Culligan has selected IFS as the group ERP standard and built a deployment template, establishing a clear architectural direction for the 10-instance consolidation.",
+        "impact": "Template investment is sunk. Every BU migrated onto IFS eliminates a standalone ERP instance \u2014 licence, support, and integration costs. The savings case strengthens with each migration."
+      },
+      {
+        "area": "Group CIO in place",
+        "observation": "A Group CIO exists at Corporate level, providing the senior IT leadership role from which cross-BU mandate and architecture governance can be extended.",
+        "impact": "Extending the Group CIO's mandate is a governance decision, not a hiring process. The cost and lead time of establishing group IT leadership is already absorbed."
+      },
+      {
+        "area": "Workday HRIS group deployment",
+        "observation": "Workday has been selected as the group HR system and is partially deployed, establishing a precedent for group platform adoption across BUs.",
+        "impact": "Demonstrates BU-level migration to a group platform is operationally feasible. The Workday deployment is the proof of concept for IFS ERP and Salesforce CRM consolidation."
+      }
+    ],
+    "mustAct": [
+      {
+        "area": "Group CIO mandate has no cross-BU reach",
+        "observation": "The Group CIO's authority is limited to Corporate enterprise agreements. BUs select, procure, and manage technology independently with no reference to group standards.",
+        "impact": "Every consolidation opportunity \u2014 ERP, CRM, service desk, cloud, vendor agreements \u2014 requires BU-by-BU negotiation. Without mandate, fragmentation grows with every acquisition and every BU technology renewal cycle. This is the single most costly governance gap."
+      },
+      {
+        "area": "15+ separate service desks, no ITSM standard",
+        "observation": "Every BU operates its own service desk \u2014 some internal, some outsourced to local MSPs. No group ITSM platform, no SLA framework, no consolidated performance data.",
+        "impact": "Est. $45\u201380 per ticket vs. $12\u201320 at best-in-class. The excess cost of fragmented service delivery is $2.4\u20134.7M annually on IT Spend alone, before accounting for the productivity cost of inconsistent service quality."
+      },
+      {
+        "area": "No IT architecture standards",
+        "observation": "No group architecture function. Each BU selects technology independently. 19 CRM instances, 10 ERP instances, and 14+ FSM tools \u2014 all three numbers are growing.",
+        "impact": "Each new point solution added at BU level increases the eventual consolidation cost and timeline. Without an architecture board to enforce standards, the fragmentation premium compounds annually."
+      },
+      {
+        "area": "No group change or release management",
+        "observation": "ERP patches, CRM updates, and infrastructure changes are managed entirely within BU boundaries. A vulnerability patched in one BU may remain unpatched in others for months.",
+        "impact": "Uncoordinated patching creates a material security risk exposure. A single breach in an under-patched BU carries remediation costs that would dwarf the investment in group change governance."
+      },
+      {
+        "area": "IT budgeting invisible at group level",
+        "observation": "IT budgets are set at BU level with no group consolidation. The $69M IT Spend represents an estimated 30\u201340% of true IT cost. The $80\u2013130M headcount cost is entirely unmanaged at group level.",
+        "impact": "Without a group IT cost baseline, Culligan cannot identify duplicate spend, benchmark against peers, or build a credible business case for consolidation investment."
+      },
+      {
+        "area": "EMEA running a $5M fragmentation premium",
+        "observation": "EMEA spends $19M in IT Spend against a comparable revenue base to Americas at $14M. The $5M premium is the direct cost of six national IT functions operating independently.",
+        "impact": "$5M annually in excess IT Spend attributable solely to EMEA fragmentation \u2014 before headcount. EMEA is the highest-priority region for IT operating model consolidation."
+      }
+    ],
+    "fragmentationTitle": "IT fragmentation by capability \u2014 the numbers",
+    "fragmentation": [
+      {
+        "capability": "Software (all)",
+        "bus": "19",
+        "spend": "$34.8M",
+        "observation": "Every BU buys software independently. No group master agreements below Corporate level."
+      },
+      {
+        "capability": "IT services / managed services",
+        "bus": "19",
+        "spend": "$15.7M",
+        "observation": "Every BU has its own MSP or internal IT team. Germany alone: $2.9M to a local MSP."
+      },
+      {
+        "capability": "Telecom (mobile & fixed)",
+        "bus": "14+",
+        "spend": "$5.2M",
+        "observation": "Separate telecom contracts per BU. No group mobile or fixed-line framework."
+      },
+      {
+        "capability": "Cloud & infrastructure",
+        "bus": "15",
+        "spend": "$7.0M",
+        "observation": "15 BUs have separate cloud tenancies (AWS/Azure). No group FinOps. No consolidated cloud org."
+      },
+      {
+        "capability": "Hardware (end-user compute)",
+        "bus": "12",
+        "spend": "$4.9M",
+        "observation": "Separate device procurement per BU."
+      },
+      {
+        "capability": "ERP systems",
+        "bus": "10",
+        "spend": "$10.9M",
+        "observation": "10 BUs on separate ERP instances (SAP, Navision, local). IFS is group template but not yet deployed."
+      },
+      {
+        "capability": "CRM",
+        "bus": "19",
+        "spend": "$8.3M",
+        "observation": "19 BUs on separate CRM. Corporate holds $7.2M Salesforce EA that BUs are not consolidated onto."
+      }
+    ],
+    "headcountTitle": "The headcount blind spot",
+    "headcountLead": "The IT Spend of $69M is estimated to represent only 30\u201340% of true IT cost. Applying Gartner's benchmark that people represent 60\u201370% of IT cost in comparable industrial services organisations, total IT cost including headcount is approximately $150\u2013200M annually. This means $80\u2013130M of IT cost sits entirely outside the current spend data.",
+    "headcountCallout": "The fragmentation multiplier A consolidated IT operating model at Culligan's scale ($3.8B enterprise) would require approximately 150\u2013250 group IT FTEs. The current fragmented model implies roughly 1\u20132 IT staff per BU managing local IT, plus local MSP relationships \u2014 potentially 50\u2013100 people performing duplicated functions that a shared model would consolidate into 20\u201330 roles. That is the invisible savings pool."
+  },
+  "operatingModel": {
+    "partLabel": "Part III  \u2014  IT Operating Model: Current vs Future State",
+    "currentTitle": "Current state operating model",
+    "currentLead": "The diagram below shows the structural reality of Culligan's IT estate today: 24 independent IT operations, each replicating the same capabilities, with no group governance, no shared services, and no mechanism to prevent fragmentation from growing.",
+    "currentCaption": "Figure 1: Current state \u2014 24 separate IT operations running in parallel with no group governance or shared services",
+    "currentImage": "/assets/op-model/current-state.png",
+    "futureTitle": "Future state operating model",
+    "futureLead": "The target model consolidates all 24 BUs onto shared group platforms, governed by a Group CIO and IT architecture board, with BU-level configuration rather than BU-level infrastructure. The structural change delivers $22\u201344M in annual run-rate savings at Year 3.",
+    "futureCaption": "Figure 2: Future state \u2014 group-governed, shared platform model with BU-level configuration. $22\u201344M annual run-rate saving at Year 3.",
+    "futureImage": "/assets/op-model/future-state.png",
+    "comparisonTitle": "Current vs future state \u2014 key shifts",
+    "comparison": [
+      {
+        "dimension": "Governance",
+        "current": "Group CIO without cross-BU mandate. No architecture board. BU autonomy on technology decisions.",
+        "future": "Group CIO. IT architecture board. BU-level config within group standards."
+      },
+      {
+        "dimension": "ERP",
+        "current": "10 instances (SAP, Navision, local)",
+        "future": "1 group IFS template. BU-level configuration."
+      },
+      {
+        "dimension": "CRM",
+        "current": "19 separate instances",
+        "future": "1 Salesforce EA (already negotiated \u2014 $7.2M). 19 BUs migrated onto it."
+      },
+      {
+        "dimension": "Service desk",
+        "current": "15+ separate desks. $45\u201380/ticket.",
+        "future": "1 group ServiceNow. $12\u201320/ticket (best-in-class)."
+      },
+      {
+        "dimension": "Cloud",
+        "current": "15 separate tenancies. No FinOps.",
+        "future": "Consolidated cloud org. Group FinOps. Volume pricing."
+      },
+      {
+        "dimension": "IT headcount",
+        "current": "~50\u2013100 local IT staff duplicating functions across 24 BUs.",
+        "future": "Group shared services. 20\u201330 consolidated roles. $6\u201310M saving."
+      },
+      {
+        "dimension": "Vendor agreements",
+        "current": "19 BUs buying independently. No group leverage.",
+        "future": "Group framework agreements for SaaS, telecom, hardware."
+      }
+    ]
+  },
+  "benchmarking": {
+    "partLabel": "Part IV  \u2014  Benchmarking",
+    "title": "How Culligan compares to benchmark",
+    "lead": "The following benchmarks are from Gartner IT Key Metrics (2025), Forrester Research, IDC Growth and Transformation of Global Business Services (2024), and Info-Tech Research Group. Applied to Culligan's profile: industrial services / FSM company, $3.8B revenue, multi-BU, post-acquisition context.",
+    "itSpendTitle": "IT spend as a percentage of revenue",
+    "itSpendBenchmark": [
+      {
+        "value": "1.8% Culligan IT Spend / revenue",
+        "label": "Culligan IT Spend / revenue"
+      },
+      {
+        "value": "2.5\u20134% Industrial / FSM benchmark",
+        "label": "Industrial / FSM benchmark"
+      },
+      {
+        "value": "~3.5% Culligan estimated true IT %",
+        "label": "Culligan estimated true IT %"
+      },
+      {
+        "value": "1.5\u20132% Best-in-class post-consolidation",
+        "label": "Best-in-class post-consolidation"
+      }
+    ],
+    "itSpendNote": "",
+    "serviceDeskTitle": "Service desk cost benchmarks (MetricNet / HDI 2025)",
+    "serviceDesk": [
+      {
+        "model": "Fragmented BU-level desk (est. Culligan today)",
+        "cost": "$45\u201380",
+        "relevance": "15+ separate desks, no economies of scale, local MSP contracts, duplicated tooling (HDI 2025 high-cost cohort)."
+      },
+      {
+        "model": "Industry median (single consolidated desk)",
+        "cost": "$22\u201335",
+        "relevance": "MetricNet 2025 median. Applies to organisations with 2,000\u201315,000 end users."
+      },
+      {
+        "model": "Best-in-class (consolidated + AI/automation)",
+        "cost": "$12\u201320",
+        "relevance": "Shared L1/L2, self-service portal, AI-assisted triage. Target state for Culligan (EasyVista/ManageEngine 2025)."
+      },
+      {
+        "model": "Outsourced BPO (10,000+ tickets/mo)",
+        "cost": "$8\u201315",
+        "relevance": "Available at sufficient ticket volume. Aspirational given field tech complexity."
+      }
+    ],
+    "industryTitle": "Industry evidence for shared services consolidation",
+    "industryEvidence": [
+      "Gartner \u2014 IT operating model maturity (2024) Gartner's Strategic Roadmap for the Service-Optimising IT Operating Model places Culligan at the \"decentralised\" archetype \u2014 the starting point of a five-stage maturity scale. Moving to a shared services model is associated with 15\u201325% reduction in IT run costs through headcount right-sizing, licence pooling, and process standardisation. Gartner's critical finding: organisations that attempt tool consolidation without governance first achieve only 30\u201340% of available savings. Extending the Group CIO's mandate across all BUs is the critical prerequisite.",
+      "Forrester \u2014 Total Economic Impact of IT consolidation (2025\u20132026) Forrester TEI studies consistently show 295\u2013480% ROI over three years for organisations consolidating fragmented multi-system environments. Forrester's 2026 ERP consolidation study found 100%+ ROI with a 16-month payback for mid-market organisations consolidating multiple ERP instances \u2014 directly analogous to Culligan's 10-instance situation.",
+      "IDC \u2014 Global Business Services (2024) IDC identifies IT service desk as the highest-return shared services consolidation target \u2014 ahead of finance and HR \u2014 because it is the most standardisable function. IDC's single-point-of-service model delivers continuously optimised workloads and SLA-driven accountability. The managed services market is growing at 13.6% CAGR to 2030 \u2014 Culligan's fragmented MSP spend will cost progressively more if not consolidated.",
+      "Info-Tech Research Group \u2014 service desk consolidation blueprint (2024) Info-Tech quantifies the tool consolidation saving alone \u2014 licensing, administration, training, integration \u2014 at 20\u201335% of current ITSM tooling spend, before labour efficiency gains. Critical finding: consolidation requires executive sponsorship to maintain legitimacy. Organisations without a mandate from the top fail to complete consolidation because BUs resist."
+    ]
+  },
+  "savings": {
+    "partLabel": "Part V  \u2014  The Savings Case",
+    "totalAddressable": "Total addressable saving \u2014 H3 + H4 + H5 combined (excl. H1 and H2 which are quantified separately)",
+    "h4Title": "IT service & support \u2014 the H4 anchor opportunity",
+    "h4Lead": [
+      "This is the clearest and most immediately actionable opportunity. 19 BUs each paying for IT services independently, $15.7M group-wide. Germany alone pays $2.9M to a local MSP. Nordics $1.4M. Iberia $1.1M. All delivering the same capability at different rates with no group leverage.",
+      "The mechanism is straightforward: replace 15+ separate service desk arrangements with a single group L1/L2 shared service on a common ITSM platform (ServiceNow is the leading candidate). A virtual consolidated service desk operating across time zones achieves the same structural benefit as a single location."
+    ],
+    "h4Sizing": "Sizing basis $15.7M IT services invoices \u00d7 15\u201330% benchmark saving = $2.4\u20134.7M invoice saving. Gartner's maturity research: moving from decentralised to shared services is associated with 15\u201325% reduction in IT run costs including headcount. Applied to Culligan's estimated 24\u201348 local IT FTEs, this implies an additional $3\u20136M people saving not visible in the spend cube.",
+    "h4Dependency": "Critical dependency This change cannot be driven from Corporate IT without executive mandate. The H4 workstream must begin with a governance recommendation \u2014 formalising the Group CIO's cross-BU mandate and establishing the IT architecture board \u2014 before a technology recommendation. Without executive authority, every service desk migration will be vetoed by a local general manager citing business disruption.",
+    "leversTitle": "The five savings levers mapped to capabilities",
+    "levers": [
+      {
+        "hyp": "H1",
+        "lever": "AI automation",
+        "capability": "Route planning & optimisation",
+        "current": "0 of 14 route BUs use AI scheduling",
+        "saving": "15\u201325% reduction in cost-per-service-call"
+      },
+      {
+        "hyp": "H2",
+        "lever": "Infrastructure",
+        "capability": "Infrastructure & cloud management",
+        "current": "15 separate cloud tenancies, no FinOps",
+        "saving": "Consolidated cloud org, group FinOps"
+      },
+      {
+        "hyp": "H3",
+        "lever": "App rationalisation",
+        "capability": "ERP / CRM / FSM",
+        "current": "10 ERPs + 19 CRMs + 14 FSM tools",
+        "saving": "IFS + Salesforce + group FSM (3 platforms)"
+      },
+      {
+        "hyp": "H4",
+        "lever": "IT operating model",
+        "capability": "IT service & support management",
+        "current": "15+ service desks, 19 MSP contracts",
+        "saving": "Group ServiceNow, shared L1/L2, 1 SLA"
+      },
+      {
+        "hyp": "H5",
+        "lever": "Vendor & licensing",
+        "capability": "All domains",
+        "current": "19 BUs buying independently",
+        "saving": "Group framework agreements for all SaaS/telecom"
+      }
+    ],
+    "cumulative": "Cumulative Year 3 run rate  \u00b7  Full H3 + H4 + H5 savings realised  \u00b7  Group CIO mandate formalised  \u00b7  19 BUs on group ITSM  \u00b7  ERP migration 60%+ complete"
+  },
+  "itLeadershipStructure": {
+    "partLabel": "Future state  \u2014  leadership design",
+    "title": "IT leadership structure \u2014 design options",
+    "lead": "Wave 1 requires a decision on IT leadership structure before governance can be formalised. The question is not simply whether to appoint regional IT leaders \u2014 it is what authority they hold, what sits centrally versus regionally, and how to right-size the structure to Culligan's actual IT complexity and spend by region.",
+    "options": [
+      {
+        "id": "regional-cios",
+        "number": 1,
+        "title": "Group CIO + regional CIOs",
+        "recommended": false,
+        "tagline": "Mirror regional P&L structure",
+        "structure": "Group CIO with a CIO in each of Americas, EMEA, and APAC. Regional CIOs report to Group CIO. IT budget accountability sits at regional level.",
+        "strengths": [
+          "Mirrors Culligan's operational structure",
+          "Regional P&L accountability for IT spend",
+          "EMEA CIO directly owns the fragmentation premium",
+          "Clear escalation path from BU to region to group"
+        ],
+        "risks": [
+          "APAC too small to justify a full CIO",
+          "Risk of regional mini-fiefdoms resisting group mandates",
+          "Three senior IT hires \u2014 cost and lead time"
+        ],
+        "diagram": "three-cios"
+      },
+      {
+        "id": "regional-ctos",
+        "number": 2,
+        "title": "Group CIO + regional CTOs",
+        "recommended": false,
+        "tagline": "Split operations vs product",
+        "structure": "Group CIO owns all IT operations and shared services centrally. Regional CTOs own technology product and digital capability in each region, reporting to regional GMs (not Group CIO).",
+        "strengths": [
+          "Clean separation: CIO runs cost and ops, CTOs drive growth",
+          "APAC justifies a CTO for connected product technology",
+          "Group shared services under one budget"
+        ],
+        "risks": [
+          "CTOs may lack authority to enforce platform adoption",
+          "Boundary disputes between CIO and CTO scope",
+          "Premature \u2014 stable IT foundations needed first"
+        ],
+        "diagram": "three-ctos"
+      },
+      {
+        "id": "emea-cio-only",
+        "number": 3,
+        "title": "Group CIO + EMEA CIO only",
+        "recommended": true,
+        "tagline": "Right-sized to regional scale",
+        "structure": "Group CIO with a dedicated EMEA CIO (the only region with sufficient IT scale and complexity). Americas and APAC covered by IT Directors reporting to Group CIO. Group IT shared services under Group CIO.",
+        "strengths": [
+          "Right-sizes structure to actual IT spend and complexity",
+          "EMEA scale justifies a full CIO",
+          "Americas more homogeneous \u2014 Quench/Flagship dominant",
+          "Avoids symmetric headcount for asymmetric complexity"
+        ],
+        "risks": [
+          "Americas IT Director may lack seniority for large BU negotiations",
+          "APAC IT Director scope needs explicit strategic definition"
+        ],
+        "diagram": "emea-cio"
+      }
+    ],
+    "structuralPrinciple": {
+      "title": "The structural principle that cannot move",
+      "body": "Whichever option Culligan chooses, the Group CIO must own group IT shared services \u2014 the service desk, ITSM platform, ERP template, cloud organisation, and enterprise agreements \u2014 as a single budget, not fragmented into regional IT operations. The moment a regional CIO or CTO owns their own service desk and infrastructure budget, the savings case is materially undermined. Regional IT leaders must be consumers of group platforms, not operators of regional IT stacks. The IT architecture board and chargeback model enforce this boundary."
+    }
+  },
+  "roadmap": {
+    "partLabel": "Part VI  \u2014  Implementation Roadmap",
+    "title": "Recommended sequence \u2014 three waves",
+    "lead": "The savings opportunities are interdependent. The recommended sequence maximises early wins while building the governance foundation required for the larger structural changes. Nothing in Waves 2 or 3 is achievable without the governance investment in Wave 1.",
+    "waves": [
+      {
+        "wave": "Wave 1",
+        "horizon": "0\u20136 months (Foundation)",
+        "actions": "Formalise Group CIO cross-BU mandate. Establish IT architecture board. Commission TBM baseline (PwC H4). Complete SaaS and telecom vendor audit (H5 quick wins). Renegotiate top 5 MSP contracts as a group.",
+        "saving": "$4\u201310M (vendor renegotiation + SaaS audit). Primarily H5."
+      },
+      {
+        "wave": "Wave 2",
+        "horizon": "6\u201318 months (Consolidation)",
+        "actions": "Select and deploy group ITSM platform (ServiceNow). Migrate first 5 BU service desks. Standardise L1/L2 triage processes. Launch corporate Salesforce roll-out to first 3 BUs. Begin IFS ERP pilot (2 BUs).",
+        "saving": "$6\u201314M (service desk + CRM). Primarily H4 + H3."
+      },
+      {
+        "wave": "Wave 3",
+        "horizon": "18\u201336 months (Transformation)",
+        "actions": "Complete service desk consolidation (all BUs on group model). Accelerate IFS ERP roll-out. Consolidate cloud tenancies under group FinOps. Design and implement group IT chargeback model. Full headcount right-sizing.",
+        "saving": "$12\u201320M additional. H3 + H2 + H4 headcount savings."
+      }
+    ],
+    "governanceTitle": "Governance \u2014 the enabling investment",
+    "governanceLead": "None of the above savings are achievable without first establishing the governance structures that make consolidation possible. Three investments are non-negotiable:",
+    "governance": [
+      {
+        "investment": "Group CIO mandate extension",
+        "does": "The Group CIO exists but currently manages Corporate enterprise agreements only. The mandate must be extended to cover all BU-level technology decisions \u2014 platform standards, architecture, vendor contracts.",
+        "without": "The Group CIO has no authority to enforce group standards at BU level. Every consolidation initiative requires BU-by-BU negotiation."
+      },
+      {
+        "investment": "Group IT architecture board",
+        "does": "Quarterly governance body (Group CIO chair, BU IT leads) to ratify technology decisions and manage the application consolidation roadmap.",
+        "without": "No mechanism to enforce the IFS ERP template, Salesforce consolidation, or ITSM standardisation."
+      },
+      {
+        "investment": "Group IT chargeback model",
+        "does": "BUs on group platforms pay the consolidated rate; BUs operating outside group standards pay the full undiscounted cost. Gives the Group CIO commercial leverage.",
+        "without": "No financial incentive for BUs to move to group platforms. Fragmentation continues to grow."
+      }
+    ]
+  }
+}

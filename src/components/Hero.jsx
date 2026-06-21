@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useCountUp } from "../hooks/useAnimations";
 import { brand, draft, kpis } from "../data/benchmarkData";
 import Logo from "./Logo";
@@ -51,7 +52,16 @@ export default function Hero() {
           ))}
         </div>
 
-        <p className="mt-8 sm:mt-10 text-center text-[10px] sm:text-xs text-culligan-light/60 max-w-3xl mx-auto px-2 leading-relaxed">
+        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link
+            to="/taxonomy"
+            className="inline-flex items-center gap-2 rounded-xl border border-culligan-accent/50 bg-culligan-accent/20 px-6 py-3 text-sm font-semibold text-white hover:bg-culligan-accent/30 transition-colors"
+          >
+            IT Support & Operating Model →
+          </Link>
+        </div>
+
+        <p className="mt-6 sm:mt-8 text-center text-[10px] sm:text-xs text-culligan-light/60 max-w-3xl mx-auto px-2 leading-relaxed">
           {brand.heroAttribution}
         </p>
       </div>

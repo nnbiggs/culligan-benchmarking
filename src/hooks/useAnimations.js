@@ -28,9 +28,10 @@ export function useInView(options = {}) {
 }
 
 export function useActiveSection(sectionIds) {
-  const [activeId, setActiveId] = useState(sectionIds[0]);
+  const [activeId, setActiveId] = useState(sectionIds[0] ?? "");
 
   useEffect(() => {
+    if (sectionIds.length === 0) return;
     const observers = [];
     const visibleSections = new Map();
 
