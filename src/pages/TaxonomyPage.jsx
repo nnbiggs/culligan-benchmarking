@@ -15,10 +15,8 @@ import {
   RoadmapSection,
 } from "../components/opModel/OpModelSections";
 import { operatingRegions } from "../data/taxonomyData";
-import { taxonomyNavLinks } from "../data/siteNav";
 import { opModelCover, opModelCapability } from "../data/opModelData";
 import { buCostSource, buCostFootnote } from "../data/buCostData";
-import { PageScrollAssist } from "../components/PageNavigation";
 
 function TaxonomyHero() {
   return (
@@ -153,7 +151,6 @@ export default function TaxonomyPage() {
         <RoadmapSection />
         <RegionsSection />
       </main>
-      <PageScrollAssist links={taxonomyNavLinks} ariaLabel="Operating model page navigation" />
       <Footer />
     </div>
   );

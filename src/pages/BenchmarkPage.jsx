@@ -13,8 +13,6 @@ import PriorityMatrix from "../components/PriorityMatrix";
 import Roadmap from "../components/Roadmap";
 import BenchmarkTable from "../components/BenchmarkTable";
 import Footer from "../components/Footer";
-import { PageScrollAssist } from "../components/PageNavigation";
-import { executiveSummaryLinks } from "../data/siteNav";
 
 export default function BenchmarkPage() {
   return (
@@ -35,7 +33,6 @@ export default function BenchmarkPage() {
         <Roadmap />
         <BenchmarkTable />
       </main>
-      <PageScrollAssist links={executiveSummaryLinks} ariaLabel="Executive summary page navigation" />
       <Footer />
     </div>
   );

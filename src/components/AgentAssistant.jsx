@@ -96,8 +96,8 @@ export default function AgentAssistant() {
           >
             <header className="flex items-center justify-between gap-3 bg-culligan-deep px-4 py-3">
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-culligan-accent">Agentic assistant</p>
-                <p className="text-sm font-semibold text-white">Culligan IT Benchmarking</p>
+                <p className="text-xs font-bold uppercase tracking-widest text-culligan-accent">Ask the report</p>
+                <p className="text-sm font-semibold text-white">Culligan IT Cost Savings</p>
               </div>
               <button
                 type="button"
@@ -127,10 +127,10 @@ export default function AgentAssistant() {
                     <MarkdownLite text={msg.content} />
                     {msg.toolRuns && <ToolBadge toolRuns={msg.toolRuns} />}
                     {msg.mode === "llm" && (
-                      <p className="mt-1 text-[10px] text-culligan-muted">Powered by LLM + tools</p>
+                      <p className="mt-1 text-[10px] text-culligan-muted">AI-assisted answer</p>
                     )}
                     {msg.mode === "local" && (
-                      <p className="mt-1 text-[10px] text-culligan-muted">Local agent · tools + search</p>
+                      <p className="mt-1 text-[10px] text-culligan-muted">Answer from report data</p>
                     )}
                   </div>
                 </div>

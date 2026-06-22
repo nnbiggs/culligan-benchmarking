@@ -1,6 +1,6 @@
 import { planAgentSteps } from "./planner";
-import { executeTool, formatToolResult } from "./tools";
-import { draft } from "../data/benchmarkData";
+import { executeTool } from "./tools";
+import { formatToolResultPlain, synthesizeAgentReply, PLAIN_ENGLISH_DISCLAIMER } from "./plainEnglish";
 
 const MAX_STEPS = 4;
 
@@ -35,7 +35,13 @@ export async function runAgent({ message, history = [], context = {}, navigate }
       }
     }
     return {
-      content: remote.content ?? toolRuns.map((t) => formatToolResult(t.result)).join("\n\n"),
+      content: remote.content
+        ? `${remote.content.trim()}\n\n${PLAIN_ENGLISH_DISCLAIMER}`
+        : synthesizeAgentReply({
+            message,
+            toolRuns,
+            sections: toolRuns.map((t) => formatToolResultPlain(t.result)),
+          }),
       toolRuns,
       mode: "llm",
     };
@@ -50,22 +56,11 @@ export async function runAgent({ message, history = [], context = {}, navigate }
     toolRuns.push({ tool: step.tool, args: step.args, result });
   }
 
-  const sections = toolRuns.map((t) => formatToolResult(t.result)).filter(Boolean);
-  const navigated = toolRuns.some((t) => t.result.action === "navigate");
-
-  let content = sections.join("\n\n");
-
-  if (!content || content === "No matching content found in the report.") {
-    content =
-      "I couldn't find a precise match. Try asking about a hypothesis (H1–H6), a region's IT spend, CIO priorities, the savings case, or say **take me to** a section like Future state or Roadmap.";
-  }
-
-  if (navigated) {
-    content = `${content}\n\n_Scrolled to the relevant section._`;
-  }
+  const sections = toolRuns.map((t) => formatToolResultPlain(t.result));
+  const content = `${synthesizeAgentReply({ message, toolRuns, sections })}\n\n${PLAIN_ENGLISH_DISCLAIMER}`;
 
   return {
-    content: `${content}\n\n---\n_${draft.banner}_`,
+    content,
     toolRuns,
     mode: "local",
   };

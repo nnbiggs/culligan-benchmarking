@@ -9,6 +9,7 @@ import {
 import { getCapabilityDescription } from "../data/capabilityDescriptions";
 import { agentDestinations, matchDestination } from "./navigationMap";
 import { searchKnowledge } from "./knowledgeIndex";
+import { formatToolResultPlain } from "./plainEnglish";
 
 export const toolDefinitions = [
   {
@@ -215,54 +216,5 @@ export async function executeTool(name, args, { navigate, page }) {
 }
 
 export function formatToolResult(result) {
-  if (!result.ok) return result.error;
-
-  switch (result.action) {
-    case "navigate":
-      return `Opened **${result.destination.label}**.`;
-    case "search":
-      if (result.results.length === 0) return "No matching content found in the report.";
-      return result.results
-        .map((r, i) => `**${i + 1}. ${r.title}** (${r.source})\n${r.excerpt}`)
-        .join("\n\n");
-    case "get_hypothesis":
-      return [
-        `### ${result.code} — ${result.legend.name}`,
-        result.legend.definition,
-        `**Measured:** ${result.legend.measured}`,
-        result.finding
-          ? `**Status:** ${result.finding.status}\n\n**Numbers:**\n${result.finding.numbers}\n\n**Meaning:**\n${result.finding.meaning}`
-          : "",
-      ]
-        .filter(Boolean)
-        .join("\n\n");
-    case "get_bu_spend": {
-      const d = result.data;
-      return `**${result.bu}** — IT spend **${d.itSpend ?? d.totalIt ?? "N/A"}** (${d.itPercent ?? ""} of vendor spend). Region: ${d.region ?? "—"}.`;
-    }
-    case "get_region_spend":
-      return `**${result.region}** — IT **${result.cube.itSpend}** across ${result.cube.buCount} BUs (${result.cube.itPercent}). ${result.cube.explanation}`;
-    case "get_cio_priorities":
-      return [
-        result.intro,
-        ...result.priorities.map(
-          (p) => `**${p.step} — ${p.title}** (${p.horizon})\nSavings: ${p.savings} · Owner: ${p.owner}`
-        ),
-      ].join("\n\n");
-    case "get_leadership_options":
-      return [
-        result.lead,
-        ...result.options.map(
-          (o) =>
-            `**Option ${o.number}${o.recommended ? " (Recommended)" : ""}: ${o.title}**\n${o.structure}\n✓ ${o.strengths.slice(0, 2).join("; ")}`
-        ),
-        `**${result.principle.title}:** ${result.principle.body}`,
-      ].join("\n\n");
-    case "list_sections":
-      return result.sections.map((s) => `• ${s.label} (${s.page})`).join("\n");
-    case "get_capability":
-      return `**${result.name}:** ${result.description}`;
-    default:
-      return JSON.stringify(result, null, 2);
-  }
+  return formatToolResultPlain(result);
 }

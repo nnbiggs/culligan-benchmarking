@@ -14,7 +14,7 @@ export function AgentProvider({ children }) {
       id: "welcome",
       role: "assistant",
       content:
-        "I'm your **Culligan IT Cost Savings agent**. I can answer your questions and navigate you to the right section.\n\nTry a suggested prompt below, or ask anything about the report.",
+        "I'm your Culligan IT Cost Savings assistant. Ask me anything about the report in plain language — I'll explain the findings simply and can take you to the right page.\n\nTry a suggested question below, or type your own.",
       mode: "system",
     },
   ]);
@@ -66,7 +66,7 @@ export function AgentProvider({ children }) {
           {
             id: `e-${Date.now()}`,
             role: "assistant",
-            content: `Something went wrong: ${err.message}. Try rephrasing your question.`,
+            content: `Sorry, something went wrong on my end. Please try asking again in simpler words — for example, "What are the top 3 CIO priorities?" or "How much does EMEA spend on IT?"`,
             mode: "error",
           },
         ]);

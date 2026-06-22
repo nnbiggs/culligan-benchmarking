@@ -102,10 +102,10 @@ export function planAgentSteps(message, context = {}) {
 }
 
 export const suggestedPrompts = [
-  { label: "Top 3 CIO priorities", message: "What are the top 3 CIO priorities?" },
-  { label: "H6 vendor findings", message: "Show me H6 vendor and licensing findings" },
-  { label: "Savings case", message: "Take me to the savings case and summarise the levers" },
-  { label: "EMEA IT spend", message: "How much does EMEA spend on IT?" },
-  { label: "Leadership options", message: "Explain the recommended IT leadership structure" },
-  { label: "Future state", message: "Navigate to the future state operating model" },
+  { label: "Top 3 CIO priorities", message: "In simple terms, what are the three most important things the CIO should do first?" },
+  { label: "Vendor spend findings", message: "Explain the vendor and software licensing findings in plain English" },
+  { label: "Savings opportunity", message: "How much could Culligan save, and where does the money come from?" },
+  { label: "EMEA IT spend", message: "How much does EMEA spend on IT, and what does that mean?" },
+  { label: "IT leadership", message: "What is the recommended IT leadership structure, explained simply?" },
+  { label: "Future state", message: "Take me to the future state section and summarise it simply" },
 ];
