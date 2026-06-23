@@ -116,15 +116,13 @@ export const knowledgeChunks = [
     tags: ["savings", "h3", "h4", "h5"],
     source: "opModelData",
   }),
-  ...opModelLeadership.options.map((opt) =>
-    chunk({
-      id: `leadership-${opt.id}`,
-      title: `IT leadership option ${opt.number}: ${opt.title}`,
-      content: `${opt.recommended ? "RECOMMENDED. " : ""}${opt.structure}\n\nStrengths: ${opt.strengths.join("; ")}\n\nRisks: ${opt.risks.join("; ")}`,
-      tags: ["leadership", "cio", opt.recommended ? "recommended" : "option"],
-      source: "opModelData",
-    })
-  ),
+  chunk({
+    id: "leadership-accountability",
+    title: "IT Central Functions Options matrix",
+    content: `${opModelLeadership.lead}\n\nRecommended: ${opModelLeadership.recommendedOption.title}. ${opModelLeadership.recommendedOption.summary}\n\n${opModelLeadership.accountabilityMatrix.rows.map((r) => `${r.function}: Option 3 = ${r.option3}. ${r.whyItMatters}`).join("\n")}`,
+    tags: ["leadership", "cio", "recommended", "accountability"],
+    source: "opModelData",
+  }),
   chunk({
     id: "leadership-principle",
     title: "IT leadership structural principle",

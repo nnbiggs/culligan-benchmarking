@@ -177,15 +177,13 @@ export async function executeTool(name, args, { navigate, page }) {
     }
 
     case "get_leadership_options": {
-      const options = args.recommended_only
-        ? opModelLeadership.options.filter((o) => o.recommended)
-        : opModelLeadership.options;
       return {
         ok: true,
         action: "get_leadership_options",
         lead: opModelLeadership.lead,
         principle: opModelLeadership.structuralPrinciple,
-        options,
+        matrix: opModelLeadership.accountabilityMatrix,
+        recommendedOption: opModelLeadership.recommendedOption,
       };
     }
 

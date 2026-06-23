@@ -19,11 +19,11 @@ function firstSentence(text, max = 220) {
 function explainHypothesisCode(code) {
   const names = {
     H1: "AI and automation",
-    H2: "infrastructure and cloud",
-    H3: "applications and ERP",
-    H4: "IT operating model and shared services",
-    H5: "vendor management and software licensing",
-    H6: "overall IT spend and vendor agreements",
+    H2: "spans, layers, and IT organisation structure",
+    H3: "infrastructure and cloud",
+    H4: "applications, ERP, and platforms",
+    H5: "IT support and the operating model",
+    H6: "vendor management and software licensing",
   };
   return names[code] ?? "this area of IT spending";
 }
@@ -97,22 +97,24 @@ export function formatToolResultPlain(result) {
         "If you can only focus on three things, the report says to start here:",
         ...result.priorities.map(
           (p, i) =>
-            `${i + 1}. ${p.title} — ${stripMarkdown(p.horizon)}. Expected savings: ${p.savings}. Who should lead it: ${p.owner}.`
+            `${i + 1}. ${p.title} — ${stripMarkdown(p.horizon)}. Expected savings: ${p.savings}. Led by ${p.owner}.`
         ),
         firstSentence(result.intro, 280),
       ].join("\n\n");
 
     case "get_leadership_options": {
-      const optionText = result.options.map((o) => {
-        const tag = o.recommended ? " (this is the recommended option)" : "";
-        const strengths = o.strengths.slice(0, 2).join("; ");
-        return `Option ${o.number}${tag}: ${o.title}. ${stripMarkdown(o.structure)} What works well: ${strengths}.`;
-      });
+      const rec = result.recommendedOption;
+      const highlights = (result.matrix?.rows ?? [])
+        .slice(0, 4)
+        .map((r) => `• ${r.function}: Option 3 assigns this to **${r.option3}**. ${stripMarkdown(r.whyItMatters)}`);
       return [
-        firstSentence(result.lead, 300),
-        ...optionText,
+        firstSentence(result.lead, 280),
+        `**Recommended: Option ${rec.number} — ${rec.title}** (${rec.tagline}). ${stripMarkdown(rec.summary)}`,
+        highlights.length ? "Key accountability shifts:\n" + highlights.join("\n") : "",
         `${result.principle.title}: ${stripMarkdown(result.principle.body)}`,
-      ].join("\n\n");
+      ]
+        .filter(Boolean)
+        .join("\n\n");
     }
 
     case "list_sections": {

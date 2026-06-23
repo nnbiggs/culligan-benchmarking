@@ -516,69 +516,97 @@
     "cumulative": "Cumulative Year 3 run rate  \u00b7  Full H3 + H4 + H5 savings realised  \u00b7  Group CIO mandate formalised  \u00b7  19 BUs on group ITSM  \u00b7  ERP migration 60%+ complete"
   },
   "itLeadershipStructure": {
-    "partLabel": "Future state  \u2014  leadership design",
-    "title": "IT leadership structure \u2014 design options",
-    "lead": "Wave 1 requires a decision on IT leadership structure before governance can be formalised. The question is not simply whether to appoint regional IT leaders \u2014 it is what authority they hold, what sits centrally versus regionally, and how to right-size the structure to Culligan's actual IT complexity and spend by region.",
-    "options": [
-      {
-        "id": "regional-cios",
-        "number": 1,
-        "title": "Group CIO + regional CIOs",
-        "recommended": false,
-        "tagline": "Mirror regional P&L structure",
-        "structure": "Group CIO with a CIO in each of Americas, EMEA, and APAC. Regional CIOs report to Group CIO. IT budget accountability sits at regional level.",
-        "strengths": [
-          "Mirrors Culligan's operational structure",
-          "Regional P&L accountability for IT spend",
-          "EMEA CIO directly owns the fragmentation premium",
-          "Clear escalation path from BU to region to group"
-        ],
-        "risks": [
-          "APAC too small to justify a full CIO",
-          "Risk of regional mini-fiefdoms resisting group mandates",
-          "Three senior IT hires \u2014 cost and lead time"
-        ],
-        "diagram": "three-cios"
-      },
-      {
-        "id": "regional-ctos",
-        "number": 2,
-        "title": "Group CIO + regional CTOs",
-        "recommended": false,
-        "tagline": "Split operations vs product",
-        "structure": "Group CIO owns all IT operations and shared services centrally. Regional CTOs own technology product and digital capability in each region, reporting to regional GMs (not Group CIO).",
-        "strengths": [
-          "Clean separation: CIO runs cost and ops, CTOs drive growth",
-          "APAC justifies a CTO for connected product technology",
-          "Group shared services under one budget"
-        ],
-        "risks": [
-          "CTOs may lack authority to enforce platform adoption",
-          "Boundary disputes between CIO and CTO scope",
-          "Premature \u2014 stable IT foundations needed first"
-        ],
-        "diagram": "three-ctos"
-      },
-      {
-        "id": "emea-cio-only",
-        "number": 3,
-        "title": "Group CIO + EMEA CIO only",
-        "recommended": true,
-        "tagline": "Right-sized to regional scale",
-        "structure": "Group CIO with a dedicated EMEA CIO (the only region with sufficient IT scale and complexity). Americas and APAC covered by IT Directors reporting to Group CIO. Group IT shared services under Group CIO.",
-        "strengths": [
-          "Right-sizes structure to actual IT spend and complexity",
-          "EMEA scale justifies a full CIO",
-          "Americas more homogeneous \u2014 Quench/Flagship dominant",
-          "Avoids symmetric headcount for asymmetric complexity"
-        ],
-        "risks": [
-          "Americas IT Director may lack seniority for large BU negotiations",
-          "APAC IT Director scope needs explicit strategic definition"
-        ],
-        "diagram": "emea-cio"
-      }
-    ],
+    "partLabel": "IT Central Functions Options",
+    "title": "IT Central Functions Options",
+    "lead": "Wave 1 requires a decision on IT leadership structure before governance can be formalised. The matrix below shows who owns each IT function under today's fragmented model versus three design options — and why each assignment matters for the savings case.",
+    "accountabilityMatrix": {
+      "columns": [
+        { "key": "today", "label": "Today", "sublabel": "Fragmented" },
+        { "key": "option3", "label": "Option 3", "sublabel": "Group CIO + EMEA CIO", "recommended": true },
+        { "key": "option1", "label": "Option 1", "sublabel": "Group CIO + 3 regional CIOs" },
+        { "key": "option2", "label": "Option 2", "sublabel": "Group CIO + regional CTOs" }
+      ],
+      "rows": [
+        {
+          "function": "IT strategy & architecture standards",
+          "today": "24 × BU",
+          "option3": "Group CIO",
+          "option1": "Group CIO",
+          "option2": "Group CIO",
+          "whyItMatters": "Must be centrally owned. Prevents 10 ERPs / 19 CRMs fragmentation."
+        },
+        {
+          "function": "Group shared services (service desk, ITSM, cloud, ERP, CRM)",
+          "today": "24 × BU",
+          "option3": "Group CIO",
+          "option1": "Group CIO",
+          "option2": "Group CIO",
+          "whyItMatters": "Non-negotiable for $22–44M savings case."
+        },
+        {
+          "function": "Enterprise vendor agreements (SaaS, telecom, hardware)",
+          "today": "24 × BU",
+          "option3": "Group CIO",
+          "option1": "Group CIO",
+          "option2": "Group CIO",
+          "whyItMatters": "Group volume leverage via single negotiating entity saves $4–10M."
+        },
+        {
+          "function": "Cybersecurity & group SOC",
+          "today": "Group CIO",
+          "option3": "Group CIO",
+          "option1": "Group CIO",
+          "option2": "Group CIO",
+          "whyItMatters": "Already centralized ($1.7M group SOC). Gap is BU-level patching coordination."
+        },
+        {
+          "function": "Regional IT delivery & BU migration",
+          "today": "24 × BU",
+          "option3": "Regional lead",
+          "option1": "Regional lead",
+          "option2": "Regional lead",
+          "whyItMatters": "Regional execution for migrations to group platforms (IFS, Salesforce, etc.)."
+        },
+        {
+          "function": "IT demand management (BU project pipeline)",
+          "today": "24 × BU",
+          "option3": "Regional lead",
+          "option1": "Regional lead",
+          "option2": "Regional lead",
+          "whyItMatters": "Regional leads filter BU requests through the IT architecture board to prevent duplicate spend."
+        },
+        {
+          "function": "Technology product & digital innovation",
+          "today": "24 × BU",
+          "option3": "BU liaison",
+          "option1": "Regional lead",
+          "option2": "Regional lead",
+          "whyItMatters": "Option 3 keeps at BU level; Options 1 & 2 elevate to regional leadership."
+        },
+        {
+          "function": "Local IT operations & end-user support",
+          "today": "24 × BU",
+          "option3": "BU liaison",
+          "option1": "BU liaison",
+          "option2": "BU liaison",
+          "whyItMatters": "BU-level IT becomes a liaison/consumer of group platforms, not an independent operator."
+        },
+        {
+          "function": "Regional regulatory & data compliance (GDPR etc.)",
+          "today": "24 × BU",
+          "option3": "Regional lead",
+          "option1": "Regional lead",
+          "option2": "Shared",
+          "whyItMatters": "Option 3 EMEA CIO justifies regional compliance role."
+        }
+      ]
+    },
+    "recommendedOption": {
+      "number": 3,
+      "title": "Group CIO + EMEA CIO",
+      "tagline": "Right-sized to regional scale",
+      "summary": "Group CIO owns strategy, shared services, vendor agreements, and cybersecurity. EMEA CIO covers regional delivery, demand management, and compliance; Americas and APAC use IT Directors. BU liaisons consume group platforms rather than operating independent stacks."
+    },
     "structuralPrinciple": {
       "title": "The structural principle that cannot move",
       "body": "Whichever option Culligan chooses, the Group CIO must own group IT shared services \u2014 the service desk, ITSM platform, ERP template, cloud organisation, and enterprise agreements \u2014 as a single budget, not fragmented into regional IT operations. The moment a regional CIO or CTO owns their own service desk and infrastructure budget, the savings case is materially undermined. Regional IT leaders must be consumers of group platforms, not operators of regional IT stacks. The IT architecture board and chargeback model enforce this boundary."

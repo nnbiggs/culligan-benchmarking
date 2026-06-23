@@ -1,189 +1,72 @@
 import { opModelLeadership } from "../../data/opModelData";
 
-const NODE_VARIANTS = {
-  group: "bg-[#022656] text-white ring-[#022656]",
-  regional: "bg-sky-700 text-white ring-sky-700",
-  director: "bg-slate-600 text-white ring-slate-600",
-  cto: "bg-violet-700 text-white ring-violet-700",
-  shared: "bg-emerald-700 text-white ring-emerald-700",
-  gm: "bg-amber-600 text-white ring-amber-600",
-};
-
-function OrgNode({ label, sublabel, variant = "group", className = "" }) {
+function AccountabilityCell({ value, highlight }) {
   return (
-    <div
-      className={`flex flex-col items-center justify-center rounded-lg px-2 py-2 text-center ring-1 shadow-sm w-full min-h-[52px] ${NODE_VARIANTS[variant]} ${className}`}
-    >
-      <p className="text-[10px] sm:text-[11px] font-bold leading-tight">{label}</p>
-      {sublabel && <p className="text-[9px] font-medium opacity-90 mt-0.5 leading-tight">{sublabel}</p>}
-    </div>
-  );
-}
-
-function RegionalColumn({ nodes }) {
-  return (
-    <div className="flex flex-col items-center justify-center flex-1 min-w-0 w-full min-h-[116px]">
-      {nodes.map((node, i) => (
-        <div key={`${node.label}-${i}`} className="flex flex-col items-center w-full">
-          {i > 0 && <div className="w-0.5 h-3 bg-slate-300 shrink-0" aria-hidden="true" />}
-          <OrgNode label={node.label} sublabel={node.sublabel} variant={node.variant} />
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function SymmetricOrgDiagram({ groupSublabel, columns, caption, captionClass = "text-culligan-muted" }) {
-  return (
-    <div className="flex flex-col min-h-[200px] sm:h-[248px]">
-      <div className="flex-1 flex flex-col items-center justify-center w-full max-w-[320px] mx-auto">
-        <OrgNode label="Group CIO" sublabel={groupSublabel} variant="group" className="max-w-[200px]" />
-        <div className="w-0.5 h-3 bg-slate-300 shrink-0" aria-hidden="true" />
-        <OrgNode label="Group shared services" sublabel="Single group budget" variant="shared" className="max-w-[200px]" />
-        <div className="w-0.5 h-3 bg-slate-300 shrink-0" aria-hidden="true" />
-        <div className="relative w-full px-1">
-          <div className="absolute left-[16.67%] right-[16.67%] top-0 h-0.5 bg-slate-300" aria-hidden="true" />
-          <div className="flex w-full items-start justify-between gap-2 pt-0">
-            {columns.map((nodes, i) => (
-              <div key={i} className="flex flex-col items-center flex-1 min-w-0">
-                <div className="w-0.5 h-3 bg-slate-300 shrink-0" aria-hidden="true" />
-                <RegionalColumn nodes={nodes} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      <p className={`text-[10px] text-center leading-snug px-2 h-8 shrink-0 ${captionClass}`}>{caption}</p>
-    </div>
-  );
-}
-
-const DIAGRAM_CONFIG = {
-  "three-cios": {
-    groupSublabel: "Group mandate",
-    columns: [
-      [{ label: "Americas", sublabel: "CIO", variant: "regional" }],
-      [{ label: "EMEA", sublabel: "CIO", variant: "regional" }],
-      [{ label: "APAC", sublabel: "CIO", variant: "regional" }],
-    ],
-    caption: "Regional CIOs report to Group CIO · budget at region",
-    captionClass: "text-culligan-muted",
-  },
-  "three-ctos": {
-    groupSublabel: "All IT ops",
-    columns: [
-      [
-        { label: "Americas", sublabel: "CTO", variant: "cto" },
-        { label: "Regional GM", sublabel: "Reports to", variant: "gm" },
-      ],
-      [
-        { label: "EMEA", sublabel: "CTO", variant: "cto" },
-        { label: "Regional GM", sublabel: "Reports to", variant: "gm" },
-      ],
-      [
-        { label: "APAC", sublabel: "CTO", variant: "cto" },
-        { label: "Regional GM", sublabel: "Reports to", variant: "gm" },
-      ],
-    ],
-    caption: "CTOs report to regional GMs, not Group CIO",
-    captionClass: "text-violet-800",
-  },
-  "emea-cio": {
-    groupSublabel: "Shared services owner",
-    columns: [
-      [{ label: "Americas", sublabel: "IT Director", variant: "director" }],
-      [{ label: "EMEA", sublabel: "CIO", variant: "regional" }],
-      [{ label: "APAC", sublabel: "IT Director", variant: "director" }],
-    ],
-    caption: "Recommended · right-sized to regional scale",
-    captionClass: "text-emerald-800 font-semibold",
-  },
-};
-
-function OptionCard({ option }) {
-  const diagram = DIAGRAM_CONFIG[option.diagram];
-  const isRecommended = option.recommended;
-
-  if (!diagram) return null;
-
-  return (
-    <div
-      className={`rounded-2xl overflow-hidden shadow-md flex flex-col h-full ${
-        isRecommended ? "ring-2 ring-emerald-400 bg-white" : "ring-1 ring-black/5 bg-white"
+    <td
+      className={`px-3 py-3 text-xs sm:text-sm text-culligan-body align-top whitespace-nowrap ${
+        highlight ? "bg-amber-50 font-semibold text-culligan-deep" : ""
       }`}
     >
-      <div className={`px-4 py-3 sm:px-5 min-h-[88px] ${isRecommended ? "bg-emerald-700" : "bg-culligan-deep"}`}>
-        <div className="flex items-start justify-between gap-2">
-          <div className="min-w-0">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-white/80">Option {option.number}</p>
-            <p className="font-headline text-base sm:text-lg font-bold text-white leading-snug mt-0.5">{option.title}</p>
-            <p className="text-xs text-white/85 mt-1">{option.tagline}</p>
-          </div>
-          <span
-            className={`shrink-0 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide ${
-              isRecommended ? "bg-white text-emerald-800" : "invisible"
-            }`}
-          >
-            Recommended
-          </span>
-        </div>
-      </div>
+      {value}
+    </td>
+  );
+}
 
-      <div
-        className={`px-4 py-4 sm:px-5 border-b shrink-0 ${
-          isRecommended ? "bg-emerald-50/60" : "bg-slate-50"
-        }`}
-      >
-        <SymmetricOrgDiagram
-          groupSublabel={diagram.groupSublabel}
-          columns={diagram.columns}
-          caption={diagram.caption}
-          captionClass={diagram.captionClass}
-        />
-      </div>
+function LeadershipAccountabilityTable() {
+  const { accountabilityMatrix } = opModelLeadership;
+  const { columns, rows } = accountabilityMatrix;
 
-      <div className="px-4 py-4 sm:px-5 flex-1 flex flex-col">
-        <p className="text-xs text-culligan-body leading-relaxed">{option.structure}</p>
-
-        <div className="mt-4 grid gap-3 sm:grid-cols-2 flex-1">
-          <div>
-            <p className="text-[10px] font-bold uppercase tracking-wide text-emerald-800 mb-2">What it gets right</p>
-            <ul className="space-y-1.5">
-              {option.strengths.map((item) => (
-                <li key={item} className="flex gap-2 text-xs text-culligan-body leading-relaxed">
-                  <span className="text-emerald-600 shrink-0 mt-0.5">✓</span>
-                  <span>{item}</span>
-                </li>
+  return (
+    <div className="overflow-x-auto rounded-2xl ring-1 ring-black/5 shadow-md">
+      <table className="w-full min-w-[880px] border-collapse text-left">
+        <thead>
+          <tr className="bg-culligan-deep text-white">
+            <th className="px-4 py-3 text-xs sm:text-sm font-bold min-w-[200px]">IT function</th>
+            {columns.map((col) => (
+              <th
+                key={col.key}
+                className={`px-3 py-3 text-center min-w-[120px] ${
+                  col.recommended ? "bg-amber-600 text-white" : ""
+                }`}
+              >
+                <div className="text-xs sm:text-sm font-bold">
+                  {col.recommended && <span aria-hidden="true">★ </span>}
+                  {col.label}
+                </div>
+                <div className={`text-[10px] font-medium mt-0.5 ${col.recommended ? "text-amber-100" : "text-culligan-light/80"}`}>
+                  {col.sublabel}
+                </div>
+              </th>
+            ))}
+            <th className="px-4 py-3 text-xs sm:text-sm font-bold min-w-[220px]">Why it matters</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, i) => (
+            <tr key={row.function} className={i % 2 === 0 ? "bg-white" : "bg-culligan-off-white/60"}>
+              <td className="px-4 py-3 text-xs sm:text-sm font-semibold text-culligan-deep align-top leading-snug">
+                {row.function}
+              </td>
+              {columns.map((col) => (
+                <AccountabilityCell key={col.key} value={row[col.key]} highlight={col.recommended} />
               ))}
-            </ul>
-          </div>
-          <div>
-            <p className="text-[10px] font-bold uppercase tracking-wide text-amber-800 mb-2">Risks & constraints</p>
-            <ul className="space-y-1.5">
-              {option.risks.map((item) => (
-                <li key={item} className="flex gap-2 text-xs text-culligan-body leading-relaxed">
-                  <span className="text-amber-600 shrink-0 mt-0.5">!</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
+              <td className="px-4 py-3 text-xs sm:text-sm text-culligan-muted align-top leading-relaxed">
+                {row.whyItMatters}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
 
 export default function ItLeadershipVisual() {
-  const { options, structuralPrinciple } = opModelLeadership;
+  const { structuralPrinciple } = opModelLeadership;
 
   return (
     <div className="space-y-8">
-      <div className="grid gap-5 lg:grid-cols-3 items-stretch">
-        {options.map((option) => (
-          <OptionCard key={option.id} option={option} />
-        ))}
-      </div>
+      <LeadershipAccountabilityTable />
 
       <div className="rounded-2xl overflow-hidden ring-2 ring-culligan-accent shadow-md">
         <div className="bg-culligan-deep px-5 py-4 sm:px-6 flex items-center gap-3">

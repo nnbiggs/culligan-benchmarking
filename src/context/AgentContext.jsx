@@ -5,19 +5,19 @@ import { suggestedPrompts } from "../agent/planner";
 
 const AgentContext = createContext(null);
 
+const WELCOME_MESSAGE = {
+  id: "welcome",
+  role: "assistant",
+  content:
+    "Hi — I'm here to explain this report in plain English.\n\nYou can ask about savings, CIO priorities, regional IT spend, or say things like \"take me to the roadmap\" and I'll scroll you there.\n\nPick a suggested question below, or type your own.",
+  mode: "system",
+};
+
 export function AgentProvider({ children }) {
   const navigate = useNavigate();
   const location = useLocation();
   const [open, setOpen] = useState(false);
-  const [messages, setMessages] = useState([
-    {
-      id: "welcome",
-      role: "assistant",
-      content:
-        "I'm your Culligan IT Cost Savings assistant. Ask me anything about the report in plain language — I'll explain the findings simply and can take you to the right page.\n\nTry a suggested question below, or type your own.",
-      mode: "system",
-    },
-  ]);
+  const [messages, setMessages] = useState([WELCOME_MESSAGE]);
   const [loading, setLoading] = useState(false);
 
   const context = useMemo(
@@ -77,6 +77,10 @@ export function AgentProvider({ children }) {
     [loading, messages, context, navigate]
   );
 
+  const resetConversation = useCallback(() => {
+    setMessages([{ ...WELCOME_MESSAGE, id: `welcome-${Date.now()}` }]);
+  }, []);
+
   const value = useMemo(
     () => ({
       open,
@@ -84,10 +88,11 @@ export function AgentProvider({ children }) {
       messages,
       loading,
       sendMessage,
+      resetConversation,
       suggestedPrompts,
       context,
     }),
-    [open, messages, loading, sendMessage, context]
+    [open, messages, loading, sendMessage, resetConversation, context]
   );
 
   return <AgentContext.Provider value={value}>{children}</AgentContext.Provider>;

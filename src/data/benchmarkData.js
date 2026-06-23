@@ -2,7 +2,7 @@ export const brand = {
   companyName: "Culligan",
   heroTitle: "Transforming IT for Growth",
   heroSubtitle: "Strategic Roadmap, EBITDA Impact & CIO Action Plan",
-  heroMeta: "June 2026 · Draft · Confidential",
+  heroMeta: "June 2026 · Confidential",
   heroAttribution:
     "PwC IT Benchmarking · Gartner · Zylo 2026 SaaS Index · Forrester TEI · HDI/MetricNet · Independent 2026 Industry Data",
 };

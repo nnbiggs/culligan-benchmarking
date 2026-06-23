@@ -45,7 +45,7 @@ function ToolBadge({ toolRuns }) {
 }
 
 export default function AgentAssistant() {
-  const { open, setOpen, messages, loading, sendMessage, suggestedPrompts } = useAgent();
+  const { open, setOpen, messages, loading, sendMessage, resetConversation, suggestedPrompts } = useAgent();
   const bottomRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -94,21 +94,33 @@ export default function AgentAssistant() {
             role="dialog"
             aria-label="IT Benchmarking AI agent"
           >
-            <header className="flex items-center justify-between gap-3 bg-culligan-deep px-4 py-3">
-              <div>
+            <header className="flex items-center justify-between gap-2 bg-culligan-deep px-4 py-3">
+              <div className="min-w-0">
                 <p className="text-xs font-bold uppercase tracking-widest text-culligan-accent">Ask the report</p>
-                <p className="text-sm font-semibold text-white">Culligan IT Cost Savings</p>
+                <p className="text-sm font-semibold text-white truncate">Culligan IT Cost Savings</p>
               </div>
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                className="rounded-lg p-1.5 text-white/80 hover:bg-white/10"
-                aria-label="Close"
-              >
-                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
+              <div className="flex items-center gap-1 shrink-0">
+                <button
+                  type="button"
+                  onClick={resetConversation}
+                  disabled={loading || messages.length <= 1}
+                  className="rounded-lg px-2.5 py-1.5 text-xs font-semibold text-white/90 hover:bg-white/10 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                  aria-label="Reset conversation"
+                  title="Start a new conversation"
+                >
+                  Reset
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  className="rounded-lg p-1.5 text-white/80 hover:bg-white/10"
+                  aria-label="Close"
+                >
+                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
             </header>
 
             <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4 bg-culligan-off-white/40">
@@ -126,11 +138,10 @@ export default function AgentAssistant() {
                   >
                     <MarkdownLite text={msg.content} />
                     {msg.toolRuns && <ToolBadge toolRuns={msg.toolRuns} />}
-                    {msg.mode === "llm" && (
-                      <p className="mt-1 text-[10px] text-culligan-muted">AI-assisted answer</p>
-                    )}
-                    {msg.mode === "local" && (
-                      <p className="mt-1 text-[10px] text-culligan-muted">Answer from report data</p>
+                    {msg.mode === "local" && msg.id !== "welcome" && !String(msg.id).startsWith("welcome-") && (
+                      <p className="mt-2 text-[10px] text-culligan-muted border-t border-culligan-off-white pt-1.5">
+                        Answer from report data · figures are draft estimates only
+                      </p>
                     )}
                   </div>
                 </div>
@@ -138,6 +149,7 @@ export default function AgentAssistant() {
               {loading && (
                 <div className="flex justify-start">
                   <div className="rounded-2xl bg-white px-4 py-3 ring-1 ring-black/5">
+                    <p className="text-xs text-culligan-muted mb-2">Looking that up…</p>
                     <div className="flex gap-1">
                       {[0, 1, 2].map((i) => (
                         <span
@@ -153,20 +165,24 @@ export default function AgentAssistant() {
               <div ref={bottomRef} />
             </div>
 
-            {messages.length <= 1 && (
-              <div className="px-4 pb-2 flex flex-wrap gap-1.5 border-t border-culligan-off-white bg-white">
+            <div className="px-4 py-2 border-t border-culligan-off-white bg-white">
+              <p className="text-[10px] font-bold uppercase tracking-widest text-culligan-muted mb-2">
+                Suggested questions
+              </p>
+              <div className="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto">
                 {suggestedPrompts.map((prompt) => (
                   <button
                     key={prompt.label}
                     type="button"
                     onClick={() => sendMessage(prompt.message)}
-                    className="rounded-full bg-culligan-off-white px-3 py-1.5 text-xs font-medium text-culligan-deep hover:bg-culligan-light transition-colors"
+                    disabled={loading}
+                    className="rounded-full bg-culligan-off-white px-3 py-1.5 text-xs font-medium text-culligan-deep hover:bg-culligan-light transition-colors disabled:opacity-50"
                   >
                     {prompt.label}
                   </button>
                 ))}
               </div>
-            )}
+            </div>
 
             <form onSubmit={onSubmit} className="border-t border-culligan-off-white bg-white p-3">
               <div className="flex gap-2">
@@ -174,7 +190,7 @@ export default function AgentAssistant() {
                   ref={inputRef}
                   name="message"
                   type="text"
-                  placeholder="Ask about H1–H6, spend, savings, or say go to…"
+                  placeholder="Ask in plain English — e.g. top CIO priorities, EMEA spend…"
                   disabled={loading}
                   className="flex-1 rounded-xl border border-culligan-off-white bg-culligan-off-white/50 px-3 py-2.5 text-sm text-culligan-body placeholder:text-culligan-muted focus:outline-none focus:ring-2 focus:ring-culligan-accent/40"
                   autoComplete="off"

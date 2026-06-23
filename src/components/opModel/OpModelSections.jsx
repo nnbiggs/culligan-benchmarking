@@ -172,9 +172,11 @@ export function OperatingModelSection() {
         className="bg-white py-12 sm:py-16 border-t border-culligan-off-white"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold tracking-[0.2em] text-culligan-accent uppercase mb-3">
-            {leadership.partLabel}
-          </p>
+          {leadership.partLabel !== leadership.title && (
+            <p className="text-xs font-semibold tracking-[0.2em] text-culligan-accent uppercase mb-3">
+              {leadership.partLabel}
+            </p>
+          )}
           <SubTitle>{leadership.title}</SubTitle>
           <LeadText className="mt-4 max-w-4xl">{leadership.lead}</LeadText>
           <div className="mt-10">
