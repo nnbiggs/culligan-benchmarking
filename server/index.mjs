@@ -75,11 +75,14 @@ function planWithHeuristics(message) {
   return steps;
 }
 
-async function callAnthropic(message, history, context) {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+const OPENAI_MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
+
+async function callOpenAI(message, history, context) {
+  const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) return null;
 
   const messages = [
+    { role: "system", content: SYSTEM_PROMPT },
     ...history.slice(-6).map((m) => ({ role: m.role, content: m.content })),
     {
       role: "user",
@@ -87,36 +90,46 @@ async function callAnthropic(message, history, context) {
     },
   ];
 
-  const res = await fetch("https://api.anthropic.com/v1/messages", {
+  const res = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "x-api-key": apiKey,
-      "anthropic-version": "2023-06-01",
+      Authorization: `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-      model: process.env.ANTHROPIC_MODEL ?? "claude-sonnet-4-20250514",
+      model: OPENAI_MODEL,
       max_tokens: 1024,
-      system: SYSTEM_PROMPT,
-      tools: TOOLS.map((t) => ({ name: t.name, description: t.description, input_schema: t.input_schema })),
       messages,
+      tools: TOOLS.map((t) => ({
+        type: "function",
+        function: {
+          name: t.name,
+          description: t.description,
+          parameters: t.input_schema,
+        },
+      })),
     }),
   });
 
   if (!res.ok) {
     const err = await res.text();
-    throw new Error(`Anthropic API: ${err}`);
+    throw new Error(`OpenAI API: ${err}`);
   }
 
   const data = await res.json();
+  const choice = data.choices?.[0]?.message;
   const steps = [];
-  let text = "";
+  let text = choice?.content ?? "";
 
-  for (const block of data.content ?? []) {
-    if (block.type === "text") text += block.text;
-    if (block.type === "tool_use") {
-      steps.push({ tool: block.name, args: block.input });
+  for (const toolCall of choice?.tool_calls ?? []) {
+    const fn = toolCall.function;
+    let args = {};
+    try {
+      args = JSON.parse(fn.arguments || "{}");
+    } catch {
+      args = {};
     }
+    steps.push({ tool: fn.name, args });
   }
 
   return { content: text, steps };
@@ -125,8 +138,9 @@ async function callAnthropic(message, history, context) {
 app.get("/api/agent/health", (_req, res) => {
   res.json({
     ok: true,
-    llm: Boolean(process.env.ANTHROPIC_API_KEY),
-    model: process.env.ANTHROPIC_MODEL ?? "claude-sonnet-4-20250514",
+    llm: Boolean(process.env.OPENAI_API_KEY),
+    model: OPENAI_MODEL,
+    provider: "openai",
   });
 });
 
@@ -140,7 +154,7 @@ app.post("/api/agent/chat", async (req, res) => {
     let content = "";
     let steps = [];
 
-    const llm = await callAnthropic(message, history, context);
+    const llm = await callOpenAI(message, history, context);
     if (llm) {
       content = llm.content;
       steps = llm.steps;
@@ -164,5 +178,5 @@ app.post("/api/agent/chat", async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Agent API listening on http://localhost:${PORT}`);
-  console.log(`LLM mode: ${process.env.ANTHROPIC_API_KEY ? "enabled (Anthropic)" : "heuristic planner only"}`);
+  console.log(`LLM mode: ${process.env.OPENAI_API_KEY ? `enabled (OpenAI ${OPENAI_MODEL})` : "heuristic planner only"}`);
 });
