@@ -9,7 +9,7 @@ export const brand = {
 
 export const executiveSummaryCover = {
   eyebrow: "Culligan International · Confidential · PwC Engagement",
-  title: "IT Cost Savings Benchmark",
+  title: "IT Enterprise Cost Findings: From Mis-Spend to Measurable Value",
   subtitle: "Hypothesis Analysis, Savings Quantification, EBITDA Impact & CIO Action Plan",
   meta: "Hypotheses H1–H6 · June 2026 · PwC Confidential",
   hook:

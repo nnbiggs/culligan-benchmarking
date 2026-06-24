@@ -113,7 +113,7 @@ function planAgentSteps(message) {
   if (LEADERSHIP_RE.test(m)) {
     steps.push({ tool: "get_leadership_options", args: { recommended_only: /\brecommend/i.test(m) } });
     if (NAV_RE.test(m) || /\boption|design\b/i.test(m)) {
-      steps.push({ tool: "navigate", args: { section: "IT leadership" } });
+      steps.push({ tool: "navigate", args: { section: "IT Accountability" } });
     }
     return steps;
   }

@@ -118,8 +118,8 @@ export const knowledgeChunks = [
   }),
   chunk({
     id: "leadership-accountability",
-    title: "IT Central Functions Options matrix",
-    content: `${opModelLeadership.lead}\n\nRecommended: ${opModelLeadership.recommendedOption.title}. ${opModelLeadership.recommendedOption.summary}\n\n${opModelLeadership.accountabilityMatrix.rows.map((r) => `${r.function}: Option 3 = ${r.option3}. ${r.whyItMatters}`).join("\n")}`,
+    title: "IT Accountability matrix",
+    content: `${opModelLeadership.lead}\n\nDecision criteria: ${opModelLeadership.decisionCriteria.rows.map((r) => r.criterion).join(", ")}\n\nRecommended: ${opModelLeadership.recommendedOption.title}. ${opModelLeadership.recommendedOption.summary}\n\n${opModelLeadership.accountabilityMatrix.rows.map((r) => `${r.function}: Option 3 = ${r.option3}. ${r.whyItMatters}`).join("\n")}`,
     tags: ["leadership", "cio", "recommended", "accountability"],
     source: "opModelData",
   }),

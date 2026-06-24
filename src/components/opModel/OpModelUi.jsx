@@ -118,3 +118,62 @@ export function CalloutBox({ title, children, variant = "sky" }) {
     </div>
   );
 }
+
+const observationColumns = [
+  { key: "area", label: "Area" },
+  { key: "observation", label: "Observation" },
+  { key: "impact", label: "Impact on Culligan IT costs" },
+];
+
+export function KeyObservationsTable({ title, rows, variant }) {
+  const headerBg = variant === "good" ? "bg-emerald-700" : "bg-rose-700";
+
+  return (
+    <div className="rounded-xl overflow-hidden ring-1 ring-black/5 shadow-sm">
+      <div className={`${headerBg} px-4 py-3 sm:px-5`}>
+        <p className="font-headline text-sm sm:text-base font-bold text-white">{title}</p>
+      </div>
+
+      <div className="space-y-4 p-4 md:hidden">
+        {rows.map((row) => (
+          <div key={row.area} className="rounded-xl bg-white p-4 ring-1 ring-culligan-off-white shadow-sm">
+            <p className="font-semibold text-culligan-deep text-sm mb-3">{row.area}</p>
+            <p className="text-xs font-semibold text-culligan-accent uppercase tracking-wide mb-1">Observation</p>
+            <p className="text-sm text-culligan-body leading-relaxed mb-3">{row.observation}</p>
+            <p className="text-xs font-semibold text-culligan-deep uppercase tracking-wide mb-1">Impact on Culligan IT costs</p>
+            <p className="text-sm text-culligan-body leading-relaxed">{row.impact}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="hidden md:block overflow-x-auto">
+        <table className="w-full text-left text-sm">
+          <thead>
+            <tr className="bg-culligan-deep text-white">
+              {observationColumns.map((col) => (
+                <th key={col.key} className="px-4 py-3 text-xs font-semibold align-top">
+                  {col.label}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row, i) => (
+              <tr key={row.area} className={i % 2 === 0 ? "bg-white" : "bg-culligan-off-white/50"}>
+                {observationColumns.map((col) => (
+                  <td key={col.key} className="px-4 py-3 text-culligan-body align-top text-xs sm:text-sm leading-relaxed">
+                    {col.key === "area" ? (
+                      <span className="font-semibold text-culligan-deep">{row[col.key]}</span>
+                    ) : (
+                      row[col.key]
+                    )}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}

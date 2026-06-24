@@ -1,5 +1,6 @@
 import { navLinks } from "../data/benchmarkData";
 import { taxonomyNavLinks } from "../data/taxonomyData";
+import { vendorRationalizationNavLinks } from "../data/vendorRationalizationData";
 
 /** Canonical destinations the agent can navigate to */
 export const agentDestinations = [
@@ -14,6 +15,18 @@ export const agentDestinations = [
     label: link.label,
     page: "/taxonomy",
     aliases: [link.label.toLowerCase(), link.id.replace("taxonomy-", "").replace(/-/g, " ")],
+  })),
+  ...vendorRationalizationNavLinks.map((link) => ({
+    id: link.id,
+    label: link.label,
+    page: "/vendor-rationalization",
+    aliases: [
+      link.label.toLowerCase(),
+      link.id.replace("vr-", "").replace(/-/g, " "),
+      "vendor rationalization",
+      "vendor rationalisation",
+      "h5 vendor",
+    ],
   })),
   {
     id: "hypothesis-h1",
@@ -41,15 +54,15 @@ export const agentDestinations = [
   },
   {
     id: "hypothesis-h5",
-    label: "H5 IT Support & Operating Model",
-    page: "/taxonomy",
-    aliases: ["h5", "operating model", "service desk", "itsm"],
+    label: "H5 Vendor Rationalisation",
+    page: "/vendor-rationalization",
+    aliases: ["h5", "vendor rationalization", "vendor rationalisation", "vendor consolidation", "sam"],
   },
   {
     id: "hypothesis-h6",
     label: "H6 Vendor & Licensing",
     page: "/",
-    aliases: ["h6", "vendor", "licensing", "sam", "software"],
+    aliases: ["h6", "licensing", "software"],
   },
 ];
 

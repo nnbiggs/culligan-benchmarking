@@ -20,7 +20,7 @@ export const taxonomyNavLinks = [
   { id: "taxonomy-capabilities", label: "Capability model" },
   { id: "taxonomy-current-state", label: "Current state" },
   { id: "taxonomy-future-state", label: "Future state" },
-  { id: "taxonomy-leadership", label: "IT leadership" },
+  { id: "taxonomy-leadership", label: "IT Accountability" },
   { id: "taxonomy-benchmark", label: "Benchmarks" },
   { id: "taxonomy-savings", label: "Savings case" },
   { id: "taxonomy-roadmap", label: "Roadmap" },

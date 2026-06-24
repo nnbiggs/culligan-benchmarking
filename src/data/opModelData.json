@@ -516,9 +516,54 @@
     "cumulative": "Cumulative Year 3 run rate  \u00b7  Full H3 + H4 + H5 savings realised  \u00b7  Group CIO mandate formalised  \u00b7  19 BUs on group ITSM  \u00b7  ERP migration 60%+ complete"
   },
   "itLeadershipStructure": {
-    "partLabel": "IT Central Functions Options",
-    "title": "IT Central Functions Options",
-    "lead": "Wave 1 requires a decision on IT leadership structure before governance can be formalised. The matrix below shows who owns each IT function under today's fragmented model versus three design options — and why each assignment matters for the savings case.",
+    "partLabel": "IT Accountability",
+    "title": "IT Accountability",
+    "lead": "Wave 1 requires a decision on how IT accountability is distributed before governance can be formalised. The table below maps each IT function to who owns it today and who would own it under each option — the key question is not what title regional leaders hold, but which functions sit centrally versus regionally under each model.",
+    "decisionCriteria": {
+      "title": "Decision criteria — Group CIO vs BU ownership",
+      "lead": "Six criteria determine whether an IT function sits centrally under the Group CIO or is retained at business unit level. A function that meets the majority of the left-hand conditions below belongs centrally. A function that meets the right-hand conditions is a candidate for BU retention — with governance conditions applied.",
+      "columns": [
+        "Decision criterion",
+        "Group CIO owns it centrally when…",
+        "BU retains it locally when…"
+      ],
+      "rows": [
+        {
+          "criterion": "Scale & spend",
+          "groupCio": "Spend benefits from group volume (>$1M across 3+ BUs). Includes vendor contracts, cloud, ERP licences, telecom.",
+          "bu": "Spend is BU-specific, below group aggregation threshold. Includes niche local tools, local regulatory subscriptions."
+        },
+        {
+          "criterion": "Cross-BU dependency",
+          "groupCio": "Function touches data/processes flowing between BUs (reporting, intercompany, customer data, post-acquisition integration).",
+          "bu": "Function is entirely self-contained within one BU with no cross-boundary dependencies."
+        },
+        {
+          "criterion": "Standardisation benefit",
+          "groupCio": "Consistency creates value (one SLA, one security posture, one ITSM workflow, etc.).",
+          "bu": "BU operating model differences mean a standard approach reduces effectiveness (e.g., route service vs. premium product FSM)."
+        },
+        {
+          "criterion": "Security & compliance risk",
+          "groupCio": "Inconsistency creates group-wide exposure (patching, access management, data protection, SOC).",
+          "bu": "Risk is contained within the BU with no group-wide propagation effect."
+        },
+        {
+          "criterion": "Competitive differentiation",
+          "groupCio": "Function is a commodity (infrastructure, service desk, ERP financial processing).",
+          "bu": "Function creates genuine competitive differentiation (connected product technology, localised customer experience tools)."
+        },
+        {
+          "criterion": "Acquisition integration",
+          "groupCio": "Primary integration vector; new acquisitions must be onboarded rapidly to realise synergies.",
+          "bu": "Function is stable within acquired entities and doesn't require immediate harmonisation (e.g., local HR payroll)."
+        }
+      ]
+    },
+    "functionalAllocation": {
+      "title": "Functional allocation — what sits where",
+      "lead": "The table below maps each IT function to target ownership under the recommended model (Group CIO + EMEA CIO). Group CIO = centrally owned. Regional lead = regional execution within group standards. BU liaison = BU consumes group platforms rather than operating independent stacks."
+    },
     "accountabilityMatrix": {
       "columns": [
         { "key": "today", "label": "Today", "sublabel": "Fragmented" },

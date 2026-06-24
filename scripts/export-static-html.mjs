@@ -15,7 +15,7 @@ const taxonomyNavLinks = [
   { id: "taxonomy-capabilities", label: "Capability model" },
   { id: "taxonomy-current-state", label: "Current state" },
   { id: "taxonomy-future-state", label: "Future state" },
-  { id: "taxonomy-leadership", label: "IT leadership" },
+  { id: "taxonomy-leadership", label: "IT Accountability" },
   { id: "taxonomy-benchmark", label: "Benchmarks" },
   { id: "taxonomy-savings", label: "Savings case" },
   { id: "taxonomy-roadmap", label: "Roadmap" },
@@ -81,7 +81,7 @@ const agentDestinations = [
   })),
   { id: "findings", label: "Key findings", page: "benchmark", aliases: ["findings", "hypothesis", "h1", "h2", "h3", "h4", "h5", "h6"] },
   { id: "priority", label: "CIO priorities", page: "benchmark", aliases: ["cio", "priorities", "top 3"] },
-  { id: "taxonomy-leadership", label: "IT leadership", page: "taxonomy", aliases: ["leadership", "cio structure", "design options"] },
+  { id: "taxonomy-leadership", label: "IT Accountability", page: "taxonomy", aliases: ["leadership", "accountability", "cio structure", "design options"] },
   { id: "taxonomy-savings", label: "Savings case", page: "taxonomy", aliases: ["savings case", "savings levers"] },
   { id: "taxonomy-regions", label: "Regional spend", page: "taxonomy", aliases: ["regions", "regional spend", "americas", "emea", "apac"] },
 ];
@@ -93,7 +93,7 @@ const searchSnippets = [
   { title: "Operating model fragmentation", content: opModel.cover.hook + " " + (opModel.executiveSummary.rows[0]?.finding ?? "") },
   { title: "Future state", content: opModel.operatingModel.futureLead + " " + opModel.operatingModel.comparison.map((c) => c.future).join(" ") },
   { title: "Roadmap", content: benchmark.roadmap.phases.map((p) => p.phase + " " + p.actions.join(" ")).join(" ") },
-  { title: "IT leadership", content: opModel.itLeadershipStructure.lead + " " + opModel.itLeadershipStructure.recommendedOption.summary },
+  { title: "IT Accountability", content: opModel.itLeadershipStructure.lead + " " + opModel.itLeadershipStructure.recommendedOption.summary },
   { title: "Cost of inaction", content: benchmark.costOfInaction.callout.text },
   { title: "Maturity model", content: benchmark.maturityModel.callout.text },
   ...benchmark.strategicInsights.items.map((i) => ({ title: i.title, content: Object.values(i.sections).join(" ") })),
@@ -139,7 +139,7 @@ const appData = {
     { label: "Vendor spend findings", message: "Explain the vendor and software licensing findings in plain English" },
     { label: "Savings opportunity", message: "How much could Culligan save, and where does the money come from?" },
     { label: "EMEA IT spend", message: "How much does EMEA spend on IT, and what does that mean?" },
-    { label: "IT leadership", message: "What is the recommended IT leadership structure, explained simply?" },
+    { label: "IT Accountability", message: "What is the recommended IT leadership structure, explained simply?" },
     { label: "Future state", message: "Take me to the future state section and summarise it simply" },
   ],
 };
@@ -326,7 +326,7 @@ tr.total td{font-weight:700;background:var(--callout)!important}
       <button type="button" class="agent-chip" data-q="Explain the vendor and software licensing findings in plain English">Vendor spend</button>
       <button type="button" class="agent-chip" data-q="How much could Culligan save, and where does the money come from?">Savings opportunity</button>
       <button type="button" class="agent-chip" data-q="How much does EMEA spend on IT, and what does that mean?">EMEA IT spend</button>
-      <button type="button" class="agent-chip" data-q="What is the recommended IT leadership structure, explained simply?">IT leadership</button>
+      <button type="button" class="agent-chip" data-q="What is the recommended IT leadership structure, explained simply?">IT Accountability</button>
       <button type="button" class="agent-chip" data-q="Take me to the future state section and summarise it simply">Future state</button>
     </div>
   </div>
@@ -598,7 +598,23 @@ function renderTaxonomy(){
   <section class="section scroll-anchor" id="taxonomy-leadership">
     <h3>\${esc(ld.title)}</h3>
     <p class="lead">\${esc(ld.lead)}</p>
-    <div style="overflow-x:auto;margin-top:1rem;border-radius:.75rem;box-shadow:0 1px 4px rgba(0,0,0,.08);border:1px solid var(--off)">
+
+    <h4 style="margin-top:1.5rem">\${esc(ld.decisionCriteria.title)}</h4>
+    <p class="sub">\${esc(ld.decisionCriteria.lead)}</p>
+    <div style="overflow-x:auto;margin-top:.75rem;border-radius:.75rem;box-shadow:0 1px 4px rgba(0,0,0,.08);border:1px solid var(--off)">
+      <table style="min-width:720px">
+        <thead><tr>
+          \${ld.decisionCriteria.columns.map(c=>'<th>'+esc(c)+'</th>').join("")}
+        </tr></thead>
+        <tbody>
+          \${ld.decisionCriteria.rows.map(r=>'<tr><td><strong>'+esc(r.criterion)+'</strong></td><td>'+esc(r.groupCio)+'</td><td>'+esc(r.bu)+'</td></tr>').join("")}
+        </tbody>
+      </table>
+    </div>
+
+    <h4 style="margin-top:1.5rem">\${esc(ld.functionalAllocation.title)}</h4>
+    <p class="sub">\${esc(ld.functionalAllocation.lead)}</p>
+    <div style="overflow-x:auto;margin-top:.75rem;border-radius:.75rem;box-shadow:0 1px 4px rgba(0,0,0,.08);border:1px solid var(--off)">
       <table style="min-width:880px">
         <thead><tr>
           <th>IT function</th>

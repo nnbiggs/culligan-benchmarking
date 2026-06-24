@@ -1,8 +1,9 @@
 import { navLinks, keyFindings } from "./benchmarkData";
 import { taxonomyNavLinks } from "./taxonomyData";
+import { vendorRationalizationNavLinks } from "./vendorRationalizationData";
 
 export const executiveSummaryLinks = navLinks;
-export { taxonomyNavLinks };
+export { taxonomyNavLinks, vendorRationalizationNavLinks };
 
 /** H5 routes to the business capability taxonomy page; other hypotheses scroll to Key Findings on the home page. */
 export const hypothesisLinks = keyFindings.hypothesisLegend.rows.map((row) => {
@@ -13,7 +14,7 @@ export const hypothesisLinks = keyFindings.hypothesisLegend.rows.map((row) => {
     return {
       id,
       label,
-      to: "/taxonomy",
+      to: "/vendor-rationalization",
     };
   }
 
@@ -25,6 +26,11 @@ export const hypothesisLinks = keyFindings.hypothesisLegend.rows.map((row) => {
 });
 
 export const operatingModelLink = {
-  label: "IT Support & Operating Model",
+  label: "Operating model",
   path: "/taxonomy",
+};
+
+export const vendorRationalizationLink = {
+  label: "Vendor rationalization",
+  path: "/vendor-rationalization",
 };

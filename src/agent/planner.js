@@ -39,7 +39,7 @@ export function planAgentSteps(message, context = {}) {
       args: { recommended_only: recommended },
     });
     if (NAV_RE.test(m) || /\b(option|design)\b/i.test(m)) {
-      steps.push({ tool: "navigate", args: { section: "it leadership" } });
+      steps.push({ tool: "navigate", args: { section: "IT Accountability" } });
     }
     return steps;
   }
@@ -106,6 +106,6 @@ export const suggestedPrompts = [
   { label: "Vendor spend findings", message: "Explain the vendor and software licensing findings in plain English" },
   { label: "Savings opportunity", message: "How much could Culligan save, and where does the money come from?" },
   { label: "EMEA IT spend", message: "How much does EMEA spend on IT, and what does that mean?" },
-  { label: "IT leadership", message: "What is the recommended IT leadership structure, explained simply?" },
+  { label: "IT Accountability", message: "What is the recommended IT leadership structure, explained simply?" },
   { label: "Future state", message: "Take me to the future state section and summarise it simply" },
 ];

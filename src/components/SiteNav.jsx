@@ -6,7 +6,9 @@ import SiteTitleBar from "./SiteTitleBar";
 import {
   executiveSummaryLinks,
   operatingModelLink,
+  vendorRationalizationLink,
   taxonomyNavLinks,
+  vendorRationalizationNavLinks,
 } from "../data/siteNav";
 
 function scrollToSection(id) {
@@ -16,7 +18,8 @@ function scrollToSection(id) {
 
 const pageLinks = [
   { path: "/", label: "Executive Summary" },
-  { path: operatingModelLink.path, label: "Operating model" },
+  { path: operatingModelLink.path, label: operatingModelLink.label },
+  { path: vendorRationalizationLink.path, label: vendorRationalizationLink.label },
 ];
 
 export default function SiteNav() {
@@ -28,7 +31,14 @@ export default function SiteNav() {
 
   const isHome = location.pathname === "/";
   const isOperatingModel = location.pathname === operatingModelLink.path;
-  const sectionLinks = isHome ? executiveSummaryLinks : isOperatingModel ? taxonomyNavLinks : [];
+  const isVendorRationalization = location.pathname === vendorRationalizationLink.path;
+  const sectionLinks = isHome
+    ? executiveSummaryLinks
+    : isOperatingModel
+      ? taxonomyNavLinks
+      : isVendorRationalization
+        ? vendorRationalizationNavLinks
+        : [];
   const activeSection = useActiveSection(sectionLinks.map((l) => l.id));
 
   useEffect(() => {
@@ -65,7 +75,7 @@ export default function SiteNav() {
 
   const handleSectionClick = (id) => {
     setMenuOpen(false);
-    if (isHome || isOperatingModel) {
+    if (isHome || isOperatingModel || isVendorRationalization) {
       scrollToSection(id);
     }
   };
