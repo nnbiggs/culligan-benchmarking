@@ -16,7 +16,7 @@
   },
   "executiveSummary": {
     "partLabel": "01 · Executive summary",
-    "title": "The picture in one page",
+    "title": "The situation at a glance",
     "kpis": [
       { "value": "$69.2M", "label": "Total IT & Digital spend", "accent": "orange" },
       { "value": "1,481", "label": "Unique vendors", "accent": "default" },
