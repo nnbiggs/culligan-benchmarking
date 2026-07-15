@@ -254,7 +254,7 @@ export default function VendorCurrentStateVisual({ data }) {
       <div className="grid gap-8 lg:grid-cols-2">
         <Panel className="border-t-4 border-t-culligan-accent">
           <SubTitle>Spend by region</SubTitle>
-          <p className="text-xs text-culligan-muted mt-1 mb-6">$69.2M IT & Digital spend · L2 capability rollup</p>
+          <p className="text-xs text-culligan-muted mt-1 mb-6">{data.totalSpendM}M IT & Digital spend · H4 capability model</p>
           <RegionDonut regions={data.byRegion} totalSpendM={data.totalSpendM} />
           <div className="mt-8 space-y-4">
             {data.byRegion.map((r) => (

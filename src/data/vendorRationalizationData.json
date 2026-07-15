@@ -1,67 +1,59 @@
 {
-  "sourceDocument": "Culligan_H5_Vendor_Rationalisation_v6.pptx · June 2026",
+  "sourceDocument": "Culligan_H5_Vendor_Licensing_Rationalization_v7.pptx · June 2026",
   "cover": {
     "eyebrow": "Culligan International · Confidential · PwC Engagement",
-    "title": "Vendor Rationalisation",
-    "subtitle": "A current-state assessment of IT & Digital vendor spend — and the governance-led case for consolidation",
-    "meta": "Hypothesis H5 · June 2026 · PwC Confidential",
-    "hook": "Culligan has grown through 20+ acquisitions, and IT was never consolidated. Each business unit still buys its own software, services and infrastructure independently — 1,481 vendors serve a $69.2M estate. Consolidating the largest overlaps could release $22–44M annually at Year-3 run-rate.",
+    "title": "Vendor & Licensing Rationalization",
+    "subtitle": "Vendor duplication proof, savings case & governance roadmap",
+    "meta": "Hypothesis H5 · June 2026 · PwC Confidential · Subject to CIO validation",
+    "hook": "1,674 vendors serve a $87.2M IT estate — 40 spend-carrying entities buy independently with no IT vendor management framework below Corporate. Consolidating vendor services and licensing onto group standards releases $6.5–8.5M annually at Year-3 run-rate.",
     "kpis": [
-      { "value": "$69.2M", "label": "Total IT & Digital spend", "accent": "orange" },
-      { "value": "1,481", "label": "Unique vendors", "accent": "default" },
-      { "value": "19 / 19", "label": "BUs buying independently", "accent": "red" },
-      { "value": "$22–44M", "label": "Year-3 run-rate opportunity", "accent": "sky" }
+      { "value": "$87.2M", "label": "Total IT & Digital spend", "accent": "orange" },
+      { "value": "$72.7M", "label": "Addressable vendor & license spend", "accent": "default" },
+      { "value": "40", "label": "Entities buy independently", "accent": "red" },
+      { "value": "$6.5–8.5M", "label": "Annual run-rate savings (Yr 3)", "accent": "sky" }
     ],
-    "source": "Source: Culligan Spend Cube June 2026 · March 2026 P&L · 20 of 40 BUs in scope"
+    "source": "Source: Culligan Spend Cube June 2026 (reconciled) · Central EAs restated at group value"
   },
   "executiveSummary": {
     "partLabel": "01 · Executive summary",
     "title": "The situation at a glance",
+    "sectionTitle": "Culligan's vendor and license estate is not managed — it is accumulated",
     "kpis": [
-      { "value": "$69.2M", "label": "Total IT & Digital spend", "accent": "orange" },
-      { "value": "1,481", "label": "Unique vendors", "accent": "default" },
-      { "value": "19 / 19", "label": "BUs buying independently", "accent": "red" },
-      { "value": "$22–44M", "label": "Year-3 run-rate opportunity", "accent": "sky" }
+      { "value": "$6.5–8.5M", "label": "Gross savings (Yr 3 run-rate)", "accent": "sky" },
+      { "value": "$1.0–1.9M", "label": "Wave 1 quick wins", "accent": "orange" },
+      { "value": "83%", "label": "Addressable base ($72.7M)", "accent": "default" },
+      { "value": "40", "label": "Entities buying independently", "accent": "red" }
     ],
     "rows": [
       {
         "dimension": "What the problem is",
-        "detail": "Culligan's IT estate is the unmanaged residue of 20+ acquisitions. Every business unit runs its own IT operation independently — its own ERP, CRM, service desk, managed service contracts, and IT staff — with no group mandate to standardise, consolidate, or govern.",
-        "highlight": "Culligan operates one business model across three regions but runs its IT 24 separate ways."
+        "detail": "1,674 vendors serve one $87.2M IT estate — 24 business units / 59 legal entities (44 in scope), with spend across 40 entities, buy services and licenses independently. No IT vendor management framework below Corporate. 681 of 728 service vendors locked in a single BU; the same capability spread across ~323 vendors in 34 BUs. 564 software vendors with no group standard. $14.0M in central Microsoft ($6.05M), Salesforce ($7.32M) and SAP ($0.69M) EAs partially unused. ~25–30% of SaaS seats unused (Gartner/Zylo est.). ~83% of IT spend auto-renews without group visibility."
       },
       {
-        "dimension": "Why it is a problem",
-        "detail": "19 of 19 operating BUs buy software independently ($34.8M) · 19 separate MSP / IT service contracts ($15.7M) · 10 different ERP instances across the group, none of which are integrated · 19 separate CRM instances, despite a $7.2M group Salesforce EA sitting unused · 15 separate cloud tenancies with no group FinOps discipline · 15+ separate service desks costing an estimated $45–80 per ticket vs. $12–20 at best-in-class · Estimated $80–130M in IT headcount cost entirely invisible in the spend cube · EMEA pays $5M more in IT invoices than Americas at equivalent revenue scale, directly attributable to running six national IT operations independently.",
-        "emphasis": "Group CIO in place but mandate limited to Corporate enterprise agreements — no authority over BU technology decisions."
-      },
-      {
-        "dimension": "Impact on the Culligan operating model",
-        "detail": "IT fragmentation directly undermines the Culligan operating model in four ways: (1) Scale benefits are destroyed — a $3.8B enterprise negotiates 19 separate software contracts instead of one, paying small-company rates across every BU. Volume discounts of 20–35% are foregone on every renewal. (2) Operational visibility is broken — no group IT performance data, no consolidated SLA reporting, no single view of the technology estate. The Group CIO cannot see what the group spends, who it spends it with, or what it gets for the money. (3) Integration is structurally blocked — 10 ERP instances and 19 CRM instances make group-level data consolidation, cross-BU reporting, and post-acquisition integration progressively harder and more expensive with every passing quarter. (4) Risk compounds silently — security patching, access management, and change control are managed independently per BU with no group oversight, creating a patchwork risk posture that no single person can see or own."
+        "dimension": "Why it is a problem — impact on spend",
+        "detail": "Volume leverage destroyed — a $3.4B enterprise negotiates 1,674 small contracts at BU-local rates. Duplication compounds — the same tools bought in parallel across BUs with no mechanism to retire overlaps. Renewals fragment — ~83% of IT spend auto-renews with no group visibility or challenge. EAs underutilized — $14.0M in central agreements partially unused while BUs buy standalone equivalents. Every renewal cycle without a framework re-locks another year of fragmentation premium.",
+        "emphasis": "Group CIO authority stops at Corporate — BUs buy independently at every renewal."
       },
       {
         "dimension": "The opportunity",
-        "detail": "$22–44M in annual run-rate savings at Year 3, comprising $12–22M from H4 IT operating model changes (service delivery consolidation, headcount rationalisation, MSP renegotiation, demand governance) and $12–23M from H2 Infrastructure, H3 application rationalisation, and H5 vendor agreements — all of which are unlocked by H4 governance. Total programme investment $3.05M — fully self-funded from Wave 1 savings. Payback 14–18 months. ROI 6–13×. Base case $30M saving."
+        "detail": "$6.5–8.5M gross savings at Year 3 (≈15% blended on ~$47.5M reachable spend). Vendor track $2.1–3.5M on $27.56M addressable services. Licensing track $3.0–6.0M on $45.16M. Wave 1 quick wins $1.0–1.9M self-funding. H5 requires H4 Group CIO mandate before Wave 2."
       },
       {
         "dimension": "Recommendations",
-        "detail": "Extend Group CIO mandate to cover all BU-level IT decisions. Establish an IT architecture board with cross-BU authority to set and enforce standards. Introduce an IT chargeback model to create a financial incentive for BU compliance. Commission the PwC TBM baseline to make the $80–130M headcount cost visible and manageable. Authorise a Vendor Consolidation Reserve — 15% of each month's realised savings ring-fenced to self-fund Waves 2 and 3, requiring no further capital requests. Without these steps, no consolidation programme — application, infrastructure, or vendor — can be executed at group level."
-      },
-      {
-        "dimension": "Roadmap",
-        "detail": "Wave 1 (0–6 months) — $2.55M net saving: extend Group CIO mandate, establish IT architecture board, complete SaaS and telecom vendor audit, negotiate first group framework agreements. Investment $350k from existing budget. Wave 2 (6–18 months) — $3.4M net saving: deploy group ITSM (ServiceNow), migrate first BU service desks, launch Salesforce CRM consolidation, renegotiate ERP support agreements. Investment $1.2M funded from Wave 1 reserve. Wave 3 (18–36 months) — $8.3M net saving: full service desk consolidation, IFS ERP roll-out, cloud FinOps programme, IT chargeback goes live, vendor tail reduced to ~200–300 strategic partners. Investment $1.5M funded from Wave 1+2 reserve."
+        "detail": "01. Stand up an IT vendor management framework with a category owner per capability. 02. Name champion/challenger panels per service capability; migrate the 728-vendor services tail. 03. Right-size and extend the central EAs (Microsoft, Salesforce, SAP) — utilization, not new deals. 04. Build a contract renewal calendar immediately — it is the critical-path control. 05. Secure the H4 mandate — H5 cannot be enforced at BU level without it."
       }
     ]
   },
   "methodology": {
     "partLabel": "03 · Methodology & approach",
-    "title": "How we turned 1,770 raw spend lines into a consolidation case",
+    "title": "How we built the TBM baseline into a consolidation case",
     "steps": [
-      { "step": "1", "title": "Normalise the spend", "detail": "Start from the Spend Cube (IT & Digital, L2). Clean and normalise vendor names.", "metric": "$69.2M · 1,481 vendors" },
-      { "step": "2", "title": "Map to capabilities", "detail": "Map every vendor to a business-capability model — domain & sub-capability — by region and BU.", "metric": "8 domains · sub-capabilities" },
-      { "step": "3", "title": "Find the overlaps", "detail": "Within each BU and capability, count how many vendors deliver the same thing.", "metric": "19 BUs compared" },
+      { "step": "1", "title": "Build the TBM baseline", "detail": "Start from the refreshed $87.2M TBM spend, reconciled across 1,674 vendors, 24 BUs and 59 legal entities. Clean vendor name variants (Insight, PTC, U/UKG).", "metric": "$87.2M · 1,674 vendors" },
+      { "step": "2", "title": "Map to capabilities", "detail": "Map every vendor to the H4 capability model — seven domains and sub-capabilities — by region and BU.", "metric": "7 domains · sub-capabilities" },
+      { "step": "3", "title": "Find the overlaps", "detail": "Within each BU and capability, count how many vendors deliver the same thing.", "metric": "24 BUs compared" },
       { "step": "4", "title": "Size & benchmark", "detail": "Apply industry consolidation benchmarks to the addressable overlap, adjusted for Culligan's fragmentation.", "metric": "vs. peer benchmarks" }
     ],
-    "principles": "Everything reconciles to the source of truth ($69.2M / 1,481 vendors). Vendor invoice spend only — internal labour is excluded.",
+    "principles": "Everything reconciles to the reconciled TBM baseline ($87.2M / 1,674 vendors). $72.7M addressable (vendor $27.56M + licensing $45.16M). Vendor invoice spend only — internal labour excluded.",
     "validation": {
       "title": "Stakeholder validation",
       "items": [
@@ -77,48 +69,52 @@
     ]
   },
   "benchmarks": {
-    "title": "Six prioritised levers — and what each returns at Culligan scale",
-    "note": "Benchmark ranges are directional and will be reconciled to the PwC TBM spend baseline. H5 captures agreement rationalisation; H3 covers platform migration (IFS, Salesforce BU migrations).",
+    "title": "Six prioritised levers — benchmarked against Gartner, NPI, Zylo, Flexera, Info-Tech",
+    "note": "H5 scope: third-party IT services ($27.56M) and software/licensing ($45.16M). Cloud, telecom and hardware excluded from addressable base per reconciled view. ERP rationalization is Wave 3 / H3-dependent.",
     "levers": [
-      { "priority": 1, "lever": "Group vendor framework agreements", "hypothesis": "H5", "addressable": "$34.8M", "benchmark": "20–35%", "saving": "$4.0M–$10.0M", "wave": "Wave 1", "context": "19 BUs buy software, telecom, cloud & hardware with zero group leverage." },
-      { "priority": 2, "lever": "Service desk / MSP consolidation", "hypothesis": "H5", "addressable": "$15.7M", "benchmark": "20–30%", "saving": "$3.1M–$4.7M", "wave": "Wave 2", "context": "15+ separate service desks, 306 IT-service vendors, no common ITSM." },
-      { "priority": 3, "lever": "ERP support & maintenance agreements", "hypothesis": "H5 / H3", "addressable": "$10.9M", "benchmark": "15–25%", "saving": "$1.5M–$2.7M", "wave": "Wave 2", "context": "174 ERP vendors. H5: renegotiate now. H3: IFS template migration." },
-      { "priority": 4, "lever": "CRM vendor agreement rationalisation", "hypothesis": "H5 / H3", "addressable": "$8.3M", "benchmark": "10–20%", "saving": "$0.1M–$0.2M", "wave": "Wave 2", "context": "Salesforce EA ($7.2M) exists but 14 parallel CRM vendors remain." },
-      { "priority": 5, "lever": "Telecom & connectivity consolidation", "hypothesis": "H5", "addressable": "$3.6M", "benchmark": "15–25%", "saving": "$0.5M–$0.9M", "wave": "Wave 1", "context": "144 telecom vendors; Quench runs 6 UCaaS providers in parallel." },
-      { "priority": 6, "lever": "Vendor count reduction (tail spend)", "hypothesis": "H5", "addressable": "1,481 → ~200–300", "benchmark": "50–75% count reduction", "saving": "Overhead savings", "wave": "Wave 3", "context": "1 vendor per $46k vs. best-practice 1 per $500k+." }
+      { "priority": 1, "lever": "Champion/challenger vendor panels", "hypothesis": "H5", "addressable": "$27.56M", "benchmark": "12–20% (Gartner 15–30% adjusted)", "saving": "$2.1M–$3.5M", "wave": "Wave 2", "context": "314 service vendors; 681 of 728 locked in one BU. 80% of spend reachable." },
+      { "priority": 2, "lever": "MSP renegotiation (country-siloed contracts)", "hypothesis": "H5", "addressable": "incl. in services", "benchmark": "20–30% (Gartner)", "saving": "$0.6M–$0.9M", "wave": "Wave 2", "context": "Most immediately renegotiable line in vendor track." },
+      { "priority": 3, "lever": "EA right-size (Microsoft, Salesforce, SAP)", "hypothesis": "H5", "addressable": "$14.0M central EAs", "benchmark": "10–20% (Flexera/Zylo)", "saving": "$1.0M–$1.9M", "wave": "Wave 1", "context": "~25–30% seats unused. Ghost-seat recovery — no migration required." },
+      { "priority": 4, "lever": "Platform standardize (CRM, HRIS, analytics)", "hypothesis": "H5 / H3", "addressable": "$45.16M licensing", "benchmark": "15–25%", "saving": "$0.9M–$1.5M", "wave": "Wave 2", "context": "Migrate parallel tools onto group standards (Salesforce EA $7.32M, UKG, etc.)." },
+      { "priority": 5, "lever": "ERP & finance rationalize", "hypothesis": "H5 / H3", "addressable": "$9.65M", "benchmark": "10–20% TCO (Forrester/Gartner)", "saving": "$1.0M–$1.9M", "wave": "Wave 3", "context": "90 tools across 10 BUs. Wave 3 / H3-dependent — not Year-1 commitment." },
+      { "priority": 6, "lever": "Vendor count reduction (tail spend)", "hypothesis": "H5", "addressable": "1,674 → ~200–300", "benchmark": "50–75% count reduction", "saving": "Overhead savings", "wave": "Wave 3", "context": "1 vendor per $52k vs. best-practice 1 per $500k+." }
     ],
     "benchmarkTable": [
-      { "lever": "Volume / framework agreements", "industry": "15–35%", "culligan": "20–35%" },
-      { "lever": "ERP consolidation", "industry": "20–40%", "culligan": "35–55% of tail" },
-      { "lever": "CRM consolidation", "industry": "15–30%", "culligan": "30–50% of non-EA" },
-      { "lever": "Service-desk / MSP", "industry": "20–30%", "culligan": "20–30%" }
+      { "lever": "Vendor services / revenue", "industry": "0.4–0.5% (Gartner peer)", "culligan": "0.8% ($27.56M, 314 vendors)" },
+      { "lever": "SaaS seat utilization", "industry": "<10% unused (Zylo/Flexera)", "culligan": "~25–30% unused (est.)" },
+      { "lever": "Champion vendor concentration", "industry": "60–80% (Info-Tech)", "culligan": "11–51% per capability" },
+      { "lever": "Strategic vendor consolidation", "industry": "15–30% (Gartner)", "culligan": "12–20% adjusted" }
     ]
   },
   "currentState": {
     "partLabel": "04 · Current-state analysis",
     "title": "Following the money — by region, business unit and capability",
-    "totalSpendM": 69.2,
+    "totalSpendM": 87.2,
     "byRegion": [
-      { "region": "EMEA", "spend": "$23.2M", "spendM": 23.2, "color": "bg-culligan-accent" },
-      { "region": "Corporate", "spend": "$21.0M", "spendM": 21.0, "color": "bg-culligan-deep" },
-      { "region": "Americas", "spend": "$17.9M", "spendM": 17.9, "color": "bg-culligan-amber" },
-      { "region": "APAC", "spend": "$7.1M", "spendM": 7.1, "color": "bg-culligan-green" }
+      { "region": "Americas", "spend": "$41.1M", "spendM": 41.1, "color": "bg-culligan-amber" },
+      { "region": "EMEA", "spend": "$20.7M", "spendM": 20.7, "color": "bg-culligan-accent" },
+      { "region": "APAC", "spend": "$7.9M", "spendM": 7.9, "color": "bg-culligan-green" },
+      { "region": "Central & group", "spend": "$17.5M", "spendM": 17.5, "color": "bg-culligan-deep" }
     ],
     "byCapability": [
-      { "capability": "Technology & innovation", "spend": "$50.7M", "spendM": 50.7, "priority": "High" },
-      { "capability": "Unknowns", "spend": "$10.4M", "spendM": 10.4, "priority": "Med" },
-      { "capability": "People & org", "spend": "$2.9M", "spendM": 2.9, "priority": "Med" },
-      { "capability": "Customer & market", "spend": "$2.2M", "spendM": 2.2, "priority": "Med" },
-      { "capability": "Finance & risk", "spend": "$2.0M", "spendM": 2.0, "priority": "Med" }
+      { "capability": "Technology & innovation", "spend": "$36.1M", "spendM": 36.1, "priority": "High" },
+      { "capability": "Operations & supply chain", "spend": "$16.1M", "spendM": 16.1, "priority": "High" },
+      { "capability": "Finance & risk", "spend": "$12.0M", "spendM": 12.0, "priority": "High" },
+      { "capability": "Customer & market", "spend": "$8.7M", "spendM": 8.7, "priority": "Med" },
+      { "capability": "Corporate affairs", "spend": "$7.3M", "spendM": 7.3, "priority": "Med" },
+      { "capability": "Governance layer", "spend": "$6.0M", "spendM": 6.0, "priority": "Med" },
+      { "capability": "Product & service", "spend": "$1.1M", "spendM": 1.1, "priority": "Low" }
     ],
     "capabilityHeatmap": {
-      "regions": ["EMEA", "Americas", "APAC", "Corporate"],
+      "regions": ["EMEA", "Americas", "APAC", "Central"],
       "rows": [
         { "capability": "Technology & innovation", "cells": ["High", "High", "High", "High"] },
-        { "capability": "Unknowns", "cells": ["Med", "Med", "Med", "—"] },
-        { "capability": "People & org", "cells": ["Med", "Med", "—", "Med"] },
-        { "capability": "Customer & market", "cells": ["Med", "Med", "Med", "—"] },
-        { "capability": "Finance & risk", "cells": ["Med", "Med", "—", "Med"] }
+        { "capability": "Operations & supply chain", "cells": ["High", "Med", "Med", "Med"] },
+        { "capability": "Finance & risk", "cells": ["High", "Med", "Low", "Med"] },
+        { "capability": "Customer & market", "cells": ["Med", "High", "Med", "High"] },
+        { "capability": "Corporate affairs", "cells": ["Med", "Med", "Low", "Med"] },
+        { "capability": "Governance layer", "cells": ["Med", "Med", "Low", "High"] },
+        { "capability": "Product & service", "cells": ["Low", "Med", "Low", "Low"] }
       ]
     },
     "focusUnitsLead": "Six highest-spending business units — expand any card to see vendor duplication detail.",
@@ -127,11 +123,45 @@
         "id": "corporate",
         "region": "Corporate",
         "name": "Corporate",
-        "spend": "$21.0M",
-        "spendM": 21.0,
+        "spend": "$21.2M",
+        "spendM": 21.2,
         "role": "anchor",
-        "note": "Group IT owner — holds the best-negotiated contracts, including the $7.2M Salesforce enterprise agreement.",
+        "note": "Group IT owner — holds the best-negotiated contracts, including the $7.32M Salesforce enterprise agreement and $6.05M Microsoft EA.",
         "expandable": false
+      },
+      {
+        "id": "quench",
+        "region": "Americas",
+        "name": "Culligan Quench",
+        "spend": "$10.1M",
+        "spendM": 10.1,
+        "expandable": true,
+        "detail": {
+          "vendors": 254,
+          "capabilitiesWithOverlap": 4,
+          "focus": "Telecom & connectivity",
+          "overlapVendors": 6,
+          "overlapSpend": "$0.96M / year",
+          "vendors_list": ["RingCentral", "Vonage", "Metropolitan Telecom", "Command Link", "Twilio", "Vonage Business"],
+          "otherAreas": ["ERP / core operations (4)", "IT service & support (5)", "Financial mgmt & reporting (4)"]
+        }
+      },
+      {
+        "id": "flagship",
+        "region": "Americas",
+        "name": "Flagship",
+        "spend": "$7.2M",
+        "spendM": 7.2,
+        "expandable": true,
+        "detail": {
+          "vendors": 46,
+          "capabilitiesWithOverlap": 2,
+          "focus": "Business intelligence & reporting",
+          "overlapVendors": 7,
+          "overlapSpend": "$0.87M / year",
+          "vendors_list": ["Microsoft Online", "BlackLine Systems", "GoEngineer", "Secure Document Conversion", "Autoscribe Informatics", "Altium"],
+          "otherAreas": ["Infrastructure & hardware (8 vendors)", "ERP / core operations (6 vendors)"]
+        }
       },
       {
         "id": "iberia",
@@ -148,40 +178,6 @@
           "overlapSpend": "$0.90M / year",
           "vendors_list": ["Insight Data Technologies", "Inetum", "CGI", "SHI International", "Softcat", "Alhambra"],
           "otherAreas": ["ERP / core operations (42 vendors)", "BI & reporting (8)", "Supplier management (5)"]
-        }
-      },
-      {
-        "id": "flagship",
-        "region": "Americas",
-        "name": "Flagship",
-        "spend": "$6.7M",
-        "spendM": 6.7,
-        "expandable": true,
-        "detail": {
-          "vendors": 46,
-          "capabilitiesWithOverlap": 2,
-          "focus": "Business intelligence & reporting",
-          "overlapVendors": 7,
-          "overlapSpend": "$0.87M / year",
-          "vendors_list": ["Microsoft Online", "BlackLine Systems", "GoEngineer", "Secure Document Conversion", "Autoscribe Informatics", "Altium"],
-          "otherAreas": ["Infrastructure & hardware (8 vendors)", "ERP / core operations (6 vendors)"]
-        }
-      },
-      {
-        "id": "quench",
-        "region": "Americas",
-        "name": "Culligan Quench",
-        "spend": "$6.6M",
-        "spendM": 6.6,
-        "expandable": true,
-        "detail": {
-          "vendors": 254,
-          "capabilitiesWithOverlap": 4,
-          "focus": "Telecom & connectivity",
-          "overlapVendors": 6,
-          "overlapSpend": "$0.96M / year",
-          "vendors_list": ["RingCentral", "Vonage", "Metropolitan Telecom", "Command Link", "Twilio", "Vonage Business"],
-          "otherAreas": ["ERP / core operations (4)", "IT service & support (5)", "Financial mgmt & reporting (4)"]
         }
       },
       {
@@ -205,65 +201,80 @@
     "otherUnitsByRegion": [
       { "region": "EMEA", "units": ["France & Switzerland $5.0M", "Germany $4.0M", "UK CDW $3.4M", "Nordics $2.6M"] },
       { "region": "Americas", "units": ["WaterCo $1.6M", "Brazil $803k", "ZeroWater $537k"] },
-      { "region": "APAC", "units": ["ZIP UK $1.1M"] }
+      { "region": "APAC", "units": ["ZIP UK $1.1M", "Paragon $0.3M"] }
     ],
     "keyObservationsTitle": "Current state key observations",
-    "doingWellTitle": "What works — foundations to build on",
-    "overpayingTitle": "Where the cost savings are",
+    "doingWellTitle": "What Culligan is already doing well",
+    "overpayingTitle": "Where Culligan must act",
     "doingWell": [
       {
-        "area": "Salesforce enterprise agreement",
-        "observation": "$7.2M enterprise agreement already in place and active. 86% of CRM spend consolidated on one platform.",
-        "impact": "This is the template for how group-wide agreements should work — the EA demonstrates Culligan can negotiate at group scale when it chooses to."
+        "area": "Salesforce EA ($7.32M)",
+        "observation": "CRM standard is set. EA cost is sunk. Migrating BUs on standalone CRM tools eliminates parallel spend from day one — net positive from the first BU migrated.",
+        "impact": "89% of CRM spend already on Salesforce — the template for how group-wide agreements should work."
       },
       {
-        "area": "Corporate IT as anchor",
-        "observation": "Corporate holds the group's best-negotiated contracts at $21M — the largest single spending bloc and the most favourable unit rates.",
-        "impact": "Enterprise application governance and group platform management are the capabilities BUs should consolidate onto. The Group CIO role exists — the mandate simply needs extension to the regions."
+        "area": "Microsoft EA ($6.05M)",
+        "observation": "Group agreement negotiated and in place. The lever is utilization and tier right-sizing, not a new deal.",
+        "impact": "Recovering ghost seats and right-sizing E3/E5 allocation is the immediate Wave 1 prize."
       },
       {
-        "area": "IFS ERP group template",
-        "observation": "A single ERP template has been chosen for group roll-out, removing the architectural decision that typically delays consolidation.",
-        "impact": "The path is clear; the obstacle is migration sequencing, not platform selection. H5 can renegotiate support agreements now while H3 executes the migration."
+        "area": "SAP EA ($0.69M)",
+        "observation": "Group ERP anchor exists for Corporate & Flagship — positions SAP as the consolidation target for the fragmented 90-tool ERP tail.",
+        "impact": "Reduces the cost of convergence substantially vs. negotiating a new deal."
+      },
+      {
+        "area": "Group CIO role established",
+        "observation": "Mandate extension is a governance decision, not a new hire. The cost and lead time to create the role is already absorbed.",
+        "impact": "The question is scope of authority, not existence — H4 extends the mandate; H5 captures the savings."
+      },
+      {
+        "area": "Group cybersecurity SOC in place",
+        "observation": "Group threat monitoring avoids BUs buying endpoint security separately.",
+        "impact": "Already realizing an estimated $1.3–2.3M annual saving — proof of concept for group-standard delivery."
       }
     ],
     "overpaying": [
       {
-        "area": "$69M estate · 1,481 vendors",
-        "observation": "Culligan operates with 1 vendor per $46k of IT spend. Best-practice for a company of this size is 1 per $500k+.",
-        "impact": "That 10× gap directly equates to overpaid renewals, duplicated tools and uncontested contracts at every BU."
+        "area": "No IT vendor management framework below Corporate",
+        "observation": "24 BUs each buy independently. Every consolidation needs BU-by-BU negotiation — the single costliest governance gap.",
+        "impact": "Fragmentation compounds with every acquisition and every renewal."
       },
       {
-        "area": "$5M EMEA fragmentation premium",
-        "observation": "EMEA pays 20–30% more than Corporate for identical capabilities because BUs buy independently. Iberia alone runs 37 vendors for IT service & support at $0.9M.",
-        "impact": "Under a group framework, Iberia's IT service vendor base collapses to 2–3 providers — a pattern repeatable across EMEA."
+        "area": "No SAM tool — 25–30% of SaaS seats unused",
+        "observation": "$14.0M in central EAs partially unutilized. Seat utilization is invisible without a SAM baseline.",
+        "impact": "Cannot recover what cannot be measured. Zylo or Flexera deployment is a Wave 1 priority."
       },
       {
-        "area": "15+ separate service desks",
-        "observation": "Running 15 separate service desks costs an estimated $3–5M in preventable premium vs. a consolidated group model. No single desk is large enough to negotiate meaningful SLAs.",
-        "impact": "Each desk duplicates tooling, management and vendor contracts. Consolidation delivers labour-rate leverage and the ITSM platform for AI automation."
+        "area": "No contract renewal calendar",
+        "observation": "~83% of IT spend auto-renews without group visibility. Every contract that renews before group frameworks are in place locks in another cycle at BU-local rates.",
+        "impact": "The renewal calendar is the most urgent Wave 1 deliverable — not a reporting tool."
       },
       {
-        "area": "10 ERP instances, 174 ERP vendors",
-        "observation": "Each standalone ERP instance carries its own licence, integration and support costs. The 169-vendor tail beyond the top 5 represents $4.2M in fragmented spend.",
-        "impact": "Zero volume leverage on the tail. H5 renegotiation and tail elimination is achievable now — without waiting for IFS platform migration."
+        "area": "681 of 728 service vendors locked in one BU",
+        "observation": "No cross-BU contracts, no group rate cards, no champion panel formalized. Same capability spread across ~323 vendors in 34 BUs.",
+        "impact": "Each BU pays a different price for the same service — volume leverage is zero."
+      },
+      {
+        "area": "EAs underutilized — standalone equivalents still being bought",
+        "observation": "Culligan pays for the Salesforce EA and 18 standalone CRMs simultaneously. $0.85M in parallel CRM spend alongside the $7.32M EA is the clearest illustration.",
+        "impact": "Governance absent — every renewal renews at full entitlement, not actual use."
       }
     ]
   },
   "futureState": {
     "partLabel": "05 · Future-state analysis",
-    "title": "Six moves that unlock $22–44M a year",
-    "lead": "Overlapping capabilities consolidated toward single, group-preferred vendors. H5 captures agreement rationalisation now; H3 delivers platform migration over 18–36 months.",
+    "title": "Six moves that unlock $6.5–8.5M a year",
+    "lead": "Vendor track ($27.56M) and licensing track ($45.16M) rationalized at group scale. H5 requires H4 governance mandate before Wave 2 vendor consolidation can be enforced.",
     "opportunities": [
       {
         "id": "frameworks",
-        "title": "Group vendor frameworks",
+        "title": "IT vendor management framework",
         "wave": "Wave 1",
         "hypothesis": "H5",
-        "current": "$34.8M",
-        "saving": "$4.0M–$10.0M",
-        "summary": "19 BUs → group agreements for software, telecom, cloud & hardware. Fastest, lowest-risk wave.",
-        "why": "Zero migration risk. Every dollar saved in Wave 1 self-funds Waves 2 and 3.",
+        "current": "$72.7M addressable",
+        "saving": "$6.5M–$8.5M",
+        "summary": "Category owners, rate cards, renewal calendar and champion/challenger panels across the full estate.",
+        "why": "Wave 1 license recovery self-funds Waves 2 and 3. Governance is the unlock — not procurement alone.",
         "anchor": "vr-frameworks"
       },
       {
@@ -271,31 +282,31 @@
         "title": "Service desk / MSP consolidation",
         "wave": "Wave 2",
         "hypothesis": "H5",
-        "current": "$15.7M",
-        "saving": "$3.1M–$4.7M",
-        "summary": "15+ desks → one group model on a common ITSM platform.",
+        "current": "$27.56M services",
+        "saving": "$2.1M–$3.5M",
+        "summary": "728 service vendor relationships → four champion/challenger panels with group rate cards.",
         "why": "Delivers ITSM standardisation and the foundation for AI-driven automation.",
         "anchor": "vr-service-desk"
       },
       {
         "id": "erp",
-        "title": "ERP vendor agreements",
-        "wave": "Wave 2",
+        "title": "ERP & finance rationalization",
+        "wave": "Wave 3",
         "hypothesis": "H5 / H3",
-        "current": "$10.9M",
-        "saving": "$3.8M–$6.0M",
-        "summary": "174 ERP vendors → right-sized agreements. H3: IFS template migration (Wave 3).",
-        "why": "H5 renegotiates support & tail elimination now — without waiting for platform migration.",
+        "current": "$9.65M",
+        "saving": "$1.0M–$1.9M",
+        "summary": "90 ERP tools → one group template (SAP / IFS). H3-dependent — Wave 3 horizon.",
+        "why": "Largest single licensing lever but longest to execute — do not present as Year-1 commitment.",
         "anchor": "vr-erp"
       },
       {
         "id": "crm",
-        "title": "CRM vendor agreements",
+        "title": "CRM right-size & standardize",
         "wave": "Wave 2",
         "hypothesis": "H5 / H3",
-        "current": "$8.3M",
-        "saving": "$2.5M–$4.2M",
-        "summary": "Retire 14 parallel CRM contracts; right-size the existing Salesforce EA.",
+        "current": "$8.03M",
+        "saving": "$0.3M–$0.4M",
+        "summary": "Retire 7 minor CRMs; extend the existing $7.32M Salesforce EA to remaining BUs.",
         "why": "Platform and rate already in place — lowest-risk consolidation lever.",
         "anchor": "vr-crm"
       },
@@ -304,10 +315,10 @@
         "title": "Telecom & connectivity",
         "wave": "Wave 1",
         "hypothesis": "H5",
-        "current": "$3.6M",
-        "saving": "$0.5M–$0.9M",
-        "summary": "144 telecom vendors → single carrier agreements per region.",
-        "why": "Often overlooked quick win — Quench alone runs 6 UCaaS providers.",
+        "current": "$7.5M",
+        "saving": "Partly addressable",
+        "summary": "Telecom partly addressable — carrier contracts constrain near-term consolidation.",
+        "why": "Often overlooked — Quench alone runs 6 UCaaS providers.",
         "anchor": "vr-telecom"
       },
       {
@@ -315,9 +326,9 @@
         "title": "Vendor tail reduction",
         "wave": "Wave 3",
         "hypothesis": "H5",
-        "current": "1,481 vendors",
+        "current": "1,674 vendors",
         "saving": "Admin & security overhead",
-        "summary": "Target ~200–300 strategic vendors from 1,481 today.",
+        "summary": "Target ~200–300 strategic vendors from 1,674 today.",
         "why": "Each tail vendor = contract admin, security access point, invoice to process.",
         "anchor": "vr-tail"
       }
@@ -325,31 +336,31 @@
     "deepDives": [
       {
         "id": "vr-erp",
-        "title": "ERP consolidation",
-        "today": { "vendors": 174, "spend": "$10.9M", "topVendors": ["RI OASIS $3.26M", "Parametric Technology $1.22M", "Inetum $0.82M", "169 more $4.24M"] },
-        "target": "Single IFS group template + regional roll-out. Retire duplicate licences, integrations and support contracts.",
-        "saving": "$3.8M–$6.0M (35–55% of redundant tail)"
+        "title": "ERP rationalization",
+        "today": { "vendors": 90, "spend": "$9.65M", "topVendors": ["Parametric Technology $1.22M (13%)", "Inetum $0.82M", "RI OASIS $3.26M", "87 more tools $4.35M"] },
+        "target": "One ERP template (SAP / IFS group standard). Collapse the 90-tool sprawl over 18–36 months — H3-dependent.",
+        "saving": "$1.0M–$1.9M / yr (RATIONALIZE lever)"
       },
       {
         "id": "vr-crm",
-        "title": "CRM consolidation",
-        "today": { "vendors": 15, "spend": "$8.3M", "topVendors": ["Salesforce EA $7.18M (86%)", "SVB-Freshworks $0.41M", "Bolt Data $0.27M", "7 more $0.16M"] },
-        "target": "Migrate remaining BUs onto the existing $7.2M Salesforce EA and retire parallel CRMs.",
-        "saving": "$2.5M–$4.2M (30–50% of non-EA spend)"
+        "title": "CRM right-size",
+        "today": { "vendors": 8, "spend": "$8.03M", "topVendors": ["Salesforce EA $7.32M (89%)", "SVB-Freshworks $0.41M", "SuperOffice $0.16M", "5 minor CRMs $0.14M"] },
+        "target": "Extend the existing $7.32M Salesforce EA and retire 7 minor CRMs across 4 BUs.",
+        "saving": "$0.3M–$0.4M / yr (RIGHT-SIZE lever)"
       },
       {
         "id": "vr-service-desk",
-        "title": "Service desk & MSP rationalisation",
-        "today": { "vendors": 306, "spend": "$15.7M", "topVendors": ["Insight Data $1.96M", "Ricoh Australia $1.35M", "Tsunami Tsolutions $0.73M", "301 more $8.06M"] },
-        "target": "One group service desk + common ITSM. Consolidate IT-services vendor base behind it.",
-        "saving": "$3.1M–$4.7M (20–30% of run cost)"
+        "title": "Vendor services consolidation",
+        "today": { "vendors": 314, "spend": "$27.56M", "topVendors": ["Insight Data $2.26M", "Inetum $1.93M", "Ricoh Australia $1.36M", "Business Integration $1.61M", "301 more $20.4M"] },
+        "target": "Four champion/challenger panels — IT services, managed services, SI, app dev — with group rate cards.",
+        "saving": "$2.1M–$3.5M (12–20% on 80% reachable)"
       },
       {
         "id": "vr-frameworks",
-        "title": "Group vendor frameworks",
-        "today": { "categories": ["Software $34.8M (575 vendors)", "IT services $15.7M (429)", "Telecom $3.6M (144)", "Cloud $1.6M (59)", "Hardware $0.4M (26)"] },
-        "target": "Group framework agreements per category capturing 20–35% volume discounts.",
-        "saving": "$4.0M–$10.0M (nets down to avoid double-count with CRM/ERP)"
+        "title": "Licensing rationalization — three levers",
+        "today": { "categories": ["RIGHT-SIZE $9.6M (CRM, procurement, tax)", "STANDARDIZE $5.9M (HRIS, CLM, PLM)", "RATIONALIZE $14.1M (ERP, analytics, FSM)"] },
+        "target": "One platform per capability. Recover ghost seats. Extend central-EA chargeback to all BUs.",
+        "saving": "$3.0M–$6.0M licensing track (gross build-up by lever)"
       }
     ],
     "relatedLinks": [
@@ -360,38 +371,38 @@
   "roadmap": {
     "partLabel": "06 · Recommended implementation map",
     "title": "Sequence the moves behind a governance mandate",
-    "lead": "Frameworks first (fast, low-risk, self-funding), then the migrations they enable. Each wave depends on the governance mandate set in Wave 1.",
+    "lead": "License quick wins first (self-funding), then vendor consolidation, then standardize & sustain. Each wave depends on the governance mandate set in Wave 1.",
     "waves": [
       {
         "wave": "Wave 1",
-        "horizon": "0–6 months · Foundation",
-        "actions": "Extend the Group CIO mandate. Negotiate group vendor frameworks (software, telecom, cloud, hardware).",
-        "netYear": "$2.55M net Year 1",
-        "investment": "$350k"
+        "horizon": "0–6 months · License quick wins",
+        "actions": "Commission SAM baseline (Zylo or Flexera). Ghost-seat recovery — Microsoft, Salesforce, SAP EAs. Tier right-sizing across top-10 software vendors. Build contract renewal calendar (all 1,674 vendors). Baseline services spend — confirm champion incumbents. Name category owner per service capability.",
+        "netYear": "$1.0–1.9M",
+        "investment": "Self-funding"
       },
       {
         "wave": "Wave 2",
-        "horizon": "6–18 months · Consolidation",
-        "actions": "Stand up a single group service desk on a common ITSM platform; migrate BUs onto the existing Salesforce EA; renegotiate ERP support agreements.",
-        "netYear": "$3.4M net Year 2",
-        "investment": "$1.2M"
+        "horizon": "6–18 months · Vendor consolidation",
+        "actions": "Formalize 4 champion/challenger panels — group rate cards. Renegotiate top 5 MSP contracts (Insight, Ricoh, Inetum, CGI). Standardize CRM, HRIS, analytics onto group platforms. Launch IT chargeback model for central EAs. Retire parallel tool contracts per standardization map. IT vendor management framework governance live.",
+        "netYear": "$2.1–3.5M run-rate",
+        "investment": "Funded by Wave 1 savings"
       },
       {
         "wave": "Wave 3",
-        "horizon": "18–36 months · Transformation",
-        "actions": "Consolidate the ERP tail onto the IFS group template; complete service-desk and cloud consolidation; reduce vendor tail to ~200–300 strategic partners.",
-        "netYear": "$8.3M net Year 3",
-        "investment": "$1.5M"
+        "horizon": "18–36 months · Standardize & sustain",
+        "actions": "ERP rationalization — dependent on H3 IFS template. Retire remaining tail tools (458 below top-10 licensing vendors). Renewal calendar gatekeeping fully operational. SAM governance in steady state — no off-framework buying. Quarterly panel re-tender cadence established.",
+        "netYear": "$1.4–2.8M",
+        "investment": "Funded from Wave 1+2 reserve"
       }
     ],
     "funding": {
-      "title": "The programme pays for itself",
-      "mechanism": "Wave 1 savings realised in months 1–6 fund Wave 2. 15% of each month's realised saving is ring-fenced into a Vendor Consolidation Reserve. Culligan writes no upfront cheque.",
+      "title": "Net economics — cost to achieve",
+      "mechanism": "Gross $6.5–8.5M run-rate at Year 3. Total cost to achieve $2.0–4.0M one-off over 3 years (SAM tooling, VMO stand-up, panel migration, advisory, internal team). Net annual run-rate saving $3.1–4.5M. Payback 12–18 months. Wave 1 license recovery is self-funding in Year 1.",
       "totals": {
-        "investment": "$3.05M",
-        "netSaving": "$18–40M",
-        "roi": "6–13×",
-        "payback": "14–18 months"
+        "grossSaving": "$6.5–8.5M",
+        "costToAchieve": "$2.0–4.0M",
+        "netSaving": "$3.1–4.5M",
+        "payback": "12–18 mo"
       }
     },
     "relatedLinks": [
@@ -401,22 +412,21 @@
   },
   "financialModel": {
     "partLabel": "Financial model",
-    "title": "3-year savings profile — net of transition cost",
+    "title": "H5 savings profile — vendor track $2.1–3.5M · licensing track $3.0–6.0M",
     "rows": [
-      { "lever": "Group vendor frameworks", "wave": "W1", "confidence": "HIGH", "y1": "$2.5M", "y2": "$4.0M", "y3": "$4–10M", "transition": "$(0.2M)", "net3yr": "$11–26M" },
-      { "lever": "Telecom & connectivity", "wave": "W1", "confidence": "HIGH", "y1": "$0.4M", "y2": "$0.6M", "y3": "$0.5–0.9M", "transition": "$(0.15M)", "net3yr": "$1.3–2M" },
-      { "lever": "Service desk / MSP", "wave": "W2", "confidence": "MED-HIGH", "y1": "—", "y2": "$2.0M", "y3": "$3.1–4.7M", "transition": "$(0.6M)", "net3yr": "$5.2–7.9M" },
-      { "lever": "ERP vendor agreements", "wave": "W2", "confidence": "MEDIUM", "y1": "—", "y2": "$0.8M", "y3": "$1.5–2.7M", "transition": "$(0.3M)", "net3yr": "$2–4.2M" },
-      { "lever": "CRM vendor agreements", "wave": "W2", "confidence": "MEDIUM", "y1": "—", "y2": "$0.1M", "y3": "$0.1–0.2M", "transition": "$(0.15M)", "net3yr": "$0.1–0.3M" },
-      { "lever": "Vendor tail reduction", "wave": "W3", "confidence": "MEDIUM", "y1": "—", "y2": "—", "y3": "Overhead", "transition": "$(0.2M)", "net3yr": "Overhead" }
+      { "lever": "EA right-size (Wave 1)", "wave": "W1", "confidence": "HIGH", "y1": "$1.0–1.9M", "y2": "—", "y3": "—", "transition": "Self-funding", "net3yr": "$1.0–1.9M" },
+      { "lever": "Champion/challenger panels", "wave": "W2", "confidence": "MED", "y1": "—", "y2": "$2.1–3.5M", "y3": "$2.1–3.5M", "transition": "[DATA NEEDED]", "net3yr": "[DATA NEEDED]" },
+      { "lever": "MSP renegotiation", "wave": "W2", "confidence": "MED", "y1": "—", "y2": "$0.6–0.9M", "y3": "$0.6–0.9M", "transition": "[DATA NEEDED]", "net3yr": "[DATA NEEDED]" },
+      { "lever": "Platform standardize", "wave": "W2", "confidence": "MEDIUM", "y1": "—", "y2": "$0.9–1.5M", "y3": "$0.9–1.5M", "transition": "[DATA NEEDED]", "net3yr": "[DATA NEEDED]" },
+      { "lever": "ERP rationalize (H3-dependent)", "wave": "W3", "confidence": "LOW", "y1": "—", "y2": "—", "y3": "$1.0–1.9M", "transition": "[DATA NEEDED]", "net3yr": "[DATA NEEDED]" }
     ],
-    "total": { "y1": "~$2.9M", "y2": "~$7.5M", "y3": "$22–44M", "transition": "$(3.05M)", "net3yr": "$18–40M" },
-    "footnote": "Base case payback: 14–18 months. Year 1 net saving: $6–12M. No upfront capital required beyond Wave 1 ($350k)."
+    "total": { "y1": "$1.0–1.9M", "y2": "$2.1–3.5M run-rate", "y3": "$6.5–8.5M", "transition": "[DATA NEEDED]", "net3yr": "$6.5–8.5M" },
+    "footnote": "Blended ≈15% on reachable spend ($47.5M reachable base per deck reconciliation). Wave savings sum ($4.5–8.2M) is gross build-up by lever; $6.5–8.5M headline applies blended rate. Cost to achieve phased across three waves — ranges are planning-grade pending SAM baseline."
   },
   "bottomLine": {
-    "title": "Culligan is paying for fragmentation",
-    "stats": ["1,481 vendors", "19 BUs buying independently", "No group leverage"],
-    "saving": "$22–44M annual run-rate at Year 3",
-    "nextStep": "Validate these ranges against the PwC TBM spend baseline, reconcile the group-framework overlap, then mobilise Wave 1."
+    "title": "Culligan is paying a fragmentation premium on vendor and licensing spend",
+    "stats": ["1,674 vendors", "40 entities buying independently", "$14.0M central EAs underutilized"],
+    "saving": "$6.5–8.5M annual run-rate at Year 3",
+    "nextStep": "The single highest-leverage action: extend the Group CIO mandate and stand up the IT vendor management framework. H3 application rationalisation is reported separately and netted at programme level."
   }
 }

@@ -1,4 +1,7 @@
+import HypothesisExecutiveSection from "../hypothesis/HypothesisExecutiveSection";
+import HypothesisRoadmapSection from "../hypothesis/HypothesisRoadmapSection";
 import {
+  opModelCover,
   opModelExecutiveSummary,
   opModelCurrentState,
   opModelComparison,
@@ -27,23 +30,14 @@ import ItLeadershipVisual from "./ItLeadershipVisual";
 export { KeyObservationsTable };
 
 export function ExecutiveSummarySection() {
-  const { title, sectionTitle, rows } = opModelExecutiveSummary;
-
   return (
-    <SectionWrapper id="taxonomy-executive" className="bg-white py-12 sm:py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionTitle>{title}</SectionTitle>
-        <SubTitle className="mt-6">{sectionTitle}</SubTitle>
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
-          {rows.map((row) => (
-            <Panel key={row.dimension} className="border-t-4 border-t-culligan-accent">
-              <p className="text-xs font-bold uppercase tracking-wide text-culligan-accent mb-2">{row.dimension}</p>
-              <LeadText>{row.finding}</LeadText>
-            </Panel>
-          ))}
-        </div>
-      </div>
-    </SectionWrapper>
+    <HypothesisExecutiveSection
+      id="taxonomy-executive"
+      data={{
+        ...opModelExecutiveSummary,
+        kpis: opModelCover.kpis,
+      }}
+    />
   );
 }
 
@@ -269,41 +263,25 @@ export function SavingsSection() {
 
 export function RoadmapSection() {
   const d = opModelRoadmap;
-
   return (
-    <SectionWrapper id="taxonomy-roadmap" className="bg-culligan-deep py-12 sm:py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <PartLabel>{d.partLabel}</PartLabel>
-        <h2 className="font-headline text-2xl sm:text-3xl font-extrabold text-white tracking-tight">{d.title}</h2>
-        <p className="mt-4 text-sm sm:text-base text-culligan-light leading-relaxed max-w-4xl">{d.lead}</p>
-
-        <div className="mt-8 grid gap-4 lg:grid-cols-3">
-          {d.waves.map((wave, i) => (
-            <div key={wave.wave} className="rounded-2xl bg-white/10 ring-1 ring-white/15 p-5 sm:p-6">
-              <p className="text-xs font-bold uppercase tracking-wide text-culligan-accent">{wave.wave}</p>
-              <p className="mt-1 text-sm font-bold text-white">{wave.horizon}</p>
-              <p className="mt-4 text-sm text-culligan-light leading-relaxed">{wave.actions}</p>
-              <p className="mt-4 text-sm font-semibold text-culligan-accent border-t border-white/10 pt-3">{wave.saving}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-10">
-          <h3 className="font-headline text-lg font-bold text-white">{d.governanceTitle}</h3>
-          <p className="mt-3 text-sm text-culligan-light leading-relaxed">{d.governanceLead}</p>
-          <div className="mt-6 rounded-xl overflow-hidden ring-1 ring-white/10 bg-white">
-            <DataTable
-              columns={[
-                { key: "investment", label: "Investment" },
-                { key: "does", label: "What it does" },
-                { key: "without", label: "Without it" },
-              ]}
-              rows={d.governance}
-              compact
-            />
-          </div>
-        </div>
-      </div>
-    </SectionWrapper>
+    <HypothesisRoadmapSection
+      id="taxonomy-roadmap"
+      data={{
+        partLabel: d.partLabel,
+        title: d.title,
+        lead: d.lead,
+        waves: d.waves,
+        governance: {
+          title: d.governanceTitle,
+          lead: d.governanceLead,
+          columns: [
+            { key: "investment", label: "Investment" },
+            { key: "does", label: "What it does" },
+            { key: "without", label: "Without it" },
+          ],
+          rows: d.governance,
+        },
+      }}
+    />
   );
 }

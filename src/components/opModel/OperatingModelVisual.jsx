@@ -204,7 +204,7 @@ function SavingsSection() {
     <section className="rounded-3xl bg-emerald-950 px-6 py-8 sm:px-10 sm:py-10 text-white">
       <h3 className="font-headline text-xl sm:text-2xl font-extrabold">Year 3 savings levers</h3>
       <p className="mt-2 text-sm sm:text-base text-emerald-100 leading-relaxed max-w-3xl">
-        Structural consolidation unlocks $22–44M annual run-rate saving — mapped to the five PwC hypotheses.
+        Structural consolidation unlocks ~$2.4M H4 direct saving at Year 3 — and enables H2, H3 and H5 at group scale.
       </p>
       <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {savingsLevers.map((lever) => (

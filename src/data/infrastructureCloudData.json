@@ -1,0 +1,171 @@
+{
+  "sourceDocument": "Culligan_H2_Infrastructure_Cloud_v11.pptx · June 2026",
+  "cover": {
+    "eyebrow": "Culligan International · Confidential · PwC Engagement",
+    "title": "Infrastructure & Cloud Optimization",
+    "subtitle": "Five plays — FinOps, acquisition cleanup, MSP restructure, network rationalisation, storage hardening",
+    "meta": "Hypothesis H2 · June 2026 · PwC Confidential · Subject to CIO validation",
+    "hook": "Five plays, not three. No data centers — but Culligan's acquisition-heavy model has left a long tail of duplicated infrastructure, fragmented identity, unmanaged circuits, and a $2.04M cloud run-rate (TBM Cloud Services pool) with negligible FinOps discipline. The prize is $1.7–3.5M — and it demands acquisition cleanup, commercially-structured MSP contracts, and hard FinOps discipline.",
+    "kpis": [
+      { "value": "$87.2M", "label": "Total visible IT spend (Spend Cube)" },
+      { "value": "$13.0M", "label": "Infrastructure towers (15% of IT)" },
+      { "value": "$2.04M", "label": "Cloud Services cost pool (TBM)" },
+      { "value": "$1.7–3.5M", "label": "Net annual savings (Yr 3)" }
+    ],
+    "source": "Source: TBM Spend Baseline (7.10) · Cloud Billing Q1 2026 · Gartner IT Metrics 2024 · CrowdStrike 2024 Threat Report"
+  },
+  "executiveSummary": {
+    "partLabel": "01 · Executive summary",
+    "title": "Executive summary",
+    "sectionTitle": "The problem is structural, the opportunity is real, and the clock is running",
+    "rows": [
+      {
+        "dimension": "What the problem is",
+        "finding": "19 BUs procure infrastructure independently — no group-level leverage or visibility. Group MSP estate carries zero contractual leverage; auto-escalation 3–7% p.a. Cloud Services run-rate $2.04M (TBM pool) with ~0% Reserved Instance coverage and negligible tagging. Ultrapure/WaterFlex (11 sites) migrating to NetSuite on Azure independently — shadow CapEx. 137 AMER FortiGates on firmware associated with critical CVEs — live ransomware exposure."
+      },
+      {
+        "dimension": "Why it is a problem",
+        "finding": "Acquisition-driven growth compounds fragmentation with every deal — each adds identity forests, MSP contracts, backup tools and Azure subscriptions never rationalised on close. 83% of IT spend locked in auto-renewing contracts — inaction guarantees 3–7% annual cost increase. Culligan's $3.4B revenue scale gives material vendor leverage it is currently not using at any level."
+      },
+      {
+        "dimension": "Impact on overall IT spend",
+        "finding": "Infrastructure towers (Compute+Storage+Network) = 15% of total IT spend ($13.0M of $87.2M per TBM baseline); Network is the largest single tower at $10.05M. Infrastructure & Cloud is the category with the most fragmentation-driven cost growth and least group oversight. Each year without intervention: 3–7% auto-escalation on renewing contracts + cloud sprawl (+9%/qtr unmanaged)."
+      },
+      {
+        "dimension": "The opportunity",
+        "finding": "$1.7–3.5M net annual savings (H2 total, Year 3). Year 1 quick wins (FinOps alone): $0.4–0.8M. Five sequenced plays over 0–36 months. Gross savings $2.0–4.4M before investment. Plays 3–4 (MSP, circuits) are H4-mandate gated; H4 owns the full cross-BU MSP commercial renegotiation ($3.1–4.0M)."
+      },
+      {
+        "dimension": "Recommendations",
+        "finding": "01. Formalize FinOps immediately — rightsize, enforce tagging, commit stable prod to Reserved Instances (Play 1, 0–12m). 02. Treat acquisition infrastructure debt as the primary structural lever: consolidate identity forests, rationalize backup, decommission inherited subscriptions (Play 2, 6–18m). 03. Restructure the MSP commercially — committed 5–10%/yr price reduction, gain-share, and automation milestone triggers (Play 3, 6–24m). 04. Remediate 137 critically-vulnerable FortiGates on a security timeline (Play 4 prerequisite). 05. Commission circuit & carrier inventory across all sites before claiming a savings ceiling (Play 4, 12–36m)."
+      },
+      {
+        "dimension": "Delivery roadmap",
+        "finding": "NOW (0–12m): $0.4–0.8M — FinOps, tagging, RI commitments, acquisition inventory, FortiGate remediation, MSP RFP. NEXT (6–24m): $0.8–1.9M — identity consolidation, backup rationalisation, MSP contract, Tier-0 automation. LATER (12–36m): $0.3–0.8M — circuit inventory & RFP, storage tiering, DR consolidation, platform hire."
+      }
+    ]
+  },
+  "benchmarks": {
+    "partLabel": "Part II · Benchmarking",
+    "title": "Benchmarking — spend vs. peers and operating maturity",
+    "healthWarning": "In acquisition-heavy companies, spending below peers can signal underinvestment, deferred tech debt, or a cost base that hasn't yet absorbed the acquired entities' run-rate. Directional context only — not evidence of efficiency.",
+    "spendMetrics": [
+      { "metric": "Infrastructure towers % of IT", "culligan": "15% ($13.0M)", "peer": "[DATA NEEDED]", "implication": "Compute+Storage+Network per TBM baseline on $87.2M visible spend." },
+      { "metric": "Cloud Services run-rate (TBM)", "culligan": "$2.04M", "peer": "[DATA NEEDED]", "implication": "Q1 Azure billing extract shows larger gross estate (~$3.6–4.0M); lenses differ intentionally." },
+      { "metric": "RI / Savings Plan coverage", "culligan": "~0%", "peer": ">50% stable workloads (Gartner FinOps)", "implication": "$0.9–1.4M p.a. opportunity if confirmed zero RI on stable prod." },
+      { "metric": "Azure spend tagged to BU", "culligan": "~70%", "peer": ">95% (Info-Tech)", "implication": "~30% (~$0.6M/yr of TBM pool) unmapped — FinOps prerequisite." },
+      { "metric": "Non-prod on off-hours schedule", "culligan": "<5%", "peer": ">80% (IDC)", "implication": "21% of cloud spend is non-prod (~$0.77M/yr annualised from Q1 2026)." },
+      { "metric": "Virtual Agent deflection", "culligan": "1.1%", "peer": "15–20% (Gartner ITSM)", "implication": "786 of 70K incidents; MSP Play 3 lever." },
+      { "metric": "Onboarding (JML) lead time", "culligan": "5–9 days", "peer": "<1 day (MetricNet)", "implication": "31,000+ JML requests; sequential multi-team manual process." },
+      { "metric": "MSP automation rate", "culligan": "33% target", "peer": "50–75% (NPI)", "implication": "Without gain-share in contract, MSP captures automation benefit." },
+      { "metric": "FortiGate fleet patched", "culligan": "70%", "peer": "100%", "implication": "137 devices on critical CVE firmware — CrowdStrike #1 ransomware vector in industrial sector." }
+    ],
+    "impactRisks": [
+      {
+        "title": "Security exposure",
+        "finding": "137 FortiGates (30% of AMER fleet) on firmware associated with critical CVEs. Spend on network hardware is below peer range — signs of deferred refresh, not lean design.",
+        "action": "Remediate the 137 devices on a security timeline. Cost: ~$480K one-time (137 × $3,500 licensing). Non-negotiable."
+      },
+      {
+        "title": "Governance gap",
+        "finding": "~$1.1M/yr of cloud spend sits in unmapped subscriptions with no BU owner. Virtual Agent deflection 1.1% vs. 15–20% industry target. RI coverage ~0% on stable production.",
+        "action": "FinOps is not optional. Enforce tagging, commit stable workloads to RIs, schedule off-hours shutdown for non-production. Self-funding within 12 months."
+      },
+      {
+        "title": "Hidden cost base",
+        "finding": "Rubrik, Nasuni, and Azure-native backup run in parallel. Multiple AD forests live. ~30% of Azure subscriptions unmapped, many inherited from acquisitions.",
+        "action": "Commission an acquisition infrastructure inventory before the next annual budget cycle. Without it, the savings case remains directional."
+      }
+    ],
+    "sources": "Gartner IT Metrics 2024 · Info-Tech Research Group 2025 · IDC Cloud Maturity Survey 2024 · MetricNet ITSM Benchmarks 2024 · NPI Financial 2024 · CrowdStrike 2024 Threat Report · Revenue ~$3.4B"
+  },
+  "plays": {
+    "partLabel": "Part III · The five plays",
+    "title": "The five plays",
+    "lead": "Expanded from three to capture acquisition cleanup and a commercially-structured MSP. Savings ranges designed to be non-overlapping — backup rationalisation in Play 2 only; Azure cleanup split Play 1 (organic) / Play 2 (acquired).",
+    "items": [
+      { "play": 1, "name": "Optimize — Azure FinOps", "gross": "$0.5–1.0M", "net": "$0.4–0.8M", "horizon": "0–12m", "confidence": "HIGH", "focus": "Rightsizing · RIs · Off-hours scheduling · Tagging enforcement · Automated parking · Orphaned VM reclaim · Inherited subscription cleanup" },
+      { "play": 2, "name": "Cleanup — Acquisition Infrastructure", "gross": "$0.6–1.2M", "net": "$0.5–1.0M", "horizon": "6–18m", "confidence": "MEDIUM — inventory req'd", "focus": "Identity consolidation (AD/Entra ID) · Backup rationalisation (Rubrik + Nasuni + Azure-native) · Inherited Azure subscriptions · Duplicate NOC/monitoring · DR deduplication" },
+      { "play": 3, "name": "Automate — MSP + Service Model", "gross": "$0.4–1.1M", "net": "$0.3–0.9M", "horizon": "6–24m", "confidence": "CONDITIONAL — H4 mandate + contract", "focus": "Committed 5–10%/yr price reduction · Gain-share · Unit-rate compression · Tier-0 self-heal · JML automation. Infra MSP sub-component only — H4 owns full MSP renegotiation ($3.1–4.0M)." },
+      { "play": 4, "name": "See-then-cut — Network · Circuits · Firewall", "gross": "$0.3–0.7M", "net": "$0.2–0.5M", "horizon": "12–36m", "confidence": "MEDIUM — inventory req'd", "focus": "Circuit inventory build (all carriers, all sites) · Carrier consolidation · FortiGate firmware remediation · Firewall ops into MSP. No circuit visibility — savings ceiling cannot be stated until inventory is built." },
+      { "play": 5, "name": "Harden — Storage · Backup · Platform", "gross": "$0.2–0.4M", "net": "$0.1–0.3M", "horizon": "12–36m", "confidence": "MEDIUM", "focus": "Storage tiering (Cool/Archive) · Redundant DR copy removal · Retention policy · Distributed-cloud platform owner (Head of Platform hire). Sequence behind Play 2 backup rationalisation." }
+    ],
+    "total": { "gross": "$2.0–4.4M", "net": "$1.7–3.5M", "horizon": "0–36m" }
+  },
+  "maIntegrationPipeline": {
+    "partLabel": "Part III · M&A integration pipeline",
+    "title": "Active integration backlog — Americas (July 2026)",
+    "lead": "The M&A integration opportunity is not a large legacy backlog. The active pipeline covers 19 users and 2 sites (plus 1 upcoming deal). Culligan has standardised locations on CommandLink at $230/month — not the $850/month DIA assumed in prior models. Identity is consolidated. The savings lever is integration process efficiency and the Ultrapure anomaly.",
+    "rows": [
+      { "entity": "Quench (×2 deals)", "close": "Prior", "users": "None", "sites": "None", "items": "Phone number + email domain transfer only", "cost": "<$5K one-time", "status": "MINIMAL" },
+      { "entity": "3/1 deal (1 location)", "close": "Mar 2026", "users": "TBC", "sites": "1", "items": "1 site still on legacy ISP; migrate to CommandLink on expiry", "cost": "$2,760/yr", "status": "IN PROGRESS" },
+      { "entity": "7/1 deal (10 users)", "close": "Jul 2026", "users": "10", "sites": "1", "items": "FortiGate 60F, M365 migration, backup, security stack", "cost": "$2,600 capex + $10,880/yr", "status": "NOT STARTED" },
+      { "entity": "8/1 deal (upcoming)", "close": "Aug 2026", "users": "9", "sites": "1", "items": "Pre-close — scope TBC; assume similar to 7/1 profile", "cost": "~$2,600 + ~$10K/yr", "status": "PRE-CLOSE" },
+      { "entity": "Ultrapure (11 WaterFlex sites)", "close": "Prior", "users": "TBC", "sites": "11", "items": "Legacy WaterFlex ERP on Azure VMs — heading to NetSuite, NOT IFS; running independently from Culligan IT", "cost": "Azure VM hosting TBC", "status": "ANOMALY" }
+    ],
+    "implications": [
+      "Circuit rationalisation is largely done — active pipeline locations confirmed on CommandLink at $230/mo. Scott Sier to confirm whether legacy acquired sites remain on higher-cost DIA circuits.",
+      "Ultrapure/WaterFlex needs a decision — 11 sites on Azure-hosted WaterFlex heading to NetSuite. Recommended: bring under Group IT governance or formally assign BU cost accountability to GM.",
+      "The opportunity is per-deal efficiency — rapid, standardised integration onto FortiGate, CommandLink, M365, and the security stack within a defined SLA."
+    ],
+    "source": "Mike Baerson (IT M&A Lead, Americas), July 2026. Pipeline covers Americas only."
+  },
+  "regionalSpend": {
+    "partLabel": "Part IV · Regional spend",
+    "title": "Infrastructure tower spend by region (TBM)",
+    "lead": "Compute + Storage + Network towers from TBM Spend Baseline (7.10), joined to BU→region mapping. TBM net of credits (gross $98.1M).",
+    "regions": [
+      { "region": "Americas", "spend": "$5.2M", "share": "40%", "note": "Quench Direct $1.72M · Corporate $1.24M · Flagship $1.18M · Culligan Water Canada $0.45M" },
+      { "region": "EMEA", "spend": "$6.0M", "share": "46%", "note": "UK CDW $1.33M · France $1.21M · Culligan Italiana $0.56M · ZIP UK $0.47M" },
+      { "region": "APAC / Other", "spend": "$1.8M", "share": "14%", "note": "ZIP ANZ $0.92M · WaterCo $0.86M · Think Water $0.04M" }
+    ]
+  },
+  "roadmap": {
+    "partLabel": "Part V · Roadmap",
+    "title": "Sequenced roadmap",
+    "lead": "Start FinOps now; add acquisition cleanup and the MSP; gate circuits on inventory. Critical dependency: dedicated programme resource required to execute Plays 1–3 in parallel.",
+    "waves": [
+      {
+        "wave": "NOW",
+        "horizon": "0–12 months · $0.4–0.8M net",
+        "saving": "$0.4–0.8M net",
+        "actions": [
+          "Stand up FinOps: rightsize, schedule off-hours, reclaim orphaned VM disks — Play 1",
+          "Enforce tagging standard — every subscription mapped to a BU — Play 1",
+          "Commit stable prod base to Reserved Instances / Savings Plans — Play 1",
+          "Commission acquisition infrastructure inventory — Play 2",
+          "Remediate 137 critically-vulnerable FortiGates with SecOps — Play 4",
+          "Structure MSP RFP with committed price-reduction clauses (5–10%/yr), gain-share, automation triggers — Play 3"
+        ]
+      },
+      {
+        "wave": "NEXT",
+        "horizon": "6–24 months · adds to $1.7–3.5M net",
+        "saving": "Adds to $1.7–3.5M net",
+        "actions": [
+          "Consolidate identity: merge AD forests → single Entra ID — Play 2",
+          "Rationalise backup: consolidate Rubrik + Nasuni + Azure-native — Plays 2 & 5",
+          "Decommission inherited Azure subscriptions and DR environments — Play 2",
+          "Award MSP contract; deploy Tier-0 self-heal and JML automation — Play 3",
+          "Build circuit inventory (all carriers, all sites); commission carrier consolidation RFP — Play 4"
+        ]
+      },
+      {
+        "wave": "LATER",
+        "horizon": "12–36 months · $0.3–0.8M additional",
+        "saving": "$0.3–0.8M additional",
+        "actions": [
+          "Network/circuit rationalisation post-inventory",
+          "Storage tiering and DR consolidation",
+          "Distributed-cloud platform owner (Head of Platform hire)"
+        ]
+      }
+    ]
+  },
+  "bottomLine": {
+    "title": "Five plays, not three — and the root cause is now the lead play",
+    "stats": ["Optimize: FinOps self-funding, starts now", "Cleanup: acquisition debt is the root cause", "Automate: MSP only saves if contract is structured commercially", "Inventory then cut: build circuit inventory before claiming ceiling"],
+    "saving": "$1.7–3.5M net annually — by treating acquisition debt as the root cause, not a footnote",
+    "nextStep": "Spending less than peers may reflect technical debt and underinvestment, not efficiency. Fix the FortiGate vulnerability now regardless of the broader roadmap."
+  }
+}

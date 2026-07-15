@@ -1,58 +1,55 @@
 {
-  "sourceDocument": "Culligan_IT_OpModel_Combined (1).docx \u00b7 June 2026",
+  "sourceDocument": "UPDATED H4 IT support and operating model efficiency.pptx · June 2026",
   "cover": {
-    "eyebrow": "Culligan International \u00b7 Confidential \u00b7 PwC Engagement",
+    "eyebrow": "Culligan International · Confidential · PwC Engagement",
     "title": "IT Operating Model",
     "subtitle": "Capability Model, Current State Analysis & IT Cost Savings Case",
-    "meta": "Hypotheses H1\u2013H5 \u00b7 June 2026 \u00b7 PwC Confidential",
-    "hook": "Culligan's IT operating model is not a model. It is 24 separate IT operations running in parallel, each replicating the same capabilities independently. The cost of that duplication is measurable. The path to reducing it is clear.",
+    "meta": "Hypothesis H4 · June 2026 · PwC Confidential · Subject to CIO validation",
+    "hook": "Culligan's IT operating model is not a model — it is 19 separate IT operations running in parallel. H4 delivers ~$2.4M directly at Year 3 and is the governance enabler that unlocks ~$12–18M more across H2, H3 and H5.",
     "kpis": [
       {
-        "value": "$69M",
-        "label": "IT & Digital Spend"
+        "value": "$87.2M",
+        "label": "IT invoice spend (visible)"
       },
       {
-        "value": "~$170M",
-        "label": "Est. total IT cost incl. people"
+        "value": "$22.9M",
+        "label": "IT labor (est. · 281 FTEs)"
       },
       {
-        "value": "19 / 19",
-        "label": "BUs buying IT independently"
+        "value": "19",
+        "label": "Trading BUs buying IT independently"
       },
       {
-        "value": "$20\u201344M",
-        "label": "Annual savings opportunity"
+        "value": "~$2.4M",
+        "label": "H4 saving (Yr 3, built bottom-up)"
       }
     ],
-    "source": "Source: Culligan Spend Cube June 2026 \u00b7 March 2026 P&L. People costs excluded from spend cube."
+    "source": "Source: Culligan Spend Cube June 2026 · TBM baseline pending. Vendor invoices only; headcount excluded from visible spend."
   },
   "executiveSummary": {
+    "partLabel": "01 · Executive summary",
     "title": "Executive Summary",
     "sectionTitle": "The situation at a glance",
     "rows": [
       {
         "dimension": "What the problem is",
-        "finding": "Culligan's IT estate is the unmanaged residue of 20+ acquisitions. Every business unit runs its own IT operation independently — its own ERP, CRM, service desk, managed service contracts, and IT staff — with no group mandate to standardise, consolidate, or govern. Culligan operates one business model across three regions, but runs its IT 24 separate ways."
+        "finding": "Culligan's IT estate is the unmanaged residue of 20+ acquisitions. Every business unit runs its own IT operation independently — ERP, CRM, service desk, managed-service contracts, and IT staff — with no group mandate to standardise, consolidate, or govern. One business model across three regions, run 19 separate ways."
       },
       {
         "dimension": "Why it is a problem",
-        "finding": "19 of 19 operating BUs buy software independently ($34.8M) · 19 separate MSP/IT service contracts ($15.7M) · 10 different ERP instances across the group · 19 separate CRM instances, despite a $7.2M group Salesforce EA sitting unused · 15 separate cloud tenancies with no group FinOps · 15+ separate service desks costing an estimated $45–80 per ticket vs. $12–20 at best-in-class · Group CIO in place but mandate limited to Corporate enterprise agreements — no authority over BU technology decisions · Estimated $80–130M in IT headcount cost entirely invisible in the spend cube · EMEA pays $5M more in IT Spend than Americas at equivalent revenue scale, directly attributable to running six national IT operations independently."
+        "finding": "19 trading BUs buy software independently ($38.3M) · 19 MSP contracts ($16.6M) · 10 ERP instances · 19 CRM instances despite a $7.2M group Salesforce EA unused · 15+ service desks at $45–80/ticket vs. $12–20 best-in-class · Group CIO mandate limited to Corporate EA · EMEA over-indexes on third-party services (~42% of services on ~34% of IT)."
       },
       {
         "dimension": "Impact on the Culligan operating model",
-        "finding": "IT fragmentation directly undermines the Culligan operating model in four ways: (1) Scale benefits are destroyed — a $3.8B enterprise negotiates 19 separate software contracts instead of one, paying small-company rates across every BU. (2) Operational visibility is broken — no group IT performance data, no consolidated SLA reporting, no single view of the technology estate. (3) Integration is structurally blocked — 10 ERP instances and 19 CRM instances make group-level data consolidation, cross-BU reporting, and post-acquisition integration progressively harder and more expensive. (4) Risk compounds silently — security patching, access management, and change control are managed independently per BU with no group oversight, creating a patchwork risk posture that no single person can see."
+        "finding": "(1) Scale benefits destroyed — a $3.4B enterprise negotiates 19 contracts at small-company rates. (2) Visibility broken — no consolidated SLA reporting or single view of the estate. (3) Integration blocked — 10 ERP and 19 CRM instances make group reporting progressively harder. (4) Risk compounds silently — patching managed per-BU with no group oversight."
       },
       {
         "dimension": "The opportunity",
-        "finding": "$22–44M in annual run-rate savings at Year 3, comprising $12–22M from H4 IT operating model changes (service delivery consolidation, headcount rationalisation, MSP renegotiation, demand governance) and $12–23M from H2 Infrastructure, H3 application rationalisation, and H5 vendor agreements — all of which are unlocked by H4 governance. Conservative estimates using lower-bound Gartner, Forrester, IDC, and Info-Tech benchmarks."
+        "finding": "H4 delivers ~$2.4M directly (gross; $1.0–1.6M net of run cost). This is H4's own operating-model saving; it also enables ~$12–18M more across H2/H3/H5 — counted in their own hypotheses, not here. Investment ~$2.5–3.5M one-off (ServiceNow ITSM), pending vendor quotes. Targeted outsourcing ($5–8M p.a.) is a separate option, not part of the H4 figure. Benchmarked: Gartner, Forrester, ISG, Everest Group."
       },
       {
         "dimension": "Recommendations",
-        "finding": "Extend Group CIO mandate to cover all BU-level IT decisions. Establish an IT architecture board with cross-BU authority. Introduce an IT chargeback model to create a financial incentive for BU compliance. Commission the PwC TBM baseline to make the $80–130M headcount cost visible. Without these steps, no consolidation programme — application, infrastructure, or vendor — can be executed at group level."
-      },
-      {
-        "dimension": "Roadmap",
-        "finding": "Wave 1 (0–6 months): Extend Group CIO mandate, establish IT architecture board, complete SaaS and telecom vendor audit — $4–10M quick wins. Wave 2 (6–18 months): Deploy group ITSM (ServiceNow), migrate first BU service desks, launch Salesforce consolidation — $6–14M. Wave 3 (18–36 months): Full service desk consolidation, IFS ERP roll-out, cloud FinOps, IT chargeback — $12–20M additional."
+        "finding": "Extend Group CIO mandate to cover all BU-level IT decisions. Establish an IT architecture board with cross-BU authority. Introduce an IT chargeback model to drive BU compliance. Commission the PwC TBM baseline to make the $22.9M headcount cost visible. Without these, no consolidation programme is executable at group level."
       }
     ]
   },
@@ -122,7 +119,7 @@
       {
         "domain": "Technology & innovation",
         "covers": "ERP, CRM, FSM, remote monitoring, BI, IT service & support management.",
-        "itEnabler": "$62M IT Spend (30\u201340% of true IT cost). Core H3/H4 domain."
+        "itEnabler": "$72M of $87.2M total IT invoices sit within this domain. Core H3/H4 scope."
       },
       {
         "domain": "Finance & risk",
@@ -303,13 +300,13 @@
       },
       {
         "area": "IT budgeting invisible at group level",
-        "observation": "IT budgets are set at BU level with no group consolidation. The $69M IT Spend represents an estimated 30\u201340% of true IT cost. The $80\u2013130M headcount cost is entirely unmanaged at group level.",
+        "observation": "$87.2M visible invoices ≈ 51% of estimated true cost. The $22.9M headcount (281 FTEs est.) is invisible — impossible to optimize without a TBM baseline.",
         "impact": "Without a group IT cost baseline, Culligan cannot identify duplicate spend, benchmark against peers, or build a credible business case for consolidation investment."
       },
       {
-        "area": "EMEA running a $5M fragmentation premium",
-        "observation": "EMEA spends $19M in IT Spend against a comparable revenue base to Americas at $14M. The $5M premium is the direct cost of six national IT functions operating independently.",
-        "impact": "$5M annually in excess IT Spend attributable solely to EMEA fragmentation \u2014 before headcount. EMEA is the highest-priority region for IT operating model consolidation."
+        "area": "EMEA over-indexes on outside services",
+        "observation": "EMEA holds ~42% of third-party services spend on ~34% of IT — a services-intensity gap, not a total-cost premium. Six national IT functions run independently with ~51% of IT headcount.",
+        "impact": "EMEA is the highest-priority region for IT operating model consolidation — both the largest saving opportunity and the highest works-council sensitivity."
       }
     ],
     "fragmentationTitle": "IT fragmentation by capability \u2014 the numbers",
@@ -317,31 +314,31 @@
       {
         "capability": "Software (all)",
         "bus": "19",
-        "spend": "$34.8M",
+        "spend": "$38.3M",
         "observation": "Every BU buys software independently. No group master agreements below Corporate level."
       },
       {
         "capability": "IT services / managed services",
         "bus": "19",
-        "spend": "$15.7M",
-        "observation": "Every BU has its own MSP or internal IT team. Germany alone: $2.9M to a local MSP."
+        "spend": "$16.6M",
+        "observation": "19 contracts with zero group leverage. Local MSP rates 30–50% above group equivalents — most immediately renegotiable line."
       },
       {
         "capability": "Telecom (mobile & fixed)",
         "bus": "14+",
-        "spend": "$5.2M",
+        "spend": "$6.9M",
         "observation": "Separate telecom contracts per BU. No group mobile or fixed-line framework."
       },
       {
         "capability": "Cloud & infrastructure",
         "bus": "15",
-        "spend": "$7.0M",
+        "spend": "$8.9M",
         "observation": "15 BUs have separate cloud tenancies (AWS/Azure). No group FinOps. No consolidated cloud org."
       },
       {
         "capability": "Hardware (end-user compute)",
         "bus": "12",
-        "spend": "$4.9M",
+        "spend": "$5.0M",
         "observation": "Separate device procurement per BU."
       },
       {
@@ -358,8 +355,8 @@
       }
     ],
     "headcountTitle": "The headcount blind spot",
-    "headcountLead": "The IT Spend of $69M is estimated to represent only 30\u201340% of true IT cost. Applying Gartner's benchmark that people represent 60\u201370% of IT cost in comparable industrial services organisations, total IT cost including headcount is approximately $150\u2013200M annually. This means $80\u2013130M of IT cost sits entirely outside the current spend data.",
-    "headcountCallout": "The fragmentation multiplier A consolidated IT operating model at Culligan's scale ($3.8B enterprise) would require approximately 150\u2013250 group IT FTEs. The current fragmented model implies roughly 1\u20132 IT staff per BU managing local IT, plus local MSP relationships \u2014 potentially 50\u2013100 people performing duplicated functions that a shared model would consolidate into 20\u201330 roles. That is the invisible savings pool."
+    "headcountLead": "The $87.2M visible spend cube captures vendor invoices only (~51% of estimated true IT cost per deck). IT headcount ($22.9M est. · 281 FTEs) is invisible without a TBM baseline. Gartner benchmarks suggest consolidation to 150–250 shared FTEs — an estimated $0.3–0.5M annual saving (attrition-first, pending labor survey).",
+    "headcountCallout": "The fragmentation multiplier: 281 fragmented IT FTEs today vs. 150–250 in a shared model. ~60% of duplicated local IT sits in EMEA. Delivery is attrition-first (40%), redeployment (35%), managed exits (25%) over three waves — not a Day-1 restructure."
   },
   "operatingModel": {
     "partLabel": "Part III  \u2014  IT Operating Model: Current vs Future State",
@@ -368,8 +365,8 @@
     "currentCaption": "Figure 1: Current state \u2014 24 separate IT operations running in parallel with no group governance or shared services",
     "currentImage": "/assets/op-model/current-state.png",
     "futureTitle": "Future state operating model",
-    "futureLead": "The target model consolidates all 24 BUs onto shared group platforms, governed by a Group CIO and IT architecture board, with BU-level configuration rather than BU-level infrastructure. The structural change delivers $22\u201344M in annual run-rate savings at Year 3.",
-    "futureCaption": "Figure 2: Future state \u2014 group-governed, shared platform model with BU-level configuration. $22\u201344M annual run-rate saving at Year 3.",
+    "futureLead": "The target model consolidates all 24 BUs onto shared group platforms, governed by a Group CIO and IT architecture board, with BU-level configuration rather than BU-level infrastructure. H4 direct run-rate saving at Year 3: ~$2.4M (gross; $1.0–1.6M net). H2, H3 and H5 savings are enabled by H4 but reported in their own hypotheses.",
+    "futureCaption": "Figure 2: Future state — group-governed, shared platform model with BU-level configuration. H4 ~$2.4M annual run-rate saving at Year 3.",
     "futureImage": "/assets/op-model/future-state.png",
     "comparisonTitle": "Current vs future state \u2014 key shifts",
     "comparison": [
@@ -400,8 +397,8 @@
       },
       {
         "dimension": "IT headcount",
-        "current": "~50\u2013100 local IT staff duplicating functions across 24 BUs.",
-        "future": "Group shared services. 20\u201330 consolidated roles. $6\u201310M saving."
+        "current": "281 local IT FTEs duplicating functions. $22.9M invisible.",
+        "future": "Group shared services. BU IT → config & liaison. 150–250 shared FTEs."
       },
       {
         "dimension": "Vendor agreements",
@@ -413,27 +410,27 @@
   "benchmarking": {
     "partLabel": "Part IV  \u2014  Benchmarking",
     "title": "How Culligan compares to benchmark",
-    "lead": "The following benchmarks are from Gartner IT Key Metrics (2025), Forrester Research, IDC Growth and Transformation of Global Business Services (2024), and Info-Tech Research Group. Applied to Culligan's profile: industrial services / FSM company, $3.8B revenue, multi-BU, post-acquisition context.",
+    "lead": "The following benchmarks are from Gartner IT Key Metrics (2025), Forrester Research, IDC Growth and Transformation of Global Business Services (2024), and Info-Tech Research Group. Applied to Culligan's profile: industrial services / FSM company, $3.4B revenue, multi-BU, post-acquisition context.",
     "itSpendTitle": "IT spend as a percentage of revenue",
     "itSpendBenchmark": [
       {
-        "value": "1.8% Culligan IT Spend / revenue",
-        "label": "Culligan IT Spend / revenue"
+        "value": "~5.0% est. true IT / revenue",
+        "label": "Culligan today (fully loaded)"
       },
       {
-        "value": "2.5\u20134% Industrial / FSM benchmark",
-        "label": "Industrial / FSM benchmark"
+        "value": "2.5\u20133.5%",
+        "label": "Gartner peer (multi-BU industrials)"
       },
       {
-        "value": "~3.5% Culligan estimated true IT %",
-        "label": "Culligan estimated true IT %"
+        "value": "~4.1% target",
+        "label": "3-year programme target"
       },
       {
-        "value": "1.5\u20132% Best-in-class post-consolidation",
-        "label": "Best-in-class post-consolidation"
+        "value": "1.5\u20132%",
+        "label": "Best-in-class (beyond 3-yr scope)"
       }
     ],
-    "itSpendNote": "",
+    "itSpendNote": "The ~2.6% invoice figure understates true IT cost. Visible invoices ($87.2M) are ~51% of estimated true cost; IT labor is $22.9M est. (281 FTEs). Fully loaded estimate is ~5% of revenue vs. Gartner peer 2.5–3.5%. Fragmentation premium is structural, not cyclical.",
     "serviceDeskTitle": "Service desk cost benchmarks (MetricNet / HDI 2025)",
     "serviceDesk": [
       {
@@ -470,10 +467,10 @@
     "totalAddressable": "Total addressable saving \u2014 H3 + H4 + H5 combined (excl. H1 and H2 which are quantified separately)",
     "h4Title": "IT service & support \u2014 the H4 anchor opportunity",
     "h4Lead": [
-      "This is the clearest and most immediately actionable opportunity. 19 BUs each paying for IT services independently, $15.7M group-wide. Germany alone pays $2.9M to a local MSP. Nordics $1.4M. Iberia $1.1M. All delivering the same capability at different rates with no group leverage.",
-      "The mechanism is straightforward: replace 15+ separate service desk arrangements with a single group L1/L2 shared service on a common ITSM platform (ServiceNow is the leading candidate). A virtual consolidated service desk operating across time zones achieves the same structural benefit as a single location."
+      "H4 delivers ~$2.4M directly at Year 3 — built bottom-up from the TBM base: service desk consolidation ($1.3M), demand management ($0.6M), and headcount right-sizing ($0.3–0.5M est., pending labor survey). MSP commercial renegotiation is counted in H5, not double-counted here.",
+      "H4 is also the governance enabler for H2 (~$1.8–2.5M), H3 ($6.3–8.5M) and H5 ($6.5–8.5M per H5 deck) — ~$12–18M enabled, reported separately. Targeted outsourcing (service desk, cloud ops, SOC, devices) adds $5–8M p.a. as a separate option."
     ],
-    "h4Sizing": "Sizing basis $15.7M IT services invoices \u00d7 15\u201330% benchmark saving = $2.4\u20134.7M invoice saving. Gartner's maturity research: moving from decentralised to shared services is associated with 15\u201325% reduction in IT run costs including headcount. Applied to Culligan's estimated 24\u201348 local IT FTEs, this implies an additional $3\u20136M people saving not visible in the spend cube.",
+    "h4Sizing": "H4 direct savings: ~$2.4M gross ($1.0–1.6M net after $0.8–1.2M ongoing run cost). One-off investment $2.5–3.5M (ServiceNow ITSM). Payback ~19–40 months. Enables ~$12–18M across H2/H3/H5.",
     "h4Dependency": "Critical dependency This change cannot be driven from Corporate IT without executive mandate. The H4 workstream must begin with a governance recommendation \u2014 formalising the Group CIO's cross-BU mandate and establishing the IT architecture board \u2014 before a technology recommendation. Without executive authority, every service desk migration will be vetoed by a local general manager citing business disruption.",
     "leversTitle": "The five savings levers mapped to capabilities",
     "levers": [
@@ -586,7 +583,7 @@
           "option3": "Group CIO",
           "option1": "Group CIO",
           "option2": "Group CIO",
-          "whyItMatters": "Non-negotiable for $22–44M savings case."
+          "whyItMatters": "Non-negotiable for H4 ~$2.4M saving and programme enablement."
         },
         {
           "function": "Enterprise vendor agreements (SaaS, telecom, hardware)",
@@ -666,19 +663,19 @@
         "wave": "Wave 1",
         "horizon": "0\u20136 months (Foundation)",
         "actions": "Formalise Group CIO cross-BU mandate. Establish IT architecture board. Commission TBM baseline (PwC H4). Complete SaaS and telecom vendor audit (H5 quick wins). Renegotiate top 5 MSP contracts as a group.",
-        "saving": "$4\u201310M (vendor renegotiation + SaaS audit). Primarily H5."
+        "saving": "$4–7M (H4 + H5 + outsourcing W1)"
       },
       {
         "wave": "Wave 2",
         "horizon": "6\u201318 months (Consolidation)",
         "actions": "Select and deploy group ITSM platform (ServiceNow). Migrate first 5 BU service desks. Standardise L1/L2 triage processes. Launch corporate Salesforce roll-out to first 3 BUs. Begin IFS ERP pilot (2 BUs).",
-        "saving": "$6\u201314M (service desk + CRM). Primarily H4 + H3."
+        "saving": "$8–14M (H4 + H3)"
       },
       {
         "wave": "Wave 3",
         "horizon": "18\u201336 months (Transformation)",
-        "actions": "Complete service desk consolidation (all BUs on group model). Accelerate IFS ERP roll-out. Consolidate cloud tenancies under group FinOps. Design and implement group IT chargeback model. Full headcount right-sizing.",
-        "saving": "$12\u201320M additional. H3 + H2 + H4 headcount savings."
+        "actions": "Complete service desk consolidation (all BUs on group model). Accelerate IFS ERP roll-out. Consolidate cloud tenancies under group FinOps. Design and implement group IT chargeback model. Full headcount right-sizing (attrition-first).",
+        "saving": "Enabled hypotheses (H3 + H2 + H4)"
       }
     ],
     "governanceTitle": "Governance \u2014 the enabling investment",

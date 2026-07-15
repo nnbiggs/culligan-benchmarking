@@ -13,7 +13,10 @@ import {
   CalloutBox,
   KeyObservationsTable,
 } from "../opModel/OpModelUi";
+import HypothesisExecutiveSection from "../hypothesis/HypothesisExecutiveSection";
+import HypothesisRoadmapSection from "../hypothesis/HypothesisRoadmapSection";
 import {
+  vendorRationalizationCover,
   vendorRationalizationExecutive,
   vendorRationalizationMethodology,
   vendorRationalizationBenchmarks,
@@ -44,91 +47,15 @@ function RelatedLinks({ links, className = "" }) {
   );
 }
 
-function ExecutiveKpiCard({ label, value, accent = "default" }) {
-  const valueColors = {
-    orange: "text-culligan-amber",
-    default: "text-culligan-deep",
-    red: "text-culligan-red",
-    sky: "text-culligan-accent",
-  };
-
-  return (
-    <div className="rounded-xl bg-[#f4f0e8] px-4 py-5 sm:py-6 text-center ring-1 ring-black/5 border border-white/60">
-      <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-culligan-muted leading-snug">{label}</p>
-      <p className={`font-headline text-2xl sm:text-3xl font-extrabold mt-2 ${valueColors[accent] ?? valueColors.default}`}>
-        {value}
-      </p>
-    </div>
-  );
-}
-
-function DimensionDetailTable({ rows }) {
-  return (
-    <>
-      <div className="space-y-4 md:hidden">
-        {rows.map((row) => (
-          <Panel key={row.dimension} className="border-t-4 border-t-culligan-deep">
-            <p className="text-xs font-bold uppercase tracking-wide text-culligan-accent mb-2">{row.dimension}</p>
-            <LeadText>{row.detail}</LeadText>
-            {row.highlight && (
-              <p className="mt-3 text-sm font-semibold text-culligan-amber leading-relaxed">{row.highlight}</p>
-            )}
-            {row.emphasis && (
-              <p className="mt-3 text-sm font-semibold text-culligan-red leading-relaxed">{row.emphasis}</p>
-            )}
-          </Panel>
-        ))}
-      </div>
-
-      <div className="hidden md:block rounded-xl overflow-hidden ring-1 ring-black/5 shadow-sm">
-        <table className="w-full text-left text-sm">
-          <thead>
-            <tr className="bg-culligan-deep text-white">
-              <th className="px-4 py-3 text-xs font-semibold w-[28%] align-top">Dimension</th>
-              <th className="px-4 py-3 text-xs font-semibold align-top">Detail</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((row, i) => (
-              <tr key={row.dimension} className={i % 2 === 0 ? "bg-white" : "bg-culligan-off-white/50"}>
-                <td className="px-4 py-4 font-semibold text-culligan-deep align-top text-xs sm:text-sm">{row.dimension}</td>
-                <td className="px-4 py-4 text-culligan-body align-top text-xs sm:text-sm leading-relaxed">
-                  {row.detail}
-                  {row.highlight && (
-                    <p className="mt-3 font-semibold text-culligan-amber">{row.highlight}</p>
-                  )}
-                  {row.emphasis && (
-                    <p className="mt-3 font-semibold text-culligan-red">{row.emphasis}</p>
-                  )}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </>
-  );
-}
-
 export function VendorExecutiveSection() {
-  const d = vendorRationalizationExecutive;
   return (
-    <SectionWrapper id="vr-executive" className="bg-white py-12 sm:py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <PartLabel>{d.partLabel}</PartLabel>
-        <SectionTitle>{d.title}</SectionTitle>
-
-        <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-          {d.kpis.map((kpi) => (
-            <ExecutiveKpiCard key={kpi.label} {...kpi} />
-          ))}
-        </div>
-
-        <div className="mt-10">
-          <DimensionDetailTable rows={d.rows} />
-        </div>
-      </div>
-    </SectionWrapper>
+    <HypothesisExecutiveSection
+      id="vr-executive"
+      data={{
+        ...vendorRationalizationExecutive,
+        kpis: vendorRationalizationCover.kpis,
+      }}
+    />
   );
 }
 
@@ -241,7 +168,7 @@ export function VendorCurrentStateSection() {
   const d = vendorRationalizationCurrentState;
 
   return (
-    <SectionWrapper id="vr-current-state" className="bg-culligan-off-white py-12 sm:py-16">
+    <SectionWrapper id="vr-current-state" className="bg-white py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <PartLabel>{d.partLabel}</PartLabel>
         <SectionTitle>{d.title}</SectionTitle>
@@ -340,52 +267,18 @@ export function VendorRoadmapSection() {
   const bl = vendorRationalizationBottomLine;
 
   return (
-    <>
-      <SectionWrapper id="vr-roadmap" className="bg-culligan-deep py-12 sm:py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <PartLabel>{d.partLabel}</PartLabel>
-          <h2 className="font-headline text-2xl sm:text-3xl font-extrabold text-white tracking-tight">{d.title}</h2>
-          <p className="mt-4 text-sm sm:text-base text-culligan-light leading-relaxed max-w-4xl">{d.lead}</p>
-
-          <div className="mt-8 grid gap-4 lg:grid-cols-3">
-            {d.waves.map((wave) => (
-              <div key={wave.wave} className="rounded-2xl bg-white/10 ring-1 ring-white/15 p-5 sm:p-6 border-t-4 border-t-culligan-accent">
-                <p className="text-xs font-bold uppercase tracking-wide text-culligan-accent">{wave.wave}</p>
-                <p className="mt-1 text-sm font-bold text-white">{wave.horizon}</p>
-                <p className="mt-4 text-sm text-culligan-light leading-relaxed">{wave.actions}</p>
-                <div className="mt-4 pt-3 border-t border-white/10 space-y-1">
-                  <p className="text-sm font-semibold text-culligan-accent">{wave.netYear}</p>
-                  <p className="text-xs text-culligan-light/70">Investment: {wave.investment}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 rounded-2xl bg-white/5 ring-1 ring-white/10 p-6">
-            <h3 className="font-headline text-lg font-bold text-white">{d.funding.title}</h3>
-            <p className="mt-3 text-sm text-culligan-light leading-relaxed">{d.funding.mechanism}</p>
-            <div className="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-3">
-              {Object.entries(d.funding.totals).map(([key, val]) => (
-                <div key={key} className="rounded-xl bg-white/10 px-4 py-3 text-center">
-                  <p className="text-[10px] uppercase tracking-wide text-culligan-accent">{key.replace(/([A-Z])/g, " $1")}</p>
-                  <p className="font-headline text-lg font-extrabold text-white mt-1">{val}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <RelatedLinks links={d.relatedLinks} className="[&_a]:bg-white/10 [&_a]:text-culligan-light [&_a]:ring-white/20" />
-        </div>
-      </SectionWrapper>
-
-      <SectionWrapper className="bg-white py-10 sm:py-12 border-t border-culligan-off-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="font-headline text-xl sm:text-2xl font-extrabold text-culligan-deep">{bl.title}</h3>
-          <p className="mt-3 text-sm text-culligan-muted">{bl.stats.join(" · ")}</p>
-          <p className="mt-4 font-headline text-2xl sm:text-3xl font-extrabold text-culligan-accent">{bl.saving}</p>
-          <p className="mt-4 text-sm text-culligan-body max-w-2xl mx-auto">{bl.nextStep}</p>
-        </div>
-      </SectionWrapper>
-    </>
+    <HypothesisRoadmapSection
+      id="vr-roadmap"
+      data={{
+        partLabel: d.partLabel,
+        title: d.title,
+        lead: d.lead,
+        waves: d.waves,
+        funding: d.funding,
+        relatedLinks: d.relatedLinks,
+        bottomLine: bl,
+      }}
+    />
   );
 }
 

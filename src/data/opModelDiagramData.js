@@ -32,7 +32,7 @@ export const executiveHeadline = {
   stats: [
     { value: "24", label: "Business units unchanged" },
     { value: "6", label: "Platform consolidations" },
-    { value: "$22–44M", label: "Year 3 run-rate saving" },
+    { value: "~$2.4M", label: "H4 Yr-3 saving" },
     { value: "1.5–2%", label: "Target IT / revenue" },
   ],
 };
@@ -50,7 +50,7 @@ export const changeOverview = {
     { label: "Service desk", from: "15+ desks", to: "1 ServiceNow" },
     { label: "FSM", from: "14 tools", to: "1 platform" },
     { label: "Cloud", from: "15 tenancies", to: "1 org + FinOps" },
-    { label: "IT FTE", from: "50–100 local", to: "20–30 shared" },
+    { label: "IT FTE", from: "281 local", to: "150–250 shared" },
   ],
   enables: [
     { label: "Group CIO mandate", detail: "Authority extended to all BUs", changeStatus: "extended" },

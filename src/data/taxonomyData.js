@@ -8,7 +8,7 @@ export const taxonomyBrand = {
 
 export const taxonomyKpis = [
   { value: "$69M", label: "IT & Digital Spend" },
-  { value: "~$170M", label: "Est. total IT cost" },
+  { value: "~$110M", label: "Est. total IT cost" },
   { value: "$20–44M", label: "Savings opportunity" },
   { value: "24", label: "Business units" },
   { value: "59", label: "Legal entities" },
