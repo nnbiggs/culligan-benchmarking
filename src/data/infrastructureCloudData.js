@@ -1,6 +1,7 @@
 import data from "./infrastructureCloudData.json";
+import { datedCover } from "./siteMeta";
 
-export const infrastructureCloudCover = data.cover;
+export const infrastructureCloudCover = datedCover(data.cover);
 export const infrastructureCloudExecutive = data.executiveSummary;
 export const infrastructureCloudBenchmarks = data.benchmarks;
 export const infrastructureCloudPlays = data.plays;

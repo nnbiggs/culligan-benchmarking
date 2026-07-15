@@ -1,6 +1,7 @@
 import data from "./buCostData.json";
+import { withEngagementDate } from "./siteMeta";
 
-export const buCostSource = data.source;
+export const buCostSource = withEngagementDate(data.source);
 export const buCostFootnote = data.footnote;
 export const regionCostData = data.regionCosts;
 export const corporateCostData = data.corporate;

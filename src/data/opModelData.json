@@ -4,7 +4,7 @@
     "eyebrow": "Culligan International · Confidential · PwC Engagement",
     "title": "IT Operating Model",
     "subtitle": "Capability Model, Current State Analysis & IT Cost Savings Case",
-    "meta": "Hypothesis H4 · June 2026 · PwC Confidential · Subject to CIO validation",
+    "meta": "Hypothesis H4 · {monthYear} · PwC Confidential · Subject to CIO validation",
     "hook": "Culligan's IT operating model is not a model — it is 19 separate IT operations running in parallel. H4 delivers ~$2.4M directly at Year 3 and is the governance enabler that unlocks ~$12–18M more across H2, H3 and H5.",
     "kpis": [
       {
@@ -24,7 +24,7 @@
         "label": "H4 saving (Yr 3, built bottom-up)"
       }
     ],
-    "source": "Source: Culligan Spend Cube June 2026 · TBM baseline pending. Vendor invoices only; headcount excluded from visible spend."
+    "source": "Source: Culligan Spend Cube {monthYear} · TBM baseline pending. Vendor invoices only; headcount excluded from visible spend."
   },
   "executiveSummary": {
     "partLabel": "01 · Executive summary",

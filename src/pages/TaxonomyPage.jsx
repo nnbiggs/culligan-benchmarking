@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { engagementMonthYear } from "../data/siteMeta";
 import SiteNav from "../components/SiteNav";
 import Footer from "../components/Footer";
 import HypothesisPageHero from "../components/hypothesis/HypothesisPageHero";
@@ -30,7 +31,7 @@ function RegionsSection() {
           Operating regions · vendor spend detail
         </h2>
         <p className="mt-3 text-sm text-culligan-muted max-w-3xl">
-          June 2026 spend cube costs by business unit — IT spend, operational analysis, and vendor cost structure.
+          {engagementMonthYear} spend cube costs by business unit — IT spend, operational analysis, and vendor cost structure.
         </p>
         <p className="mt-2 text-xs text-culligan-muted/80">{buCostSource} · {buCostFootnote}</p>
 

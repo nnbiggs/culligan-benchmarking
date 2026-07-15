@@ -4,7 +4,7 @@
     "eyebrow": "Culligan International · Confidential · PwC Engagement",
     "title": "Infrastructure & Cloud Optimization",
     "subtitle": "Five plays — FinOps, acquisition cleanup, MSP restructure, network rationalisation, storage hardening",
-    "meta": "Hypothesis H2 · June 2026 · PwC Confidential · Subject to CIO validation",
+    "meta": "Hypothesis H2 · {monthYear} · PwC Confidential · Subject to CIO validation",
     "hook": "Five plays, not three. No data centers — but Culligan's acquisition-heavy model has left a long tail of duplicated infrastructure, fragmented identity, unmanaged circuits, and a $2.04M cloud run-rate (TBM Cloud Services pool) with negligible FinOps discipline. The prize is $1.7–3.5M — and it demands acquisition cleanup, commercially-structured MSP contracts, and hard FinOps discipline.",
     "kpis": [
       { "value": "$87.2M", "label": "Total visible IT spend (Spend Cube)" },

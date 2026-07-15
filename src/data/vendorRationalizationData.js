@@ -1,6 +1,7 @@
 import data from "./vendorRationalizationData.json";
+import { datedCover } from "./siteMeta";
 
-export const vendorRationalizationCover = data.cover;
+export const vendorRationalizationCover = datedCover(data.cover);
 export const vendorRationalizationExecutive = data.executiveSummary;
 export const vendorRationalizationMethodology = data.methodology;
 export const vendorRationalizationBenchmarks = data.benchmarks;

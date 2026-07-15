@@ -1,8 +1,10 @@
+import { engagementMonthYear, withEngagementDate } from "./siteMeta";
+
 export const brand = {
   companyName: "Culligan",
   heroTitle: "Transforming IT for Growth",
   heroSubtitle: "Strategic Roadmap, EBITDA Impact & CIO Action Plan",
-  heroMeta: "June 2026 · Confidential",
+  heroMeta: `${engagementMonthYear} · Confidential`,
   heroAttribution:
     "PwC IT Benchmarking · Gartner · Zylo 2026 SaaS Index · Forrester TEI · HDI/MetricNet · Independent 2026 Industry Data",
 };
@@ -11,10 +13,10 @@ export const executiveSummaryCover = {
   eyebrow: "Culligan International · Confidential · PwC Engagement",
   title: "IT Enterprise Cost Findings: From Mis-Spend to Measurable Value",
   subtitle: "Operating model, infrastructure, applications, vendor & licensing — savings quantification and CIO action plan",
-  meta: "Hypotheses H1–H5 · June 2026 · PwC Confidential · Subject to CIO validation",
+  meta: `Hypotheses H1–H5 · ${engagementMonthYear} · PwC Confidential · Subject to CIO validation`,
   hook:
     "Culligan's IT estate is the unmanaged residue of 20+ acquisitions — 19 trading BUs buying independently with no group mandate below Corporate. Visible invoice spend is $87.2M, but estimated true IT cost is ~$170M (~5% of revenue vs. a 2.5–3.5% peer norm). The programme delivers $29–43M gross annual run-rate savings at Year 3 — but only if H4 governance (Group CIO mandate, architecture board, chargeback) comes first.",
-  source: "Source: Culligan Spend Cube June 2026 · TBM Spend Baseline (7.10) · H2/H4/H5 analysis decks (June 2026)",
+  source: `Source: Culligan Spend Cube ${engagementMonthYear} · TBM Spend Baseline (7.10) · H2/H4/H5 analysis decks (${engagementMonthYear})`,
 };
 
 export const draft = {
@@ -278,7 +280,7 @@ export const keyFindings = {
   hypothesisLegend: {
     title: "Hypothesis Legend — What Each Area Means",
     intro:
-      "The benchmarking is structured around five hypotheses from the June 2026 analysis decks (H2 v11, H4 updated, H5 v7) — specific questions about where Culligan's IT spending and operating model fall below peer efficiency.",
+      `The benchmarking is structured around five hypotheses from the ${engagementMonthYear} analysis decks (H2 v11, H4 updated, H5 v7) — specific questions about where Culligan's IT spending and operating model fall below peer efficiency.`,
     columns: ["Code", "Hypothesis Name", "High Level Description", "What Was Measured"],
     rows: [
       { code: "H1", name: "Operations & AI", definition: "How effectively is Culligan using AI and automation in field operations and route service?", measured: "Route optimisation, AI scheduling — not yet sized; excluded from near-term savings case." },
@@ -288,7 +290,7 @@ export const keyFindings = {
       { code: "H5", name: "Vendor & Licensing", definition: "Is Culligan getting value from vendor contracts and software licences?", measured: "Vendor services ($27.56M) and licensing ($45.16M) rationalization. Dedicated page: /vendor-rationalization." },
     ],
     footnote:
-      "H1–H5 framework from PwC IT Benchmarking June 2026 decks. Programme total: $29–43M p.a. at Year 3 gross (~$19–32M net). $24–35M excludes outsourcing; $29–43M includes it. Peer set: mid-market industrials/distribution, $1–5B revenue.",
+      `H1–H5 framework from PwC IT Benchmarking ${engagementMonthYear} decks. Programme total: $29–43M p.a. at Year 3 gross (~$19–32M net). $24–35M excludes outsourcing; $29–43M includes it. Peer set: mid-market industrials/distribution, $1–5B revenue.`,
   },
   findingsTable: {
     title: "Key Findings — Quantitative Results & Business Meaning",
@@ -349,7 +351,7 @@ export const keyFindings = {
         statusType: "green",
         numbers: "0 of 14 route BUs use AI scheduling\nVirtual Agent deflection 1.1% vs 15–20% target\nExcluded from near-term $29–43M programme case",
         meaning:
-          "AI opportunities exist in route service and service desk but H1 is flagged for a later phase per the June 2026 decks.",
+          `AI opportunities exist in route service and service desk but H1 is flagged for a later phase per the ${engagementMonthYear} decks.`,
       },
       {
         area: "Overall IT Spend",
@@ -362,7 +364,7 @@ export const keyFindings = {
     ],
   },
   source:
-    "Source: Culligan_H2_Infrastructure_Cloud_v11 · Culligan_H4_IT_Operating_Model_v10 · Culligan_H5_Vendor_Licensing_v4 (June 2026); Gartner IT Key Metrics 2025; Zylo/Flexera; MetricNet 2025; TBM Spend Baseline.",
+    `Source: Culligan_H2_Infrastructure_Cloud_v11 · Culligan_H4 IT support and operating model efficiency · Culligan_H5_Vendor_Licensing_Rationalization_v7 (${engagementMonthYear}); Gartner IT Key Metrics 2025; Zylo/Flexera; MetricNet 2025; TBM Spend Baseline.`,
 };
 
 export const statusBadgeStyles = {
@@ -662,13 +664,13 @@ export const benchmarkTable = {
     { metric: "Programme total (H1–H5 + outsourcing)", culligan: "$29–43M p.a.", peer: "—", comparison: "Year 3 run-rate (H4 deck)" },
   ],
     caption:
-    "Sources: PwC IT Benchmarking Analysis decks (July 2026); Gartner IT Key Metrics 2025; Zylo/Flexera SAM benchmarks; MetricNet 2025; Info-Tech 2024. Directional; subject to CIO validation.",
+    `Sources: PwC IT Benchmarking Analysis decks (${engagementMonthYear}); Gartner IT Key Metrics 2025; Zylo/Flexera SAM benchmarks; MetricNet 2025; Info-Tech 2024. Directional; subject to CIO validation.`,
 };
 
 export const footer = {
   confidentiality: "CONFIDENTIAL — FOR INTERNAL EXECUTIVE USE ONLY",
   attribution:
-    "Based on PwC IT Benchmarking Analysis (June 2026) enhanced with Gartner, Zylo, Forrester, HDI/MetricNet, and independent 2026 industry research",
+    `Based on PwC IT Benchmarking Analysis (${engagementMonthYear}) enhanced with Gartner, Zylo, Forrester, HDI/MetricNet, and independent 2026 industry research`,
   copyright: "© 2026 Culligan International Co. All rights reserved.",
   disclaimer:
     "Not for external distribution.",

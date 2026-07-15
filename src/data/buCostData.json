@@ -1,5 +1,5 @@
 {
-  "source": "Spend Cube (June 2026) \u00b7 Vendor invoice spend only",
+  "source": "Spend Cube ({monthYear}) · Vendor invoice spend only",
   "footnote": "Financial & Corporate Charges are intercompany allocations \u2014 interpret as financial flows, not operational cost drivers. People costs (salaries, benefits) are not included.",
   "regionCosts": {
     "Americas": {

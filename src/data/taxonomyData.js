@@ -1,9 +1,10 @@
 import { regionCostData, corporateCostData } from "./buCostData";
+import { engagementMonthYear } from "./siteMeta";
 
 export const taxonomyBrand = {
   title: "IT Operating Model",
   subtitle: "Capability Model, Current State Analysis & IT Cost Savings Case",
-  source: "Spend Cube + March 2026 P&L · June 2026",
+  source: `Spend Cube + March 2026 P&L · ${engagementMonthYear}`,
 };
 
 export const taxonomyKpis = [

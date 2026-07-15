@@ -1,6 +1,7 @@
 import data from "./opModelData.json";
+import { datedCover } from "./siteMeta";
 
-export const opModelCover = data.cover;
+export const opModelCover = datedCover(data.cover);
 export const opModelExecutiveSummary = data.executiveSummary;
 export const opModelCapability = data.capabilityModel;
 export const opModelCurrentState = data.currentState;

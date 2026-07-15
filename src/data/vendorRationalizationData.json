@@ -4,7 +4,7 @@
     "eyebrow": "Culligan International · Confidential · PwC Engagement",
     "title": "Vendor & Licensing Rationalization",
     "subtitle": "Vendor duplication proof, savings case & governance roadmap",
-    "meta": "Hypothesis H5 · June 2026 · PwC Confidential · Subject to CIO validation",
+    "meta": "Hypothesis H5 · {monthYear} · PwC Confidential · Subject to CIO validation",
     "hook": "1,674 vendors serve a $87.2M IT estate — 40 spend-carrying entities buy independently with no IT vendor management framework below Corporate. Consolidating vendor services and licensing onto group standards releases $6.5–8.5M annually at Year-3 run-rate.",
     "kpis": [
       { "value": "$87.2M", "label": "Total IT & Digital spend", "accent": "orange" },
@@ -12,7 +12,7 @@
       { "value": "40", "label": "Entities buy independently", "accent": "red" },
       { "value": "$6.5–8.5M", "label": "Annual run-rate savings (Yr 3)", "accent": "sky" }
     ],
-    "source": "Source: Culligan Spend Cube June 2026 (reconciled) · Central EAs restated at group value"
+    "source": "Source: Culligan Spend Cube {monthYear} (reconciled) · Central EAs restated at group value"
   },
   "executiveSummary": {
     "partLabel": "01 · Executive summary",

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { getBuCostForTaxonomyBu } from "../data/buCostData";
+import { engagementMonthYear } from "../data/siteMeta";
 
 function parseAmountM(value) {
   if (!value) return 0;
@@ -272,7 +273,7 @@ export default function BuCostCard({ taxonomyName }) {
     return (
       <div className="rounded-xl border border-dashed border-culligan-off-white bg-white p-5">
         <p className="text-base font-semibold text-culligan-deep">{taxonomyName}</p>
-        <p className="mt-2 text-sm text-culligan-muted">Not included in the June 2026 vendor spend cube.</p>
+        <p className="mt-2 text-sm text-culligan-muted">Not included in the {engagementMonthYear} vendor spend cube.</p>
       </div>
     );
   }
